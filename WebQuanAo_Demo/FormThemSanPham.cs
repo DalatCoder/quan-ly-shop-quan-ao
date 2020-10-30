@@ -70,5 +70,10 @@ namespace WebQuanAo_Demo
 			pictureBox1.ImageLocation = "";
 			txtMoTa.Text = "";
 		}
-	}
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+			Application.Exit();
+        }
+    }
 }
