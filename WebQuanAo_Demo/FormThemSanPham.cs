@@ -28,9 +28,19 @@ namespace WebQuanAo_Demo
 		{
 			string errorMessage = "";
 			if (txtTenSP.Text == "")
-				errorMessage = "Nhập tên sản phẩm đi má (°-°) (°.°)";
-			else if (txtSize.Text == "")
-				errorMessage = "Nhập kích thước đi má (°-°) (°.°)";
+				errorMessage += "Nhập tên sản phẩm đi má (°-°) (°.°) \n";
+		    if (txtSize.Text == "")
+				errorMessage += "Nhập kích thước đi má (°-°) (°.°) \n";
+		    if (txtGiaBan.Text == "")
+				errorMessage += "Nhập giá bán đi!!! \n";
+			if (txtSoluong.Text == "")
+				errorMessage += "Nhập số lượng đi!!! \n";
+		    if (txtDiscount.Text == "")
+				errorMessage += "Nhập discount đi!!! \n";
+			if (cbxLoaiSP.Text == "")
+				errorMessage += "Chọn loại sản phẩm đi!!! \n";
+            
+
 
 			// Nếu có lỗi, in ra và thoát hàm
 			if (errorMessage.Length > 0)
