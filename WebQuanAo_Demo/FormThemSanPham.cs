@@ -26,7 +26,27 @@ namespace WebQuanAo_Demo
 
 		private void btnThem_Click(object sender, EventArgs e)
 		{
+			string errorMessage = "";
+			if (txtTenSP.Text == "")
+				errorMessage = "Nhập tên sản phẩm đi má (°-°) (°.°)";
+			else if (txtSize.Text == "")
+				errorMessage = "Nhập kích thước đi má (°-°) (°.°)";
 
+			// Nếu có lỗi, in ra và thoát hàm
+			if (errorMessage.Length > 0)
+			{
+				MessageBox.Show(errorMessage, "Nhập đầy đủ hộ đi má");
+				return;
+			}
+
+			// Nếu không lỗi thì thực thi các dòng dưới này
+			// 1. Lấy thông tin 
+
+			// 2. Gán vào đối tượng tương ứng
+
+			// 3. Lưu trữ
+
+			// 4. Hiển thị
 		}
 
 		private void btnMacDinh_Click(object sender, EventArgs e)
