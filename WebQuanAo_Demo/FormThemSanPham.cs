@@ -31,6 +31,16 @@ namespace WebQuanAo_Demo
 				errorMessage = "Nhập tên sản phẩm đi má (°-°) (°.°)";
 			else if (txtSize.Text == "")
 				errorMessage = "Nhập kích thước đi má (°-°) (°.°)";
+			else if (txtGiaBan.Text == "")
+				errorMessage = "Nhập giá bán đi!!!";
+			else if (txtSoluong.Text == "")
+				errorMessage = "Nhập số lượng đi!!!";
+			else if (txtDiscount.Text == "")
+				errorMessage = "Nhập discount đi!!!";
+			else if (cbxLoaiSP.Text == "")
+				errorMessage = "Chọn loại sản phẩm đi!!!";
+            
+
 
 			// Nếu có lỗi, in ra và thoát hàm
 			if (errorMessage.Length > 0)
