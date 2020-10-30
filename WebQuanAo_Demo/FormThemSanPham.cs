@@ -43,7 +43,7 @@ namespace WebQuanAo_Demo
 
 
 			// Nếu có lỗi, in ra và thoát hàm
-			if (errorMessage.Length > 0)
+			if (errorMessage!= "Vui lòng nhập: \n")
 			{
 				MessageBox.Show(errorMessage, "Thông báo chưa đủ thông tin @_@");
 				return;

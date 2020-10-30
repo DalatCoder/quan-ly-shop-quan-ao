@@ -26,9 +26,10 @@ namespace WebQuanAo_Demo
             if (txtMatKhau.Text == "")
                 errorMessage += "- Mật khẩu !!!\n";
 
-            if(errorMessage.Length>0)
+            if(errorMessage!="Vui lòng nhập:\n")
             {
                 MessageBox.Show(errorMessage, "Thông báo chưa đủ dự kiện ^_^");
+                return;
             }    
         }
     }
