@@ -17,5 +17,19 @@ namespace WebQuanAo_Demo
         {
             InitializeComponent();
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            string errorMessage = "Vui lòng nhập:\n";
+            if (txtTenDangNhap.Text == "")
+                errorMessage += "- Tên đăng nhập !!!\n";
+            if (txtMatKhau.Text == "")
+                errorMessage += "- Mật khẩu !!!\n";
+
+            if(errorMessage.Length>0)
+            {
+                MessageBox.Show(errorMessage, "Thông báo chưa đủ dự kiện ^_^");
+            }    
+        }
     }
 }
