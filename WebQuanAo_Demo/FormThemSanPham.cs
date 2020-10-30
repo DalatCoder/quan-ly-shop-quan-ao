@@ -26,26 +26,26 @@ namespace WebQuanAo_Demo
 
 		private void btnThem_Click(object sender, EventArgs e)
 		{
-			string errorMessage = "";
+			string errorMessage = "Vui lòng nhập: \n";
 			if (txtTenSP.Text == "")
-				errorMessage += "Nhập tên sản phẩm đi má (°-°) (°.°) \n";
+				errorMessage += "- Tên sản phẩm !!! \n";
 		    if (txtSize.Text == "")
-				errorMessage += "Nhập kích thước đi má (°-°) (°.°) \n";
+				errorMessage += "- Kích thước !!! \n";
 		    if (txtGiaBan.Text == "")
-				errorMessage += "Nhập giá bán đi!!! \n";
+				errorMessage += "- Giá bán !!! \n";
 			if (txtSoluong.Text == "")
-				errorMessage += "Nhập số lượng đi!!! \n";
+				errorMessage += "- Số lượng !!! \n";
 		    if (txtDiscount.Text == "")
-				errorMessage += "Nhập discount đi!!! \n";
+				errorMessage += "- Discount !!! \n";
 			if (cbxLoaiSP.Text == "")
-				errorMessage += "Chọn loại sản phẩm đi!!! \n";
+				errorMessage += "- Loại sản phẩm !!!\n";
             
 
 
 			// Nếu có lỗi, in ra và thoát hàm
 			if (errorMessage.Length > 0)
 			{
-				MessageBox.Show(errorMessage, "Nhập đầy đủ hộ đi má");
+				MessageBox.Show(errorMessage, "Thông báo chưa đủ thông tin @_@");
 				return;
 			}
 
