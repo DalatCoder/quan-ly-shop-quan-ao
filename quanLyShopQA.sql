@@ -160,3 +160,95 @@ ALTER TABLE NguoiDung
 ADD CONSTRAINT FK_KieuNguoiDung_NguoiDung
 FOREIGN KEY (ID_KND) REFERENCES KieuNguoiDung(ID_KND)
 GO
+
+-----------------------------------------------------------------------
+----------------------------- PROCEDURE -------------------------------
+-----------------------------------------------------------------------
+
+------------------------------- Quan Ao -------------------------------
+CREATE PROCEDURE sp_select_QuanAo_All
+AS
+	BEGIN
+		SELECT * FROM dbo.QuanAo
+	END
+GO
+
+CREATE PROCEDURE sp_select_QuanAo_by_ID
+(
+	@ID_QA INT
+)
+AS
+	BEGIN
+		SELECT * FROM dbo.QuanAo WHERE [ID_QA] = @ID_QA
+	END
+GO
+
+CREATE PROCEDURE sp_insert_QuanAo
+(
+	@Ten_QA NVARCHAR(100),
+	@Size CHAR(5),
+	@GiaBan FLOAT NOT NULL,
+	@SoLuong INT,
+	@GhiChu NVARCHAR(MAX),
+	@Discount FLOAT,
+	@ID_LQA INT NOT NULL,
+	@HinhQA IMAGE,
+	@HinhQAP NVARCHAR(MAX)
+)
+AS
+BEGIN
+		IF (NOT EXISTS (SELECT * FROM dbo.QuanAo WHERE Ten_QA = @Ten_QA))
+		BEGIN
+			DECLARE @ID_HQA INT
+			INSERT INTO dbo.HinhQA(HinhQA, HinhQAP) VALUES (@HinhQA, @HinhQAP)
+			SET @ID_HQA = @@IDENTITY
+
+			INSERT INTO dbo.QuanAo(Ten_QA, Size, GiaBan, SoLuong, GhiChu, Discount, ID_HQA, ID_LQA)
+				VALUES (@Ten_QA, @Size, @GiaBan, @SoLuong, @GhiChu, @Discount, @ID_HQA, @ID_LQA) 
+		END
+END
+GO
+
+CREATE PROCEDURE sp_update_QuanAo
+(
+	@ID_QA INT,
+	@Ten_QA NVARCHAR(100),
+	@Size CHAR(5),
+	@GiaBan FLOAT NOT NULL,
+	@SoLuong INT,
+	@GhiChu NVARCHAR(MAX),
+	@Discount FLOAT,
+	@ID_LQA INT NOT NULL,
+	@ID_HQA INT,
+	@HinhQA IMAGE,
+	@HinhQAP NVARCHAR(MAX)
+)
+AS
+BEGIN
+	UPDATE dbo.HinhQA
+	SET
+		[HinhQA] = @HinhQA,
+		[HinhQAP] = @HinhQAP
+	WHERE ID_HQA = @ID_HQA
+
+	UPDATE dbo.QuanAo
+	SET
+		[Ten_QA] = @Ten_QA,
+		[Size] = @Size,
+		[GiaBan] = @GiaBan,
+		[SoLuong] = @SoLuong,
+		[GhiChu] = @GhiChu,
+		[Discount] = @Discount
+	WHERE ID_QA = @ID_QA
+END
+GO
+
+CREATE PROCEDURE sp_delete_QuanAo_By_ID
+(
+	@ID_QA INT
+)
+AS
+BEGIN
+	DELETE FROM dbo.QuanAo WHERE ID_QA = @ID_QA
+END
+GO
