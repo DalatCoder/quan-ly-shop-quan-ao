@@ -188,6 +188,16 @@ AS
 	END
 GO
 
+CREATE PROCEDURE sp_select_Master_LoaiQA
+AS
+BEGIN
+	select LoaiQA.ID_LQA,count(QuanAo.ID_LQA)  AS SoLuongSanPham,Ten_LQA
+	from QuanAo join LoaiQA on QuanAo.ID_LQA=LoaiQA.ID_LQA
+	where QuanAo.ID_LQA=LoaiQA.ID_LQA
+	group by LoaiQA.ID_LQA,Ten_LQA
+END
+GO
+
 CREATE PROCEDURE sp_insert_LoaiQuanAo
 (
 	@Ten_LQA NVARCHAR(30)
@@ -223,12 +233,31 @@ BEGIN
 END
 GO
 
------------------------------------ Quan Ao ------------------------------------
-CREATE PROCEDURE sp_select_QuanAo_All
+--------------------------------- Hinh Quan Ao ---------------------------------
+CREATE PROCEDURE sp_select_HinhSanPham
+(
+	@ID_HQA INT
+)
 AS
-	BEGIN
-		SELECT * FROM dbo.QuanAo
-	END
+BEGIN
+	SELECT HinhQA
+	FROM HinhQA
+	WHERE ID_HQA = @ID_HQA
+END
+GO
+
+----------------------------------- Quan Ao ------------------------------------
+CREATE PROCEDURE sp_select_QuanAo
+AS
+BEGIN
+	SELECT
+	ID_QA,Ten_QA,Ten_LQA,ID_HQA,
+	SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu,GiaBan
+	FROM
+	QuanAo INNER JOIN LoaiQA
+	ON
+	LoaiQA.ID_LQA = QuanAo.ID_LQA
+END
 GO
 
 CREATE PROCEDURE sp_select_QuanAo_by_ID
@@ -236,9 +265,72 @@ CREATE PROCEDURE sp_select_QuanAo_by_ID
 	@ID_QA INT
 )
 AS
-	BEGIN
-		SELECT * FROM dbo.QuanAo WHERE [ID_QA] = @ID_QA
-	END
+BEGIN
+	SELECT
+	ID_QA,Ten_QA,Ten_LQA,ID_HQA,
+	SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu,GiaBan
+	FROM
+	QuanAo INNER JOIN LoaiQA
+	ON
+	LoaiQA.ID_LQA = QuanAo.ID_LQA
+	WHERE QuanAo.ID_QA = @ID_QA
+END
+GO
+
+CREATE PROCEDURE sp_select_QuanAo_by_ID_LQA
+(
+	@ID_LQA INT
+)
+AS
+BEGIN
+	SELECT 
+	ID_QA,Ten_QA,Ten_LQA,ID_HQA,GhiChu,GiaBan,Discount
+	FROM 
+	LoaiQA INNER JOIN QuanAo 
+	ON 
+	LoaiQA.ID_LQA = QuanAo.ID_LQA
+	WHERE 
+	QuanAo.ID_LQA = @ID_LQA
+END
+GO
+
+CREATE PROCEDURE sp_select_search_QuanAo
+(
+	@TieuChuanTim NVARCHAR(255)
+)
+AS
+BEGIN
+	SELECT
+	ID_QA,Ten_QA,Ten_LQA,ID_HQA,
+	SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu,GiaBan,Discount
+	FROM
+	QuanAo INNER JOIN LoaiQA
+	ON
+	LoaiQA.ID_LQA = QuanAo.ID_LQA
+	WHERE
+	Ten_LQA LIKE '%' + @TieuChuanTim + '%' OR
+	Ten_QA LIKE '%' + @TieuChuanTim + '%' OR
+	GhiChu LIKE '%' + @TieuChuanTim + '%'OR
+	Discount LIKE '%'+@TieuChuanTim+'%'
+END
+GO
+
+CREATE PROCEDURE sp_select_QuanAo_By_GiaCa_Discount
+(
+	@GiaBanThap FLOAT,
+	@GiaBanCao FLOAT,
+	@Disscount FLOAT
+)
+AS
+BEGIN
+	SELECT 
+	ID_QA,Ten_QA,ID_HQA,GhiChu,GiaBan,Discount
+	FROM 
+	QuanAo 
+	Where
+	(@GiaBanThap <GiaBan and GiaBan< @GiaBanCao) or
+	(@Disscount=Discount)
+END
 GO
 
 CREATE PROCEDURE sp_insert_QuanAo
@@ -352,3 +444,43 @@ END
 GO
 
 ------------------------------ Chi Tiet Ban Hang -------------------------------
+CREATE PROCEDURE sp_insert_ChiTietBanHang
+(
+	@ID_QA INT,
+	@ID_BH INT,
+	@SoLuongSanPham INT
+)
+AS
+BEGIN
+	INSERT INTO dbo.ChiTietBanHang (ID_QA, ID_BH, SoLuongSanPham)
+	VALUES (@ID_QA, @ID_BH, @SoLuongSanPham)
+END
+GO
+
+CREATE PROCEDURE sp_select_ChiTietBanHang
+(
+	@ID_BH INT
+)
+AS
+BEGIN
+	SELECT SoLuongSanPham,Ten_QA, GiaBan
+	FROM ChiTietBanHang 
+	INNER JOIN QuanAo ON QuanAo.ID_QA = ChiTietBanHang.ID_QA
+	WHERE ID_BH = @ID_BH
+END
+GO
+
+---------------------------------- Dang Nhap -----------------------------------
+CREATE PROCEDURE sp_select_DangNhapAdmin
+(
+	@TenDangNhap NVARCHAR(50),
+	@MatKhau NVARCHAR(50)
+)
+AS
+BEGIN
+	SELECT TenDangNhap, MatKhau
+	FROM QuanTriVien
+	WHERE TenDangNhap = @TenDangNhap AND MatKhau = @MatKhau
+END
+GO
+
