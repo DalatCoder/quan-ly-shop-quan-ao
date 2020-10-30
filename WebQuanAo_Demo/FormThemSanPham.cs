@@ -28,17 +28,17 @@ namespace WebQuanAo_Demo
 		{
 			string errorMessage = "";
 			if (txtTenSP.Text == "")
-				errorMessage = "Nhập tên sản phẩm đi má (°-°) (°.°)";
-			else if (txtSize.Text == "")
-				errorMessage = "Nhập kích thước đi má (°-°) (°.°)";
-			else if (txtGiaBan.Text == "")
-				errorMessage = "Nhập giá bán đi!!!";
-			else if (txtSoluong.Text == "")
-				errorMessage = "Nhập số lượng đi!!!";
-			else if (txtDiscount.Text == "")
-				errorMessage = "Nhập discount đi!!!";
-			else if (cbxLoaiSP.Text == "")
-				errorMessage = "Chọn loại sản phẩm đi!!!";
+				errorMessage += "Nhập tên sản phẩm đi má (°-°) (°.°) \n";
+		    if (txtSize.Text == "")
+				errorMessage += "Nhập kích thước đi má (°-°) (°.°) \n";
+		    if (txtGiaBan.Text == "")
+				errorMessage += "Nhập giá bán đi!!! \n";
+			if (txtSoluong.Text == "")
+				errorMessage += "Nhập số lượng đi!!! \n";
+		    if (txtDiscount.Text == "")
+				errorMessage += "Nhập discount đi!!! \n";
+			if (cbxLoaiSP.Text == "")
+				errorMessage += "Chọn loại sản phẩm đi!!! \n";
             
 
 
