@@ -1,12 +1,17 @@
+
+--------------------------------------------------------------------------------
+--                          SHOP MANAGEMENT DATABASE                          --
+--------------------------------------------------------------------------------
+
 CREATE DATABASE QL_ShopQuanAo
 GO
 
 USE QL_ShopQuanAo
 GO
 
------------------------------------------------------------------------
--------------------------------- TABLE --------------------------------
------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--                                   TABLE                                    --
+--------------------------------------------------------------------------------
 CREATE TABLE LoaiQA
 (
 	ID_LQA INT NOT NULL IDENTITY(1,1),
@@ -77,9 +82,9 @@ CREATE TABLE ChiTietBanHang
 )
 GO
 
------------------------------------------------------------------------
------------------------------ PRIMARY KEY -----------------------------
------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--                                PRIMARY KEY                                 --
+--------------------------------------------------------------------------------
 ALTER TABLE LoaiQA WITH NOCHECK ADD CONSTRAINT PK_LoaiQA PRIMARY KEY CLUSTERED 
 (
 	ID_LQA ASC 
@@ -128,9 +133,9 @@ ALTER TABLE BanHang WITH NOCHECK ADD CONSTRAINT PK_BanHang PRIMARY KEY CLUSTERED
 )
 GO
 
------------------------------------------------------------------------
------------------------------ FOREIGN KEY -----------------------------
------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--                                FOREIGN KEY                                 --
+--------------------------------------------------------------------------------
 ALTER TABLE QuanAo
 ADD CONSTRAINT FK_HinhQA_QuanAo
 FOREIGN KEY (ID_HQA) REFERENCES HinhQA(ID_HQA)
@@ -161,11 +166,64 @@ ADD CONSTRAINT FK_KieuNguoiDung_NguoiDung
 FOREIGN KEY (ID_KND) REFERENCES KieuNguoiDung(ID_KND)
 GO
 
------------------------------------------------------------------------
------------------------------ PROCEDURE -------------------------------
------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--                                 PROCEDURE                                  --
+--------------------------------------------------------------------------------
 
-------------------------------- Quan Ao -------------------------------
+--------------------------------- Loai Quan Ao ---------------------------------
+CREATE PROCEDURE sp_select_LoaiQuanAo_All
+AS
+	BEGIN
+		SELECT * FROM dbo.LoaiQA
+	END
+GO
+
+CREATE PROCEDURE sp_select_LoaiQuanAo_by_ID
+(
+	@ID_LQA INT
+)
+AS
+	BEGIN
+		SELECT * FROM dbo.LoaiQA WHERE [ID_LQA] = @ID_LQA
+	END
+GO
+
+CREATE PROCEDURE sp_insert_LoaiQuanAo
+(
+	@Ten_LQA NVARCHAR(30)
+)
+AS
+BEGIN
+	IF (NOT EXISTS (SELECT * FROM dbo.LoaiQA WHERE Ten_LQA = @Ten_LQA))
+		INSERT INTO dbo.LoaiQA (Ten_LQA) VALUES (@Ten_LQA)
+END
+GO
+
+CREATE PROCEDURE sp_update_LoaiQuanAo
+(
+	@ID_LQA INT,
+	@Ten_LQA NVARCHAR(30)
+)
+AS
+BEGIN
+	UPDATE dbo.LoaiQA
+	SET
+		[Ten_LQA] = @Ten_LQA
+	WHERE ID_LQA = @ID_LQA
+END
+GO
+
+CREATE PROCEDURE sp_delete_LoaiQuanAo_by_ID
+(
+	@ID_LQA INT
+)
+AS
+BEGIN
+	DELETE FROM dbo.LoaiQA WHERE ID_LQA = @ID_LQA
+END
+GO
+
+----------------------------------- Quan Ao ------------------------------------
 CREATE PROCEDURE sp_select_QuanAo_All
 AS
 	BEGIN
@@ -252,3 +310,45 @@ BEGIN
 	DELETE FROM dbo.QuanAo WHERE ID_QA = @ID_QA
 END
 GO
+
+----------------------------------- Ban Hang -----------------------------------
+CREATE PROCEDURE sp_select_BanHang_All
+AS
+	BEGIN
+		SELECT * FROM dbo.BanHang
+	END
+GO
+
+CREATE PROCEDURE sp_select_BanHang_by_ID
+(
+	@ID_BH INT
+)
+AS
+	BEGIN
+		SELECT * FROM dbo.QuanAo WHERE [ID_QA] = @ID_BH
+	END
+GO
+
+CREATE PROCEDURE sp_insert_BanHang
+(	
+	@ID_GD NVARCHAR(50),
+	@NgayBanHang DATETIME,
+	@HoTen NVARCHAR(50),
+	@SDT NVARCHAR(50)
+)
+AS
+BEGIN
+	DECLARE @ID_ND INT
+
+	IF (NOT EXISTS (SELECT * FROM dbo.NguoiDung WHERE SDT = @SDT))
+		INSERT INTO dbo.NguoiDung (ID_ND, HoTen, SDT)
+			VALUES (1, @HoTen, @SDT)
+
+	SET @ID_ND = @@IDENTITY
+
+	INSERT INTO BanHang (ID_GD, ID_ND, NgayBanHang)
+		VALUES (@ID_GD, @ID_ND, @NgayBanHang)
+END
+GO
+
+------------------------------ Chi Tiet Ban Hang -------------------------------
