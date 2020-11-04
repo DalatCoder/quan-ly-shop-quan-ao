@@ -21,7 +21,7 @@ namespace WebQuanAo_Demo
 		private void simpleButton1_Click(object sender, EventArgs e)
 		{
 			FormThemLoai formThemLoai = new FormThemLoai();
-			formThemLoai.ShowDialog();
+			// formThemLoai.ShowDialog();
 		}
 
 		private void btnThem_Click(object sender, EventArgs e)

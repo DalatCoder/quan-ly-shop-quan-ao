@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class FormLogin : DevExpress.XtraEditors.XtraForm
+    public partial class FormLogin : DevExpress.XtraEditors.XtraUserControl
     {
         public FormLogin()
         {

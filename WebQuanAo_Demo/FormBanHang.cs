@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class FormBanHang : DevExpress.XtraEditors.XtraForm
+    public partial class FormBanHang : DevExpress.XtraEditors.XtraUserControl
     {
         public FormBanHang()
         {

@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class FormChinhSuaQuanAo : DevExpress.XtraEditors.XtraForm
+    public partial class FormChinhSuaQuanAo : DevExpress.XtraEditors.XtraUserControl
     {
         public FormChinhSuaQuanAo()
         {
