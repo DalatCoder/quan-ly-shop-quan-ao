@@ -39,6 +39,26 @@ namespace WebQuanAo_Demo
 				errorMessage += "- Discount !!! \n";
 			if (cbxLoaiSP.Text == "")
 				errorMessage += "- Loại sản phẩm !!!\n";
+
+            try
+            {
+				var tenSP = txtTenSP.Text;
+				var kichThuoc = txtSize.Text;
+				var giaBan = txtGiaBan.Text;
+				var soLuong = txtSoluong.Text;
+				var discount = txtDiscount.Text;
+				var loaiSP = cbxLoaiSP.Text;
+
+				StringValidator.CheckRequire(tenSP, "Tên sản phẩm");
+				StringValidator.CheckRequire(kichThuoc, "Kích thước sản phẩm");
+				StringValidator.CheckRequire(giaBan, "Giá bán sản phẩm");
+				StringValidator.CheckRequire(soLuong, "Số lượng sản phẩm");
+				StringValidator.CheckRequire(discount, "Discount sản phẩm");
+            }
+            catch (Exception ex)
+            {
+				MessageBox.Show(ex.Message, "Thông báo chưa đủ thông tin ^_^");
+            }
             
 
 
