@@ -1,17 +1,9 @@
-﻿using DevExpress.XtraPrinting;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace WebQuanAo_Demo
 {
-	public partial class FormThemSanPham : Form
+	public partial class FormThemSanPham : UserControl
 	{
 		public FormThemSanPham()
 		{
