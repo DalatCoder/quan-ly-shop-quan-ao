@@ -11,9 +11,21 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class z : DevExpress.XtraEditors.XtraUserControl
+    public partial class FormToanBoSanPham : DevExpress.XtraEditors.XtraUserControl
     {
-        public z()
+        private static FormToanBoSanPham _instance;
+
+        public static FormToanBoSanPham Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new FormToanBoSanPham();
+                return _instance;
+            }
+        }
+
+        public FormToanBoSanPham()
         {
             InitializeComponent();
         }

@@ -37,5 +37,55 @@ namespace WebQuanAo_Demo
             }
             FormThemSanPham.Instance.BringToFront();
         }
+
+		private void menuChinhSuaSP_Click(object sender, EventArgs e)
+		{
+            if (!container.Controls.Contains(FormChinhSuaQuanAo.Instance))
+            {
+                container.Controls.Add(FormChinhSuaQuanAo.Instance);
+                FormChinhSuaQuanAo.Instance.Dock = DockStyle.Fill;
+            }
+            FormChinhSuaQuanAo.Instance.BringToFront();
+        }
+
+		private void menuCapNhatNhomSanPham_Click(object sender, EventArgs e)
+		{
+            if (!container.Controls.Contains(FormCapNhatNhomSP.Instance))
+            {
+                container.Controls.Add(FormCapNhatNhomSP.Instance);
+                FormCapNhatNhomSP.Instance.Dock = DockStyle.Fill;
+            }
+            FormCapNhatNhomSP.Instance.BringToFront();
+        }
+
+		private void menuThemLoaiSP_Click(object sender, EventArgs e)
+		{
+            if (!container.Controls.Contains(FormThemLoai.Instance))
+            {
+                container.Controls.Add(FormThemLoai.Instance);
+                FormThemLoai.Instance.Dock = DockStyle.Fill;
+            }
+            FormThemLoai.Instance.BringToFront();
+        }
+
+		private void menuXemSP_Click(object sender, EventArgs e)
+		{
+            if (!container.Controls.Contains(FormToanBoSanPham.Instance))
+            {
+                container.Controls.Add(FormToanBoSanPham.Instance);
+                FormToanBoSanPham.Instance.Dock = DockStyle.Fill;
+            }
+            FormToanBoSanPham.Instance.BringToFront();
+        }
+
+		private void menuXemNguoiDung_Click(object sender, EventArgs e)
+		{
+            if (!container.Controls.Contains(FormXemNguoiDung.Instance))
+            {
+                container.Controls.Add(FormXemNguoiDung.Instance);
+                FormXemNguoiDung.Instance.Dock = DockStyle.Fill;
+            }
+            FormXemNguoiDung.Instance.BringToFront();
+        }
 	}
 }

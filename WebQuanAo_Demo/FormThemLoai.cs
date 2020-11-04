@@ -13,6 +13,18 @@ namespace WebQuanAo_Demo
 {
     public partial class FormThemLoai : DevExpress.XtraEditors.XtraUserControl
     {
+        private static FormThemLoai _instance;
+
+        public static FormThemLoai Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new FormThemLoai();
+                return _instance;
+            }
+        }
+
         public FormThemLoai()
         {
             InitializeComponent();

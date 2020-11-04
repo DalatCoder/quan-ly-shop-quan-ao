@@ -13,6 +13,18 @@ namespace WebQuanAo_Demo
 {
     public partial class FormXemNguoiDung : DevExpress.XtraEditors.XtraUserControl
     {
+        private static FormXemNguoiDung _instance;
+
+        public static FormXemNguoiDung Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new FormXemNguoiDung();
+                return _instance;
+            }
+        }
+
         public FormXemNguoiDung()
         {
             InitializeComponent();

@@ -13,6 +13,18 @@ namespace WebQuanAo_Demo
 {
     public partial class FormChinhSuaQuanAo : DevExpress.XtraEditors.XtraUserControl
     {
+        private static FormChinhSuaQuanAo _instance;
+
+        public static FormChinhSuaQuanAo Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new FormChinhSuaQuanAo();
+                return _instance;
+            }
+        }
+
         public FormChinhSuaQuanAo()
         {
             InitializeComponent();

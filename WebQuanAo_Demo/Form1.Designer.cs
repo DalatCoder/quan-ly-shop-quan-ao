@@ -31,19 +31,19 @@
 			this.components = new System.ComponentModel.Container();
 			this.container = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
 			this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-			this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-			this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
-			this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
 			this.menuBanHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+			this.accordionControlSeparator2 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.menuThemSP = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.menuChinhSuaSP = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.menuCapNhatNhomSanPham = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.menuThemLoaiSP = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.menuXemSP = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.menuXemNguoiDung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
 			this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-			this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
-			this.accordionControlSeparator2 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+			this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+			this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
 			((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -78,33 +78,6 @@
 			this.accordionControl1.TabIndex = 1;
 			this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
 			// 
-			// fluentDesignFormControl1
-			// 
-			this.fluentDesignFormControl1.FluentDesignForm = this;
-			this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barStaticItem1});
-			this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-			this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
-			this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
-			this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-			this.fluentDesignFormControl1.Size = new System.Drawing.Size(1078, 31);
-			this.fluentDesignFormControl1.TabIndex = 2;
-			this.fluentDesignFormControl1.TabStop = false;
-			this.fluentDesignFormControl1.TitleItemLinks.Add(this.barStaticItem1);
-			// 
-			// fluentFormDefaultManager1
-			// 
-			this.fluentFormDefaultManager1.DockingEnabled = false;
-			this.fluentFormDefaultManager1.Form = this;
-			this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barStaticItem1});
-			this.fluentFormDefaultManager1.MaxItemId = 2;
-			// 
-			// fileSystemWatcher1
-			// 
-			this.fileSystemWatcher1.EnableRaisingEvents = true;
-			this.fileSystemWatcher1.SynchronizingObject = this;
-			// 
 			// menuBanHang
 			// 
 			this.menuBanHang.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
@@ -115,6 +88,16 @@
 			this.menuBanHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuBanHang.Text = "Bán Hàng";
 			this.menuBanHang.Click += new System.EventHandler(this.accordionControlElement1_Click);
+			// 
+			// accordionControlSeparator1
+			// 
+			this.accordionControlSeparator1.Name = "accordionControlSeparator1";
+			this.accordionControlSeparator1.Visible = false;
+			// 
+			// accordionControlSeparator2
+			// 
+			this.accordionControlSeparator2.Name = "accordionControlSeparator2";
+			this.accordionControlSeparator2.Visible = false;
 			// 
 			// menuThemSP
 			// 
@@ -130,6 +113,7 @@
 			this.menuChinhSuaSP.Name = "menuChinhSuaSP";
 			this.menuChinhSuaSP.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuChinhSuaSP.Text = "Chỉnh sửa Sản Phẩm";
+			this.menuChinhSuaSP.Click += new System.EventHandler(this.menuChinhSuaSP_Click);
 			// 
 			// menuCapNhatNhomSanPham
 			// 
@@ -137,6 +121,7 @@
 			this.menuCapNhatNhomSanPham.Name = "menuCapNhatNhomSanPham";
 			this.menuCapNhatNhomSanPham.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuCapNhatNhomSanPham.Text = "Cập Nhật Nhóm Sản Phẩm";
+			this.menuCapNhatNhomSanPham.Click += new System.EventHandler(this.menuCapNhatNhomSanPham_Click);
 			// 
 			// menuThemLoaiSP
 			// 
@@ -144,6 +129,7 @@
 			this.menuThemLoaiSP.Name = "menuThemLoaiSP";
 			this.menuThemLoaiSP.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuThemLoaiSP.Text = "Thêm Loại Sản Phẩm";
+			this.menuThemLoaiSP.Click += new System.EventHandler(this.menuThemLoaiSP_Click);
 			// 
 			// menuXemSP
 			// 
@@ -151,6 +137,7 @@
 			this.menuXemSP.Name = "menuXemSP";
 			this.menuXemSP.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuXemSP.Text = "Xem Toàn Bộ Sản Phẩm";
+			this.menuXemSP.Click += new System.EventHandler(this.menuXemSP_Click);
 			// 
 			// menuXemNguoiDung
 			// 
@@ -158,6 +145,21 @@
 			this.menuXemNguoiDung.Name = "menuXemNguoiDung";
 			this.menuXemNguoiDung.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuXemNguoiDung.Text = "Xem Người Dùng Hiện Có";
+			this.menuXemNguoiDung.Click += new System.EventHandler(this.menuXemNguoiDung_Click);
+			// 
+			// fluentDesignFormControl1
+			// 
+			this.fluentDesignFormControl1.FluentDesignForm = this;
+			this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barStaticItem1});
+			this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+			this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
+			this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
+			this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
+			this.fluentDesignFormControl1.Size = new System.Drawing.Size(1078, 31);
+			this.fluentDesignFormControl1.TabIndex = 2;
+			this.fluentDesignFormControl1.TabStop = false;
+			this.fluentDesignFormControl1.TitleItemLinks.Add(this.barStaticItem1);
 			// 
 			// barStaticItem1
 			// 
@@ -166,15 +168,18 @@
 			this.barStaticItem1.Id = 1;
 			this.barStaticItem1.Name = "barStaticItem1";
 			// 
-			// accordionControlSeparator1
+			// fluentFormDefaultManager1
 			// 
-			this.accordionControlSeparator1.Name = "accordionControlSeparator1";
-			this.accordionControlSeparator1.Visible = false;
+			this.fluentFormDefaultManager1.DockingEnabled = false;
+			this.fluentFormDefaultManager1.Form = this;
+			this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barStaticItem1});
+			this.fluentFormDefaultManager1.MaxItemId = 2;
 			// 
-			// accordionControlSeparator2
+			// fileSystemWatcher1
 			// 
-			this.accordionControlSeparator2.Name = "accordionControlSeparator2";
-			this.accordionControlSeparator2.Visible = false;
+			this.fileSystemWatcher1.EnableRaisingEvents = true;
+			this.fileSystemWatcher1.SynchronizingObject = this;
 			// 
 			// Form1
 			// 

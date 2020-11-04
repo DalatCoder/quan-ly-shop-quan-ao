@@ -1,4 +1,7 @@
-﻿namespace WebQuanAo_Demo
+﻿using System;
+using System.Windows.Forms;
+
+namespace WebQuanAo_Demo
 {
 	public partial class FormBanHang : DevExpress.XtraEditors.XtraUserControl
     {
@@ -40,7 +43,6 @@
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Thông báo không đủ dữ kiện");
             }
         }

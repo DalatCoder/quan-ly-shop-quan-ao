@@ -13,6 +13,18 @@ namespace WebQuanAo_Demo
 {
     public partial class FormCapNhatNhomSP : DevExpress.XtraEditors.XtraUserControl
     {
+        private static FormCapNhatNhomSP _instance;
+
+        public static FormCapNhatNhomSP Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new FormCapNhatNhomSP();
+                return _instance;
+            }
+        }
+
         public FormCapNhatNhomSP()
         {
             InitializeComponent();
