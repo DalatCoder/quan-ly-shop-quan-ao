@@ -5,6 +5,18 @@ namespace WebQuanAo_Demo
 {
 	public partial class FormThemSanPham : UserControl
 	{
+		private static FormThemSanPham _instance;
+
+		public static FormThemSanPham Instance
+		{
+			get
+			{
+				if (_instance == null)
+					_instance = new FormThemSanPham();
+				return _instance;
+			}
+		}
+
 		public FormThemSanPham()
 		{
 			InitializeComponent();
