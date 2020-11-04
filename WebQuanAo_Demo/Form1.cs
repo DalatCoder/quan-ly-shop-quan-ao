@@ -24,6 +24,7 @@ namespace WebQuanAo_Demo
 			{
                 container.Controls.Add(FormBanHang.Instance);
                 FormBanHang.Instance.Dock = DockStyle.Fill;
+                FormBanHang.Instance.Anchor = AnchorStyles.None;
 			}
             FormBanHang.Instance.BringToFront();    
 		}
@@ -34,6 +35,7 @@ namespace WebQuanAo_Demo
             {
                 container.Controls.Add(FormThemSanPham.Instance);
                 FormThemSanPham.Instance.Dock = DockStyle.Fill;
+                FormThemSanPham.Instance.Anchor = AnchorStyles.None;
             }
             FormThemSanPham.Instance.BringToFront();
         }
@@ -44,6 +46,7 @@ namespace WebQuanAo_Demo
             {
                 container.Controls.Add(FormChinhSuaQuanAo.Instance);
                 FormChinhSuaQuanAo.Instance.Dock = DockStyle.Fill;
+                FormChinhSuaQuanAo.Instance.Anchor = AnchorStyles.None;
             }
             FormChinhSuaQuanAo.Instance.BringToFront();
         }
@@ -54,6 +57,7 @@ namespace WebQuanAo_Demo
             {
                 container.Controls.Add(FormCapNhatNhomSP.Instance);
                 FormCapNhatNhomSP.Instance.Dock = DockStyle.Fill;
+                FormCapNhatNhomSP.Instance.Anchor = AnchorStyles.None;
             }
             FormCapNhatNhomSP.Instance.BringToFront();
         }
@@ -64,6 +68,7 @@ namespace WebQuanAo_Demo
             {
                 container.Controls.Add(FormThemLoai.Instance);
                 FormThemLoai.Instance.Dock = DockStyle.Fill;
+                FormThemLoai.Instance.Anchor = AnchorStyles.None;
             }
             FormThemLoai.Instance.BringToFront();
         }
@@ -74,6 +79,7 @@ namespace WebQuanAo_Demo
             {
                 container.Controls.Add(FormToanBoSanPham.Instance);
                 FormToanBoSanPham.Instance.Dock = DockStyle.Fill;
+                FormToanBoSanPham.Instance.Anchor = AnchorStyles.None;
             }
             FormToanBoSanPham.Instance.BringToFront();
         }
@@ -84,6 +90,7 @@ namespace WebQuanAo_Demo
             {
                 container.Controls.Add(FormXemNguoiDung.Instance);
                 FormXemNguoiDung.Instance.Dock = DockStyle.Fill;
+                FormXemNguoiDung.Instance.Anchor = AnchorStyles.None;
             }
             FormXemNguoiDung.Instance.BringToFront();
         }

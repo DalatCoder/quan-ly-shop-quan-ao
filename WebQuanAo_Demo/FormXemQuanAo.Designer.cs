@@ -236,7 +236,7 @@
 			this.Controls.Add(this.labelControl2);
 			this.Controls.Add(this.labelControl1);
 			this.Name = "FormToanBoSanPham";
-			this.Size = new System.Drawing.Size(640, 533);
+			this.Size = new System.Drawing.Size(850, 688);
 			((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtKichThuocSP.Properties)).EndInit();
