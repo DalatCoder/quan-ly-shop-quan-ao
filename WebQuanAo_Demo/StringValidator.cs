@@ -42,5 +42,12 @@ namespace WebQuanAo_Demo
 			if (sanitizeString(raw).Length != length)
 				throw new Exception(tieude + " phải có đủ " + length + " kí tự");
 		}
+
+		public static void TextIsStringNumber(string raw, string tieude)
+		{
+			bool isDouble = double.TryParse(raw, out _);
+			if (!isDouble)
+				throw new Exception(tieude + " phải là số");
+		}
 	}
 }
