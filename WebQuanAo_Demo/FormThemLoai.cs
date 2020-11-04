@@ -20,16 +20,20 @@ namespace WebQuanAo_Demo
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
-            string errorMessage = "";
+          
 
-            if (txtLoaiSanPham.Text == "")
-                errorMessage = "Vui lòng nhập loại sản phẩm mới !!!";
-
-            if(errorMessage.Length>0)
+            try
             {
-                MessageBox.Show(errorMessage, "Thông báo không đủ dự kiện $_$");
-                return;
-            }    
+                string erroMessage = "Vui lòng nhập loại sản phẩm mới !!!";
+                string data = txtLoaiSanPham.Text;
+                int min = 2;
+                StringValidator.CheckRequire(data, erroMessage);
+                StringValidator.CheckMinLength(data, min, erroMessage);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo không đủ dự kiện $_$");
+            }
 
         }
 
