@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
 			this.components = new System.ComponentModel.Container();
-			this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+			this.container = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
 			this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
 			this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
 			this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
@@ -50,14 +50,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// fluentDesignFormContainer1
+			// container
 			// 
-			this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.fluentDesignFormContainer1.Location = new System.Drawing.Point(228, 31);
-			this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(2);
-			this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-			this.fluentDesignFormContainer1.Size = new System.Drawing.Size(850, 688);
-			this.fluentDesignFormContainer1.TabIndex = 0;
+			this.container.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.container.Location = new System.Drawing.Point(228, 31);
+			this.container.Margin = new System.Windows.Forms.Padding(2);
+			this.container.Name = "container";
+			this.container.Size = new System.Drawing.Size(850, 688);
+			this.container.TabIndex = 0;
 			// 
 			// accordionControl1
 			// 
@@ -122,6 +122,7 @@
 			this.menuThemSP.Name = "menuThemSP";
 			this.menuThemSP.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuThemSP.Text = "Thêm Sản Phẩm";
+			this.menuThemSP.Click += new System.EventHandler(this.menuThemSP_Click);
 			// 
 			// menuChinhSuaSP
 			// 
@@ -180,8 +181,8 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1078, 719);
-			this.ControlContainer = this.fluentDesignFormContainer1;
-			this.Controls.Add(this.fluentDesignFormContainer1);
+			this.ControlContainer = this.container;
+			this.Controls.Add(this.container);
 			this.Controls.Add(this.accordionControl1);
 			this.Controls.Add(this.fluentDesignFormControl1);
 			this.FluentDesignFormControl = this.fluentDesignFormControl1;
@@ -199,7 +200,7 @@
         }
 
         #endregion
-        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
+        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer container;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
