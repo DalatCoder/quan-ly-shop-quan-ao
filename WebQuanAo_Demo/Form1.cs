@@ -16,5 +16,10 @@ namespace WebQuanAo_Demo
         {
             InitializeComponent();
         }
-    }
+
+		private void accordionControlElement1_Click(object sender, EventArgs e)
+		{
+            MessageBox.Show("Hello World");
+		}
+	}
 }
