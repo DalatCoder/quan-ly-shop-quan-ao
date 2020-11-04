@@ -19,28 +19,28 @@ namespace WebQuanAo_Demo
 			return raw.Trim();
 		}
 
-		public static void CheckRequire(string raw, string errMessage)
+		public static void CheckRequire(string raw, string tieude)
 		{
 			if (sanitizeString(raw).Length == 0)
-				throw new Exception(errMessage);
+				throw new Exception(tieude + " không hợp lệ (❁´◡`❁)");
 		}
 
-		public static void CheckMinLength(string raw, int min, string errMessage)
+		public static void CheckMinLength(string raw, int min, string tieude)
 		{
 			if (sanitizeString(raw).Length < min)
-				throw new Exception(errMessage);
+				throw new Exception(tieude + " phải nhiều hơn " + min + " kí tự");
 		}
 
-		public static void CheckMaxLength(string raw, int max, string errMessage)
+		public static void CheckMaxLength(string raw, int max, string tieude)
 		{
 			if (sanitizeString(raw).Length > max)
-				throw new Exception(errMessage);
+				throw new Exception(tieude + "");
 		}
 
-		public static void CheckLengthEqualTo(string raw, int length, string errMessage)
+		public static void CheckLengthEqualTo(string raw, int length, string tieude)
 		{
 			if (sanitizeString(raw).Length != length)
-				throw new Exception(errMessage);
+				throw new Exception(tieude + " phải có đủ " + length + " kí tự");
 		}
 	}
 }
