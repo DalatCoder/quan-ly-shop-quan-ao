@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class FormThemLoai : DevExpress.XtraEditors.XtraUserControl
+    public partial class FormThemLoai : DevExpress.XtraEditors.XtraForm
     {
         public FormThemLoai()
         {
