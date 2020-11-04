@@ -47,7 +47,7 @@ namespace WebQuanAo_Demo
 		{
 			bool isDouble = double.TryParse(raw, out _);
 			if (!isDouble)
-				throw new Exception(tieude + " phải là số");
+				throw new Exception(tieude + " phải là số (¬‿¬)");
 		}
 	}
 }
