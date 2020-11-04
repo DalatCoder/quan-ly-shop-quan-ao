@@ -24,15 +24,14 @@ namespace WebQuanAo_Demo
 
             try
             {
-                string erroMessage = "Vui lòng nhập loại sản phẩm mới !!!";
-                string data = txtLoaiSanPham.Text;
+                string loaiSanPham = txtLoaiSanPham.Text;
                 int min = 2;
-                StringValidator.CheckRequire(data, erroMessage);
-                StringValidator.CheckMinLength(data, min, erroMessage);
+                StringValidator.CheckRequire(loaiSanPham,"Tên loại sản phẩm mới");
+                StringValidator.CheckMinLength(loaiSanPham, min,"Tên loại sản phẩm mới");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Thông báo không đủ dự kiện $_$");
+                MessageBox.Show(ex.Message, "Thông báo không đủ dữ kiện $_$");
             }
 
         }

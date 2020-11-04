@@ -17,5 +17,32 @@ namespace WebQuanAo_Demo
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnChinhSuaSP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var tenSanPham = txtTenSP.Text;
+                var giaBan = txtGiaBan.Text;
+                var discount = txtDiscount.Text;
+                var nhomSanPham = cbNhomSanPham.Text;
+
+                StringValidator.CheckRequire(tenSanPham, "Tên sản phẩm");
+                StringValidator.CheckRequire(giaBan, "Giá bán sản phẩm");
+                StringValidator.CheckRequire(discount, "Discount sản phẩm");
+                StringValidator.CheckRequire(nhomSanPham, "Nhóm sản phẩm");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo không đủ dữ kiện");
+            }
+        }
+
+        
     }
 }

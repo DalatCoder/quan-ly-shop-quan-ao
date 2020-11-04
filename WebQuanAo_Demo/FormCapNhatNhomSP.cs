@@ -17,5 +17,26 @@ namespace WebQuanAo_Demo
         {
             InitializeComponent();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnChinhSuaSP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var loaiQuanAo = cboNhomSanPham.Text;
+                var tenNhom = txtTenNhom.Text;
+
+                StringValidator.CheckRequire(loaiQuanAo, "Nhóm loại quần áo");
+                StringValidator.CheckRequire(tenNhom, "Tên nhóm quần áo");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo không đủ dữ kiện (•_•)");
+            }
+        }
     }
 }

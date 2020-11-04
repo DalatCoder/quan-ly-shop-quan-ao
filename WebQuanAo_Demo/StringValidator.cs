@@ -28,13 +28,13 @@ namespace WebQuanAo_Demo
 		public static void CheckMinLength(string raw, int min, string tieude)
 		{
 			if (sanitizeString(raw).Length < min)
-				throw new Exception(tieude + " phải nhiều hơn " + min + " kí tự ╰(*°▽°*)╯");
+				throw new Exception(tieude + " phải ít nhất " + min + " kí tự ╰(*°▽°*)╯");
 		}
 
 		public static void CheckMaxLength(string raw, int max, string tieude)
 		{
 			if (sanitizeString(raw).Length > max)
-				throw new Exception(tieude + " phải ít hơn "+max + " kí tự ಠ_ಠ");
+				throw new Exception(tieude + " phải nhiều nhất "+max + " kí tự ಠ_ಠ");
 		}
 
 		public static void CheckLengthEqualTo(string raw, int length, string tieude)

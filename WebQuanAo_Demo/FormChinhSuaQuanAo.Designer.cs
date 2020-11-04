@@ -37,144 +37,180 @@
             this.btnTimKiemHinhAnh = new DevExpress.XtraEditors.SimpleButton();
             this.txtTenSP = new DevExpress.XtraEditors.TextEdit();
             this.txtGiaBan = new DevExpress.XtraEditors.TextEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.cbNhomSanPham = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtDiscount = new DevExpress.XtraEditors.TextEdit();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnChinhSuaSP = new DevExpress.XtraEditors.SimpleButton();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbNhomSanPham.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiscount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(208, 27);
+            this.labelControl1.Location = new System.Drawing.Point(267, 24);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(185, 13);
+            this.labelControl1.Size = new System.Drawing.Size(239, 17);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Chỉnh sửa thông tin sản phẩm quần áo";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(246, 80);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(295, 85);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(68, 13);
+            this.labelControl2.Size = new System.Drawing.Size(112, 22);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Tên Sản Phẩm";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(278, 124);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(295, 131);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(36, 13);
+            this.labelControl4.Size = new System.Drawing.Size(65, 22);
             this.labelControl4.TabIndex = 3;
             this.labelControl4.Text = "Giá Bán";
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(273, 173);
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(295, 180);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(41, 13);
+            this.labelControl7.Size = new System.Drawing.Size(71, 22);
             this.labelControl7.TabIndex = 6;
             this.labelControl7.Text = "Discount";
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.Location = new System.Drawing.Point(41, 80);
+            this.pictureEdit1.Location = new System.Drawing.Point(49, 85);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(165, 199);
+            this.pictureEdit1.Size = new System.Drawing.Size(203, 256);
             this.pictureEdit1.TabIndex = 7;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(238, 218);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(295, 230);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(76, 13);
+            this.labelControl3.Size = new System.Drawing.Size(125, 22);
             this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "Nhóm sản phẩm";
             // 
             // btnTimKiemHinhAnh
             // 
-            this.btnTimKiemHinhAnh.Location = new System.Drawing.Point(291, 256);
+            this.btnTimKiemHinhAnh.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemHinhAnh.Appearance.Options.UseFont = true;
+            this.btnTimKiemHinhAnh.Location = new System.Drawing.Point(366, 303);
+            this.btnTimKiemHinhAnh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnTimKiemHinhAnh.Name = "btnTimKiemHinhAnh";
-            this.btnTimKiemHinhAnh.Size = new System.Drawing.Size(238, 23);
+            this.btnTimKiemHinhAnh.Size = new System.Drawing.Size(437, 38);
             this.btnTimKiemHinhAnh.TabIndex = 9;
             this.btnTimKiemHinhAnh.Text = "Tìm kiếm hình ảnh";
             // 
             // txtTenSP
             // 
-            this.txtTenSP.Location = new System.Drawing.Point(340, 77);
+            this.txtTenSP.Location = new System.Drawing.Point(468, 82);
+            this.txtTenSP.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(239, 20);
+            this.txtTenSP.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSP.Properties.Appearance.Options.UseFont = true;
+            this.txtTenSP.Size = new System.Drawing.Size(311, 28);
             this.txtTenSP.TabIndex = 10;
             // 
             // txtGiaBan
             // 
-            this.txtGiaBan.Location = new System.Drawing.Point(340, 121);
+            this.txtGiaBan.Location = new System.Drawing.Point(468, 128);
+            this.txtGiaBan.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtGiaBan.Name = "txtGiaBan";
-            this.txtGiaBan.Properties.Mask.EditMask = "n0";
-            this.txtGiaBan.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtGiaBan.Size = new System.Drawing.Size(239, 20);
+            this.txtGiaBan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaBan.Properties.Appearance.Options.UseFont = true;
+            this.txtGiaBan.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtGiaBan.Properties.MaskSettings.Set("mask", "n0");
+            this.txtGiaBan.Size = new System.Drawing.Size(311, 28);
             this.txtGiaBan.TabIndex = 11;
             // 
-            // comboBoxEdit1
+            // cbNhomSanPham
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(340, 215);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbNhomSanPham.Location = new System.Drawing.Point(468, 227);
+            this.cbNhomSanPham.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.cbNhomSanPham.Name = "cbNhomSanPham";
+            this.cbNhomSanPham.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNhomSanPham.Properties.Appearance.Options.UseFont = true;
+            this.cbNhomSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(239, 20);
-            this.comboBoxEdit1.TabIndex = 12;
+            this.cbNhomSanPham.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbNhomSanPham.Size = new System.Drawing.Size(311, 28);
+            this.cbNhomSanPham.TabIndex = 12;
             // 
-            // textEdit1
+            // txtDiscount
             // 
-            this.textEdit1.Location = new System.Drawing.Point(340, 170);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Mask.EditMask = "00.00%";
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
-            this.textEdit1.Size = new System.Drawing.Size(239, 20);
-            this.textEdit1.TabIndex = 13;
+            this.txtDiscount.Location = new System.Drawing.Point(468, 177);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiscount.Properties.Appearance.Options.UseFont = true;
+            this.txtDiscount.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.txtDiscount.Properties.MaskSettings.Set("mask", "00.00%");
+            this.txtDiscount.Size = new System.Drawing.Size(311, 28);
+            this.txtDiscount.TabIndex = 13;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 315);
+            this.dataGridView1.Location = new System.Drawing.Point(49, 370);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(538, 152);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(754, 289);
             this.dataGridView1.TabIndex = 14;
             // 
             // btnChinhSuaSP
             // 
-            this.btnChinhSuaSP.Location = new System.Drawing.Point(41, 515);
+            this.btnChinhSuaSP.Location = new System.Drawing.Point(75, 872);
+            this.btnChinhSuaSP.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnChinhSuaSP.Name = "btnChinhSuaSP";
-            this.btnChinhSuaSP.Size = new System.Drawing.Size(126, 23);
+            this.btnChinhSuaSP.Size = new System.Drawing.Size(231, 38);
             this.btnChinhSuaSP.TabIndex = 15;
             this.btnChinhSuaSP.Text = "Xác nhận chỉnh sửa";
+            this.btnChinhSuaSP.Click += new System.EventHandler(this.btnChinhSuaSP_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(453, 515);
+            this.btnThoat.Location = new System.Drawing.Point(830, 872);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(126, 23);
+            this.btnThoat.Size = new System.Drawing.Size(231, 38);
             this.btnThoat.TabIndex = 16;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FormChinhSuaQuanAo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Appearance.Options.UseFont = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 582);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnChinhSuaSP);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.comboBoxEdit1);
+            this.Controls.Add(this.txtDiscount);
+            this.Controls.Add(this.cbNhomSanPham);
             this.Controls.Add(this.txtGiaBan);
             this.Controls.Add(this.txtTenSP);
             this.Controls.Add(this.btnTimKiemHinhAnh);
@@ -184,13 +220,14 @@
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "FormChinhSuaQuanAo";
-            this.Text = "FormChinhSuaQuanAo";
+            this.Size = new System.Drawing.Size(850, 688);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbNhomSanPham.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiscount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -208,8 +245,8 @@
         private DevExpress.XtraEditors.SimpleButton btnTimKiemHinhAnh;
         private DevExpress.XtraEditors.TextEdit txtTenSP;
         private DevExpress.XtraEditors.TextEdit txtGiaBan;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbNhomSanPham;
+        private DevExpress.XtraEditors.TextEdit txtDiscount;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.SimpleButton btnChinhSuaSP;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
