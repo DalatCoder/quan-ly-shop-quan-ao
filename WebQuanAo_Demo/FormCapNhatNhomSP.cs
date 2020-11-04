@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class FormCapNhatNhomSP : DevExpress.XtraEditors.XtraForm
+    public partial class FormCapNhatNhomSP : DevExpress.XtraEditors.XtraUserControl
     {
         public FormCapNhatNhomSP()
         {

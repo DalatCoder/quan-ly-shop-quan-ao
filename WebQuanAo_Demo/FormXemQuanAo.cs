@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class z : DevExpress.XtraEditors.XtraForm
+    public partial class z : DevExpress.XtraEditors.XtraUserControl
     {
         public z()
         {

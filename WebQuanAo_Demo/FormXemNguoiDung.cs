@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class FormXemNguoiDung : DevExpress.XtraEditors.XtraForm
+    public partial class FormXemNguoiDung : DevExpress.XtraEditors.XtraUserControl
     {
         public FormXemNguoiDung()
         {
