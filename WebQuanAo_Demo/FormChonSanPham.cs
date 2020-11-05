@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WebQuanAo_Demo
 {
-	public partial class FormChonSanPham : Form
+	public partial class FormChonSanPham : DevExpress.XtraEditors.XtraForm
 	{
 		public FormChonSanPham()
 		{

@@ -3,21 +3,21 @@ using System.Windows.Forms;
 
 namespace WebQuanAo_Demo
 {
-	public partial class FormThemSanPham : UserControl
+	public partial class FormThemSP : DevExpress.XtraEditors.XtraUserControl
 	{
-		private static FormThemSanPham _instance;
+		private static FormThemSP _instance;
 
-		public static FormThemSanPham Instance
+		public static FormThemSP Instance
 		{
 			get
 			{
 				if (_instance == null)
-					_instance = new FormThemSanPham();
+					_instance = new FormThemSP();
 				return _instance;
 			}
 		}
 
-		public FormThemSanPham()
+		public FormThemSP()
 		{
 			InitializeComponent();
 		}
@@ -35,7 +35,7 @@ namespace WebQuanAo_Demo
             try
             {
 				var tenSP = txtTenSP.Text;
-				var kichThuoc = txtSize.Text;
+				var kichThuoc = cbxSize.Text;
 				var giaBan = txtGiaBan.Text;
 				var soLuong = txtSoluong.Text;
 				var discount = txtDiscount.Text;
@@ -73,12 +73,12 @@ namespace WebQuanAo_Demo
 		private void btnMacDinh_Click(object sender, EventArgs e)
 		{
 			txtTenSP.Text = "";
-			txtSize.Text = "";
+			cbxSize.Text = "";
 			txtGiaBan.Text = "";
 			txtSoluong.Text = "";
 			txtDiscount.Text = "";
 			cbxLoaiSP.Text = "";
-			pictureBox1.ImageLocation = "";
+			pbHinhSP.ImageLocation = "";
 			txtMoTa.Text = "";
 		}
 

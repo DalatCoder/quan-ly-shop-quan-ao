@@ -31,13 +31,13 @@ namespace WebQuanAo_Demo
 
 		private void menuThemSP_Click(object sender, EventArgs e)
 		{
-            if (!container.Controls.Contains(FormThemSanPham.Instance))
+            if (!container.Controls.Contains(FormThemSP.Instance))
             {
-                container.Controls.Add(FormThemSanPham.Instance);
-                FormThemSanPham.Instance.Dock = DockStyle.Fill;
-                FormThemSanPham.Instance.Anchor = AnchorStyles.None;
+                container.Controls.Add(FormThemSP.Instance);
+                FormThemSP.Instance.Dock = DockStyle.Fill;
+                FormThemSP.Instance.Anchor = AnchorStyles.None;
             }
-            FormThemSanPham.Instance.BringToFront();
+            FormThemSP.Instance.BringToFront();
         }
 
 		private void menuChinhSuaSP_Click(object sender, EventArgs e)
