@@ -126,7 +126,7 @@
 			// pbHinhSP
 			// 
 			this.pbHinhSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.pbHinhSP.Location = new System.Drawing.Point(19, 80);
+			this.pbHinhSP.Location = new System.Drawing.Point(20, 80);
 			this.pbHinhSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.pbHinhSP.Name = "pbHinhSP";
 			this.pbHinhSP.Size = new System.Drawing.Size(170, 227);
@@ -171,7 +171,7 @@
 			this.dgvNguoiDung.BackgroundColor = System.Drawing.Color.Azure;
 			this.dgvNguoiDung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
 			this.dgvNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvNguoiDung.Location = new System.Drawing.Point(19, 380);
+			this.dgvNguoiDung.Location = new System.Drawing.Point(20, 380);
 			this.dgvNguoiDung.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.dgvNguoiDung.MultiSelect = false;
 			this.dgvNguoiDung.Name = "dgvNguoiDung";
