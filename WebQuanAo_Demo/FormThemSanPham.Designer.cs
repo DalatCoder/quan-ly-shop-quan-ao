@@ -63,7 +63,7 @@
 			// 
 			this.labelControl1.Location = new System.Drawing.Point(245, 28);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(70, 13);
+			this.labelControl1.Size = new System.Drawing.Size(81, 17);
 			this.labelControl1.TabIndex = 0;
 			this.labelControl1.Text = "Tên Sản Phẩm";
 			// 
@@ -71,7 +71,7 @@
 			// 
 			this.labelControl2.Location = new System.Drawing.Point(245, 58);
 			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(20, 13);
+			this.labelControl2.Size = new System.Drawing.Size(23, 17);
 			this.labelControl2.TabIndex = 1;
 			this.labelControl2.Text = "Size";
 			// 
@@ -79,7 +79,7 @@
 			// 
 			this.labelControl3.Location = new System.Drawing.Point(245, 89);
 			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(40, 13);
+			this.labelControl3.Size = new System.Drawing.Size(44, 17);
 			this.labelControl3.TabIndex = 2;
 			this.labelControl3.Text = "Giá Bán";
 			// 
@@ -87,7 +87,7 @@
 			// 
 			this.labelControl4.Location = new System.Drawing.Point(245, 122);
 			this.labelControl4.Name = "labelControl4";
-			this.labelControl4.Size = new System.Drawing.Size(49, 13);
+			this.labelControl4.Size = new System.Drawing.Size(56, 17);
 			this.labelControl4.TabIndex = 3;
 			this.labelControl4.Text = "Số Lượng";
 			// 
@@ -95,7 +95,7 @@
 			// 
 			this.labelControl5.Location = new System.Drawing.Point(245, 155);
 			this.labelControl5.Name = "labelControl5";
-			this.labelControl5.Size = new System.Drawing.Size(46, 13);
+			this.labelControl5.Size = new System.Drawing.Size(50, 17);
 			this.labelControl5.TabIndex = 4;
 			this.labelControl5.Text = "Discount";
 			// 
@@ -103,7 +103,7 @@
 			// 
 			this.labelControl6.Location = new System.Drawing.Point(245, 187);
 			this.labelControl6.Name = "labelControl6";
-			this.labelControl6.Size = new System.Drawing.Size(74, 13);
+			this.labelControl6.Size = new System.Drawing.Size(85, 17);
 			this.labelControl6.TabIndex = 5;
 			this.labelControl6.Text = "Loại Sản Phẩm";
 			// 
@@ -111,7 +111,7 @@
 			// 
 			this.labelControl9.Location = new System.Drawing.Point(44, 260);
 			this.labelControl9.Name = "labelControl9";
-			this.labelControl9.Size = new System.Drawing.Size(31, 13);
+			this.labelControl9.Size = new System.Drawing.Size(38, 17);
 			this.labelControl9.TabIndex = 8;
 			this.labelControl9.Text = "Mô Tả";
 			// 
@@ -153,42 +153,42 @@
 			// 
 			this.txtTenSP.Location = new System.Drawing.Point(349, 28);
 			this.txtTenSP.Name = "txtTenSP";
-			this.txtTenSP.Size = new System.Drawing.Size(100, 20);
+			this.txtTenSP.Size = new System.Drawing.Size(100, 24);
 			this.txtTenSP.TabIndex = 14;
 			// 
 			// txtSize
 			// 
 			this.txtSize.Location = new System.Drawing.Point(349, 55);
 			this.txtSize.Name = "txtSize";
-			this.txtSize.Size = new System.Drawing.Size(100, 20);
+			this.txtSize.Size = new System.Drawing.Size(100, 24);
 			this.txtSize.TabIndex = 15;
 			// 
 			// txtGiaBan
 			// 
 			this.txtGiaBan.Location = new System.Drawing.Point(349, 86);
 			this.txtGiaBan.Name = "txtGiaBan";
-			this.txtGiaBan.Size = new System.Drawing.Size(100, 20);
+			this.txtGiaBan.Size = new System.Drawing.Size(100, 24);
 			this.txtGiaBan.TabIndex = 16;
 			// 
 			// txtSoluong
 			// 
 			this.txtSoluong.Location = new System.Drawing.Point(349, 119);
 			this.txtSoluong.Name = "txtSoluong";
-			this.txtSoluong.Size = new System.Drawing.Size(100, 20);
+			this.txtSoluong.Size = new System.Drawing.Size(100, 24);
 			this.txtSoluong.TabIndex = 17;
 			// 
 			// txtDiscount
 			// 
 			this.txtDiscount.Location = new System.Drawing.Point(349, 152);
 			this.txtDiscount.Name = "txtDiscount";
-			this.txtDiscount.Size = new System.Drawing.Size(100, 20);
+			this.txtDiscount.Size = new System.Drawing.Size(100, 24);
 			this.txtDiscount.TabIndex = 18;
 			// 
 			// txtMoTa
 			// 
 			this.txtMoTa.Location = new System.Drawing.Point(44, 279);
 			this.txtMoTa.Name = "txtMoTa";
-			this.txtMoTa.Size = new System.Drawing.Size(484, 20);
+			this.txtMoTa.Size = new System.Drawing.Size(484, 24);
 			this.txtMoTa.TabIndex = 21;
 			// 
 			// btnTimHinh
@@ -205,7 +205,7 @@
 			this.cbxLoaiSP.Name = "cbxLoaiSP";
 			this.cbxLoaiSP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.cbxLoaiSP.Size = new System.Drawing.Size(100, 20);
+			this.cbxLoaiSP.Size = new System.Drawing.Size(100, 24);
 			this.cbxLoaiSP.TabIndex = 24;
 			// 
 			// simpleButton1
@@ -252,7 +252,7 @@
 			this.Controls.Add(this.labelControl2);
 			this.Controls.Add(this.labelControl1);
 			this.Name = "FormThemSanPham";
-			this.Size = new System.Drawing.Size(850, 688);
+			this.Size = new System.Drawing.Size(808, 688);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtSize.Properties)).EndInit();

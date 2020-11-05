@@ -54,7 +54,7 @@
 			// 
 			this.labelControl1.Location = new System.Drawing.Point(34, 52);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(70, 13);
+			this.labelControl1.Size = new System.Drawing.Size(81, 17);
 			this.labelControl1.TabIndex = 0;
 			this.labelControl1.Text = "Tên Sản Phẩm";
 			// 
@@ -62,7 +62,7 @@
 			// 
 			this.labelControl2.Location = new System.Drawing.Point(359, 52);
 			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(46, 13);
+			this.labelControl2.Size = new System.Drawing.Size(50, 17);
 			this.labelControl2.TabIndex = 1;
 			this.labelControl2.Text = "Discount";
 			// 
@@ -70,7 +70,7 @@
 			// 
 			this.labelControl3.Location = new System.Drawing.Point(34, 110);
 			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(20, 13);
+			this.labelControl3.Size = new System.Drawing.Size(23, 17);
 			this.labelControl3.TabIndex = 2;
 			this.labelControl3.Text = "Size";
 			// 
@@ -78,7 +78,7 @@
 			// 
 			this.labelControl4.Location = new System.Drawing.Point(359, 110);
 			this.labelControl4.Name = "labelControl4";
-			this.labelControl4.Size = new System.Drawing.Size(39, 13);
+			this.labelControl4.Size = new System.Drawing.Size(46, 17);
 			this.labelControl4.TabIndex = 3;
 			this.labelControl4.Text = "Loại QA";
 			// 
@@ -86,21 +86,21 @@
 			// 
 			this.txtTenSP.Location = new System.Drawing.Point(130, 49);
 			this.txtTenSP.Name = "txtTenSP";
-			this.txtTenSP.Size = new System.Drawing.Size(173, 20);
+			this.txtTenSP.Size = new System.Drawing.Size(173, 24);
 			this.txtTenSP.TabIndex = 4;
 			// 
 			// txtSize
 			// 
 			this.txtSize.Location = new System.Drawing.Point(130, 107);
 			this.txtSize.Name = "txtSize";
-			this.txtSize.Size = new System.Drawing.Size(173, 20);
+			this.txtSize.Size = new System.Drawing.Size(173, 24);
 			this.txtSize.TabIndex = 5;
 			// 
 			// txtDiscount
 			// 
 			this.txtDiscount.Location = new System.Drawing.Point(444, 49);
 			this.txtDiscount.Name = "txtDiscount";
-			this.txtDiscount.Size = new System.Drawing.Size(143, 20);
+			this.txtDiscount.Size = new System.Drawing.Size(143, 24);
 			this.txtDiscount.TabIndex = 7;
 			// 
 			// dgvSanPham
@@ -145,7 +145,7 @@
 			// 
 			this.labelControl5.Location = new System.Drawing.Point(34, 349);
 			this.labelControl5.Name = "labelControl5";
-			this.labelControl5.Size = new System.Drawing.Size(98, 13);
+			this.labelControl5.Size = new System.Drawing.Size(111, 17);
 			this.labelControl5.TabIndex = 13;
 			this.labelControl5.Text = "Sản Phẩm Đã Chọn";
 			// 
@@ -155,7 +155,7 @@
 			this.cbxLoaiQA.Name = "cbxLoaiQA";
 			this.cbxLoaiQA.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.cbxLoaiQA.Size = new System.Drawing.Size(143, 20);
+			this.cbxLoaiQA.Size = new System.Drawing.Size(143, 24);
 			this.cbxLoaiQA.TabIndex = 14;
 			// 
 			// btnChonSP
@@ -170,7 +170,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(834, 649);
+			this.ClientSize = new System.Drawing.Size(792, 649);
 			this.Controls.Add(this.btnChonSP);
 			this.Controls.Add(this.cbxLoaiQA);
 			this.Controls.Add(this.labelControl5);

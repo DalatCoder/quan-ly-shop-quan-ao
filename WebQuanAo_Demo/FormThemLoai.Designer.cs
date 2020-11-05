@@ -42,41 +42,46 @@
 			// 
 			// labelControl1
 			// 
-			this.labelControl1.Location = new System.Drawing.Point(262, 67);
+			this.labelControl1.Location = new System.Drawing.Point(306, 88);
+			this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(159, 13);
+			this.labelControl1.Size = new System.Drawing.Size(179, 17);
 			this.labelControl1.TabIndex = 0;
 			this.labelControl1.Text = "Chỉnh sửa danh mục sản phẩm";
 			// 
 			// txtLoaiSanPham
 			// 
-			this.txtLoaiSanPham.Location = new System.Drawing.Point(280, 116);
+			this.txtLoaiSanPham.Location = new System.Drawing.Point(327, 152);
+			this.txtLoaiSanPham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtLoaiSanPham.Name = "txtLoaiSanPham";
-			this.txtLoaiSanPham.Size = new System.Drawing.Size(309, 20);
+			this.txtLoaiSanPham.Size = new System.Drawing.Size(360, 24);
 			this.txtLoaiSanPham.TabIndex = 1;
 			// 
 			// btnThemSP
 			// 
-			this.btnThemSP.Location = new System.Drawing.Point(122, 380);
+			this.btnThemSP.Location = new System.Drawing.Point(142, 497);
+			this.btnThemSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnThemSP.Name = "btnThemSP";
-			this.btnThemSP.Size = new System.Drawing.Size(75, 23);
+			this.btnThemSP.Size = new System.Drawing.Size(87, 30);
 			this.btnThemSP.TabIndex = 2;
 			this.btnThemSP.Text = "Thêm";
 			this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
 			// 
 			// btnCapNhatSP
 			// 
-			this.btnCapNhatSP.Location = new System.Drawing.Point(298, 380);
+			this.btnCapNhatSP.Location = new System.Drawing.Point(348, 497);
+			this.btnCapNhatSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnCapNhatSP.Name = "btnCapNhatSP";
-			this.btnCapNhatSP.Size = new System.Drawing.Size(75, 23);
+			this.btnCapNhatSP.Size = new System.Drawing.Size(87, 30);
 			this.btnCapNhatSP.TabIndex = 3;
 			this.btnCapNhatSP.Text = "Cập nhật";
 			// 
 			// btnThoat
 			// 
-			this.btnThoat.Location = new System.Drawing.Point(457, 380);
+			this.btnThoat.Location = new System.Drawing.Point(533, 497);
+			this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnThoat.Name = "btnThoat";
-			this.btnThoat.Size = new System.Drawing.Size(75, 23);
+			this.btnThoat.Size = new System.Drawing.Size(87, 30);
 			this.btnThoat.TabIndex = 5;
 			this.btnThoat.Text = "Thoát";
 			this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -86,10 +91,11 @@
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTenLoaiSP});
-			this.dataGridView1.Location = new System.Drawing.Point(98, 182);
+			this.dataGridView1.Location = new System.Drawing.Point(114, 238);
+			this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
-			this.dataGridView1.Size = new System.Drawing.Size(491, 150);
+			this.dataGridView1.Size = new System.Drawing.Size(573, 196);
 			this.dataGridView1.TabIndex = 6;
 			// 
 			// colTenLoaiSP
@@ -102,15 +108,16 @@
 			// 
 			// labelControl2
 			// 
-			this.labelControl2.Location = new System.Drawing.Point(98, 119);
+			this.labelControl2.Location = new System.Drawing.Point(114, 156);
+			this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(145, 13);
+			this.labelControl2.Size = new System.Drawing.Size(166, 17);
 			this.labelControl2.TabIndex = 7;
 			this.labelControl2.Text = "Nhập tên loại sản phẩm mới";
 			// 
 			// FormThemLoai
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.labelControl2);
 			this.Controls.Add(this.dataGridView1);
@@ -119,8 +126,9 @@
 			this.Controls.Add(this.btnThemSP);
 			this.Controls.Add(this.txtLoaiSanPham);
 			this.Controls.Add(this.labelControl1);
+			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.Name = "FormThemLoai";
-			this.Size = new System.Drawing.Size(850, 688);
+			this.Size = new System.Drawing.Size(808, 688);
 			((System.ComponentModel.ISupportInitialize)(this.txtLoaiSanPham.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);

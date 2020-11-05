@@ -55,7 +55,7 @@
 			this.labelControl1.Location = new System.Drawing.Point(218, 21);
 			this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(203, 13);
+			this.labelControl1.Size = new System.Drawing.Size(226, 17);
 			this.labelControl1.TabIndex = 0;
 			this.labelControl1.Text = "Chỉnh sửa thông tin sản phẩm quần áo";
 			// 
@@ -222,7 +222,7 @@
 			this.Controls.Add(this.labelControl1);
 			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.Name = "FormChinhSuaQuanAo";
-			this.Size = new System.Drawing.Size(850, 688);
+			this.Size = new System.Drawing.Size(808, 688);
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).EndInit();
