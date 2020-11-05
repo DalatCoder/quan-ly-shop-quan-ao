@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
 			this.txtTenSP = new DevExpress.XtraEditors.TextEdit();
-			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
 			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
 			this.txtKichThuocSP = new DevExpress.XtraEditors.TextEdit();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -48,8 +47,8 @@
 			this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.tsslTotal = new System.Windows.Forms.ToolStripStatusLabel();
+			this.pbHinhSP = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtKichThuocSP.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtGiaBanSP.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtSoLuongSP.Properties)).BeginInit();
@@ -58,6 +57,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).BeginInit();
 			this.statusStrip1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pbHinhSP)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// txtTenSP
@@ -68,15 +68,6 @@
 			this.txtTenSP.Properties.ReadOnly = true;
 			this.txtTenSP.Size = new System.Drawing.Size(206, 24);
 			this.txtTenSP.TabIndex = 21;
-			// 
-			// pictureEdit1
-			// 
-			this.pictureEdit1.Location = new System.Drawing.Point(20, 84);
-			this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.pictureEdit1.Name = "pictureEdit1";
-			this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-			this.pictureEdit1.Size = new System.Drawing.Size(170, 227);
-			this.pictureEdit1.TabIndex = 18;
 			// 
 			// labelControl2
 			// 
@@ -263,10 +254,21 @@
 			this.tsslTotal.Size = new System.Drawing.Size(159, 15);
 			this.tsslTotal.Text = "Tổng số sản phẩm hiện có: 0";
 			// 
+			// pbHinhSP
+			// 
+			this.pbHinhSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.pbHinhSP.Location = new System.Drawing.Point(20, 84);
+			this.pbHinhSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.pbHinhSP.Name = "pbHinhSP";
+			this.pbHinhSP.Size = new System.Drawing.Size(170, 227);
+			this.pbHinhSP.TabIndex = 68;
+			this.pbHinhSP.TabStop = false;
+			// 
 			// FormToanBoSanPham
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.pbHinhSP);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.labelControl10);
 			this.Controls.Add(this.dgvNguoiDung);
@@ -284,13 +286,11 @@
 			this.Controls.Add(this.txtKichThuocSP);
 			this.Controls.Add(this.labelControl3);
 			this.Controls.Add(this.txtTenSP);
-			this.Controls.Add(this.pictureEdit1);
 			this.Controls.Add(this.labelControl2);
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.Name = "FormToanBoSanPham";
 			this.Size = new System.Drawing.Size(808, 688);
 			((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtKichThuocSP.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtGiaBanSP.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtSoLuongSP.Properties)).EndInit();
@@ -300,6 +300,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).EndInit();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pbHinhSP)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -307,7 +308,6 @@
 
         #endregion
         private DevExpress.XtraEditors.TextEdit txtTenSP;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtKichThuocSP;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -326,5 +326,6 @@
 		private DevExpress.XtraEditors.LabelControl labelControl10;
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.ToolStripStatusLabel tsslTotal;
+		private System.Windows.Forms.PictureBox pbHinhSP;
 	}
 }
