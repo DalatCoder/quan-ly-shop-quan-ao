@@ -49,7 +49,7 @@
 			this.labelControl1.Location = new System.Drawing.Point(0, 20);
 			this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(850, 33);
+			this.labelControl1.Size = new System.Drawing.Size(808, 33);
 			this.labelControl1.TabIndex = 0;
 			this.labelControl1.Text = "Danh sách người dùng hiện có";
 			// 
@@ -67,7 +67,7 @@
 			this.dgvNguoiDung.Name = "dgvNguoiDung";
 			this.dgvNguoiDung.RowHeadersWidth = 51;
 			this.dgvNguoiDung.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.dgvNguoiDung.Size = new System.Drawing.Size(810, 522);
+			this.dgvNguoiDung.Size = new System.Drawing.Size(764, 549);
 			this.dgvNguoiDung.TabIndex = 1;
 			// 
 			// statusStrip1
@@ -79,7 +79,7 @@
             this.tsslNormal});
 			this.statusStrip1.Location = new System.Drawing.Point(0, 633);
 			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(850, 55);
+			this.statusStrip1.Size = new System.Drawing.Size(808, 55);
 			this.statusStrip1.TabIndex = 2;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
@@ -116,7 +116,7 @@
 			this.Controls.Add(this.labelControl1);
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.Name = "FormXemNguoiDung";
-			this.Size = new System.Drawing.Size(850, 688);
+			this.Size = new System.Drawing.Size(808, 688);
 			this.Load += new System.EventHandler(this.FormXemNguoiDung_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).EndInit();
 			this.statusStrip1.ResumeLayout(false);

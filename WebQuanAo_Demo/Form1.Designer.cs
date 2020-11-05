@@ -53,10 +53,10 @@
 			// container
 			// 
 			this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.container.Location = new System.Drawing.Point(228, 29);
-			this.container.Margin = new System.Windows.Forms.Padding(2);
+			this.container.Location = new System.Drawing.Point(266, 29);
+			this.container.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.container.Name = "container";
-			this.container.Size = new System.Drawing.Size(850, 690);
+			this.container.Size = new System.Drawing.Size(808, 688);
 			this.container.TabIndex = 0;
 			// 
 			// accordionControl1
@@ -71,10 +71,10 @@
             this.menuXemSP,
             this.menuXemNguoiDung});
 			this.accordionControl1.Location = new System.Drawing.Point(0, 29);
-			this.accordionControl1.Margin = new System.Windows.Forms.Padding(2);
+			this.accordionControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.accordionControl1.Name = "accordionControl1";
 			this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-			this.accordionControl1.Size = new System.Drawing.Size(228, 690);
+			this.accordionControl1.Size = new System.Drawing.Size(266, 688);
 			this.accordionControl1.TabIndex = 1;
 			this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
 			// 
@@ -83,7 +83,12 @@
 			this.menuBanHang.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlSeparator1,
             this.accordionControlSeparator2});
-			this.menuBanHang.Height = 80;
+			this.menuBanHang.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
+			this.menuBanHang.Height = 70;
 			this.menuBanHang.Name = "menuBanHang";
 			this.menuBanHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuBanHang.Text = "Bán Hàng";
@@ -101,7 +106,7 @@
 			// 
 			// menuThemSP
 			// 
-			this.menuThemSP.Height = 80;
+			this.menuThemSP.Height = 70;
 			this.menuThemSP.Name = "menuThemSP";
 			this.menuThemSP.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuThemSP.Text = "Thêm Sản Phẩm";
@@ -109,7 +114,7 @@
 			// 
 			// menuChinhSuaSP
 			// 
-			this.menuChinhSuaSP.Height = 80;
+			this.menuChinhSuaSP.Height = 70;
 			this.menuChinhSuaSP.Name = "menuChinhSuaSP";
 			this.menuChinhSuaSP.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuChinhSuaSP.Text = "Chỉnh sửa Sản Phẩm";
@@ -117,7 +122,7 @@
 			// 
 			// menuCapNhatNhomSanPham
 			// 
-			this.menuCapNhatNhomSanPham.Height = 80;
+			this.menuCapNhatNhomSanPham.Height = 70;
 			this.menuCapNhatNhomSanPham.Name = "menuCapNhatNhomSanPham";
 			this.menuCapNhatNhomSanPham.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuCapNhatNhomSanPham.Text = "Cập Nhật Nhóm Sản Phẩm";
@@ -125,7 +130,7 @@
 			// 
 			// menuThemLoaiSP
 			// 
-			this.menuThemLoaiSP.Height = 80;
+			this.menuThemLoaiSP.Height = 70;
 			this.menuThemLoaiSP.Name = "menuThemLoaiSP";
 			this.menuThemLoaiSP.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuThemLoaiSP.Text = "Thêm Loại Sản Phẩm";
@@ -133,7 +138,7 @@
 			// 
 			// menuXemSP
 			// 
-			this.menuXemSP.Height = 80;
+			this.menuXemSP.Height = 70;
 			this.menuXemSP.Name = "menuXemSP";
 			this.menuXemSP.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuXemSP.Text = "Xem Toàn Bộ Sản Phẩm";
@@ -141,7 +146,7 @@
 			// 
 			// menuXemNguoiDung
 			// 
-			this.menuXemNguoiDung.Height = 80;
+			this.menuXemNguoiDung.Height = 70;
 			this.menuXemNguoiDung.Name = "menuXemNguoiDung";
 			this.menuXemNguoiDung.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.menuXemNguoiDung.Text = "Xem Người Dùng Hiện Có";
@@ -154,9 +159,9 @@
             this.barStaticItem1});
 			this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
 			this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
-			this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
+			this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-			this.fluentDesignFormControl1.Size = new System.Drawing.Size(1078, 29);
+			this.fluentDesignFormControl1.Size = new System.Drawing.Size(1074, 29);
 			this.fluentDesignFormControl1.TabIndex = 2;
 			this.fluentDesignFormControl1.TabStop = false;
 			this.fluentDesignFormControl1.TitleItemLinks.Add(this.barStaticItem1);
@@ -183,15 +188,15 @@
 			// 
 			// Form1
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1078, 719);
+			this.ClientSize = new System.Drawing.Size(1074, 717);
 			this.ControlContainer = this.container;
 			this.Controls.Add(this.container);
 			this.Controls.Add(this.accordionControl1);
 			this.Controls.Add(this.fluentDesignFormControl1);
 			this.FluentDesignFormControl = this.fluentDesignFormControl1;
-			this.Margin = new System.Windows.Forms.Padding(2);
+			this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.MaximizeBox = false;
 			this.Name = "Form1";
 			this.NavigationControl = this.accordionControl1;

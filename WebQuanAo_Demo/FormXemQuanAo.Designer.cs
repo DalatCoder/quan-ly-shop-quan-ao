@@ -78,7 +78,7 @@
 			// 
 			this.labelControl2.Location = new System.Drawing.Point(255, 65);
 			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(68, 13);
+			this.labelControl2.Size = new System.Drawing.Size(70, 13);
 			this.labelControl2.TabIndex = 15;
 			this.labelControl2.Text = "Tên Sản Phẩm";
 			// 
@@ -86,7 +86,7 @@
 			// 
 			this.labelControl1.Location = new System.Drawing.Point(217, 12);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(118, 13);
+			this.labelControl1.Size = new System.Drawing.Size(129, 13);
 			this.labelControl1.TabIndex = 14;
 			this.labelControl1.Text = "Xem thông tin  sản phẩm";
 			// 
@@ -102,7 +102,7 @@
 			// 
 			this.labelControl3.Location = new System.Drawing.Point(255, 134);
 			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(52, 13);
+			this.labelControl3.Size = new System.Drawing.Size(55, 13);
 			this.labelControl3.TabIndex = 22;
 			this.labelControl3.Text = "Kích Thước";
 			// 
@@ -118,7 +118,7 @@
 			// 
 			this.labelControl4.Location = new System.Drawing.Point(255, 175);
 			this.labelControl4.Name = "labelControl4";
-			this.labelControl4.Size = new System.Drawing.Size(36, 13);
+			this.labelControl4.Size = new System.Drawing.Size(40, 13);
 			this.labelControl4.TabIndex = 24;
 			this.labelControl4.Text = "Giá Bán";
 			// 
@@ -134,7 +134,7 @@
 			// 
 			this.labelControl5.Location = new System.Drawing.Point(255, 213);
 			this.labelControl5.Name = "labelControl5";
-			this.labelControl5.Size = new System.Drawing.Size(85, 13);
+			this.labelControl5.Size = new System.Drawing.Size(93, 13);
 			this.labelControl5.TabIndex = 26;
 			this.labelControl5.Text = "Số Lượng Hiện Có";
 			// 
@@ -150,7 +150,7 @@
 			// 
 			this.labelControl6.Location = new System.Drawing.Point(255, 247);
 			this.labelControl6.Name = "labelControl6";
-			this.labelControl6.Size = new System.Drawing.Size(41, 13);
+			this.labelControl6.Size = new System.Drawing.Size(46, 13);
 			this.labelControl6.TabIndex = 28;
 			this.labelControl6.Text = "Discount";
 			// 
@@ -166,7 +166,7 @@
 			// 
 			this.labelControl7.Location = new System.Drawing.Point(255, 96);
 			this.labelControl7.Name = "labelControl7";
-			this.labelControl7.Size = new System.Drawing.Size(69, 13);
+			this.labelControl7.Size = new System.Drawing.Size(74, 13);
 			this.labelControl7.TabIndex = 32;
 			this.labelControl7.Text = "Loại Sản Phẩm";
 			// 
@@ -174,7 +174,7 @@
 			// 
 			this.labelControl8.Location = new System.Drawing.Point(50, 301);
 			this.labelControl8.Name = "labelControl8";
-			this.labelControl8.Size = new System.Drawing.Size(87, 13);
+			this.labelControl8.Size = new System.Drawing.Size(95, 13);
 			this.labelControl8.TabIndex = 34;
 			this.labelControl8.Text = "Ghi Chú Sản Phẩm";
 			// 
@@ -199,7 +199,7 @@
 			// 
 			this.labelControl9.Location = new System.Drawing.Point(220, 324);
 			this.labelControl9.Name = "labelControl9";
-			this.labelControl9.Size = new System.Drawing.Size(164, 13);
+			this.labelControl9.Size = new System.Drawing.Size(177, 13);
 			this.labelControl9.TabIndex = 37;
 			this.labelControl9.Text = "Danh mục tất cả sản phẩm hiện có";
 			// 

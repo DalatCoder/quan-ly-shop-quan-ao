@@ -44,7 +44,7 @@
 			// 
 			this.labelControl1.Location = new System.Drawing.Point(262, 67);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(146, 13);
+			this.labelControl1.Size = new System.Drawing.Size(159, 13);
 			this.labelControl1.TabIndex = 0;
 			this.labelControl1.Text = "Chỉnh sửa danh mục sản phẩm";
 			// 
@@ -104,7 +104,7 @@
 			// 
 			this.labelControl2.Location = new System.Drawing.Point(98, 119);
 			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(131, 13);
+			this.labelControl2.Size = new System.Drawing.Size(145, 13);
 			this.labelControl2.TabIndex = 7;
 			this.labelControl2.Text = "Nhập tên loại sản phẩm mới";
 			// 

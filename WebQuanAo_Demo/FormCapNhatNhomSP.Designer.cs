@@ -55,7 +55,7 @@
 			this.labelControl1.Location = new System.Drawing.Point(43, 175);
 			this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(137, 13);
+			this.labelControl1.Size = new System.Drawing.Size(150, 13);
 			this.labelControl1.TabIndex = 1;
 			this.labelControl1.Text = "Xem thể loại quần áo hiện có";
 			// 
@@ -64,7 +64,7 @@
 			this.labelControl2.Location = new System.Drawing.Point(43, 267);
 			this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(149, 13);
+			this.labelControl2.Size = new System.Drawing.Size(162, 13);
 			this.labelControl2.TabIndex = 2;
 			this.labelControl2.Text = "Tên nhóm sản phẩm đang chọn";
 			// 
@@ -110,7 +110,7 @@
 			this.labelControl3.Location = new System.Drawing.Point(268, 92);
 			this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 5);
 			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(188, 13);
+			this.labelControl3.Size = new System.Drawing.Size(205, 13);
 			this.labelControl3.TabIndex = 7;
 			this.labelControl3.Text = "Chỉnh sửa danh mục sản phẩm quần áo";
 			// 

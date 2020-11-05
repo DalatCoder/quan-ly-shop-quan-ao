@@ -55,7 +55,7 @@
 			this.labelControl1.Location = new System.Drawing.Point(218, 21);
 			this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(185, 13);
+			this.labelControl1.Size = new System.Drawing.Size(203, 13);
 			this.labelControl1.TabIndex = 0;
 			this.labelControl1.Text = "Chỉnh sửa thông tin sản phẩm quần áo";
 			// 

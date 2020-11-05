@@ -63,7 +63,7 @@
 			// 
 			this.labelControl1.Location = new System.Drawing.Point(347, 27);
 			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(135, 13);
+			this.labelControl1.Size = new System.Drawing.Size(150, 13);
 			this.labelControl1.TabIndex = 0;
 			this.labelControl1.Text = "Thông tin hóa đơn bán hàng";
 			// 
@@ -71,7 +71,7 @@
 			// 
 			this.labelControl2.Location = new System.Drawing.Point(65, 101);
 			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(59, 13);
+			this.labelControl2.Size = new System.Drawing.Size(67, 13);
 			this.labelControl2.TabIndex = 1;
 			this.labelControl2.Text = "Mã giao dịch";
 			// 
@@ -79,7 +79,7 @@
 			// 
 			this.labelControl4.Location = new System.Drawing.Point(34, 147);
 			this.labelControl4.Name = "labelControl4";
-			this.labelControl4.Size = new System.Drawing.Size(90, 13);
+			this.labelControl4.Size = new System.Drawing.Size(99, 13);
 			this.labelControl4.TabIndex = 3;
 			this.labelControl4.Text = "Họ tên khách hàng";
 			// 
@@ -87,7 +87,7 @@
 			// 
 			this.labelControl3.Location = new System.Drawing.Point(62, 187);
 			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(62, 13);
+			this.labelControl3.Size = new System.Drawing.Size(69, 13);
 			this.labelControl3.TabIndex = 4;
 			this.labelControl3.Text = "Số điện thoại";
 			// 
@@ -144,7 +144,7 @@
 			// 
 			this.labelControl5.Location = new System.Drawing.Point(368, 222);
 			this.labelControl5.Name = "labelControl5";
-			this.labelControl5.Size = new System.Drawing.Size(124, 13);
+			this.labelControl5.Size = new System.Drawing.Size(135, 13);
 			this.labelControl5.TabIndex = 12;
 			this.labelControl5.Text = "Chi tiết sản phẩm đã chọn";
 			// 
@@ -185,7 +185,7 @@
 			// 
 			this.labelControl6.Location = new System.Drawing.Point(127, 437);
 			this.labelControl6.Name = "labelControl6";
-			this.labelControl6.Size = new System.Drawing.Size(101, 13);
+			this.labelControl6.Size = new System.Drawing.Size(110, 13);
 			this.labelControl6.TabIndex = 14;
 			this.labelControl6.Text = "Tổng tiền thanh toán";
 			// 
