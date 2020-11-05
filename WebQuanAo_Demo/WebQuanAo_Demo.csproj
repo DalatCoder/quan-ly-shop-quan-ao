@@ -74,11 +74,11 @@
     <Compile Include="FormCapNhatNhomSP.Designer.cs">
       <DependentUpon>FormCapNhatNhomSP.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChinhSuaQuanAo.cs">
+    <Compile Include="FormChinhSuaSP.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormChinhSuaQuanAo.Designer.cs">
-      <DependentUpon>FormChinhSuaQuanAo.cs</DependentUpon>
+    <Compile Include="FormChinhSuaSP.Designer.cs">
+      <DependentUpon>FormChinhSuaSP.cs</DependentUpon>
     </Compile>
     <Compile Include="FormChonSanPham.cs">
       <SubType>Form</SubType>
@@ -128,8 +128,8 @@
     <EmbeddedResource Include="FormCapNhatNhomSP.resx">
       <DependentUpon>FormCapNhatNhomSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChinhSuaQuanAo.resx">
-      <DependentUpon>FormChinhSuaQuanAo.cs</DependentUpon>
+    <EmbeddedResource Include="FormChinhSuaSP.resx">
+      <DependentUpon>FormChinhSuaSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChonSanPham.resx">
       <DependentUpon>FormChonSanPham.cs</DependentUpon>

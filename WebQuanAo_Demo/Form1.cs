@@ -42,13 +42,13 @@ namespace WebQuanAo_Demo
 
 		private void menuChinhSuaSP_Click(object sender, EventArgs e)
 		{
-            if (!container.Controls.Contains(FormChinhSuaQuanAo.Instance))
+            if (!container.Controls.Contains(FormChinhSuaSP.Instance))
             {
-                container.Controls.Add(FormChinhSuaQuanAo.Instance);
-                FormChinhSuaQuanAo.Instance.Dock = DockStyle.Fill;
-                FormChinhSuaQuanAo.Instance.Anchor = AnchorStyles.None;
+                container.Controls.Add(FormChinhSuaSP.Instance);
+                FormChinhSuaSP.Instance.Dock = DockStyle.Fill;
+                FormChinhSuaSP.Instance.Anchor = AnchorStyles.None;
             }
-            FormChinhSuaQuanAo.Instance.BringToFront();
+            FormChinhSuaSP.Instance.BringToFront();
         }
 
 		private void menuCapNhatNhomSanPham_Click(object sender, EventArgs e)

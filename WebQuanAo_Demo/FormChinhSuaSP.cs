@@ -11,21 +11,21 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class FormChinhSuaQuanAo : DevExpress.XtraEditors.XtraUserControl
+    public partial class FormChinhSuaSP : DevExpress.XtraEditors.XtraUserControl
     {
-        private static FormChinhSuaQuanAo _instance;
+        private static FormChinhSuaSP _instance;
 
-        public static FormChinhSuaQuanAo Instance
+        public static FormChinhSuaSP Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new FormChinhSuaQuanAo();
+                    _instance = new FormChinhSuaSP();
                 return _instance;
             }
         }
 
-        public FormChinhSuaQuanAo()
+        public FormChinhSuaSP()
         {
             InitializeComponent();
         }
