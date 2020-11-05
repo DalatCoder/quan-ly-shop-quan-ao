@@ -31,7 +31,6 @@
 			this.txtTenSP = new DevExpress.XtraEditors.TextEdit();
 			this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
 			this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.txtKichThuocSP = new DevExpress.XtraEditors.TextEdit();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
 			this.txtGiaBanSP = new DevExpress.XtraEditors.TextEdit();
@@ -44,9 +43,11 @@
 			this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
 			this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
 			this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-			this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+			this.dgvNguoiDung = new System.Windows.Forms.DataGridView();
+			this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.tsslTotal = new System.Windows.Forms.ToolStripStatusLabel();
 			((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtKichThuocSP.Properties)).BeginInit();
@@ -55,170 +56,221 @@
 			((System.ComponentModel.ISupportInitialize)(this.txtDiscountSP.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtLoaiSP.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).BeginInit();
+			this.statusStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// txtTenSP
 			// 
-			this.txtTenSP.Location = new System.Drawing.Point(349, 62);
+			this.txtTenSP.Location = new System.Drawing.Point(276, 81);
+			this.txtTenSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtTenSP.Name = "txtTenSP";
 			this.txtTenSP.Properties.ReadOnly = true;
-			this.txtTenSP.Size = new System.Drawing.Size(239, 20);
+			this.txtTenSP.Size = new System.Drawing.Size(206, 24);
 			this.txtTenSP.TabIndex = 21;
 			// 
 			// pictureEdit1
 			// 
-			this.pictureEdit1.Location = new System.Drawing.Point(50, 65);
+			this.pictureEdit1.Location = new System.Drawing.Point(20, 84);
+			this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.pictureEdit1.Name = "pictureEdit1";
 			this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-			this.pictureEdit1.Size = new System.Drawing.Size(165, 199);
+			this.pictureEdit1.Size = new System.Drawing.Size(170, 227);
 			this.pictureEdit1.TabIndex = 18;
 			// 
 			// labelControl2
 			// 
-			this.labelControl2.Location = new System.Drawing.Point(255, 65);
+			this.labelControl2.Location = new System.Drawing.Point(249, 84);
+			this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl2.Name = "labelControl2";
-			this.labelControl2.Size = new System.Drawing.Size(70, 13);
+			this.labelControl2.Size = new System.Drawing.Size(21, 17);
 			this.labelControl2.TabIndex = 15;
-			this.labelControl2.Text = "Tên Sản Phẩm";
-			// 
-			// labelControl1
-			// 
-			this.labelControl1.Location = new System.Drawing.Point(217, 12);
-			this.labelControl1.Name = "labelControl1";
-			this.labelControl1.Size = new System.Drawing.Size(129, 13);
-			this.labelControl1.TabIndex = 14;
-			this.labelControl1.Text = "Xem thông tin  sản phẩm";
+			this.labelControl2.Text = "Tên";
 			// 
 			// txtKichThuocSP
 			// 
-			this.txtKichThuocSP.Location = new System.Drawing.Point(349, 131);
+			this.txtKichThuocSP.Location = new System.Drawing.Point(276, 121);
+			this.txtKichThuocSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtKichThuocSP.Name = "txtKichThuocSP";
 			this.txtKichThuocSP.Properties.ReadOnly = true;
-			this.txtKichThuocSP.Size = new System.Drawing.Size(239, 20);
+			this.txtKichThuocSP.Size = new System.Drawing.Size(206, 24);
 			this.txtKichThuocSP.TabIndex = 23;
 			// 
 			// labelControl3
 			// 
-			this.labelControl3.Location = new System.Drawing.Point(255, 134);
+			this.labelControl3.Location = new System.Drawing.Point(206, 124);
+			this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(55, 13);
+			this.labelControl3.Size = new System.Drawing.Size(64, 17);
 			this.labelControl3.TabIndex = 22;
 			this.labelControl3.Text = "Kích Thước";
 			// 
 			// txtGiaBanSP
 			// 
-			this.txtGiaBanSP.Location = new System.Drawing.Point(349, 172);
+			this.txtGiaBanSP.Location = new System.Drawing.Point(276, 164);
+			this.txtGiaBanSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtGiaBanSP.Name = "txtGiaBanSP";
 			this.txtGiaBanSP.Properties.ReadOnly = true;
-			this.txtGiaBanSP.Size = new System.Drawing.Size(239, 20);
+			this.txtGiaBanSP.Size = new System.Drawing.Size(206, 24);
 			this.txtGiaBanSP.TabIndex = 25;
 			// 
 			// labelControl4
 			// 
-			this.labelControl4.Location = new System.Drawing.Point(255, 175);
+			this.labelControl4.Location = new System.Drawing.Point(226, 167);
+			this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl4.Name = "labelControl4";
-			this.labelControl4.Size = new System.Drawing.Size(40, 13);
+			this.labelControl4.Size = new System.Drawing.Size(44, 17);
 			this.labelControl4.TabIndex = 24;
 			this.labelControl4.Text = "Giá Bán";
 			// 
 			// txtSoLuongSP
 			// 
-			this.txtSoLuongSP.Location = new System.Drawing.Point(349, 210);
+			this.txtSoLuongSP.Location = new System.Drawing.Point(583, 121);
+			this.txtSoLuongSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtSoLuongSP.Name = "txtSoLuongSP";
 			this.txtSoLuongSP.Properties.ReadOnly = true;
-			this.txtSoLuongSP.Size = new System.Drawing.Size(239, 20);
+			this.txtSoLuongSP.Size = new System.Drawing.Size(203, 24);
 			this.txtSoLuongSP.TabIndex = 27;
 			// 
 			// labelControl5
 			// 
-			this.labelControl5.Location = new System.Drawing.Point(255, 213);
+			this.labelControl5.Location = new System.Drawing.Point(521, 124);
+			this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl5.Name = "labelControl5";
-			this.labelControl5.Size = new System.Drawing.Size(93, 13);
+			this.labelControl5.Size = new System.Drawing.Size(56, 17);
 			this.labelControl5.TabIndex = 26;
-			this.labelControl5.Text = "Số Lượng Hiện Có";
+			this.labelControl5.Text = "Số Lượng";
 			// 
 			// txtDiscountSP
 			// 
-			this.txtDiscountSP.Location = new System.Drawing.Point(349, 244);
+			this.txtDiscountSP.Location = new System.Drawing.Point(583, 164);
+			this.txtDiscountSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtDiscountSP.Name = "txtDiscountSP";
 			this.txtDiscountSP.Properties.ReadOnly = true;
-			this.txtDiscountSP.Size = new System.Drawing.Size(239, 20);
+			this.txtDiscountSP.Size = new System.Drawing.Size(203, 24);
 			this.txtDiscountSP.TabIndex = 29;
 			// 
 			// labelControl6
 			// 
-			this.labelControl6.Location = new System.Drawing.Point(255, 247);
+			this.labelControl6.Location = new System.Drawing.Point(527, 167);
+			this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl6.Name = "labelControl6";
-			this.labelControl6.Size = new System.Drawing.Size(46, 13);
+			this.labelControl6.Size = new System.Drawing.Size(50, 17);
 			this.labelControl6.TabIndex = 28;
 			this.labelControl6.Text = "Discount";
 			// 
 			// txtLoaiSP
 			// 
-			this.txtLoaiSP.Location = new System.Drawing.Point(349, 93);
+			this.txtLoaiSP.Location = new System.Drawing.Point(583, 81);
+			this.txtLoaiSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtLoaiSP.Name = "txtLoaiSP";
 			this.txtLoaiSP.Properties.ReadOnly = true;
-			this.txtLoaiSP.Size = new System.Drawing.Size(239, 20);
+			this.txtLoaiSP.Size = new System.Drawing.Size(203, 24);
 			this.txtLoaiSP.TabIndex = 33;
 			// 
 			// labelControl7
 			// 
-			this.labelControl7.Location = new System.Drawing.Point(255, 96);
+			this.labelControl7.Location = new System.Drawing.Point(553, 84);
+			this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl7.Name = "labelControl7";
-			this.labelControl7.Size = new System.Drawing.Size(74, 13);
+			this.labelControl7.Size = new System.Drawing.Size(24, 17);
 			this.labelControl7.TabIndex = 32;
-			this.labelControl7.Text = "Loại Sản Phẩm";
+			this.labelControl7.Text = "Loại";
 			// 
 			// labelControl8
 			// 
-			this.labelControl8.Location = new System.Drawing.Point(50, 301);
+			this.labelControl8.Location = new System.Drawing.Point(225, 207);
+			this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl8.Name = "labelControl8";
-			this.labelControl8.Size = new System.Drawing.Size(95, 13);
+			this.labelControl8.Size = new System.Drawing.Size(45, 17);
 			this.labelControl8.TabIndex = 34;
-			this.labelControl8.Text = "Ghi Chú Sản Phẩm";
+			this.labelControl8.Text = "Ghi Chú";
 			// 
 			// textEdit1
 			// 
-			this.textEdit1.Location = new System.Drawing.Point(217, 298);
+			this.textEdit1.Enabled = false;
+			this.textEdit1.Location = new System.Drawing.Point(276, 204);
+			this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.textEdit1.Name = "textEdit1";
+			this.textEdit1.Properties.AutoHeight = false;
 			this.textEdit1.Properties.ReadOnly = true;
-			this.textEdit1.Size = new System.Drawing.Size(371, 20);
+			this.textEdit1.Size = new System.Drawing.Size(510, 107);
 			this.textEdit1.TabIndex = 35;
 			// 
-			// dataGridView1
+			// labelControl1
 			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(50, 355);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersWidth = 51;
-			this.dataGridView1.Size = new System.Drawing.Size(538, 115);
-			this.dataGridView1.TabIndex = 36;
+			this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelControl1.Appearance.Options.UseFont = true;
+			this.labelControl1.Appearance.Options.UseTextOptions = true;
+			this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.labelControl1.Location = new System.Drawing.Point(0, 20);
+			this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+			this.labelControl1.Name = "labelControl1";
+			this.labelControl1.Size = new System.Drawing.Size(808, 33);
+			this.labelControl1.TabIndex = 39;
+			this.labelControl1.Text = "Xem thông tin sản phẩm";
 			// 
-			// labelControl9
+			// dgvNguoiDung
 			// 
-			this.labelControl9.Location = new System.Drawing.Point(220, 324);
-			this.labelControl9.Name = "labelControl9";
-			this.labelControl9.Size = new System.Drawing.Size(177, 13);
-			this.labelControl9.TabIndex = 37;
-			this.labelControl9.Text = "Danh mục tất cả sản phẩm hiện có";
+			this.dgvNguoiDung.AllowUserToAddRows = false;
+			this.dgvNguoiDung.AllowUserToDeleteRows = false;
+			this.dgvNguoiDung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvNguoiDung.BackgroundColor = System.Drawing.Color.Azure;
+			this.dgvNguoiDung.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+			this.dgvNguoiDung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvNguoiDung.Location = new System.Drawing.Point(20, 370);
+			this.dgvNguoiDung.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.dgvNguoiDung.MultiSelect = false;
+			this.dgvNguoiDung.Name = "dgvNguoiDung";
+			this.dgvNguoiDung.RowHeadersWidth = 51;
+			this.dgvNguoiDung.ScrollBars = System.Windows.Forms.ScrollBars.None;
+			this.dgvNguoiDung.Size = new System.Drawing.Size(766, 259);
+			this.dgvNguoiDung.TabIndex = 40;
 			// 
-			// btnThoat
+			// labelControl10
 			// 
-			this.btnThoat.Location = new System.Drawing.Point(279, 488);
-			this.btnThoat.Name = "btnThoat";
-			this.btnThoat.Size = new System.Drawing.Size(75, 23);
-			this.btnThoat.TabIndex = 38;
-			this.btnThoat.Text = "Thoát";
-			this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+			this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelControl10.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelControl10.Appearance.Options.UseFont = true;
+			this.labelControl10.Appearance.Options.UseTextOptions = true;
+			this.labelControl10.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.labelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+			this.labelControl10.Location = new System.Drawing.Point(0, 328);
+			this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+			this.labelControl10.Name = "labelControl10";
+			this.labelControl10.Size = new System.Drawing.Size(808, 33);
+			this.labelControl10.TabIndex = 41;
+			this.labelControl10.Text = "Danh sách sản phẩm hiện có";
+			// 
+			// statusStrip1
+			// 
+			this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsslTotal});
+			this.statusStrip1.Location = new System.Drawing.Point(0, 633);
+			this.statusStrip1.Name = "statusStrip1";
+			this.statusStrip1.Size = new System.Drawing.Size(808, 55);
+			this.statusStrip1.TabIndex = 42;
+			this.statusStrip1.Text = "statusStrip1";
+			// 
+			// tsslTotal
+			// 
+			this.tsslTotal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.tsslTotal.Margin = new System.Windows.Forms.Padding(20);
+			this.tsslTotal.Name = "tsslTotal";
+			this.tsslTotal.Size = new System.Drawing.Size(159, 15);
+			this.tsslTotal.Text = "Tổng số sản phẩm hiện có: 0";
 			// 
 			// FormToanBoSanPham
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.btnThoat);
-			this.Controls.Add(this.labelControl9);
-			this.Controls.Add(this.dataGridView1);
+			this.Controls.Add(this.statusStrip1);
+			this.Controls.Add(this.labelControl10);
+			this.Controls.Add(this.dgvNguoiDung);
+			this.Controls.Add(this.labelControl1);
 			this.Controls.Add(this.textEdit1);
 			this.Controls.Add(this.labelControl8);
 			this.Controls.Add(this.txtLoaiSP);
@@ -234,9 +286,9 @@
 			this.Controls.Add(this.txtTenSP);
 			this.Controls.Add(this.pictureEdit1);
 			this.Controls.Add(this.labelControl2);
-			this.Controls.Add(this.labelControl1);
+			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.Name = "FormToanBoSanPham";
-			this.Size = new System.Drawing.Size(850, 688);
+			this.Size = new System.Drawing.Size(808, 688);
 			((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtKichThuocSP.Properties)).EndInit();
@@ -245,7 +297,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.txtDiscountSP.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtLoaiSP.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).EndInit();
+			this.statusStrip1.ResumeLayout(false);
+			this.statusStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -255,7 +309,6 @@
         private DevExpress.XtraEditors.TextEdit txtTenSP;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtKichThuocSP;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtGiaBanSP;
@@ -268,8 +321,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.TextEdit textEdit1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.SimpleButton btnThoat;
-    }
+		private DevExpress.XtraEditors.LabelControl labelControl1;
+		private System.Windows.Forms.DataGridView dgvNguoiDung;
+		private DevExpress.XtraEditors.LabelControl labelControl10;
+		private System.Windows.Forms.StatusStrip statusStrip1;
+		private System.Windows.Forms.ToolStripStatusLabel tsslTotal;
+	}
 }

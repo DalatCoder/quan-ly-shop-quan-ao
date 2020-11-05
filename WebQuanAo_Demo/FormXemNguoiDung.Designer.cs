@@ -47,7 +47,7 @@
 			this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
 			this.labelControl1.Location = new System.Drawing.Point(0, 20);
-			this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
 			this.labelControl1.Name = "labelControl1";
 			this.labelControl1.Size = new System.Drawing.Size(808, 33);
 			this.labelControl1.TabIndex = 0;
