@@ -20,57 +20,57 @@ namespace WebQuanAo_Demo
 
 		private void accordionControlElement1_Click(object sender, EventArgs e)
 		{
-            if (!container.Controls.Contains(FormBanHang.Instance))
+            if (!container.Controls.Contains(uForm_Bill.Instance))
 			{
-                container.Controls.Add(FormBanHang.Instance);
-                FormBanHang.Instance.Dock = DockStyle.Fill;
-                FormBanHang.Instance.Anchor = AnchorStyles.None;
+                container.Controls.Add(uForm_Bill.Instance);
+                uForm_Bill.Instance.Dock = DockStyle.Fill;
+                uForm_Bill.Instance.Anchor = AnchorStyles.None;
 			}
-            FormBanHang.Instance.BringToFront();    
+            uForm_Bill.Instance.BringToFront();    
 		}
 
 		private void menuThemSP_Click(object sender, EventArgs e)
 		{
-            if (!container.Controls.Contains(FormThemSP.Instance))
+            if (!container.Controls.Contains(uForm_Product_Create.Instance))
             {
-                container.Controls.Add(FormThemSP.Instance);
-                FormThemSP.Instance.Dock = DockStyle.Fill;
-                FormThemSP.Instance.Anchor = AnchorStyles.None;
+                container.Controls.Add(uForm_Product_Create.Instance);
+                uForm_Product_Create.Instance.Dock = DockStyle.Fill;
+                uForm_Product_Create.Instance.Anchor = AnchorStyles.None;
             }
-            FormThemSP.Instance.BringToFront();
+            uForm_Product_Create.Instance.BringToFront();
         }
 
 		private void menuChinhSuaSP_Click(object sender, EventArgs e)
 		{
-            if (!container.Controls.Contains(FormChinhSuaSP.Instance))
+            if (!container.Controls.Contains(uForm_Product_Update.Instance))
             {
-                container.Controls.Add(FormChinhSuaSP.Instance);
-                FormChinhSuaSP.Instance.Dock = DockStyle.Fill;
-                FormChinhSuaSP.Instance.Anchor = AnchorStyles.None;
+                container.Controls.Add(uForm_Product_Update.Instance);
+                uForm_Product_Update.Instance.Dock = DockStyle.Fill;
+                uForm_Product_Update.Instance.Anchor = AnchorStyles.None;
             }
-            FormChinhSuaSP.Instance.BringToFront();
+            uForm_Product_Update.Instance.BringToFront();
         }
 
 		private void menuCapNhatNhomSanPham_Click(object sender, EventArgs e)
 		{
-            if (!container.Controls.Contains(FormCapNhatNhomSP.Instance))
+            if (!container.Controls.Contains(uForm_Category_Update.Instance))
             {
-                container.Controls.Add(FormCapNhatNhomSP.Instance);
-                FormCapNhatNhomSP.Instance.Dock = DockStyle.Fill;
-                FormCapNhatNhomSP.Instance.Anchor = AnchorStyles.None;
+                container.Controls.Add(uForm_Category_Update.Instance);
+                uForm_Category_Update.Instance.Dock = DockStyle.Fill;
+                uForm_Category_Update.Instance.Anchor = AnchorStyles.None;
             }
-            FormCapNhatNhomSP.Instance.BringToFront();
+            uForm_Category_Update.Instance.BringToFront();
         }
 
 		private void menuThemLoaiSP_Click(object sender, EventArgs e)
 		{
-            if (!container.Controls.Contains(FormThemLoai.Instance))
+            if (!container.Controls.Contains(uForm_Category_Create.Instance))
             {
-                container.Controls.Add(FormThemLoai.Instance);
-                FormThemLoai.Instance.Dock = DockStyle.Fill;
-                FormThemLoai.Instance.Anchor = AnchorStyles.None;
+                container.Controls.Add(uForm_Category_Create.Instance);
+                uForm_Category_Create.Instance.Dock = DockStyle.Fill;
+                uForm_Category_Create.Instance.Anchor = AnchorStyles.None;
             }
-            FormThemLoai.Instance.BringToFront();
+            uForm_Category_Create.Instance.BringToFront();
         }
 
 		private void menuXemSP_Click(object sender, EventArgs e)
@@ -86,13 +86,13 @@ namespace WebQuanAo_Demo
 
 		private void menuXemNguoiDung_Click(object sender, EventArgs e)
 		{
-            if (!container.Controls.Contains(FormXemNguoiDung.Instance))
+            if (!container.Controls.Contains(uForm_User_Read.Instance))
             {
-                container.Controls.Add(FormXemNguoiDung.Instance);
-                FormXemNguoiDung.Instance.Dock = DockStyle.Fill;
-                FormXemNguoiDung.Instance.Anchor = AnchorStyles.None;
+                container.Controls.Add(uForm_User_Read.Instance);
+                uForm_User_Read.Instance.Dock = DockStyle.Fill;
+                uForm_User_Read.Instance.Anchor = AnchorStyles.None;
             }
-            FormXemNguoiDung.Instance.BringToFront();
+            uForm_User_Read.Instance.BringToFront();
         }
 	}
 }

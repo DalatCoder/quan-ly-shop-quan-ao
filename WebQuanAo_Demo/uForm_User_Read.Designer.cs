@@ -1,6 +1,6 @@
 ﻿namespace WebQuanAo_Demo
 {
-    partial class FormXemNguoiDung
+    partial class uForm_User_Read
     {
         /// <summary>
         /// Required designer variable.
@@ -65,8 +65,10 @@
 			this.dgvNguoiDung.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.dgvNguoiDung.MultiSelect = false;
 			this.dgvNguoiDung.Name = "dgvNguoiDung";
+			this.dgvNguoiDung.ReadOnly = true;
 			this.dgvNguoiDung.RowHeadersWidth = 51;
-			this.dgvNguoiDung.ScrollBars = System.Windows.Forms.ScrollBars.None;
+			this.dgvNguoiDung.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvNguoiDung.ShowEditingIcon = false;
 			this.dgvNguoiDung.Size = new System.Drawing.Size(764, 549);
 			this.dgvNguoiDung.TabIndex = 1;
 			// 
@@ -105,7 +107,7 @@
 			this.tsslNormal.Size = new System.Drawing.Size(139, 15);
 			this.tsslNormal.Text = "Số khách hàng thường: 1";
 			// 
-			// FormXemNguoiDung
+			// uForm_User_Read
 			// 
 			this.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Appearance.Options.UseFont = true;
@@ -115,7 +117,7 @@
 			this.Controls.Add(this.dgvNguoiDung);
 			this.Controls.Add(this.labelControl1);
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.Name = "FormXemNguoiDung";
+			this.Name = "uForm_User_Read";
 			this.Size = new System.Drawing.Size(808, 688);
 			this.Load += new System.EventHandler(this.FormXemNguoiDung_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).EndInit();

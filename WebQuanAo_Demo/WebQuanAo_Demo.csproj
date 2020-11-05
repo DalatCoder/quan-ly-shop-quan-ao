@@ -62,23 +62,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBanHang.cs">
+    <Compile Include="uForm_Bill.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormBanHang.Designer.cs">
-      <DependentUpon>FormBanHang.cs</DependentUpon>
+    <Compile Include="uForm_Bill.Designer.cs">
+      <DependentUpon>uForm_Bill.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCapNhatNhomSP.cs">
+    <Compile Include="uForm_Category_Update.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormCapNhatNhomSP.Designer.cs">
-      <DependentUpon>FormCapNhatNhomSP.cs</DependentUpon>
+    <Compile Include="uForm_Category_Update.Designer.cs">
+      <DependentUpon>uForm_Category_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChinhSuaSP.cs">
+    <Compile Include="uForm_Product_Update.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormChinhSuaSP.Designer.cs">
-      <DependentUpon>FormChinhSuaSP.cs</DependentUpon>
+    <Compile Include="uForm_Product_Update.Designer.cs">
+      <DependentUpon>uForm_Product_Update.cs</DependentUpon>
     </Compile>
     <Compile Include="FormChonSanPham.cs">
       <SubType>Form</SubType>
@@ -92,29 +92,29 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThemLoai.cs">
+    <Compile Include="uForm_Category_Create.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormThemLoai.Designer.cs">
-      <DependentUpon>FormThemLoai.cs</DependentUpon>
+    <Compile Include="uForm_Category_Create.Designer.cs">
+      <DependentUpon>uForm_Category_Create.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThemSP.cs">
+    <Compile Include="uForm_Product_Create.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormThemSP.Designer.cs">
-      <DependentUpon>FormThemSP.cs</DependentUpon>
+    <Compile Include="uForm_Product_Create.Designer.cs">
+      <DependentUpon>uForm_Product_Create.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormXemNguoiDung.cs">
+    <Compile Include="uForm_User_Read.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormXemNguoiDung.Designer.cs">
-      <DependentUpon>FormXemNguoiDung.cs</DependentUpon>
+    <Compile Include="uForm_User_Read.Designer.cs">
+      <DependentUpon>uForm_User_Read.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormXemSP.cs">
+    <Compile Include="uForm_Product_Read.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FormXemSP.Designer.cs">
-      <DependentUpon>FormXemSP.cs</DependentUpon>
+    <Compile Include="uForm_Product_Read.Designer.cs">
+      <DependentUpon>uForm_Product_Read.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,14 +122,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBanHang.resx">
-      <DependentUpon>FormBanHang.cs</DependentUpon>
+    <EmbeddedResource Include="uForm_Bill.resx">
+      <DependentUpon>uForm_Bill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCapNhatNhomSP.resx">
-      <DependentUpon>FormCapNhatNhomSP.cs</DependentUpon>
+    <EmbeddedResource Include="uForm_Category_Update.resx">
+      <DependentUpon>uForm_Category_Update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChinhSuaSP.resx">
-      <DependentUpon>FormChinhSuaSP.cs</DependentUpon>
+    <EmbeddedResource Include="uForm_Product_Update.resx">
+      <DependentUpon>uForm_Product_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChonSanPham.resx">
       <DependentUpon>FormChonSanPham.cs</DependentUpon>
@@ -137,17 +137,17 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThemLoai.resx">
-      <DependentUpon>FormThemLoai.cs</DependentUpon>
+    <EmbeddedResource Include="uForm_Category_Create.resx">
+      <DependentUpon>uForm_Category_Create.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThemSP.resx">
-      <DependentUpon>FormThemSP.cs</DependentUpon>
+    <EmbeddedResource Include="uForm_Product_Create.resx">
+      <DependentUpon>uForm_Product_Create.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormXemNguoiDung.resx">
-      <DependentUpon>FormXemNguoiDung.cs</DependentUpon>
+    <EmbeddedResource Include="uForm_User_Read.resx">
+      <DependentUpon>uForm_User_Read.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormXemSP.resx">
-      <DependentUpon>FormXemSP.cs</DependentUpon>
+    <EmbeddedResource Include="uForm_Product_Read.resx">
+      <DependentUpon>uForm_Product_Read.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

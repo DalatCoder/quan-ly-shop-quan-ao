@@ -1,6 +1,6 @@
 ﻿namespace WebQuanAo_Demo
 {
-    partial class FormChinhSuaSP
+    partial class uForm_Product_Update
     {
         /// <summary>
         /// Required designer variable.

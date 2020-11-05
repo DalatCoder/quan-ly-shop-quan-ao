@@ -3,28 +3,28 @@ using System.Windows.Forms;
 
 namespace WebQuanAo_Demo
 {
-	public partial class FormThemSP : DevExpress.XtraEditors.XtraUserControl
+	public partial class uForm_Product_Create : DevExpress.XtraEditors.XtraUserControl
 	{
-		private static FormThemSP _instance;
+		private static uForm_Product_Create _instance;
 
-		public static FormThemSP Instance
+		public static uForm_Product_Create Instance
 		{
 			get
 			{
 				if (_instance == null)
-					_instance = new FormThemSP();
+					_instance = new uForm_Product_Create();
 				return _instance;
 			}
 		}
 
-		public FormThemSP()
+		public uForm_Product_Create()
 		{
 			InitializeComponent();
 		}
 
 		private void simpleButton1_Click(object sender, EventArgs e)
 		{
-			FormThemLoai formThemLoai = new FormThemLoai();
+			uForm_Category_Create formThemLoai = new uForm_Category_Create();
 			// formThemLoai.ShowDialog();
 		}
 

@@ -1,6 +1,6 @@
 ﻿namespace WebQuanAo_Demo
 {
-	partial class FormThemSP
+	partial class uForm_Product_Create
 	{
 		/// <summary>
 		/// Required designer variable.

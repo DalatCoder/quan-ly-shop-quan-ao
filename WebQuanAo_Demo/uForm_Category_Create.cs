@@ -11,21 +11,21 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class FormThemLoai : DevExpress.XtraEditors.XtraUserControl
+    public partial class uForm_Category_Create : DevExpress.XtraEditors.XtraUserControl
     {
-        private static FormThemLoai _instance;
+        private static uForm_Category_Create _instance;
 
-        public static FormThemLoai Instance
+        public static uForm_Category_Create Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new FormThemLoai();
+                    _instance = new uForm_Category_Create();
                 return _instance;
             }
         }
 
-        public FormThemLoai()
+        public uForm_Category_Create()
         {
             InitializeComponent();
         }

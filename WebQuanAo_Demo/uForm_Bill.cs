@@ -3,21 +3,21 @@ using System.Windows.Forms;
 
 namespace WebQuanAo_Demo
 {
-	public partial class FormBanHang : DevExpress.XtraEditors.XtraUserControl
+	public partial class uForm_Bill : DevExpress.XtraEditors.XtraUserControl
     {
-        private static FormBanHang _instance;
+        private static uForm_Bill _instance;
 
-        public static FormBanHang Instance
+        public static uForm_Bill Instance
 		{
 			get
 			{
                 if (_instance == null)
-                    _instance = new FormBanHang();
+                    _instance = new uForm_Bill();
                 return _instance;
 			}
 		}
 
-        public FormBanHang()
+        public uForm_Bill()
         {
             InitializeComponent();
         }

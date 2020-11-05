@@ -11,21 +11,21 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class FormCapNhatNhomSP : DevExpress.XtraEditors.XtraUserControl
+    public partial class uForm_Category_Update : DevExpress.XtraEditors.XtraUserControl
     {
-        private static FormCapNhatNhomSP _instance;
+        private static uForm_Category_Update _instance;
 
-        public static FormCapNhatNhomSP Instance
+        public static uForm_Category_Update Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new FormCapNhatNhomSP();
+                    _instance = new uForm_Category_Update();
                 return _instance;
             }
         }
 
-        public FormCapNhatNhomSP()
+        public uForm_Category_Update()
         {
             InitializeComponent();
         }
@@ -39,10 +39,8 @@ namespace WebQuanAo_Demo
         {
             try
             {
-                var loaiQuanAo = cboNhomSanPham.Text;
                 var tenNhom = txtTenNhom.Text;
 
-                StringValidator.CheckRequire(loaiQuanAo, "Nhóm loại quần áo");
                 StringValidator.CheckRequire(tenNhom, "Tên nhóm quần áo");
             }
             catch (Exception ex)

@@ -1,6 +1,6 @@
 ﻿namespace WebQuanAo_Demo
 {
-    partial class FormBanHang
+    partial class uForm_Bill
     {
         /// <summary>
         /// Required designer variable.
