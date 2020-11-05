@@ -62,7 +62,7 @@
 			// 
 			// txtTenSP
 			// 
-			this.txtTenSP.Location = new System.Drawing.Point(276, 81);
+			this.txtTenSP.Location = new System.Drawing.Point(276, 77);
 			this.txtTenSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtTenSP.Name = "txtTenSP";
 			this.txtTenSP.Properties.ReadOnly = true;
@@ -71,7 +71,7 @@
 			// 
 			// labelControl2
 			// 
-			this.labelControl2.Location = new System.Drawing.Point(249, 84);
+			this.labelControl2.Location = new System.Drawing.Point(249, 80);
 			this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl2.Name = "labelControl2";
 			this.labelControl2.Size = new System.Drawing.Size(21, 17);
@@ -152,7 +152,7 @@
 			// 
 			// txtLoaiSP
 			// 
-			this.txtLoaiSP.Location = new System.Drawing.Point(583, 81);
+			this.txtLoaiSP.Location = new System.Drawing.Point(583, 77);
 			this.txtLoaiSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtLoaiSP.Name = "txtLoaiSP";
 			this.txtLoaiSP.Properties.ReadOnly = true;
@@ -161,7 +161,7 @@
 			// 
 			// labelControl7
 			// 
-			this.labelControl7.Location = new System.Drawing.Point(553, 84);
+			this.labelControl7.Location = new System.Drawing.Point(553, 80);
 			this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl7.Name = "labelControl7";
 			this.labelControl7.Size = new System.Drawing.Size(24, 17);
@@ -257,7 +257,7 @@
 			// pbHinhSP
 			// 
 			this.pbHinhSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.pbHinhSP.Location = new System.Drawing.Point(20, 84);
+			this.pbHinhSP.Location = new System.Drawing.Point(20, 80);
 			this.pbHinhSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.pbHinhSP.Name = "pbHinhSP";
 			this.pbHinhSP.Size = new System.Drawing.Size(170, 227);
