@@ -47,6 +47,10 @@ namespace WebQuanAo_Demo
             }
         }
 
-       
-    }
+		private void btnTimKiemQA_Click(object sender, EventArgs e)
+		{
+            FormChonSanPham formChonSanPham = new FormChonSanPham();
+            formChonSanPham.ShowDialog();
+		}
+	}
 }

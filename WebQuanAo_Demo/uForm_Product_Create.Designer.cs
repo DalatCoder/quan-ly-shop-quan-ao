@@ -40,7 +40,6 @@
 			this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
 			this.txtTenSP = new DevExpress.XtraEditors.TextEdit();
 			this.cbxLoaiSP = new DevExpress.XtraEditors.ComboBoxEdit();
-			this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
 			this.cbxSize = new DevExpress.XtraEditors.ComboBoxEdit();
 			this.txtSoluong = new DevExpress.XtraEditors.TextEdit();
 			this.txtGiaBan = new DevExpress.XtraEditors.TextEdit();
@@ -101,7 +100,7 @@
 			// 
 			// labelControl8
 			// 
-			this.labelControl8.Location = new System.Drawing.Point(279, 243);
+			this.labelControl8.Location = new System.Drawing.Point(296, 236);
 			this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
 			this.labelControl8.Name = "labelControl8";
 			this.labelControl8.Size = new System.Drawing.Size(35, 17);
@@ -110,7 +109,7 @@
 			// 
 			// labelControl10
 			// 
-			this.labelControl10.Location = new System.Drawing.Point(302, 120);
+			this.labelControl10.Location = new System.Drawing.Point(307, 115);
 			this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
 			this.labelControl10.Name = "labelControl10";
 			this.labelControl10.Size = new System.Drawing.Size(24, 17);
@@ -119,7 +118,7 @@
 			// 
 			// labelControl11
 			// 
-			this.labelControl11.Location = new System.Drawing.Point(567, 207);
+			this.labelControl11.Location = new System.Drawing.Point(567, 201);
 			this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
 			this.labelControl11.Name = "labelControl11";
 			this.labelControl11.Size = new System.Drawing.Size(50, 17);
@@ -128,7 +127,7 @@
 			// 
 			// labelControl12
 			// 
-			this.labelControl12.Location = new System.Drawing.Point(561, 165);
+			this.labelControl12.Location = new System.Drawing.Point(561, 156);
 			this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
 			this.labelControl12.Name = "labelControl12";
 			this.labelControl12.Size = new System.Drawing.Size(56, 17);
@@ -137,7 +136,7 @@
 			// 
 			// labelControl13
 			// 
-			this.labelControl13.Location = new System.Drawing.Point(279, 207);
+			this.labelControl13.Location = new System.Drawing.Point(287, 201);
 			this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
 			this.labelControl13.Name = "labelControl13";
 			this.labelControl13.Size = new System.Drawing.Size(44, 17);
@@ -146,7 +145,7 @@
 			// 
 			// labelControl14
 			// 
-			this.labelControl14.Location = new System.Drawing.Point(255, 166);
+			this.labelControl14.Location = new System.Drawing.Point(267, 157);
 			this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
 			this.labelControl14.Name = "labelControl14";
 			this.labelControl14.Size = new System.Drawing.Size(64, 17);
@@ -155,7 +154,7 @@
 			// 
 			// labelControl15
 			// 
-			this.labelControl15.Location = new System.Drawing.Point(305, 80);
+			this.labelControl15.Location = new System.Drawing.Point(310, 80);
 			this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
 			this.labelControl15.Name = "labelControl15";
 			this.labelControl15.Size = new System.Drawing.Size(21, 17);
@@ -172,26 +171,17 @@
 			// 
 			// cbxLoaiSP
 			// 
-			this.cbxLoaiSP.Location = new System.Drawing.Point(337, 119);
+			this.cbxLoaiSP.Location = new System.Drawing.Point(337, 112);
 			this.cbxLoaiSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.cbxLoaiSP.Name = "cbxLoaiSP";
 			this.cbxLoaiSP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.cbxLoaiSP.Size = new System.Drawing.Size(280, 24);
+			this.cbxLoaiSP.Size = new System.Drawing.Size(449, 24);
 			this.cbxLoaiSP.TabIndex = 56;
-			// 
-			// simpleButton2
-			// 
-			this.simpleButton2.Location = new System.Drawing.Point(623, 115);
-			this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.simpleButton2.Name = "simpleButton2";
-			this.simpleButton2.Size = new System.Drawing.Size(163, 30);
-			this.simpleButton2.TabIndex = 57;
-			this.simpleButton2.Text = "Thêm loại";
 			// 
 			// cbxSize
 			// 
-			this.cbxSize.Location = new System.Drawing.Point(337, 162);
+			this.cbxSize.Location = new System.Drawing.Point(337, 153);
 			this.cbxSize.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.cbxSize.Name = "cbxSize";
 			this.cbxSize.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -201,7 +191,7 @@
 			// 
 			// txtSoluong
 			// 
-			this.txtSoluong.Location = new System.Drawing.Point(623, 163);
+			this.txtSoluong.Location = new System.Drawing.Point(623, 154);
 			this.txtSoluong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtSoluong.Name = "txtSoluong";
 			this.txtSoluong.Size = new System.Drawing.Size(163, 24);
@@ -209,7 +199,7 @@
 			// 
 			// txtGiaBan
 			// 
-			this.txtGiaBan.Location = new System.Drawing.Point(337, 203);
+			this.txtGiaBan.Location = new System.Drawing.Point(337, 197);
 			this.txtGiaBan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtGiaBan.Name = "txtGiaBan";
 			this.txtGiaBan.Size = new System.Drawing.Size(163, 24);
@@ -217,7 +207,7 @@
 			// 
 			// txtDiscount
 			// 
-			this.txtDiscount.Location = new System.Drawing.Point(623, 204);
+			this.txtDiscount.Location = new System.Drawing.Point(623, 198);
 			this.txtDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtDiscount.Name = "txtDiscount";
 			this.txtDiscount.Size = new System.Drawing.Size(163, 24);
@@ -225,7 +215,7 @@
 			// 
 			// txtMoTa
 			// 
-			this.txtMoTa.Location = new System.Drawing.Point(337, 242);
+			this.txtMoTa.Location = new System.Drawing.Point(337, 235);
 			this.txtMoTa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtMoTa.Name = "txtMoTa";
 			this.txtMoTa.Size = new System.Drawing.Size(449, 72);
@@ -302,7 +292,7 @@
 			this.pbHinhSP.TabIndex = 67;
 			this.pbHinhSP.TabStop = false;
 			// 
-			// FormThemSP
+			// uForm_Product_Create
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -316,7 +306,6 @@
 			this.Controls.Add(this.txtGiaBan);
 			this.Controls.Add(this.txtSoluong);
 			this.Controls.Add(this.cbxSize);
-			this.Controls.Add(this.simpleButton2);
 			this.Controls.Add(this.cbxLoaiSP);
 			this.Controls.Add(this.txtTenSP);
 			this.Controls.Add(this.labelControl8);
@@ -330,7 +319,7 @@
 			this.Controls.Add(this.btnMacDinh);
 			this.Controls.Add(this.btnThem);
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.Name = "FormThemSP";
+			this.Name = "uForm_Product_Create";
 			this.Size = new System.Drawing.Size(808, 688);
 			((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cbxLoaiSP.Properties)).EndInit();
@@ -361,7 +350,6 @@
 		private DevExpress.XtraEditors.LabelControl labelControl15;
 		private DevExpress.XtraEditors.TextEdit txtTenSP;
 		private DevExpress.XtraEditors.ComboBoxEdit cbxLoaiSP;
-		private DevExpress.XtraEditors.SimpleButton simpleButton2;
 		private DevExpress.XtraEditors.ComboBoxEdit cbxSize;
 		private DevExpress.XtraEditors.TextEdit txtSoluong;
 		private DevExpress.XtraEditors.TextEdit txtGiaBan;

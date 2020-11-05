@@ -122,6 +122,7 @@
 			this.btnTimKiemQA.Size = new System.Drawing.Size(192, 30);
 			this.btnTimKiemQA.TabIndex = 10;
 			this.btnTimKiemQA.Text = "Chọn sản phẩm";
+			this.btnTimKiemQA.Click += new System.EventHandler(this.btnTimKiemQA_Click);
 			// 
 			// txtSoDT
 			// 
@@ -229,7 +230,7 @@
 			this.dgvNguoiDung.Size = new System.Drawing.Size(766, 208);
 			this.dgvNguoiDung.TabIndex = 44;
 			// 
-			// FormBanHang
+			// uForm_Bill
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,7 +250,7 @@
 			this.Controls.Add(this.labelControl4);
 			this.Controls.Add(this.labelControl2);
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.Name = "FormBanHang";
+			this.Name = "uForm_Bill";
 			this.Size = new System.Drawing.Size(808, 688);
 			((System.ComponentModel.ISupportInitialize)(this.txtMaGiaoDich.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTenKhachHang.Properties)).EndInit();

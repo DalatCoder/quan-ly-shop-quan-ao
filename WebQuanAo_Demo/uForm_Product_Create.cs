@@ -81,10 +81,5 @@ namespace WebQuanAo_Demo
 			pbHinhSP.ImageLocation = "";
 			txtMoTa.Text = "";
 		}
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-			Application.Exit();
-        }
-    }
+	}
 }
