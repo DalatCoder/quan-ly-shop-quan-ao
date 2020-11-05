@@ -52,10 +52,10 @@
 			// 
 			// btnThemSP
 			// 
-			this.btnThemSP.Location = new System.Drawing.Point(297, 160);
+			this.btnThemSP.Location = new System.Drawing.Point(171, 160);
 			this.btnThemSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnThemSP.Name = "btnThemSP";
-			this.btnThemSP.Size = new System.Drawing.Size(212, 30);
+			this.btnThemSP.Size = new System.Drawing.Size(476, 30);
 			this.btnThemSP.TabIndex = 2;
 			this.btnThemSP.Text = "Thêm";
 			this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
@@ -137,14 +137,14 @@
 			// 
 			// simpleButton1
 			// 
-			this.simpleButton1.Location = new System.Drawing.Point(297, 208);
+			this.simpleButton1.Location = new System.Drawing.Point(171, 208);
 			this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.simpleButton1.Name = "simpleButton1";
-			this.simpleButton1.Size = new System.Drawing.Size(212, 30);
+			this.simpleButton1.Size = new System.Drawing.Size(476, 30);
 			this.simpleButton1.TabIndex = 46;
 			this.simpleButton1.Text = "Mặc định";
 			// 
-			// FormThemLoai
+			// uForm_Category_Create
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,7 +157,7 @@
 			this.Controls.Add(this.btnThemSP);
 			this.Controls.Add(this.txtLoaiSanPham);
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.Name = "FormThemLoai";
+			this.Name = "uForm_Category_Create";
 			this.Size = new System.Drawing.Size(808, 688);
 			((System.ComponentModel.ISupportInitialize)(this.txtLoaiSanPham.Properties)).EndInit();
 			this.statusStrip1.ResumeLayout(false);
