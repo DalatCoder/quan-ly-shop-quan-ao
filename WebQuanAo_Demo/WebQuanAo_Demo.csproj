@@ -62,6 +62,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Category_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Category_Create.Designer.cs">
+      <DependentUpon>Form_Category_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Product_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Product_View.Designer.cs">
+      <DependentUpon>Form_Product_View.cs</DependentUpon>
+    </Compile>
     <Compile Include="uForm_Bill.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,17 +122,23 @@
     <Compile Include="uForm_User_Read.Designer.cs">
       <DependentUpon>uForm_User_Read.cs</DependentUpon>
     </Compile>
-    <Compile Include="uForm_Product_Read.cs">
+    <Compile Include="uForm_Product_View.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uForm_Product_Read.Designer.cs">
-      <DependentUpon>uForm_Product_Read.cs</DependentUpon>
+    <Compile Include="uForm_Product_View.Designer.cs">
+      <DependentUpon>uForm_Product_View.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringValidator.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Category_Create.resx">
+      <DependentUpon>Form_Category_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Product_View.resx">
+      <DependentUpon>Form_Product_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uForm_Bill.resx">
       <DependentUpon>uForm_Bill.cs</DependentUpon>
@@ -146,8 +164,8 @@
     <EmbeddedResource Include="uForm_User_Read.resx">
       <DependentUpon>uForm_User_Read.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uForm_Product_Read.resx">
-      <DependentUpon>uForm_Product_Read.cs</DependentUpon>
+    <EmbeddedResource Include="uForm_Product_View.resx">
+      <DependentUpon>uForm_Product_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

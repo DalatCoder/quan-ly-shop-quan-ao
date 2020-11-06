@@ -51,6 +51,7 @@
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.tsslTotal = new System.Windows.Forms.ToolStripStatusLabel();
 			this.pbHinhSP = new System.Windows.Forms.PictureBox();
+			this.btnThemLoai = new DevExpress.XtraEditors.SimpleButton();
 			((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cbxLoaiSP.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cbxSize.Properties)).BeginInit();
@@ -78,7 +79,7 @@
 			this.btnMacDinh.Location = new System.Drawing.Point(623, 339);
 			this.btnMacDinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnMacDinh.Name = "btnMacDinh";
-			this.btnMacDinh.Size = new System.Drawing.Size(163, 30);
+			this.btnMacDinh.Size = new System.Drawing.Size(159, 30);
 			this.btnMacDinh.TabIndex = 26;
 			this.btnMacDinh.Text = "Mặc định";
 			this.btnMacDinh.Click += new System.EventHandler(this.btnMacDinh_Click);
@@ -176,7 +177,7 @@
 			this.cbxLoaiSP.Name = "cbxLoaiSP";
 			this.cbxLoaiSP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.cbxLoaiSP.Size = new System.Drawing.Size(449, 24);
+			this.cbxLoaiSP.Size = new System.Drawing.Size(280, 24);
 			this.cbxLoaiSP.TabIndex = 56;
 			// 
 			// cbxSize
@@ -292,10 +293,21 @@
 			this.pbHinhSP.TabIndex = 67;
 			this.pbHinhSP.TabStop = false;
 			// 
+			// btnThemLoai
+			// 
+			this.btnThemLoai.Location = new System.Drawing.Point(623, 111);
+			this.btnThemLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.btnThemLoai.Name = "btnThemLoai";
+			this.btnThemLoai.Size = new System.Drawing.Size(163, 24);
+			this.btnThemLoai.TabIndex = 68;
+			this.btnThemLoai.Text = "Thêm loại";
+			this.btnThemLoai.Click += new System.EventHandler(this.btnThemLoai_Click);
+			// 
 			// uForm_Product_Create
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.btnThemLoai);
 			this.Controls.Add(this.pbHinhSP);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.dgvNguoiDung);
@@ -361,5 +373,6 @@
 		private System.Windows.Forms.StatusStrip statusStrip1;
 		private System.Windows.Forms.ToolStripStatusLabel tsslTotal;
 		private System.Windows.Forms.PictureBox pbHinhSP;
+		private DevExpress.XtraEditors.SimpleButton btnThemLoai;
 	}
 }

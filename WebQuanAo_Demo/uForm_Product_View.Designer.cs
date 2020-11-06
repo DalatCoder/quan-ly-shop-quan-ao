@@ -1,6 +1,6 @@
 ﻿namespace WebQuanAo_Demo
 {
-    partial class FormToanBoSanPham
+    partial class uFormToanBoSanPham
     {
         /// <summary>
         /// Required designer variable.
@@ -264,7 +264,7 @@
 			this.pbHinhSP.TabIndex = 68;
 			this.pbHinhSP.TabStop = false;
 			// 
-			// FormToanBoSanPham
+			// uFormToanBoSanPham
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -288,7 +288,7 @@
 			this.Controls.Add(this.txtTenSP);
 			this.Controls.Add(this.labelControl2);
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.Name = "FormToanBoSanPham";
+			this.Name = "uFormToanBoSanPham";
 			this.Size = new System.Drawing.Size(808, 688);
 			((System.ComponentModel.ISupportInitialize)(this.txtTenSP.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtKichThuocSP.Properties)).EndInit();

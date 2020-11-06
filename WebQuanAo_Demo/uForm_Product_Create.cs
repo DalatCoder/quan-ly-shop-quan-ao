@@ -81,5 +81,11 @@ namespace WebQuanAo_Demo
 			pbHinhSP.ImageLocation = "";
 			txtMoTa.Text = "";
 		}
+
+		private void btnThemLoai_Click(object sender, EventArgs e)
+		{
+			Form_Category_Create form = new Form_Category_Create();
+			form.ShowDialog();
+		}
 	}
 }
