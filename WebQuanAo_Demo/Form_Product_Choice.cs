@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WebQuanAo_Demo
 {
-	public partial class FormChonSanPham : DevExpress.XtraEditors.XtraForm
+	public partial class Form_Product_Choice : DevExpress.XtraEditors.XtraForm
 	{
-		public FormChonSanPham()
+		public Form_Product_Choice()
 		{
 			InitializeComponent();
 		}
@@ -21,7 +21,5 @@ namespace WebQuanAo_Demo
         {
 			Application.Exit();
         }
-
-        
-    }
+	}
 }

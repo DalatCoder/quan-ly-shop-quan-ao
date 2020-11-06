@@ -80,11 +80,11 @@
     <Compile Include="uForm_Product_Update.Designer.cs">
       <DependentUpon>uForm_Product_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChonSanPham.cs">
+    <Compile Include="Form_Product_Choice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormChonSanPham.Designer.cs">
-      <DependentUpon>FormChonSanPham.cs</DependentUpon>
+    <Compile Include="Form_Product_Choice.Designer.cs">
+      <DependentUpon>Form_Product_Choice.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>UserControl</SubType>
@@ -131,8 +131,8 @@
     <EmbeddedResource Include="uForm_Product_Update.resx">
       <DependentUpon>uForm_Product_Update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChonSanPham.resx">
-      <DependentUpon>FormChonSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Product_Choice.resx">
+      <DependentUpon>Form_Product_Choice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

@@ -75,13 +75,13 @@ namespace WebQuanAo_Demo
 
 		private void menuXemSP_Click(object sender, EventArgs e)
 		{
-            if (!container.Controls.Contains(FormToanBoSanPham.Instance))
+            if (!container.Controls.Contains(uFormToanBoSanPham.Instance))
             {
-                container.Controls.Add(FormToanBoSanPham.Instance);
-                FormToanBoSanPham.Instance.Dock = DockStyle.Fill;
-                FormToanBoSanPham.Instance.Anchor = AnchorStyles.None;
+                container.Controls.Add(uFormToanBoSanPham.Instance);
+                uFormToanBoSanPham.Instance.Dock = DockStyle.Fill;
+                uFormToanBoSanPham.Instance.Anchor = AnchorStyles.None;
             }
-            FormToanBoSanPham.Instance.BringToFront();
+            uFormToanBoSanPham.Instance.BringToFront();
         }
 
 		private void menuXemNguoiDung_Click(object sender, EventArgs e)
