@@ -18,6 +18,11 @@ namespace WebQuanAo_Demo
             InitializeComponent();
         }
 
+		private void Form1_Load(object sender, EventArgs e)
+		{
+            accordionControlElement1_Click(sender, e);
+        }
+
 		private void accordionControlElement1_Click(object sender, EventArgs e)
 		{
             if (!container.Controls.Contains(uForm_Bill.Instance))
@@ -94,5 +99,6 @@ namespace WebQuanAo_Demo
             }
             uForm_User_Read.Instance.BringToFront();
         }
+
 	}
 }

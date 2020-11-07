@@ -27,6 +27,20 @@ namespace WebQuanAo_Demo
 
                 StringValidator.CheckRequire(tenDangNhap, "Tên đăng nhập");
                 StringValidator.CheckRequire(matKhau, "Mật khẩu");
+
+                string taikhoan = "thiha123";
+                string password = "123";
+
+                if(tenDangNhap!=taikhoan||matKhau!=password)
+				{
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng");
+                    return;
+				}
+
+                this.Hide();
+                Form1 form1 = new Form1();
+                form1.ShowDialog();
+                this.Close();
             }
             catch (Exception ex)
             {

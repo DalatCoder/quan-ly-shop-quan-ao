@@ -202,6 +202,7 @@
 			this.NavigationControl = this.accordionControl1;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Quản Lý Shop Quần Áo";
+			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
