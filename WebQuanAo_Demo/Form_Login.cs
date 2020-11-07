@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class FormLogin : DevExpress.XtraEditors.XtraForm
+    public partial class Form_Login : DevExpress.XtraEditors.XtraForm
     {
-        public FormLogin()
+        public Form_Login()
         {
             InitializeComponent();
         }
@@ -38,7 +38,7 @@ namespace WebQuanAo_Demo
 				}
 
                 this.Hide();
-                Form1 form1 = new Form1();
+                Form_HomePage form1 = new Form_HomePage();
                 form1.ShowDialog();
                 this.Close();
             }

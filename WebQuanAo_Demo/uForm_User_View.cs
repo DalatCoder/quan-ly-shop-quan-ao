@@ -11,21 +11,21 @@ using DevExpress.XtraEditors;
 
 namespace WebQuanAo_Demo
 {
-    public partial class uForm_User_Read : DevExpress.XtraEditors.XtraUserControl
+    public partial class uForm_User_View : DevExpress.XtraEditors.XtraUserControl
     {
-        private static uForm_User_Read _instance;
+        private static uForm_User_View _instance;
 
-        public static uForm_User_Read Instance
+        public static uForm_User_View Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new uForm_User_Read();
+                    _instance = new uForm_User_View();
                 return _instance;
             }
         }
 
-        public uForm_User_Read()
+        public uForm_User_View()
         {
             InitializeComponent();
         }

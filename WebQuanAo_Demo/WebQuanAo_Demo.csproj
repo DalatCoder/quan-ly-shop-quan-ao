@@ -56,11 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_HomePage.Designer.cs">
+      <DependentUpon>Form_HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Category_Create.cs">
       <SubType>Form</SubType>
@@ -98,11 +98,11 @@
     <Compile Include="Form_Product_Choice.Designer.cs">
       <DependentUpon>Form_Product_Choice.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="uForm_Category_Create.cs">
       <SubType>UserControl</SubType>
@@ -116,11 +116,11 @@
     <Compile Include="uForm_Product_Create.Designer.cs">
       <DependentUpon>uForm_Product_Create.cs</DependentUpon>
     </Compile>
-    <Compile Include="uForm_User_Read.cs">
+    <Compile Include="uForm_User_View.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uForm_User_Read.Designer.cs">
-      <DependentUpon>uForm_User_Read.cs</DependentUpon>
+    <Compile Include="uForm_User_View.Designer.cs">
+      <DependentUpon>uForm_User_View.cs</DependentUpon>
     </Compile>
     <Compile Include="uForm_Product_View.cs">
       <SubType>UserControl</SubType>
@@ -131,8 +131,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringValidator.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form_HomePage.resx">
+      <DependentUpon>Form_HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Category_Create.resx">
       <DependentUpon>Form_Category_Create.cs</DependentUpon>
@@ -152,8 +152,8 @@
     <EmbeddedResource Include="Form_Product_Choice.resx">
       <DependentUpon>Form_Product_Choice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uForm_Category_Create.resx">
       <DependentUpon>uForm_Category_Create.cs</DependentUpon>
@@ -161,8 +161,8 @@
     <EmbeddedResource Include="uForm_Product_Create.resx">
       <DependentUpon>uForm_Product_Create.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uForm_User_Read.resx">
-      <DependentUpon>uForm_User_Read.cs</DependentUpon>
+    <EmbeddedResource Include="uForm_User_View.resx">
+      <DependentUpon>uForm_User_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uForm_Product_View.resx">
       <DependentUpon>uForm_Product_View.cs</DependentUpon>

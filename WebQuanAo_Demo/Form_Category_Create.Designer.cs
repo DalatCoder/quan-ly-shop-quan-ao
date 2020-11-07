@@ -38,7 +38,7 @@
 			// 
 			// btnThoat
 			// 
-			this.btnThoat.Location = new System.Drawing.Point(169, 217);
+			this.btnThoat.Location = new System.Drawing.Point(54, 202);
 			this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnThoat.Name = "btnThoat";
 			this.btnThoat.Size = new System.Drawing.Size(476, 30);
@@ -54,16 +54,16 @@
 			this.labelControl3.Appearance.Options.UseTextOptions = true;
 			this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 			this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-			this.labelControl3.Location = new System.Drawing.Point(0, 20);
+			this.labelControl3.Location = new System.Drawing.Point(0, 12);
 			this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
 			this.labelControl3.Name = "labelControl3";
-			this.labelControl3.Size = new System.Drawing.Size(808, 33);
+			this.labelControl3.Size = new System.Drawing.Size(602, 33);
 			this.labelControl3.TabIndex = 50;
 			this.labelControl3.Text = "Thêm loại sản phẩm mới";
 			// 
 			// labelControl2
 			// 
-			this.labelControl2.Location = new System.Drawing.Point(315, 96);
+			this.labelControl2.Location = new System.Drawing.Point(200, 81);
 			this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.labelControl2.Name = "labelControl2";
 			this.labelControl2.Size = new System.Drawing.Size(166, 17);
@@ -72,7 +72,7 @@
 			// 
 			// btnThemSP
 			// 
-			this.btnThemSP.Location = new System.Drawing.Point(169, 169);
+			this.btnThemSP.Location = new System.Drawing.Point(54, 154);
 			this.btnThemSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.btnThemSP.Name = "btnThemSP";
 			this.btnThemSP.Size = new System.Drawing.Size(476, 30);
@@ -81,7 +81,7 @@
 			// 
 			// txtLoaiSanPham
 			// 
-			this.txtLoaiSanPham.Location = new System.Drawing.Point(169, 121);
+			this.txtLoaiSanPham.Location = new System.Drawing.Point(54, 106);
 			this.txtLoaiSanPham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtLoaiSanPham.Name = "txtLoaiSanPham";
 			this.txtLoaiSanPham.Size = new System.Drawing.Size(476, 24);
@@ -91,7 +91,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(802, 296);
+			this.ClientSize = new System.Drawing.Size(596, 280);
 			this.Controls.Add(this.btnThoat);
 			this.Controls.Add(this.labelControl3);
 			this.Controls.Add(this.labelControl2);

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WebQuanAo_Demo
 {
-    public partial class Form1 : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
+    public partial class Form_HomePage : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
-        public Form1()
+        public Form_HomePage()
         {
             InitializeComponent();
         }
@@ -91,13 +91,13 @@ namespace WebQuanAo_Demo
 
 		private void menuXemNguoiDung_Click(object sender, EventArgs e)
 		{
-            if (!container.Controls.Contains(uForm_User_Read.Instance))
+            if (!container.Controls.Contains(uForm_User_View.Instance))
             {
-                container.Controls.Add(uForm_User_Read.Instance);
-                uForm_User_Read.Instance.Dock = DockStyle.Fill;
-                uForm_User_Read.Instance.Anchor = AnchorStyles.None;
+                container.Controls.Add(uForm_User_View.Instance);
+                uForm_User_View.Instance.Dock = DockStyle.Fill;
+                uForm_User_View.Instance.Anchor = AnchorStyles.None;
             }
-            uForm_User_Read.Instance.BringToFront();
+            uForm_User_View.Instance.BringToFront();
         }
 
 	}

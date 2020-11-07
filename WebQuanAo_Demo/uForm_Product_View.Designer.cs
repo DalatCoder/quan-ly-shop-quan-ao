@@ -260,7 +260,7 @@
 			this.pbHinhSP.Location = new System.Drawing.Point(20, 80);
 			this.pbHinhSP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.pbHinhSP.Name = "pbHinhSP";
-			this.pbHinhSP.Size = new System.Drawing.Size(170, 227);
+			this.pbHinhSP.Size = new System.Drawing.Size(170, 231);
 			this.pbHinhSP.TabIndex = 68;
 			this.pbHinhSP.TabStop = false;
 			// 

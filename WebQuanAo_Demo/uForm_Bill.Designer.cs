@@ -45,12 +45,14 @@
 			this.tsslTotal = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.dgvNguoiDung = new System.Windows.Forms.DataGridView();
+			this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
 			((System.ComponentModel.ISupportInitialize)(this.txtMaGiaoDich.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTenKhachHang.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtSoDT.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
 			this.statusStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// labelControl2
@@ -133,7 +135,7 @@
 			this.txtSoDT.Properties.Mask.UseMaskAsDisplayFormat = true;
 			this.txtSoDT.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
 			this.txtSoDT.Properties.MaskSettings.Set("mask", "000.000.0000");
-			this.txtSoDT.Size = new System.Drawing.Size(653, 26);
+			this.txtSoDT.Size = new System.Drawing.Size(518, 26);
 			this.txtSoDT.TabIndex = 11;
 			// 
 			// labelControl6
@@ -230,10 +232,23 @@
 			this.dgvNguoiDung.Size = new System.Drawing.Size(766, 208);
 			this.dgvNguoiDung.TabIndex = 44;
 			// 
+			// textEdit1
+			// 
+			this.textEdit1.EditValue = "Thường";
+			this.textEdit1.Location = new System.Drawing.Point(672, 151);
+			this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.textEdit1.Name = "textEdit1";
+			this.textEdit1.Properties.Appearance.Options.UseTextOptions = true;
+			this.textEdit1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+			this.textEdit1.Properties.ReadOnly = true;
+			this.textEdit1.Size = new System.Drawing.Size(115, 24);
+			this.textEdit1.TabIndex = 45;
+			// 
 			// uForm_Bill
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.textEdit1);
 			this.Controls.Add(this.dgvNguoiDung);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.labelControl10);
@@ -259,6 +274,7 @@
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -282,5 +298,6 @@
 		private System.Windows.Forms.ToolStripStatusLabel tsslTotal;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
 		private System.Windows.Forms.DataGridView dgvNguoiDung;
+		private DevExpress.XtraEditors.TextEdit textEdit1;
 	}
 }

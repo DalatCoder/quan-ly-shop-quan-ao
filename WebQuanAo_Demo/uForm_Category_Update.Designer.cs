@@ -135,7 +135,7 @@
 			this.simpleButton1.Name = "simpleButton1";
 			this.simpleButton1.Size = new System.Drawing.Size(404, 23);
 			this.simpleButton1.TabIndex = 49;
-			this.simpleButton1.Text = "Xóa sản phẩm đang chọn";
+			this.simpleButton1.Text = "Xóa loại sản phẩm đang chọn";
 			// 
 			// simpleButton2
 			// 

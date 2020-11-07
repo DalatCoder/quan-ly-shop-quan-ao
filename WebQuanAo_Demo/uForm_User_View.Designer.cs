@@ -1,6 +1,6 @@
 ﻿namespace WebQuanAo_Demo
 {
-    partial class uForm_User_Read
+    partial class uForm_User_View
     {
         /// <summary>
         /// Required designer variable.

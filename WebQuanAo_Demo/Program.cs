@@ -18,7 +18,7 @@ namespace WebQuanAo_Demo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            Application.Run(new Form_Login());
         }
     }
 }

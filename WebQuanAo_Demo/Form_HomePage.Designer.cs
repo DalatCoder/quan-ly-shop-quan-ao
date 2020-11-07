@@ -1,6 +1,6 @@
 ﻿namespace WebQuanAo_Demo
 {
-    partial class Form1
+    partial class Form_HomePage
     {
         /// <summary>
         /// Required designer variable.
