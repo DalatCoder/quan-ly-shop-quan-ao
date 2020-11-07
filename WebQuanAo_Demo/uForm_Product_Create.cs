@@ -30,12 +30,10 @@ namespace WebQuanAo_Demo
 
 		private void btnThem_Click(object sender, EventArgs e)
 		{
-			
-
             try
             {
 				var tenSP = txtTenSP.Text;
-				var kichThuoc = cbxSize.Text;
+				var kichThuoc = txtSize.Text;
 				var giaBan = txtGiaBan.Text;
 				var soLuong = txtSoluong.Text;
 				var discount = txtDiscount.Text;
@@ -55,25 +53,12 @@ namespace WebQuanAo_Demo
             {
 				MessageBox.Show(ex.Message, "Thông báo không đúng thông tin ^_^");
             }
-            
-
-
-			
-
-			// Nếu không lỗi thì thực thi các dòng dưới này
-			// 1. Lấy thông tin 
-
-			// 2. Gán vào đối tượng tương ứng
-
-			// 3. Lưu trữ
-
-			// 4. Hiển thị
 		}
 
 		private void btnMacDinh_Click(object sender, EventArgs e)
 		{
 			txtTenSP.Text = "";
-			cbxSize.Text = "";
+			cbxLoaiSP.Text = "";
 			txtGiaBan.Text = "";
 			txtSoluong.Text = "";
 			txtDiscount.Text = "";

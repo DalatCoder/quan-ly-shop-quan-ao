@@ -42,7 +42,7 @@ namespace WebQuanAo_Demo
                 var tenSanPham = txtTenSP.Text;
                 var giaBan = txtGiaBan.Text;
                 var discount = txtDiscount.Text;
-                var nhomSanPham = cbNhomSanPham.Text;
+                var nhomSanPham = cbxLoaiSP.Text;
 
                 StringValidator.CheckRequire(tenSanPham, "Tên sản phẩm");
                 StringValidator.CheckRequire(giaBan, "Giá bán sản phẩm");
