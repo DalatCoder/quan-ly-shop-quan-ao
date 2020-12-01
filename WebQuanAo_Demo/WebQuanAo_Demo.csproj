@@ -33,17 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v20.2" />
-    <Reference Include="DevExpress.Data.Desktop.v20.2" />
-    <Reference Include="DevExpress.Data.v20.2" />
-    <Reference Include="DevExpress.Printing.v20.2.Core" />
-    <Reference Include="DevExpress.Utils.v20.2" />
-    <Reference Include="DevExpress.XtraBars.v20.2" />
-    <Reference Include="DevExpress.Sparkline.v20.2.Core" />
-    <Reference Include="DevExpress.XtraEditors.v20.2" />
-    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,117 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form_HomePage.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_HomePage.Designer.cs">
-      <DependentUpon>Form_HomePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Category_Create.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Category_Create.Designer.cs">
-      <DependentUpon>Form_Category_Create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Product_View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Product_View.Designer.cs">
-      <DependentUpon>Form_Product_View.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uForm_Bill.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uForm_Bill.Designer.cs">
-      <DependentUpon>uForm_Bill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uForm_Category_Update.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uForm_Category_Update.Designer.cs">
-      <DependentUpon>uForm_Category_Update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uForm_Product_Update.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uForm_Product_Update.Designer.cs">
-      <DependentUpon>uForm_Product_Update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Product_Choice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Product_Choice.Designer.cs">
-      <DependentUpon>Form_Product_Choice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Login.Designer.cs">
-      <DependentUpon>Form_Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uForm_Category_Create.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uForm_Category_Create.Designer.cs">
-      <DependentUpon>uForm_Category_Create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uForm_Product_Create.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uForm_Product_Create.Designer.cs">
-      <DependentUpon>uForm_Product_Create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uForm_User_View.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uForm_User_View.Designer.cs">
-      <DependentUpon>uForm_User_View.cs</DependentUpon>
-    </Compile>
-    <Compile Include="uForm_Product_View.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uForm_Product_View.Designer.cs">
-      <DependentUpon>uForm_Product_View.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringValidator.cs" />
-    <EmbeddedResource Include="Form_HomePage.resx">
-      <DependentUpon>Form_HomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Category_Create.resx">
-      <DependentUpon>Form_Category_Create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Product_View.resx">
-      <DependentUpon>Form_Product_View.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uForm_Bill.resx">
-      <DependentUpon>uForm_Bill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uForm_Category_Update.resx">
-      <DependentUpon>uForm_Category_Update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uForm_Product_Update.resx">
-      <DependentUpon>uForm_Product_Update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Product_Choice.resx">
-      <DependentUpon>Form_Product_Choice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Login.resx">
-      <DependentUpon>Form_Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uForm_Category_Create.resx">
-      <DependentUpon>uForm_Category_Create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uForm_Product_Create.resx">
-      <DependentUpon>uForm_Product_Create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uForm_User_View.resx">
-      <DependentUpon>uForm_User_View.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uForm_Product_View.resx">
-      <DependentUpon>uForm_Product_View.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
