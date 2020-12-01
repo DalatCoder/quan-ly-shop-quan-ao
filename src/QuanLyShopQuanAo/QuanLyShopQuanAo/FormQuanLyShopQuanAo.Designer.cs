@@ -1,7 +1,6 @@
-﻿
-namespace QuanLyShopQuanAo
+﻿namespace QuanLyShopQuanAo
 {
-	partial class frmLogin
+	partial class FormQuanLyShopQuanAo
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,36 +28,22 @@ namespace QuanLyShopQuanAo
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
-			// label1
+			// FormQuanLyShopQuanAo
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(57, 161);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(190, 17);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Thằng hiếu biến thái dê xồm";
-			// 
-			// frmLogin
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1064, 681);
-			this.Controls.Add(this.label1);
-			this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.Name = "frmLogin";
-			this.Text = "Đăng nhập";
+			this.Name = "FormQuanLyShopQuanAo";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Quản lý cửa hàng quần áo";
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Label label1;
 	}
 }
-
