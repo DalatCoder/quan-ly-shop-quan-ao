@@ -429,6 +429,7 @@
 			this.nmGiamGia.Name = "nmGiamGia";
 			this.nmGiamGia.Size = new System.Drawing.Size(59, 25);
 			this.nmGiamGia.TabIndex = 12;
+			this.nmGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// label5
 			// 
@@ -445,7 +446,7 @@
 			this.btnHuyDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnHuyDon.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnHuyDon.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnHuyDon.Location = new System.Drawing.Point(965, 32);
+			this.btnHuyDon.Location = new System.Drawing.Point(956, 32);
 			this.btnHuyDon.Name = "btnHuyDon";
 			this.btnHuyDon.Size = new System.Drawing.Size(84, 69);
 			this.btnHuyDon.TabIndex = 6;
