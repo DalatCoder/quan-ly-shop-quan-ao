@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace QuanLyShopQuanAo
 {
-	public partial class FormQuanLyShopQuanAo : Form
+	public partial class fQLShopQuanAo : Form
 	{
-		public FormQuanLyShopQuanAo()
+		public fQLShopQuanAo()
 		{
 			InitializeComponent();
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void tsmAdmin_Click(object sender, EventArgs e)
+		{
+			frmAdmin f = new frmAdmin();
+			f.ShowDialog();
 		}
 	}
 }

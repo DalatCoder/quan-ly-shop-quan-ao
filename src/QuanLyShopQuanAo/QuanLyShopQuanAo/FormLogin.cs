@@ -16,5 +16,31 @@ namespace QuanLyShopQuanAo
 		{
 			InitializeComponent();
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			fQLShopQuanAo f = new fQLShopQuanAo();
+			this.Hide();
+			f.ShowDialog();
+			this.Show();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			string msg = "Bạn có chắc chắn muốn thoát chương trình ?";
+			var result = MessageBox.Show(msg, "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (result != DialogResult.Yes)
+				e.Cancel = true;
+		}
+
+		private void checkBox1_CheckedChanged(object sender, EventArgs e)
+		{
+			txtPass.UseSystemPasswordChar = !cbShowPass.Checked;
+		}
 	}
 }

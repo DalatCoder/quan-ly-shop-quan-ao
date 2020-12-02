@@ -30,15 +30,15 @@ namespace QuanLyShopQuanAo
 		private void InitializeComponent()
 		{
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.txtUserName = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.txtPass = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.checkBox1 = new System.Windows.Forms.CheckBox();
-			this.button1 = new System.Windows.Forms.Button();
+			this.cbShowPass = new System.Windows.Forms.CheckBox();
+			this.btnExit = new System.Windows.Forms.Button();
 			this.panel3 = new System.Windows.Forms.Panel();
-			this.button2 = new System.Windows.Forms.Button();
+			this.btnLogin = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -46,19 +46,19 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel1
 			// 
-			this.panel1.Controls.Add(this.textBox1);
+			this.panel1.Controls.Add(this.txtUserName);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Location = new System.Drawing.Point(12, 12);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(479, 58);
 			this.panel1.TabIndex = 0;
 			// 
-			// textBox1
+			// txtUserName
 			// 
-			this.textBox1.Location = new System.Drawing.Point(159, 18);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(317, 25);
-			this.textBox1.TabIndex = 1;
+			this.txtUserName.Location = new System.Drawing.Point(159, 18);
+			this.txtUserName.Name = "txtUserName";
+			this.txtUserName.Size = new System.Drawing.Size(317, 25);
+			this.txtUserName.TabIndex = 1;
 			// 
 			// label1
 			// 
@@ -71,19 +71,20 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel2
 			// 
-			this.panel2.Controls.Add(this.textBox2);
+			this.panel2.Controls.Add(this.txtPass);
 			this.panel2.Controls.Add(this.label2);
 			this.panel2.Location = new System.Drawing.Point(12, 76);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(479, 58);
 			this.panel2.TabIndex = 2;
 			// 
-			// textBox2
+			// txtPass
 			// 
-			this.textBox2.Location = new System.Drawing.Point(159, 18);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(317, 25);
-			this.textBox2.TabIndex = 1;
+			this.txtPass.Location = new System.Drawing.Point(159, 18);
+			this.txtPass.Name = "txtPass";
+			this.txtPass.Size = new System.Drawing.Size(317, 25);
+			this.txtPass.TabIndex = 1;
+			this.txtPass.UseSystemPasswordChar = true;
 			// 
 			// label2
 			// 
@@ -94,42 +95,45 @@ namespace QuanLyShopQuanAo
 			this.label2.TabIndex = 0;
 			this.label2.Text = "Mật khẩu:";
 			// 
-			// checkBox1
+			// cbShowPass
 			// 
-			this.checkBox1.AutoSize = true;
-			this.checkBox1.Location = new System.Drawing.Point(171, 140);
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(139, 21);
-			this.checkBox1.TabIndex = 3;
-			this.checkBox1.Text = "Hiển thị mật khẩu";
-			this.checkBox1.UseVisualStyleBackColor = true;
+			this.cbShowPass.AutoSize = true;
+			this.cbShowPass.Location = new System.Drawing.Point(171, 140);
+			this.cbShowPass.Name = "cbShowPass";
+			this.cbShowPass.Size = new System.Drawing.Size(139, 21);
+			this.cbShowPass.TabIndex = 3;
+			this.cbShowPass.Text = "Hiển thị mật khẩu";
+			this.cbShowPass.UseVisualStyleBackColor = true;
+			this.cbShowPass.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
-			// button1
+			// btnExit
 			// 
-			this.button1.Location = new System.Drawing.Point(361, 12);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(115, 36);
-			this.button1.TabIndex = 4;
-			this.button1.Text = "Thoát";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnExit.Location = new System.Drawing.Point(361, 12);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(115, 36);
+			this.btnExit.TabIndex = 4;
+			this.btnExit.Text = "Thoát";
+			this.btnExit.UseVisualStyleBackColor = true;
+			this.btnExit.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// panel3
 			// 
-			this.panel3.Controls.Add(this.button2);
-			this.panel3.Controls.Add(this.button1);
+			this.panel3.Controls.Add(this.btnLogin);
+			this.panel3.Controls.Add(this.btnExit);
 			this.panel3.Location = new System.Drawing.Point(12, 167);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(479, 58);
 			this.panel3.TabIndex = 5;
 			// 
-			// button2
+			// btnLogin
 			// 
-			this.button2.Location = new System.Drawing.Point(159, 12);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(115, 36);
-			this.button2.TabIndex = 5;
-			this.button2.Text = "Đăng nhập";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnLogin.Location = new System.Drawing.Point(159, 12);
+			this.btnLogin.Name = "btnLogin";
+			this.btnLogin.Size = new System.Drawing.Size(115, 36);
+			this.btnLogin.TabIndex = 5;
+			this.btnLogin.Text = "Đăng nhập";
+			this.btnLogin.UseVisualStyleBackColor = true;
+			this.btnLogin.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// frmLogin
 			// 
@@ -137,7 +141,7 @@ namespace QuanLyShopQuanAo
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(506, 246);
 			this.Controls.Add(this.panel3);
-			this.Controls.Add(this.checkBox1);
+			this.Controls.Add(this.cbShowPass);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,6 +150,7 @@ namespace QuanLyShopQuanAo
 			this.Name = "frmLogin";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Đăng nhập";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.panel2.ResumeLayout(false);
@@ -159,15 +164,15 @@ namespace QuanLyShopQuanAo
 		#endregion
 
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox txtUserName;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox txtPass;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.CheckBox checkBox1;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.CheckBox cbShowPass;
+		private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.Panel panel3;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btnLogin;
 	}
 }
 
