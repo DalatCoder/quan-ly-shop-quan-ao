@@ -666,6 +666,7 @@ namespace QuanLyShopQuanAo
 			// 
 			this.txtIDLoaiQA.Location = new System.Drawing.Point(147, 14);
 			this.txtIDLoaiQA.Name = "txtIDLoaiQA";
+			this.txtIDLoaiQA.ReadOnly = true;
 			this.txtIDLoaiQA.Size = new System.Drawing.Size(278, 25);
 			this.txtIDLoaiQA.TabIndex = 1;
 			// 
