@@ -38,9 +38,7 @@ namespace QuanLyShopQuanAo
 			this.panel19 = new System.Windows.Forms.Panel();
 			this.dtgvMatHang = new System.Windows.Forms.DataGridView();
 			this.panel13 = new System.Windows.Forms.Panel();
-			this.txtTimKiemBH = new System.Windows.Forms.TextBox();
 			this.btnTimKiemBH = new System.Windows.Forms.Button();
-			this.panel12 = new System.Windows.Forms.Panel();
 			this.btnXemBH = new System.Windows.Forms.Button();
 			this.panel11 = new System.Windows.Forms.Panel();
 			this.dtgvHD = new System.Windows.Forms.DataGridView();
@@ -113,18 +111,26 @@ namespace QuanLyShopQuanAo
 			this.txtSizeQA = new System.Windows.Forms.TextBox();
 			this.nmGiaBanQA = new System.Windows.Forms.NumericUpDown();
 			this.panel21 = new System.Windows.Forms.Panel();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
+			this.btnXemKH = new System.Windows.Forms.Button();
+			this.btnSuaKH = new System.Windows.Forms.Button();
+			this.btnXoaKH = new System.Windows.Forms.Button();
 			this.panel28 = new System.Windows.Forms.Panel();
 			this.txtDiaChiKH = new System.Windows.Forms.TextBox();
 			this.label15 = new System.Windows.Forms.Label();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label17 = new System.Windows.Forms.Label();
+			this.txtTimGiaQA = new System.Windows.Forms.TextBox();
+			this.label18 = new System.Windows.Forms.Label();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.label20 = new System.Windows.Forms.Label();
+			this.label21 = new System.Windows.Forms.Label();
+			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+			this.label22 = new System.Windows.Forms.Label();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMatHang)).BeginInit();
 			this.panel13.SuspendLayout();
-			this.panel12.SuspendLayout();
 			this.panel11.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvHD)).BeginInit();
 			this.tpQuanAo.SuspendLayout();
@@ -184,7 +190,6 @@ namespace QuanLyShopQuanAo
 			this.tpBanHang.Controls.Add(this.label6);
 			this.tpBanHang.Controls.Add(this.panel19);
 			this.tpBanHang.Controls.Add(this.panel13);
-			this.tpBanHang.Controls.Add(this.panel12);
 			this.tpBanHang.Controls.Add(this.panel11);
 			this.tpBanHang.Location = new System.Drawing.Point(4, 26);
 			this.tpBanHang.Name = "tpBanHang";
@@ -248,42 +253,31 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel13
 			// 
-			this.panel13.Controls.Add(this.txtTimKiemBH);
+			this.panel13.Controls.Add(this.btnXemBH);
+			this.panel13.Controls.Add(this.label21);
+			this.panel13.Controls.Add(this.dateTimePicker2);
+			this.panel13.Controls.Add(this.label20);
+			this.panel13.Controls.Add(this.dateTimePicker1);
 			this.panel13.Controls.Add(this.btnTimKiemBH);
-			this.panel13.Location = new System.Drawing.Point(565, 6);
+			this.panel13.Location = new System.Drawing.Point(8, 6);
 			this.panel13.Name = "panel13";
-			this.panel13.Size = new System.Drawing.Size(483, 93);
+			this.panel13.Size = new System.Drawing.Size(1040, 93);
 			this.panel13.TabIndex = 2;
-			// 
-			// txtTimKiemBH
-			// 
-			this.txtTimKiemBH.Location = new System.Drawing.Point(35, 36);
-			this.txtTimKiemBH.Name = "txtTimKiemBH";
-			this.txtTimKiemBH.Size = new System.Drawing.Size(288, 25);
-			this.txtTimKiemBH.TabIndex = 1;
 			// 
 			// btnTimKiemBH
 			// 
 			this.btnTimKiemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnTimKiemBH.Location = new System.Drawing.Point(347, 22);
+			this.btnTimKiemBH.Location = new System.Drawing.Point(357, 22);
 			this.btnTimKiemBH.Name = "btnTimKiemBH";
 			this.btnTimKiemBH.Size = new System.Drawing.Size(110, 50);
 			this.btnTimKiemBH.TabIndex = 0;
-			this.btnTimKiemBH.Text = "Tìm Kiếm";
+			this.btnTimKiemBH.Text = "Thống Kê";
 			this.btnTimKiemBH.UseVisualStyleBackColor = true;
-			// 
-			// panel12
-			// 
-			this.panel12.Controls.Add(this.btnXemBH);
-			this.panel12.Location = new System.Drawing.Point(8, 6);
-			this.panel12.Name = "panel12";
-			this.panel12.Size = new System.Drawing.Size(551, 93);
-			this.panel12.TabIndex = 1;
 			// 
 			// btnXemBH
 			// 
 			this.btnXemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnXemBH.Location = new System.Drawing.Point(186, 22);
+			this.btnXemBH.Location = new System.Drawing.Point(821, 21);
 			this.btnXemBH.Name = "btnXemBH";
 			this.btnXemBH.Size = new System.Drawing.Size(182, 50);
 			this.btnXemBH.TabIndex = 0;
@@ -533,6 +527,9 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel2
 			// 
+			this.panel2.Controls.Add(this.txtTimGiaQA);
+			this.panel2.Controls.Add(this.label17);
+			this.panel2.Controls.Add(this.label16);
 			this.panel2.Controls.Add(this.txtTimQA);
 			this.panel2.Controls.Add(this.btnTimQA);
 			this.panel2.Location = new System.Drawing.Point(565, 7);
@@ -542,15 +539,15 @@ namespace QuanLyShopQuanAo
 			// 
 			// txtTimQA
 			// 
-			this.txtTimQA.Location = new System.Drawing.Point(42, 19);
+			this.txtTimQA.Location = new System.Drawing.Point(22, 53);
 			this.txtTimQA.Name = "txtTimQA";
-			this.txtTimQA.Size = new System.Drawing.Size(274, 25);
+			this.txtTimQA.Size = new System.Drawing.Size(186, 25);
 			this.txtTimQA.TabIndex = 2;
 			// 
 			// btnTimQA
 			// 
 			this.btnTimQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnTimQA.Location = new System.Drawing.Point(375, 3);
+			this.btnTimQA.Location = new System.Drawing.Point(375, 24);
 			this.btnTimQA.Name = "btnTimQA";
 			this.btnTimQA.Size = new System.Drawing.Size(85, 54);
 			this.btnTimQA.TabIndex = 1;
@@ -702,6 +699,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel17
 			// 
+			this.panel17.Controls.Add(this.label18);
 			this.panel17.Controls.Add(this.txtTimLoaiQA);
 			this.panel17.Controls.Add(this.btnTimKiemLoaiQA);
 			this.panel17.Location = new System.Drawing.Point(565, 7);
@@ -711,9 +709,9 @@ namespace QuanLyShopQuanAo
 			// 
 			// txtTimLoaiQA
 			// 
-			this.txtTimLoaiQA.Location = new System.Drawing.Point(42, 40);
+			this.txtTimLoaiQA.Location = new System.Drawing.Point(62, 53);
 			this.txtTimLoaiQA.Name = "txtTimLoaiQA";
-			this.txtTimLoaiQA.Size = new System.Drawing.Size(274, 25);
+			this.txtTimLoaiQA.Size = new System.Drawing.Size(246, 25);
 			this.txtTimLoaiQA.TabIndex = 2;
 			// 
 			// btnTimKiemLoaiQA
@@ -905,6 +903,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel27
 			// 
+			this.panel27.Controls.Add(this.label22);
 			this.panel27.Controls.Add(this.txtTimKiemKH);
 			this.panel27.Controls.Add(this.btnTimKiemKH);
 			this.panel27.Location = new System.Drawing.Point(565, 7);
@@ -964,43 +963,43 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel21
 			// 
-			this.panel21.Controls.Add(this.button1);
-			this.panel21.Controls.Add(this.button2);
-			this.panel21.Controls.Add(this.button4);
+			this.panel21.Controls.Add(this.btnXemKH);
+			this.panel21.Controls.Add(this.btnSuaKH);
+			this.panel21.Controls.Add(this.btnXoaKH);
 			this.panel21.Location = new System.Drawing.Point(9, 8);
 			this.panel21.Name = "panel21";
 			this.panel21.Size = new System.Drawing.Size(550, 100);
 			this.panel21.TabIndex = 8;
 			// 
-			// button1
+			// btnXemKH
 			// 
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Location = new System.Drawing.Point(364, 24);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(85, 54);
-			this.button1.TabIndex = 3;
-			this.button1.Text = "Xem";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnXemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXemKH.Location = new System.Drawing.Point(364, 24);
+			this.btnXemKH.Name = "btnXemKH";
+			this.btnXemKH.Size = new System.Drawing.Size(85, 54);
+			this.btnXemKH.TabIndex = 3;
+			this.btnXemKH.Text = "Xem";
+			this.btnXemKH.UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// btnSuaKH
 			// 
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Location = new System.Drawing.Point(227, 24);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(85, 54);
-			this.button2.TabIndex = 2;
-			this.button2.Text = "Sửa";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnSuaKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSuaKH.Location = new System.Drawing.Point(227, 24);
+			this.btnSuaKH.Name = "btnSuaKH";
+			this.btnSuaKH.Size = new System.Drawing.Size(85, 54);
+			this.btnSuaKH.TabIndex = 2;
+			this.btnSuaKH.Text = "Sửa";
+			this.btnSuaKH.UseVisualStyleBackColor = true;
 			// 
-			// button4
+			// btnXoaKH
 			// 
-			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button4.Location = new System.Drawing.Point(92, 24);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(85, 54);
-			this.button4.TabIndex = 1;
-			this.button4.Text = "Xóa";
-			this.button4.UseVisualStyleBackColor = true;
+			this.btnXoaKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXoaKH.Location = new System.Drawing.Point(92, 24);
+			this.btnXoaKH.Name = "btnXoaKH";
+			this.btnXoaKH.Size = new System.Drawing.Size(85, 54);
+			this.btnXoaKH.TabIndex = 1;
+			this.btnXoaKH.Text = "Xóa";
+			this.btnXoaKH.UseVisualStyleBackColor = true;
 			// 
 			// panel28
 			// 
@@ -1027,6 +1026,85 @@ namespace QuanLyShopQuanAo
 			this.label15.TabIndex = 0;
 			this.label15.Text = "Địa Chỉ";
 			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Location = new System.Drawing.Point(68, 24);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(94, 17);
+			this.label16.TabIndex = 3;
+			this.label16.Text = "Tên Quần Áo";
+			// 
+			// label17
+			// 
+			this.label17.AutoSize = true;
+			this.label17.Location = new System.Drawing.Point(276, 24);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(30, 17);
+			this.label17.TabIndex = 4;
+			this.label17.Text = "Giá";
+			// 
+			// txtTimGiaQA
+			// 
+			this.txtTimGiaQA.Location = new System.Drawing.Point(231, 53);
+			this.txtTimGiaQA.Name = "txtTimGiaQA";
+			this.txtTimGiaQA.Size = new System.Drawing.Size(127, 25);
+			this.txtTimGiaQA.TabIndex = 5;
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Location = new System.Drawing.Point(117, 24);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(125, 17);
+			this.label18.TabIndex = 4;
+			this.label18.Text = "Tên Loại Quần Áo";
+			// 
+			// dateTimePicker1
+			// 
+			this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dateTimePicker1.Location = new System.Drawing.Point(30, 47);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(243, 25);
+			this.dateTimePicker1.TabIndex = 1;
+			// 
+			// label20
+			// 
+			this.label20.AutoSize = true;
+			this.label20.Location = new System.Drawing.Point(102, 22);
+			this.label20.Name = "label20";
+			this.label20.Size = new System.Drawing.Size(64, 17);
+			this.label20.TabIndex = 4;
+			this.label20.Text = "Từ Ngày";
+			// 
+			// label21
+			// 
+			this.label21.AutoSize = true;
+			this.label21.Location = new System.Drawing.Point(615, 21);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(72, 17);
+			this.label21.TabIndex = 6;
+			this.label21.Text = "Đến Ngày";
+			// 
+			// dateTimePicker2
+			// 
+			this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
+			this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dateTimePicker2.Location = new System.Drawing.Point(533, 46);
+			this.dateTimePicker2.Name = "dateTimePicker2";
+			this.dateTimePicker2.Size = new System.Drawing.Size(243, 25);
+			this.dateTimePicker2.TabIndex = 5;
+			// 
+			// label22
+			// 
+			this.label22.AutoSize = true;
+			this.label22.Location = new System.Drawing.Point(119, 20);
+			this.label22.Name = "label22";
+			this.label22.Size = new System.Drawing.Size(117, 17);
+			this.label22.TabIndex = 5;
+			this.label22.Text = "Tên Khách Hàng";
+			// 
 			// frmAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1044,7 +1122,6 @@ namespace QuanLyShopQuanAo
 			((System.ComponentModel.ISupportInitialize)(this.dtgvMatHang)).EndInit();
 			this.panel13.ResumeLayout(false);
 			this.panel13.PerformLayout();
-			this.panel12.ResumeLayout(false);
 			this.panel11.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dtgvHD)).EndInit();
 			this.tpQuanAo.ResumeLayout(false);
@@ -1151,10 +1228,8 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.Button btnThemLoaiQA;
 		private System.Windows.Forms.Panel panel19;
 		private System.Windows.Forms.Panel panel13;
-		private System.Windows.Forms.Panel panel12;
 		private System.Windows.Forms.Button btnXemBH;
 		private System.Windows.Forms.Panel panel11;
-		private System.Windows.Forms.TextBox txtTimKiemBH;
 		private System.Windows.Forms.Button btnTimKiemBH;
 		private System.Windows.Forms.DataGridView dtgvHD;
 		private System.Windows.Forms.PictureBox pbHinhQA;
@@ -1187,11 +1262,20 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.NumericUpDown nmGiaBanQA;
 		private System.Windows.Forms.TextBox txtSizeQA;
 		private System.Windows.Forms.Panel panel21;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.Button btnXemKH;
+		private System.Windows.Forms.Button btnSuaKH;
+		private System.Windows.Forms.Button btnXoaKH;
 		private System.Windows.Forms.Panel panel28;
 		private System.Windows.Forms.TextBox txtDiaChiKH;
 		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Label label21;
+		private System.Windows.Forms.DateTimePicker dateTimePicker2;
+		private System.Windows.Forms.Label label20;
+		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.TextBox txtTimGiaQA;
+		private System.Windows.Forms.Label label17;
+		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.Label label22;
 	}
 }
