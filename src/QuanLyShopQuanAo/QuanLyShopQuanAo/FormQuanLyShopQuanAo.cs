@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyShopQuanAo.Commons;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace QuanLyShopQuanAo
 {
 	public partial class fQLShopQuanAo : Form
 	{
+		
 		public fQLShopQuanAo()
 		{
 			InitializeComponent();
@@ -27,5 +29,12 @@ namespace QuanLyShopQuanAo
 		{
 			this.Close();
 		}
+
+		private void fQLShopQuanAo_Load(object sender, EventArgs e)
+		{
+			lbChu.Text = TienIch.So_chu(int.Parse(lbSo.Text.Replace(".", string.Empty)));
+		}
+
+		
 	}
 }

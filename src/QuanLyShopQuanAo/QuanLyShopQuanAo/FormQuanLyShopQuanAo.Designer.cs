@@ -55,16 +55,16 @@
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.lvDonHang = new System.Windows.Forms.ListView();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.lbChu = new System.Windows.Forms.Label();
+			this.lbSo = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.nmGiamGia = new System.Windows.Forms.NumericUpDown();
 			this.label5 = new System.Windows.Forms.Label();
 			this.btnHuyDon = new System.Windows.Forms.Button();
 			this.btnThanhToan = new System.Windows.Forms.Button();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.label10 = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).BeginInit();
@@ -84,14 +84,16 @@
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-			this.menuStrip1.Size = new System.Drawing.Size(1064, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(1064, 25);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
 			// tsmAdmin
 			// 
+			this.tsmAdmin.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tsmAdmin.ForeColor = System.Drawing.Color.LightCoral;
 			this.tsmAdmin.Name = "tsmAdmin";
-			this.tsmAdmin.Size = new System.Drawing.Size(55, 20);
+			this.tsmAdmin.Size = new System.Drawing.Size(67, 21);
 			this.tsmAdmin.Text = "Admin";
 			this.tsmAdmin.Click += new System.EventHandler(this.tsmAdmin_Click);
 			// 
@@ -104,8 +106,10 @@
             this.tsmThanhToan,
             this.tsmHuyDon,
             this.tsmDangXuat});
+			this.tsmChucNang.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tsmChucNang.ForeColor = System.Drawing.Color.LightCoral;
 			this.tsmChucNang.Name = "tsmChucNang";
-			this.tsmChucNang.Size = new System.Drawing.Size(77, 20);
+			this.tsmChucNang.Size = new System.Drawing.Size(98, 21);
 			this.tsmChucNang.Text = "Chức năng";
 			// 
 			// tsmThemQA
@@ -169,7 +173,8 @@
 			// 
 			this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnThem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnThem.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnThem.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnThem.Location = new System.Drawing.Point(390, 24);
 			this.btnThem.Name = "btnThem";
 			this.btnThem.Size = new System.Drawing.Size(132, 27);
@@ -199,7 +204,8 @@
 			// 
 			this.btnTaiLaiDS.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnTaiLaiDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnTaiLaiDS.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTaiLaiDS.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTaiLaiDS.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnTaiLaiDS.Location = new System.Drawing.Point(137, 53);
 			this.btnTaiLaiDS.Name = "btnTaiLaiDS";
 			this.btnTaiLaiDS.Size = new System.Drawing.Size(154, 25);
@@ -211,7 +217,8 @@
 			// 
 			this.btnXoaBoLoc.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXoaBoLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnXoaBoLoc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXoaBoLoc.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXoaBoLoc.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnXoaBoLoc.Location = new System.Drawing.Point(9, 53);
 			this.btnXoaBoLoc.Name = "btnXoaBoLoc";
 			this.btnXoaBoLoc.Size = new System.Drawing.Size(111, 25);
@@ -339,8 +346,8 @@
 			// 
 			// groupBox5
 			// 
-			this.groupBox5.Controls.Add(this.label10);
-			this.groupBox5.Controls.Add(this.label9);
+			this.groupBox5.Controls.Add(this.lbChu);
+			this.groupBox5.Controls.Add(this.lbSo);
 			this.groupBox5.Controls.Add(this.label4);
 			this.groupBox5.Controls.Add(this.label3);
 			this.groupBox5.Controls.Add(this.label7);
@@ -355,6 +362,48 @@
 			this.groupBox5.TabIndex = 4;
 			this.groupBox5.TabStop = false;
 			this.groupBox5.Text = "Thông tin thanh toán";
+			// 
+			// lbChu
+			// 
+			this.lbChu.AutoSize = true;
+			this.lbChu.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbChu.ForeColor = System.Drawing.Color.DeepPink;
+			this.lbChu.Location = new System.Drawing.Point(194, 84);
+			this.lbChu.Name = "lbChu";
+			this.lbChu.Size = new System.Drawing.Size(264, 17);
+			this.lbChu.TabIndex = 20;
+			this.lbChu.Text = "Hai trăm tám mươi nghìn đồng chẵn";
+			// 
+			// lbSo
+			// 
+			this.lbSo.AutoSize = true;
+			this.lbSo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbSo.ForeColor = System.Drawing.Color.DeepPink;
+			this.lbSo.Location = new System.Drawing.Point(637, 35);
+			this.lbSo.Name = "lbSo";
+			this.lbSo.Size = new System.Drawing.Size(72, 18);
+			this.lbSo.TabIndex = 19;
+			this.lbSo.Text = "2.500.015";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.ForeColor = System.Drawing.Color.DeepPink;
+			this.label4.Location = new System.Drawing.Point(103, 35);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(60, 18);
+			this.label4.TabIndex = 18;
+			this.label4.Text = "300.000";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(25, 84);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(161, 17);
+			this.label3.TabIndex = 17;
+			this.label3.Text = "Tổng tiền ghi bằng chữ:";
 			// 
 			// label7
 			// 
@@ -394,6 +443,8 @@
 			// 
 			this.btnHuyDon.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnHuyDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnHuyDon.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnHuyDon.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnHuyDon.Location = new System.Drawing.Point(965, 32);
 			this.btnHuyDon.Name = "btnHuyDon";
 			this.btnHuyDon.Size = new System.Drawing.Size(84, 69);
@@ -405,48 +456,14 @@
 			// 
 			this.btnThanhToan.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnThanhToan.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnThanhToan.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnThanhToan.Location = new System.Drawing.Point(845, 32);
 			this.btnThanhToan.Name = "btnThanhToan";
 			this.btnThanhToan.Size = new System.Drawing.Size(84, 69);
 			this.btnThanhToan.TabIndex = 5;
 			this.btnThanhToan.Text = "Thanh toán";
 			this.btnThanhToan.UseVisualStyleBackColor = true;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(25, 84);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(161, 17);
-			this.label3.TabIndex = 17;
-			this.label3.Text = "Tổng tiền ghi bằng chữ:";
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(103, 35);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(96, 17);
-			this.label4.TabIndex = 18;
-			this.label4.Text = "300.000 đồng";
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(637, 35);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(96, 17);
-			this.label9.TabIndex = 19;
-			this.label9.Text = "280.000 đồng";
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(194, 84);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(243, 17);
-			this.label10.TabIndex = 20;
-			this.label10.Text = "Hai trăm tám mươi nghìn đồng chẵn";
 			// 
 			// fQLShopQuanAo
 			// 
@@ -466,6 +483,7 @@
 			this.Name = "fQLShopQuanAo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Quản lý cửa hàng quần áo";
+			this.Load += new System.EventHandler(this.fQLShopQuanAo_Load);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.groupBox1.ResumeLayout(false);
@@ -520,8 +538,8 @@
 		private System.Windows.Forms.TextBox txtDiaChi;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label lbChu;
+		private System.Windows.Forms.Label lbSo;
 		private System.Windows.Forms.Label label4;
 	}
 }
