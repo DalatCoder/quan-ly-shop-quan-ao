@@ -119,13 +119,14 @@ namespace QuanLyShopQuanAo
 			this.label15 = new System.Windows.Forms.Label();
 			this.label16 = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
-			this.txtTimGiaQA = new System.Windows.Forms.TextBox();
+			this.txtTimTuGiaQA = new System.Windows.Forms.TextBox();
 			this.label18 = new System.Windows.Forms.Label();
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.label20 = new System.Windows.Forms.Label();
 			this.label21 = new System.Windows.Forms.Label();
 			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
 			this.label22 = new System.Windows.Forms.Label();
+			this.txtTimDenGiaQA = new System.Windows.Forms.TextBox();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
@@ -527,7 +528,8 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel2
 			// 
-			this.panel2.Controls.Add(this.txtTimGiaQA);
+			this.panel2.Controls.Add(this.txtTimDenGiaQA);
+			this.panel2.Controls.Add(this.txtTimTuGiaQA);
 			this.panel2.Controls.Add(this.label17);
 			this.panel2.Controls.Add(this.label16);
 			this.panel2.Controls.Add(this.txtTimQA);
@@ -1030,7 +1032,7 @@ namespace QuanLyShopQuanAo
 			// label16
 			// 
 			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(68, 24);
+			this.label16.Location = new System.Drawing.Point(64, 7);
 			this.label16.Name = "label16";
 			this.label16.Size = new System.Drawing.Size(94, 17);
 			this.label16.TabIndex = 3;
@@ -1039,18 +1041,18 @@ namespace QuanLyShopQuanAo
 			// label17
 			// 
 			this.label17.AutoSize = true;
-			this.label17.Location = new System.Drawing.Point(276, 24);
+			this.label17.Location = new System.Drawing.Point(273, 7);
 			this.label17.Name = "label17";
 			this.label17.Size = new System.Drawing.Size(30, 17);
 			this.label17.TabIndex = 4;
 			this.label17.Text = "Giá";
 			// 
-			// txtTimGiaQA
+			// txtTimTuGiaQA
 			// 
-			this.txtTimGiaQA.Location = new System.Drawing.Point(231, 53);
-			this.txtTimGiaQA.Name = "txtTimGiaQA";
-			this.txtTimGiaQA.Size = new System.Drawing.Size(127, 25);
-			this.txtTimGiaQA.TabIndex = 5;
+			this.txtTimTuGiaQA.Location = new System.Drawing.Point(231, 36);
+			this.txtTimTuGiaQA.Name = "txtTimTuGiaQA";
+			this.txtTimTuGiaQA.Size = new System.Drawing.Size(127, 25);
+			this.txtTimTuGiaQA.TabIndex = 5;
 			// 
 			// label18
 			// 
@@ -1105,6 +1107,13 @@ namespace QuanLyShopQuanAo
 			this.label22.Size = new System.Drawing.Size(117, 17);
 			this.label22.TabIndex = 5;
 			this.label22.Text = "Tên Khách Hàng";
+			// 
+			// txtTimDenGiaQA
+			// 
+			this.txtTimDenGiaQA.Location = new System.Drawing.Point(231, 68);
+			this.txtTimDenGiaQA.Name = "txtTimDenGiaQA";
+			this.txtTimDenGiaQA.Size = new System.Drawing.Size(127, 25);
+			this.txtTimDenGiaQA.TabIndex = 6;
 			// 
 			// frmAdmin
 			// 
@@ -1273,10 +1282,11 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.DateTimePicker dateTimePicker2;
 		private System.Windows.Forms.Label label20;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
-		private System.Windows.Forms.TextBox txtTimGiaQA;
+		private System.Windows.Forms.TextBox txtTimTuGiaQA;
 		private System.Windows.Forms.Label label17;
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.Label label22;
+		private System.Windows.Forms.TextBox txtTimDenGiaQA;
 	}
 }
