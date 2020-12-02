@@ -104,7 +104,7 @@ namespace QuanLyShopQuanAo
 			this.cbShowPass.TabIndex = 3;
 			this.cbShowPass.Text = "Hiển thị mật khẩu";
 			this.cbShowPass.UseVisualStyleBackColor = true;
-			this.cbShowPass.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+			this.cbShowPass.CheckedChanged += new System.EventHandler(this.cbShowPassword_CheckedChanged);
 			// 
 			// btnExit
 			// 
@@ -114,7 +114,7 @@ namespace QuanLyShopQuanAo
 			this.btnExit.TabIndex = 4;
 			this.btnExit.Text = "Thoát";
 			this.btnExit.UseVisualStyleBackColor = true;
-			this.btnExit.Click += new System.EventHandler(this.button1_Click);
+			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
 			// panel3
 			// 
@@ -133,7 +133,7 @@ namespace QuanLyShopQuanAo
 			this.btnLogin.TabIndex = 5;
 			this.btnLogin.Text = "Đăng nhập";
 			this.btnLogin.UseVisualStyleBackColor = true;
-			this.btnLogin.Click += new System.EventHandler(this.button2_Click);
+			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
 			// 
 			// frmLogin
 			// 

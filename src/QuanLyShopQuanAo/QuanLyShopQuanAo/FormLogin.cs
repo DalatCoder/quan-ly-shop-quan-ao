@@ -17,7 +17,7 @@ namespace QuanLyShopQuanAo
 			InitializeComponent();
 		}
 
-		private void button2_Click(object sender, EventArgs e)
+		private void btnLogin_Click(object sender, EventArgs e)
 		{
 			fQLShopQuanAo f = new fQLShopQuanAo();
 			this.Hide();
@@ -25,7 +25,7 @@ namespace QuanLyShopQuanAo
 			this.Show();
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void btnExit_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
 		}
@@ -38,7 +38,7 @@ namespace QuanLyShopQuanAo
 				e.Cancel = true;
 		}
 
-		private void checkBox1_CheckedChanged(object sender, EventArgs e)
+		private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
 		{
 			txtPass.UseSystemPasswordChar = !cbShowPass.Checked;
 		}

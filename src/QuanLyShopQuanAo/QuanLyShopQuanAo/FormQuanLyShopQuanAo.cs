@@ -17,15 +17,15 @@ namespace QuanLyShopQuanAo
 			InitializeComponent();
 		}
 
-		private void button2_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void tsmAdmin_Click(object sender, EventArgs e)
 		{
 			frmAdmin f = new frmAdmin();
 			f.ShowDialog();
+		}
+
+		private void tsmDangXuat_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }
