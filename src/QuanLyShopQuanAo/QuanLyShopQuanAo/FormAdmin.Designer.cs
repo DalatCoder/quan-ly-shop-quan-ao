@@ -271,6 +271,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnXemBH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXemBH.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXemBH.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnXemBH.Location = new System.Drawing.Point(821, 21);
 			this.btnXemBH.Name = "btnXemBH";
 			this.btnXemBH.Size = new System.Drawing.Size(182, 50);
@@ -318,6 +320,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnTimKiemBH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnTimKiemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTimKiemBH.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTimKiemBH.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnTimKiemBH.Location = new System.Drawing.Point(357, 22);
 			this.btnTimKiemBH.Name = "btnTimKiemBH";
 			this.btnTimKiemBH.Size = new System.Drawing.Size(110, 50);
@@ -397,6 +401,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button3.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button3.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.button3.Location = new System.Drawing.Point(231, 28);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(229, 54);
@@ -656,6 +662,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnTimQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnTimQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTimQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTimQA.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnTimQA.Location = new System.Drawing.Point(375, 24);
 			this.btnTimQA.Name = "btnTimQA";
 			this.btnTimQA.Size = new System.Drawing.Size(85, 54);
@@ -678,6 +686,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnXemQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXemQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXemQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXemQA.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnXemQA.Location = new System.Drawing.Point(435, 24);
 			this.btnXemQA.Name = "btnXemQA";
 			this.btnXemQA.Size = new System.Drawing.Size(85, 54);
@@ -689,6 +699,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnSuaQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnSuaQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSuaQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSuaQA.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnSuaQA.Location = new System.Drawing.Point(298, 24);
 			this.btnSuaQA.Name = "btnSuaQA";
 			this.btnSuaQA.Size = new System.Drawing.Size(85, 54);
@@ -700,6 +712,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnXoaQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXoaQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXoaQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXoaQA.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnXoaQA.Location = new System.Drawing.Point(163, 24);
 			this.btnXoaQA.Name = "btnXoaQA";
 			this.btnXoaQA.Size = new System.Drawing.Size(85, 54);
@@ -711,6 +725,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnThemQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnThemQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnThemQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnThemQA.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnThemQA.Location = new System.Drawing.Point(26, 24);
 			this.btnThemQA.Name = "btnThemQA";
 			this.btnThemQA.Size = new System.Drawing.Size(85, 54);
@@ -841,6 +857,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnTimKiemLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnTimKiemLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTimKiemLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTimKiemLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnTimKiemLoaiQA.Location = new System.Drawing.Point(362, 24);
 			this.btnTimKiemLoaiQA.Name = "btnTimKiemLoaiQA";
 			this.btnTimKiemLoaiQA.Size = new System.Drawing.Size(85, 54);
@@ -863,6 +881,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnXemLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXemLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXemLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXemLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnXemLoaiQA.Location = new System.Drawing.Point(435, 24);
 			this.btnXemLoaiQA.Name = "btnXemLoaiQA";
 			this.btnXemLoaiQA.Size = new System.Drawing.Size(85, 54);
@@ -874,6 +894,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnSuaLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnSuaLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSuaLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSuaLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnSuaLoaiQA.Location = new System.Drawing.Point(298, 24);
 			this.btnSuaLoaiQA.Name = "btnSuaLoaiQA";
 			this.btnSuaLoaiQA.Size = new System.Drawing.Size(85, 54);
@@ -885,6 +907,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnXoaLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXoaLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXoaLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXoaLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnXoaLoaiQA.Location = new System.Drawing.Point(163, 24);
 			this.btnXoaLoaiQA.Name = "btnXoaLoaiQA";
 			this.btnXoaLoaiQA.Size = new System.Drawing.Size(85, 54);
@@ -896,6 +920,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnThemLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnThemLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnThemLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnThemLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnThemLoaiQA.Location = new System.Drawing.Point(26, 24);
 			this.btnThemLoaiQA.Name = "btnThemLoaiQA";
 			this.btnThemLoaiQA.Size = new System.Drawing.Size(85, 54);
@@ -931,6 +957,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnXemKH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXemKH.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXemKH.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnXemKH.Location = new System.Drawing.Point(364, 24);
 			this.btnXemKH.Name = "btnXemKH";
 			this.btnXemKH.Size = new System.Drawing.Size(85, 54);
@@ -942,6 +970,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnSuaKH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnSuaKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSuaKH.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSuaKH.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnSuaKH.Location = new System.Drawing.Point(227, 24);
 			this.btnSuaKH.Name = "btnSuaKH";
 			this.btnSuaKH.Size = new System.Drawing.Size(85, 54);
@@ -953,6 +983,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnXoaKH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXoaKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXoaKH.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXoaKH.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnXoaKH.Location = new System.Drawing.Point(92, 24);
 			this.btnXoaKH.Name = "btnXoaKH";
 			this.btnXoaKH.Size = new System.Drawing.Size(85, 54);
@@ -1127,6 +1159,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnTimKiemKH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnTimKiemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTimKiemKH.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTimKiemKH.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnTimKiemKH.Location = new System.Drawing.Point(362, 24);
 			this.btnTimKiemKH.Name = "btnTimKiemKH";
 			this.btnTimKiemKH.Size = new System.Drawing.Size(85, 54);
