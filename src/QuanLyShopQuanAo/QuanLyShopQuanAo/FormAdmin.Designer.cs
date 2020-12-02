@@ -38,12 +38,17 @@ namespace QuanLyShopQuanAo
 			this.panel19 = new System.Windows.Forms.Panel();
 			this.dtgvMatHang = new System.Windows.Forms.DataGridView();
 			this.panel13 = new System.Windows.Forms.Panel();
-			this.btnTimKiemBH = new System.Windows.Forms.Button();
 			this.btnXemBH = new System.Windows.Forms.Button();
+			this.label21 = new System.Windows.Forms.Label();
+			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+			this.label20 = new System.Windows.Forms.Label();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.btnTimKiemBH = new System.Windows.Forms.Button();
 			this.panel11 = new System.Windows.Forms.Panel();
 			this.dtgvHD = new System.Windows.Forms.DataGridView();
 			this.tpQuanAo = new System.Windows.Forms.TabPage();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.txtGhiChuQA = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.button3 = new System.Windows.Forms.Button();
 			this.panel25 = new System.Windows.Forms.Panel();
@@ -51,11 +56,13 @@ namespace QuanLyShopQuanAo
 			this.label14 = new System.Windows.Forms.Label();
 			this.pbHinhQA = new System.Windows.Forms.PictureBox();
 			this.panel9 = new System.Windows.Forms.Panel();
+			this.nmGiaBanQA = new System.Windows.Forms.NumericUpDown();
 			this.label5 = new System.Windows.Forms.Label();
 			this.panel8 = new System.Windows.Forms.Panel();
 			this.nmSoLuongQA = new System.Windows.Forms.NumericUpDown();
 			this.label4 = new System.Windows.Forms.Label();
 			this.panel7 = new System.Windows.Forms.Panel();
+			this.txtSizeQA = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.txtTenQA = new System.Windows.Forms.TextBox();
@@ -66,6 +73,10 @@ namespace QuanLyShopQuanAo
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dtgvQA = new System.Windows.Forms.DataGridView();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.txtTimDenGiaQA = new System.Windows.Forms.TextBox();
+			this.txtTimTuGiaQA = new System.Windows.Forms.TextBox();
+			this.label17 = new System.Windows.Forms.Label();
+			this.label16 = new System.Windows.Forms.Label();
 			this.txtTimQA = new System.Windows.Forms.TextBox();
 			this.btnTimQA = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -84,6 +95,7 @@ namespace QuanLyShopQuanAo
 			this.panel16 = new System.Windows.Forms.Panel();
 			this.dtgvLoaiQA = new System.Windows.Forms.DataGridView();
 			this.panel17 = new System.Windows.Forms.Panel();
+			this.label18 = new System.Windows.Forms.Label();
 			this.txtTimLoaiQA = new System.Windows.Forms.TextBox();
 			this.btnTimKiemLoaiQA = new System.Windows.Forms.Button();
 			this.panel18 = new System.Windows.Forms.Panel();
@@ -92,7 +104,14 @@ namespace QuanLyShopQuanAo
 			this.btnXoaLoaiQA = new System.Windows.Forms.Button();
 			this.btnThemLoaiQA = new System.Windows.Forms.Button();
 			this.tpKhachHang = new System.Windows.Forms.TabPage();
+			this.panel21 = new System.Windows.Forms.Panel();
+			this.btnXemKH = new System.Windows.Forms.Button();
+			this.btnSuaKH = new System.Windows.Forms.Button();
+			this.btnXoaKH = new System.Windows.Forms.Button();
 			this.panel20 = new System.Windows.Forms.Panel();
+			this.panel28 = new System.Windows.Forms.Panel();
+			this.txtDiaChiKH = new System.Windows.Forms.TextBox();
+			this.label15 = new System.Windows.Forms.Label();
 			this.panel22 = new System.Windows.Forms.Panel();
 			this.nmSoLuongHDKH = new System.Windows.Forms.NumericUpDown();
 			this.label11 = new System.Windows.Forms.Label();
@@ -105,28 +124,9 @@ namespace QuanLyShopQuanAo
 			this.panel26 = new System.Windows.Forms.Panel();
 			this.dtgvKH = new System.Windows.Forms.DataGridView();
 			this.panel27 = new System.Windows.Forms.Panel();
+			this.label22 = new System.Windows.Forms.Label();
 			this.txtTimKiemKH = new System.Windows.Forms.TextBox();
 			this.btnTimKiemKH = new System.Windows.Forms.Button();
-			this.txtGhiChuQA = new System.Windows.Forms.TextBox();
-			this.txtSizeQA = new System.Windows.Forms.TextBox();
-			this.nmGiaBanQA = new System.Windows.Forms.NumericUpDown();
-			this.panel21 = new System.Windows.Forms.Panel();
-			this.btnXemKH = new System.Windows.Forms.Button();
-			this.btnSuaKH = new System.Windows.Forms.Button();
-			this.btnXoaKH = new System.Windows.Forms.Button();
-			this.panel28 = new System.Windows.Forms.Panel();
-			this.txtDiaChiKH = new System.Windows.Forms.TextBox();
-			this.label15 = new System.Windows.Forms.Label();
-			this.label16 = new System.Windows.Forms.Label();
-			this.label17 = new System.Windows.Forms.Label();
-			this.txtTimTuGiaQA = new System.Windows.Forms.TextBox();
-			this.label18 = new System.Windows.Forms.Label();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-			this.label20 = new System.Windows.Forms.Label();
-			this.label21 = new System.Windows.Forms.Label();
-			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-			this.label22 = new System.Windows.Forms.Label();
-			this.txtTimDenGiaQA = new System.Windows.Forms.TextBox();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
@@ -139,6 +139,7 @@ namespace QuanLyShopQuanAo
 			this.panel25.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pbHinhQA)).BeginInit();
 			this.panel9.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nmGiaBanQA)).BeginInit();
 			this.panel8.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmSoLuongQA)).BeginInit();
 			this.panel7.SuspendLayout();
@@ -157,7 +158,9 @@ namespace QuanLyShopQuanAo
 			this.panel17.SuspendLayout();
 			this.panel18.SuspendLayout();
 			this.tpKhachHang.SuspendLayout();
+			this.panel21.SuspendLayout();
 			this.panel20.SuspendLayout();
+			this.panel28.SuspendLayout();
 			this.panel22.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmSoLuongHDKH)).BeginInit();
 			this.panel23.SuspendLayout();
@@ -165,9 +168,6 @@ namespace QuanLyShopQuanAo
 			this.panel26.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).BeginInit();
 			this.panel27.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.nmGiaBanQA)).BeginInit();
-			this.panel21.SuspendLayout();
-			this.panel28.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tcAdmin
@@ -204,6 +204,7 @@ namespace QuanLyShopQuanAo
 			// 
 			this.txtDiscountBH.Location = new System.Drawing.Point(840, 599);
 			this.txtDiscountBH.Name = "txtDiscountBH";
+			this.txtDiscountBH.ReadOnly = true;
 			this.txtDiscountBH.Size = new System.Drawing.Size(208, 25);
 			this.txtDiscountBH.TabIndex = 7;
 			// 
@@ -220,6 +221,7 @@ namespace QuanLyShopQuanAo
 			// 
 			this.txtTongTienBH.Location = new System.Drawing.Point(569, 599);
 			this.txtTongTienBH.Name = "txtTongTienBH";
+			this.txtTongTienBH.ReadOnly = true;
 			this.txtTongTienBH.Size = new System.Drawing.Size(208, 25);
 			this.txtTongTienBH.TabIndex = 5;
 			// 
@@ -265,18 +267,9 @@ namespace QuanLyShopQuanAo
 			this.panel13.Size = new System.Drawing.Size(1040, 93);
 			this.panel13.TabIndex = 2;
 			// 
-			// btnTimKiemBH
-			// 
-			this.btnTimKiemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnTimKiemBH.Location = new System.Drawing.Point(357, 22);
-			this.btnTimKiemBH.Name = "btnTimKiemBH";
-			this.btnTimKiemBH.Size = new System.Drawing.Size(110, 50);
-			this.btnTimKiemBH.TabIndex = 0;
-			this.btnTimKiemBH.Text = "Thống Kê";
-			this.btnTimKiemBH.UseVisualStyleBackColor = true;
-			// 
 			// btnXemBH
 			// 
+			this.btnXemBH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnXemBH.Location = new System.Drawing.Point(821, 21);
 			this.btnXemBH.Name = "btnXemBH";
@@ -284,6 +277,53 @@ namespace QuanLyShopQuanAo
 			this.btnXemBH.TabIndex = 0;
 			this.btnXemBH.Text = "Tải lại danh sách";
 			this.btnXemBH.UseVisualStyleBackColor = true;
+			// 
+			// label21
+			// 
+			this.label21.AutoSize = true;
+			this.label21.Location = new System.Drawing.Point(615, 21);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(72, 17);
+			this.label21.TabIndex = 6;
+			this.label21.Text = "Đến Ngày";
+			// 
+			// dateTimePicker2
+			// 
+			this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
+			this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dateTimePicker2.Location = new System.Drawing.Point(533, 46);
+			this.dateTimePicker2.Name = "dateTimePicker2";
+			this.dateTimePicker2.Size = new System.Drawing.Size(243, 25);
+			this.dateTimePicker2.TabIndex = 5;
+			// 
+			// label20
+			// 
+			this.label20.AutoSize = true;
+			this.label20.Location = new System.Drawing.Point(102, 22);
+			this.label20.Name = "label20";
+			this.label20.Size = new System.Drawing.Size(64, 17);
+			this.label20.TabIndex = 4;
+			this.label20.Text = "Từ Ngày";
+			// 
+			// dateTimePicker1
+			// 
+			this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dateTimePicker1.Location = new System.Drawing.Point(30, 47);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(243, 25);
+			this.dateTimePicker1.TabIndex = 1;
+			// 
+			// btnTimKiemBH
+			// 
+			this.btnTimKiemBH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnTimKiemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTimKiemBH.Location = new System.Drawing.Point(357, 22);
+			this.btnTimKiemBH.Name = "btnTimKiemBH";
+			this.btnTimKiemBH.Size = new System.Drawing.Size(110, 50);
+			this.btnTimKiemBH.TabIndex = 0;
+			this.btnTimKiemBH.Text = "Thống Kê";
+			this.btnTimKiemBH.UseVisualStyleBackColor = true;
 			// 
 			// panel11
 			// 
@@ -336,6 +376,14 @@ namespace QuanLyShopQuanAo
 			this.panel4.Size = new System.Drawing.Size(483, 527);
 			this.panel4.TabIndex = 3;
 			// 
+			// txtGhiChuQA
+			// 
+			this.txtGhiChuQA.Location = new System.Drawing.Point(231, 123);
+			this.txtGhiChuQA.Multiline = true;
+			this.txtGhiChuQA.Name = "txtGhiChuQA";
+			this.txtGhiChuQA.Size = new System.Drawing.Size(229, 138);
+			this.txtGhiChuQA.TabIndex = 10;
+			// 
 			// label8
 			// 
 			this.label8.AutoSize = true;
@@ -347,6 +395,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// button3
 			// 
+			this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button3.Location = new System.Drawing.Point(231, 28);
 			this.button3.Name = "button3";
@@ -398,6 +447,24 @@ namespace QuanLyShopQuanAo
 			this.panel9.Size = new System.Drawing.Size(438, 33);
 			this.panel9.TabIndex = 4;
 			// 
+			// nmGiaBanQA
+			// 
+			this.nmGiaBanQA.Increment = new decimal(new int[] {
+            20000,
+            0,
+            0,
+            0});
+			this.nmGiaBanQA.Location = new System.Drawing.Point(147, 5);
+			this.nmGiaBanQA.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+			this.nmGiaBanQA.Name = "nmGiaBanQA";
+			this.nmGiaBanQA.Size = new System.Drawing.Size(278, 25);
+			this.nmGiaBanQA.TabIndex = 2;
+			this.nmGiaBanQA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
@@ -446,6 +513,13 @@ namespace QuanLyShopQuanAo
 			this.panel7.Name = "panel7";
 			this.panel7.Size = new System.Drawing.Size(438, 31);
 			this.panel7.TabIndex = 2;
+			// 
+			// txtSizeQA
+			// 
+			this.txtSizeQA.Location = new System.Drawing.Point(147, 3);
+			this.txtSizeQA.Name = "txtSizeQA";
+			this.txtSizeQA.Size = new System.Drawing.Size(278, 25);
+			this.txtSizeQA.TabIndex = 2;
 			// 
 			// label3
 			// 
@@ -539,6 +613,38 @@ namespace QuanLyShopQuanAo
 			this.panel2.Size = new System.Drawing.Size(483, 100);
 			this.panel2.TabIndex = 1;
 			// 
+			// txtTimDenGiaQA
+			// 
+			this.txtTimDenGiaQA.Location = new System.Drawing.Point(231, 68);
+			this.txtTimDenGiaQA.Name = "txtTimDenGiaQA";
+			this.txtTimDenGiaQA.Size = new System.Drawing.Size(127, 25);
+			this.txtTimDenGiaQA.TabIndex = 6;
+			// 
+			// txtTimTuGiaQA
+			// 
+			this.txtTimTuGiaQA.Location = new System.Drawing.Point(231, 36);
+			this.txtTimTuGiaQA.Name = "txtTimTuGiaQA";
+			this.txtTimTuGiaQA.Size = new System.Drawing.Size(127, 25);
+			this.txtTimTuGiaQA.TabIndex = 5;
+			// 
+			// label17
+			// 
+			this.label17.AutoSize = true;
+			this.label17.Location = new System.Drawing.Point(273, 7);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(30, 17);
+			this.label17.TabIndex = 4;
+			this.label17.Text = "Giá";
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Location = new System.Drawing.Point(64, 7);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(94, 17);
+			this.label16.TabIndex = 3;
+			this.label16.Text = "Tên Quần Áo";
+			// 
 			// txtTimQA
 			// 
 			this.txtTimQA.Location = new System.Drawing.Point(22, 53);
@@ -548,6 +654,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnTimQA
 			// 
+			this.btnTimQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnTimQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnTimQA.Location = new System.Drawing.Point(375, 24);
 			this.btnTimQA.Name = "btnTimQA";
@@ -569,6 +676,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnXemQA
 			// 
+			this.btnXemQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXemQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnXemQA.Location = new System.Drawing.Point(435, 24);
 			this.btnXemQA.Name = "btnXemQA";
@@ -579,6 +687,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnSuaQA
 			// 
+			this.btnSuaQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnSuaQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSuaQA.Location = new System.Drawing.Point(298, 24);
 			this.btnSuaQA.Name = "btnSuaQA";
@@ -589,6 +698,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnXoaQA
 			// 
+			this.btnXoaQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXoaQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnXoaQA.Location = new System.Drawing.Point(163, 24);
 			this.btnXoaQA.Name = "btnXoaQA";
@@ -599,6 +709,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnThemQA
 			// 
+			this.btnThemQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnThemQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnThemQA.Location = new System.Drawing.Point(26, 24);
 			this.btnThemQA.Name = "btnThemQA";
@@ -710,6 +821,15 @@ namespace QuanLyShopQuanAo
 			this.panel17.Size = new System.Drawing.Size(483, 100);
 			this.panel17.TabIndex = 5;
 			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Location = new System.Drawing.Point(117, 24);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(125, 17);
+			this.label18.TabIndex = 4;
+			this.label18.Text = "Tên Loại Quần Áo";
+			// 
 			// txtTimLoaiQA
 			// 
 			this.txtTimLoaiQA.Location = new System.Drawing.Point(62, 53);
@@ -719,6 +839,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnTimKiemLoaiQA
 			// 
+			this.btnTimKiemLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnTimKiemLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnTimKiemLoaiQA.Location = new System.Drawing.Point(362, 24);
 			this.btnTimKiemLoaiQA.Name = "btnTimKiemLoaiQA";
@@ -740,6 +861,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnXemLoaiQA
 			// 
+			this.btnXemLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXemLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnXemLoaiQA.Location = new System.Drawing.Point(435, 24);
 			this.btnXemLoaiQA.Name = "btnXemLoaiQA";
@@ -750,6 +872,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnSuaLoaiQA
 			// 
+			this.btnSuaLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnSuaLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSuaLoaiQA.Location = new System.Drawing.Point(298, 24);
 			this.btnSuaLoaiQA.Name = "btnSuaLoaiQA";
@@ -760,6 +883,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnXoaLoaiQA
 			// 
+			this.btnXoaLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnXoaLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnXoaLoaiQA.Location = new System.Drawing.Point(163, 24);
 			this.btnXoaLoaiQA.Name = "btnXoaLoaiQA";
@@ -770,6 +894,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnThemLoaiQA
 			// 
+			this.btnThemLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnThemLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnThemLoaiQA.Location = new System.Drawing.Point(26, 24);
 			this.btnThemLoaiQA.Name = "btnThemLoaiQA";
@@ -792,6 +917,49 @@ namespace QuanLyShopQuanAo
 			this.tpKhachHang.Text = "Khách Hàng";
 			this.tpKhachHang.UseVisualStyleBackColor = true;
 			// 
+			// panel21
+			// 
+			this.panel21.Controls.Add(this.btnXemKH);
+			this.panel21.Controls.Add(this.btnSuaKH);
+			this.panel21.Controls.Add(this.btnXoaKH);
+			this.panel21.Location = new System.Drawing.Point(9, 8);
+			this.panel21.Name = "panel21";
+			this.panel21.Size = new System.Drawing.Size(550, 100);
+			this.panel21.TabIndex = 8;
+			// 
+			// btnXemKH
+			// 
+			this.btnXemKH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnXemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXemKH.Location = new System.Drawing.Point(364, 24);
+			this.btnXemKH.Name = "btnXemKH";
+			this.btnXemKH.Size = new System.Drawing.Size(85, 54);
+			this.btnXemKH.TabIndex = 3;
+			this.btnXemKH.Text = "Xem";
+			this.btnXemKH.UseVisualStyleBackColor = true;
+			// 
+			// btnSuaKH
+			// 
+			this.btnSuaKH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnSuaKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSuaKH.Location = new System.Drawing.Point(227, 24);
+			this.btnSuaKH.Name = "btnSuaKH";
+			this.btnSuaKH.Size = new System.Drawing.Size(85, 54);
+			this.btnSuaKH.TabIndex = 2;
+			this.btnSuaKH.Text = "Sửa";
+			this.btnSuaKH.UseVisualStyleBackColor = true;
+			// 
+			// btnXoaKH
+			// 
+			this.btnXoaKH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnXoaKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXoaKH.Location = new System.Drawing.Point(92, 24);
+			this.btnXoaKH.Name = "btnXoaKH";
+			this.btnXoaKH.Size = new System.Drawing.Size(85, 54);
+			this.btnXoaKH.TabIndex = 1;
+			this.btnXoaKH.Text = "Xóa";
+			this.btnXoaKH.UseVisualStyleBackColor = true;
+			// 
 			// panel20
 			// 
 			this.panel20.Controls.Add(this.panel28);
@@ -802,6 +970,31 @@ namespace QuanLyShopQuanAo
 			this.panel20.Name = "panel20";
 			this.panel20.Size = new System.Drawing.Size(483, 529);
 			this.panel20.TabIndex = 7;
+			// 
+			// panel28
+			// 
+			this.panel28.Controls.Add(this.txtDiaChiKH);
+			this.panel28.Controls.Add(this.label15);
+			this.panel28.Location = new System.Drawing.Point(22, 197);
+			this.panel28.Name = "panel28";
+			this.panel28.Size = new System.Drawing.Size(438, 52);
+			this.panel28.TabIndex = 4;
+			// 
+			// txtDiaChiKH
+			// 
+			this.txtDiaChiKH.Location = new System.Drawing.Point(180, 17);
+			this.txtDiaChiKH.Name = "txtDiaChiKH";
+			this.txtDiaChiKH.Size = new System.Drawing.Size(245, 25);
+			this.txtDiaChiKH.TabIndex = 1;
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Location = new System.Drawing.Point(17, 17);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(56, 17);
+			this.label15.TabIndex = 0;
+			this.label15.Text = "Địa Chỉ";
 			// 
 			// panel22
 			// 
@@ -914,191 +1107,6 @@ namespace QuanLyShopQuanAo
 			this.panel27.Size = new System.Drawing.Size(483, 100);
 			this.panel27.TabIndex = 5;
 			// 
-			// txtTimKiemKH
-			// 
-			this.txtTimKiemKH.Location = new System.Drawing.Point(42, 40);
-			this.txtTimKiemKH.Name = "txtTimKiemKH";
-			this.txtTimKiemKH.Size = new System.Drawing.Size(274, 25);
-			this.txtTimKiemKH.TabIndex = 2;
-			// 
-			// btnTimKiemKH
-			// 
-			this.btnTimKiemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnTimKiemKH.Location = new System.Drawing.Point(362, 24);
-			this.btnTimKiemKH.Name = "btnTimKiemKH";
-			this.btnTimKiemKH.Size = new System.Drawing.Size(85, 54);
-			this.btnTimKiemKH.TabIndex = 1;
-			this.btnTimKiemKH.Text = "Tìm Kiếm";
-			this.btnTimKiemKH.UseVisualStyleBackColor = true;
-			// 
-			// txtGhiChuQA
-			// 
-			this.txtGhiChuQA.Location = new System.Drawing.Point(231, 123);
-			this.txtGhiChuQA.Multiline = true;
-			this.txtGhiChuQA.Name = "txtGhiChuQA";
-			this.txtGhiChuQA.Size = new System.Drawing.Size(229, 138);
-			this.txtGhiChuQA.TabIndex = 10;
-			// 
-			// txtSizeQA
-			// 
-			this.txtSizeQA.Location = new System.Drawing.Point(147, 3);
-			this.txtSizeQA.Name = "txtSizeQA";
-			this.txtSizeQA.Size = new System.Drawing.Size(278, 25);
-			this.txtSizeQA.TabIndex = 2;
-			// 
-			// nmGiaBanQA
-			// 
-			this.nmGiaBanQA.Increment = new decimal(new int[] {
-            20000,
-            0,
-            0,
-            0});
-			this.nmGiaBanQA.Location = new System.Drawing.Point(147, 5);
-			this.nmGiaBanQA.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-			this.nmGiaBanQA.Name = "nmGiaBanQA";
-			this.nmGiaBanQA.Size = new System.Drawing.Size(278, 25);
-			this.nmGiaBanQA.TabIndex = 2;
-			this.nmGiaBanQA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			// 
-			// panel21
-			// 
-			this.panel21.Controls.Add(this.btnXemKH);
-			this.panel21.Controls.Add(this.btnSuaKH);
-			this.panel21.Controls.Add(this.btnXoaKH);
-			this.panel21.Location = new System.Drawing.Point(9, 8);
-			this.panel21.Name = "panel21";
-			this.panel21.Size = new System.Drawing.Size(550, 100);
-			this.panel21.TabIndex = 8;
-			// 
-			// btnXemKH
-			// 
-			this.btnXemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnXemKH.Location = new System.Drawing.Point(364, 24);
-			this.btnXemKH.Name = "btnXemKH";
-			this.btnXemKH.Size = new System.Drawing.Size(85, 54);
-			this.btnXemKH.TabIndex = 3;
-			this.btnXemKH.Text = "Xem";
-			this.btnXemKH.UseVisualStyleBackColor = true;
-			// 
-			// btnSuaKH
-			// 
-			this.btnSuaKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSuaKH.Location = new System.Drawing.Point(227, 24);
-			this.btnSuaKH.Name = "btnSuaKH";
-			this.btnSuaKH.Size = new System.Drawing.Size(85, 54);
-			this.btnSuaKH.TabIndex = 2;
-			this.btnSuaKH.Text = "Sửa";
-			this.btnSuaKH.UseVisualStyleBackColor = true;
-			// 
-			// btnXoaKH
-			// 
-			this.btnXoaKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnXoaKH.Location = new System.Drawing.Point(92, 24);
-			this.btnXoaKH.Name = "btnXoaKH";
-			this.btnXoaKH.Size = new System.Drawing.Size(85, 54);
-			this.btnXoaKH.TabIndex = 1;
-			this.btnXoaKH.Text = "Xóa";
-			this.btnXoaKH.UseVisualStyleBackColor = true;
-			// 
-			// panel28
-			// 
-			this.panel28.Controls.Add(this.txtDiaChiKH);
-			this.panel28.Controls.Add(this.label15);
-			this.panel28.Location = new System.Drawing.Point(22, 197);
-			this.panel28.Name = "panel28";
-			this.panel28.Size = new System.Drawing.Size(438, 52);
-			this.panel28.TabIndex = 4;
-			// 
-			// txtDiaChiKH
-			// 
-			this.txtDiaChiKH.Location = new System.Drawing.Point(180, 17);
-			this.txtDiaChiKH.Name = "txtDiaChiKH";
-			this.txtDiaChiKH.Size = new System.Drawing.Size(245, 25);
-			this.txtDiaChiKH.TabIndex = 1;
-			// 
-			// label15
-			// 
-			this.label15.AutoSize = true;
-			this.label15.Location = new System.Drawing.Point(17, 17);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(56, 17);
-			this.label15.TabIndex = 0;
-			this.label15.Text = "Địa Chỉ";
-			// 
-			// label16
-			// 
-			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(64, 7);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(94, 17);
-			this.label16.TabIndex = 3;
-			this.label16.Text = "Tên Quần Áo";
-			// 
-			// label17
-			// 
-			this.label17.AutoSize = true;
-			this.label17.Location = new System.Drawing.Point(273, 7);
-			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(30, 17);
-			this.label17.TabIndex = 4;
-			this.label17.Text = "Giá";
-			// 
-			// txtTimTuGiaQA
-			// 
-			this.txtTimTuGiaQA.Location = new System.Drawing.Point(231, 36);
-			this.txtTimTuGiaQA.Name = "txtTimTuGiaQA";
-			this.txtTimTuGiaQA.Size = new System.Drawing.Size(127, 25);
-			this.txtTimTuGiaQA.TabIndex = 5;
-			// 
-			// label18
-			// 
-			this.label18.AutoSize = true;
-			this.label18.Location = new System.Drawing.Point(117, 24);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(125, 17);
-			this.label18.TabIndex = 4;
-			this.label18.Text = "Tên Loại Quần Áo";
-			// 
-			// dateTimePicker1
-			// 
-			this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dateTimePicker1.Location = new System.Drawing.Point(30, 47);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(243, 25);
-			this.dateTimePicker1.TabIndex = 1;
-			// 
-			// label20
-			// 
-			this.label20.AutoSize = true;
-			this.label20.Location = new System.Drawing.Point(102, 22);
-			this.label20.Name = "label20";
-			this.label20.Size = new System.Drawing.Size(64, 17);
-			this.label20.TabIndex = 4;
-			this.label20.Text = "Từ Ngày";
-			// 
-			// label21
-			// 
-			this.label21.AutoSize = true;
-			this.label21.Location = new System.Drawing.Point(615, 21);
-			this.label21.Name = "label21";
-			this.label21.Size = new System.Drawing.Size(72, 17);
-			this.label21.TabIndex = 6;
-			this.label21.Text = "Đến Ngày";
-			// 
-			// dateTimePicker2
-			// 
-			this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
-			this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dateTimePicker2.Location = new System.Drawing.Point(533, 46);
-			this.dateTimePicker2.Name = "dateTimePicker2";
-			this.dateTimePicker2.Size = new System.Drawing.Size(243, 25);
-			this.dateTimePicker2.TabIndex = 5;
-			// 
 			// label22
 			// 
 			this.label22.AutoSize = true;
@@ -1108,12 +1116,23 @@ namespace QuanLyShopQuanAo
 			this.label22.TabIndex = 5;
 			this.label22.Text = "Tên Khách Hàng";
 			// 
-			// txtTimDenGiaQA
+			// txtTimKiemKH
 			// 
-			this.txtTimDenGiaQA.Location = new System.Drawing.Point(231, 68);
-			this.txtTimDenGiaQA.Name = "txtTimDenGiaQA";
-			this.txtTimDenGiaQA.Size = new System.Drawing.Size(127, 25);
-			this.txtTimDenGiaQA.TabIndex = 6;
+			this.txtTimKiemKH.Location = new System.Drawing.Point(42, 40);
+			this.txtTimKiemKH.Name = "txtTimKiemKH";
+			this.txtTimKiemKH.Size = new System.Drawing.Size(274, 25);
+			this.txtTimKiemKH.TabIndex = 2;
+			// 
+			// btnTimKiemKH
+			// 
+			this.btnTimKiemKH.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnTimKiemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTimKiemKH.Location = new System.Drawing.Point(362, 24);
+			this.btnTimKiemKH.Name = "btnTimKiemKH";
+			this.btnTimKiemKH.Size = new System.Drawing.Size(85, 54);
+			this.btnTimKiemKH.TabIndex = 1;
+			this.btnTimKiemKH.Text = "Tìm Kiếm";
+			this.btnTimKiemKH.UseVisualStyleBackColor = true;
 			// 
 			// frmAdmin
 			// 
@@ -1142,6 +1161,7 @@ namespace QuanLyShopQuanAo
 			((System.ComponentModel.ISupportInitialize)(this.pbHinhQA)).EndInit();
 			this.panel9.ResumeLayout(false);
 			this.panel9.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nmGiaBanQA)).EndInit();
 			this.panel8.ResumeLayout(false);
 			this.panel8.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmSoLuongQA)).EndInit();
@@ -1168,7 +1188,10 @@ namespace QuanLyShopQuanAo
 			this.panel17.PerformLayout();
 			this.panel18.ResumeLayout(false);
 			this.tpKhachHang.ResumeLayout(false);
+			this.panel21.ResumeLayout(false);
 			this.panel20.ResumeLayout(false);
+			this.panel28.ResumeLayout(false);
+			this.panel28.PerformLayout();
 			this.panel22.ResumeLayout(false);
 			this.panel22.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmSoLuongHDKH)).EndInit();
@@ -1180,10 +1203,6 @@ namespace QuanLyShopQuanAo
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).EndInit();
 			this.panel27.ResumeLayout(false);
 			this.panel27.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.nmGiaBanQA)).EndInit();
-			this.panel21.ResumeLayout(false);
-			this.panel28.ResumeLayout(false);
-			this.panel28.PerformLayout();
 			this.ResumeLayout(false);
 
 		}

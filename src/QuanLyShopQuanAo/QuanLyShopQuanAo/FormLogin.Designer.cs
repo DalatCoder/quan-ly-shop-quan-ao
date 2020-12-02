@@ -108,6 +108,8 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnExit
 			// 
+			this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnExit.Location = new System.Drawing.Point(361, 12);
 			this.btnExit.Name = "btnExit";
 			this.btnExit.Size = new System.Drawing.Size(115, 36);
@@ -127,6 +129,8 @@ namespace QuanLyShopQuanAo
 			// 
 			// btnLogin
 			// 
+			this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnLogin.Location = new System.Drawing.Point(159, 12);
 			this.btnLogin.Name = "btnLogin";
 			this.btnLogin.Size = new System.Drawing.Size(115, 36);
@@ -139,6 +143,7 @@ namespace QuanLyShopQuanAo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(506, 246);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.cbShowPass);
