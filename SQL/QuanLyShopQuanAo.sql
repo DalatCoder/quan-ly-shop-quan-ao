@@ -304,7 +304,7 @@ GO
 CREATE PROCEDURE sp_select_QuanAo
 AS
 BEGIN
-	SELECT QuanAo.ID_QA, Ten_QA, Size, GiaBan, SoLuong, GhiChu, ID_HQA, LoaiQA.ID_LQA, Ten_LQA
+	SELECT QuanAo.ID_QA, Ten_QA, Size, GiaBan, SoLuong, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu, ID_HQA, LoaiQA.ID_LQA, Ten_LQA
 	FROM QuanAo
 	JOIN HinhQA ON QuanAo.ID_QA = HinhQA.ID_QA
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
@@ -318,7 +318,7 @@ CREATE PROCEDURE sp_select_QuanAo_by_ID
 @ID_QA INT
 AS
 BEGIN
-	SELECT QuanAo.ID_QA, Ten_QA, Ten_LQA, ID_HQA, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu,GiaBan
+	SELECT QuanAo.ID_QA, Ten_QA, Size, GiaBan, SoLuong, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu, ID_HQA, LoaiQA.ID_LQA, Ten_LQA
 	FROM QuanAo
 	JOIN HinhQA ON QuanAo.ID_QA = HinhQA.ID_QA
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
@@ -333,7 +333,7 @@ CREATE PROCEDURE sp_select_QuanAo_by_ID_LQA
 @ID_LQA INT
 AS
 BEGIN
-	SELECT QuanAo.ID_QA, Ten_QA, Ten_LQA, ID_HQA, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu, GiaBan
+	SELECT QuanAo.ID_QA, Ten_QA, Size, GiaBan, SoLuong, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu, ID_HQA, LoaiQA.ID_LQA, Ten_LQA
 	FROM QuanAo
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
 	JOIN HinhQA ON HinhQA.ID_QA = QuanAo.ID_QA
@@ -345,14 +345,15 @@ CREATE PROCEDURE sp_select_search_QuanAo
 @TieuChuanTim NVARCHAR(255)
 AS
 BEGIN
-	SELECT QuanAo.ID_QA, Ten_QA, Ten_LQA, ID_HQA, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu, GiaBan
+	SELECT QuanAo.ID_QA, Ten_QA, Size, GiaBan, SoLuong, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu, ID_HQA, LoaiQA.ID_LQA, Ten_LQA
 	FROM QuanAo
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
 	JOIN HinhQA ON HinhQA.ID_QA = QuanAo.ID_QA
 	WHERE
-		dbo.fuConvertToUnsign1(Ten_LQA) LIKE '%' + dbo.fuConvertToUnsign1(@TieuChuanTim) + '%' OR
+		-- dbo.fuConvertToUnsign1(Ten_LQA) LIKE '%' + dbo.fuConvertToUnsign1(@TieuChuanTim) + '%' OR
 		dbo.fuConvertToUnsign1(Ten_QA) LIKE '%' + dbo.fuConvertToUnsign1(@TieuChuanTim) + '%' OR
-		dbo.fuConvertToUnsign1(GhiChu) LIKE '%' + dbo.fuConvertToUnsign1(@TieuChuanTim) + '%'
+		QuanAo.ID_QA LIKE '%' + @TieuChuanTim + '%'
+		-- dbo.fuConvertToUnsign1(GhiChu) LIKE '%' + dbo.fuConvertToUnsign1(@TieuChuanTim) + '%' 
 END
 GO
 
@@ -367,7 +368,7 @@ CREATE PROCEDURE sp_select_QuanAo_By_GiaCa
 @GiaBanCao FLOAT
 AS
 BEGIN
-	SELECT QuanAo.ID_QA, Ten_QA, ID_HQA, GhiChu, GiaBan
+	SELECT QuanAo.ID_QA, Ten_QA, Size, GiaBan, SoLuong, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu, ID_HQA, LoaiQA.ID_LQA, Ten_LQA
 	FROM QuanAo
 	JOIN HinhQA ON QuanAo.ID_QA = HinhQA.ID_HQA
 	WHERE (@GiaBanThap <= GiaBan AND GiaBan <= @GiaBanCao)
@@ -716,6 +717,8 @@ BEGIN
 	SELECT * FROM QuanTriVien WHERE @username = TenDangNhap
 END
 GO
+
+EXEC sp_select_Account_By_UserName N'TRONGHIEU'
 
 -- EXEC sp_select_DangNhapAdmin N'TRONGHIEU', N'123'
 

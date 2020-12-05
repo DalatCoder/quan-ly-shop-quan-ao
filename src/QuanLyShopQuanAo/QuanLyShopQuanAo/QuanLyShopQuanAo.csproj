@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commons\ExtensionMethods.cs" />
     <Compile Include="Commons\StringValidator.cs" />
     <Compile Include="Commons\TienIch.cs" />
     <Compile Include="DAO\BanHang_DAO.cs" />

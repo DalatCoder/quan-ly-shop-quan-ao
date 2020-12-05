@@ -16,53 +16,71 @@ namespace QuanLyShopQuanAo
 	public partial class fQLShopQuanAo : Form
 	{
 		BindingSource listQuanAo = new BindingSource();
+		QuanTriVien_DTO loginAccount;
 
 		public fQLShopQuanAo(QuanTriVien_DTO loginAccount)
 		{
 			InitializeComponent();
-			this.Text = "Quản lý cửa hàng quần áo - Xin chào " + loginAccount.TenDangNhap + "!";
-			LoadListQuanAo();
+			this.loginAccount = loginAccount;
 		}
+
+		#region Init State
+
+		void fQLShopQuanAo_Load(object sender, EventArgs e)
+		{
+			this.Text = "Quản lý cửa hàng quần áo - Xin chào " + loginAccount.TenDangNhap + "!";
+			lbChu.Text = TienIch.So_chu(int.Parse(lbSo.Text.Replace(".", string.Empty)));
+
+			InitState();
+		}
+
+		void InitState()
+		{
+			dgvQuanAo.DataSource = listQuanAo;
+			LoadListQuanAo();
+			dgvQuanAo.HideColumns("GhiChu", "ID_HQA", "ID_LQA", "HinhQA", "HinhQAP");
+		}
+
+		#endregion
+
+		#region Methods
 
 		void LoadListQuanAo()
 		{
-			//ID_QA = (int)row["ID_QA"];
-			//Ten_QA = row["Ten_QA"].ToString();
-			//Size = row["Size"].ToString();
-			//GiaBan = (float)Convert.ToDouble(row["GiaBan"]);
-			//SoLuong = (int)row["SoLuong"];
-			//GhiChu = row["GhiChu"].ToString();
-			//ID_HQA = (int)row["ID_HQA"];
-			//ID_LQA = (int)row["ID_LQA"];
-			////HinhQA = (byte[])row["HinhQA"];
-			//HinhQAP = row["HinhQAP"].ToString();
-			//Ten_LQA = row["Ten_LQA"].ToString();
-
-
-			dgvQuanAo.DataSource = QuanAo_DAO.Instance.Load_QA();
-
-			dgvQuanAo.Columns["GhiChu"].Visible = false;
-			dgvQuanAo.Columns["ID_HQA"].Visible = false;
-			dgvQuanAo.Columns["ID_LQA"].Visible = false;
-			dgvQuanAo.Columns["HinhQA"].Visible = false;
-			dgvQuanAo.Columns["HinhQAP"].Visible = false;
-
+			listQuanAo.DataSource = QuanAo_DAO.Instance.Load_QA();
 		}
 
-		private void tsmAdmin_Click(object sender, EventArgs e)
+		#endregion
+
+		#region Events
+
+		void tsmAdmin_Click(object sender, EventArgs e)
 		{
 			frmAdmin f = new frmAdmin();
 			f.ShowDialog();
 		}
 
-		private void tsmDangXuat_Click(object sender, EventArgs e)
+		void tsmDangXuat_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
 
-		private void fQLShopQuanAo_Load(object sender, EventArgs e)
+		void txtTimKiem_TextChanged(object sender, EventArgs e)
 		{
-			lbChu.Text = TienIch.So_chu(int.Parse(lbSo.Text.Replace(".", string.Empty)));
+			string chuoiTimKiem = txtTimKiem.Text;
+			listQuanAo.DataSource = QuanAo_DAO.Instance.Load_QA_Search(chuoiTimKiem);
 		}
+
+		void btnXoaBoLoc_Click(object sender, EventArgs e)
+		{
+			txtTimKiem.Text = "";
+		}
+
+		void btnTaiLaiDS_Click(object sender, EventArgs e)
+		{
+			LoadListQuanAo();
+		}
+
+		#endregion
 	}
 }

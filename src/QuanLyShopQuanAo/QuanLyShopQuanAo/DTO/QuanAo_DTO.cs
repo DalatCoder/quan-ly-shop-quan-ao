@@ -48,6 +48,7 @@ namespace QuanLyShopQuanAo.Models
             Ten_LQA = _Ten_LQA;
 
 		}
+
         public QuanAo_DTO(DataRow row)
 		{
             ID_QA = (int)row["ID_QA"];
