@@ -709,8 +709,25 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE sp_select_Account_By_UserName
+@username NVARCHAR(100)
+AS
+BEGIN
+	SELECT * FROM QuanTriVien WHERE @username = TenDangNhap
+END
+GO
+
 -- EXEC sp_select_DangNhapAdmin N'TRONGHIEU', N'123'
 
 
 --them proc xem khach hang
 -- them proc tim don hang theo ngay
+
+CREATE PROC sp_select_banHang_FromDateToDate
+@fromDate DATETIME, @toDate DATETIME
+AS
+BEGIN
+	SELECT * FROM BanHang
+END
+GO
+
