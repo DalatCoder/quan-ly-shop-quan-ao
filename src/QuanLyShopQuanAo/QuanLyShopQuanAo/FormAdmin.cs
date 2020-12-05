@@ -208,11 +208,25 @@ namespace QuanLyShopQuanAo
 		{
 			LoadListKH();
 		}
-		
+
+
+
+		#region Thong ke hoa don
 
 		private void btnTimKiemBH_Click(object sender, EventArgs e)
 		{
 			dtgvHD.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHangInTime(dtpBatDau.Value, dtpKetThuc.Value);
+		}
+
+		private void btnXemBH_Click(object sender, EventArgs e)
+		{
+			dtgvHD.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHang();
+
+			if (dtgvHD.Rows.Count > 0)
+			{
+				dtgvHD.Rows[0].Selected = true;
+				dtgvHD_Click(this, new EventArgs());
+			}
 		}
 
 		private void dtgvHD_Click(object sender, EventArgs e)
@@ -236,15 +250,6 @@ namespace QuanLyShopQuanAo
 			txtTongTienBH.Text = tongSoTien.ToString("###.###.###");
 		}
 
-		private void btnXemBH_Click(object sender, EventArgs e)
-		{
-			dtgvHD.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHang();
-
-			if (dtgvHD.Rows.Count > 0)
-			{
-				dtgvHD.Rows[0].Selected = true;
-				dtgvHD_Click(this, new EventArgs());
-			}
-		}
+		#endregion
 	}
 }
