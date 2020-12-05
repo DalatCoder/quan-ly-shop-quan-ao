@@ -27,8 +27,11 @@ namespace QuanLyShopQuanAo
 			LoadState();
 		}
 
+		#region Init State
 		void LoadState()
 		{
+			LoadDefaultDatetimePicker();
+
 			dtgvQA.DataSource = QAList;
 			dtgvLoaiQA.DataSource = LQAList;
 			dtgvKH.DataSource = KHList;
@@ -36,9 +39,21 @@ namespace QuanLyShopQuanAo
 
 			LoadListQA();
 			LoadListLQA();
+			LoadListThongKeBanHang();
 			//LoadListBH();
 			//LoadCTBH();
 		}
+
+		void LoadDefaultDatetimePicker()
+		{
+			DateTime today = DateTime.Now;
+			dtpBatDau.Value = new DateTime(today.Year, today.Month, 1);
+			dtpKetThuc.Value = dtpBatDau.Value.AddMonths(1).AddDays(-1);
+		}
+
+		#endregion
+
+		
 
 		void LoadListQA()
 		{
@@ -53,6 +68,11 @@ namespace QuanLyShopQuanAo
 		void LoadListKH()
 		{
 			KHList.DataSource = KhachHang_DAO.Instance.Load_KH();
+		}
+
+		void LoadListThongKeBanHang()
+		{
+			BHList.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHang(dtpBatDau.Value, dtpKetThuc.Value);
 		}
 
 		void LoadListBH()
