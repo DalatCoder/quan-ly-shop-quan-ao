@@ -29,7 +29,10 @@ namespace QuanLyShopQuanAo
 		void fQLShopQuanAo_Load(object sender, EventArgs e)
 		{
 			this.Text = "Quản lý cửa hàng quần áo - Xin chào " + loginAccount.TenDangNhap + "!";
-			lbChu.Text = TienIch.So_chu(int.Parse(lbSo.Text.Replace(".", string.Empty)));
+
+			lblTongTien.Text = "0";
+			lblTongTienCuoiCung.Text = "0";
+			lblTongTienGhiBangChu.Text = TienIch.So_chu(int.Parse(lblTongTienCuoiCung.Text.Replace(".", string.Empty)));
 
 			InitState();
 		}
@@ -38,7 +41,7 @@ namespace QuanLyShopQuanAo
 		{
 			dgvQuanAo.DataSource = listQuanAo;
 			LoadListQuanAo();
-			dgvQuanAo.HideColumns("GhiChu", "ID_HQA", "ID_LQA", "HinhQA", "HinhQAP");
+			dgvQuanAo.HideColumns(SanPham.GhiChu, SanPham.ID_HQA, SanPham.ID_LQA, SanPham.HinhQA, SanPham.HinhQAP);
 		}
 
 		#endregion

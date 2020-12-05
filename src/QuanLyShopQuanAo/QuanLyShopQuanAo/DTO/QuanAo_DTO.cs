@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +7,21 @@ using System.Data;
 
 namespace QuanLyShopQuanAo.Models
 {
+    public static class SanPham
+	{
+        public static string ID_QA => "ID_QA";
+        public static string Ten_QA => "Ten_QA";
+        public static string Size => "Size";
+        public static string GiaBan => "GiaBan";
+        public static string SoLuong => "SoLuong";
+        public static string GhiChu => "GhiChu";
+        public static string ID_LQA => "ID_LQA";
+        public static string Ten_LQA => "Ten_LQA";
+        public static string ID_HQA => "ID_HQA";
+        public static string HinhQA => "HinhQA";
+        public static string HinhQAP => "HinhQAP";
+	}
+
     public class QuanAo_DTO
     {
         private int _ID_QA;
@@ -51,15 +66,15 @@ namespace QuanLyShopQuanAo.Models
 
         public QuanAo_DTO(DataRow row)
 		{
-            ID_QA = (int)row["ID_QA"];
-            Ten_QA = row["Ten_QA"].ToString();
-            Size = row["Size"].ToString();
-            GiaBan = (float)Convert.ToDouble(row["GiaBan"]);
-            SoLuong = (int)row["SoLuong"];
-            GhiChu = row["GhiChu"].ToString();
-            ID_HQA = (int)row["ID_HQA"];
-            ID_LQA = (int)row["ID_LQA"];
-            Ten_LQA = row["Ten_LQA"].ToString();
+            ID_QA = (int)row[SanPham.ID_QA];
+            Ten_QA = row[SanPham.Ten_QA].ToString();
+            Size = row[SanPham.Size].ToString();
+            GiaBan = (float)Convert.ToDouble(row[SanPham.GiaBan]);
+            SoLuong = (int)row[SanPham.SoLuong];
+            GhiChu = row[SanPham.GhiChu].ToString();
+            ID_HQA = (int)row[SanPham.ID_HQA];
+            ID_LQA = (int)row[SanPham.ID_LQA];
+            Ten_LQA = row[SanPham.Ten_LQA].ToString();
         }
 
         public void SetHinhQuanAo(byte[] hinhQA)

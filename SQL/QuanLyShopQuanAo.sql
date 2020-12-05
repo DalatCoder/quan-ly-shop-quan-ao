@@ -304,7 +304,17 @@ GO
 CREATE PROCEDURE sp_select_QuanAo
 AS
 BEGIN
-	SELECT QuanAo.ID_QA, Ten_QA, Size, GiaBan, SoLuong, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu, ID_HQA, LoaiQA.ID_LQA, Ten_LQA
+	SELECT 
+		QuanAo.ID_QA, 
+		Ten_QA, 
+		Size, 
+		GiaBan, 
+		SoLuong, 
+		SUBSTRING(GhiChu, 1, 150) + '...' AS [GhiChu], 
+		ID_HQA, 
+		LoaiQA.ID_LQA, 
+		Ten_LQA
+		
 	FROM QuanAo
 	JOIN HinhQA ON QuanAo.ID_QA = HinhQA.ID_QA
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
