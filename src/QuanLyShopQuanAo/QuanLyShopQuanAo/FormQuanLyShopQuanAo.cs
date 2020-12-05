@@ -68,6 +68,8 @@ namespace QuanLyShopQuanAo
 		void txtTimKiem_TextChanged(object sender, EventArgs e)
 		{
 			string chuoiTimKiem = txtTimKiem.Text;
+			if (string.IsNullOrWhiteSpace(chuoiTimKiem)) return;
+
 			listQuanAo.DataSource = QuanAo_DAO.Instance.Load_QA_Search(chuoiTimKiem);
 		}
 
