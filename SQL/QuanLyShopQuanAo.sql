@@ -301,7 +301,7 @@ GO
 
 ----------------------------------- Quan Ao ------------------------------------
 
-CREATE PROCEDURE sp_select_QuanAo
+ALTER PROCEDURE sp_select_QuanAo
 AS
 BEGIN
 	SELECT 
@@ -729,18 +729,52 @@ END
 GO
 
 EXEC sp_select_Account_By_UserName N'TRONGHIEU'
+GO
 
 -- EXEC sp_select_DangNhapAdmin N'TRONGHIEU', N'123'
 
 
 --them proc xem khach hang
--- them proc tim don hang theo ngay
+CREATE PROCEDURE sp_select_KhachHang
+AS SELECT * FROM KhachHang
+GO
 
+EXEC sp_select_KhachHang
+GO
+
+CREATE PROCEDURE sp_select_KhachHang_By_ID
+@id INT
+AS
+BEGIN
+	SELECT * FROM KhachHang WHERE ID_KH = @id
+END
+GO
+
+EXEC sp_select_KhachHang_By_ID 1
+GO
+
+CREATE PROCEDURE sp_selectKhachHang_By_SDT
+@sdt NVARCHAR(50)
+AS
+BEGIN
+	SELECT * FROM KhachHang WHERE SDT = @sdt
+END
+GO
+
+EXEC sp_selectKhachHang_By_SDT '0374408253';
+GO
+
+-- them proc tim don hang theo ngay
 CREATE PROC sp_select_banHang_FromDateToDate
 @fromDate DATETIME, @toDate DATETIME
 AS
 BEGIN
-	SELECT * FROM BanHang
+	SELECT ID_GD, HoTen, SDT, NgayBanHang, Discount FROM BanHang
+	JOIN KhachHang ON BanHang.ID_KH = KhachHang.ID_KH
+	WHERE 
+		ID_GD IS NOT NULL AND 
+		@fromDate <= NgayBanHang AND NgayBanHang <= @toDate
 END
 GO
 
+EXEC sp_select_banHang_FromDateToDate '20201201', '20201231'
