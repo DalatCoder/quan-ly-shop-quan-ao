@@ -36,7 +36,6 @@ namespace QuanLyShopQuanAo
 			this.txtTongTienBH = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.panel19 = new System.Windows.Forms.Panel();
-			this.dtgvMatHang = new System.Windows.Forms.DataGridView();
 			this.panel13 = new System.Windows.Forms.Panel();
 			this.btnXemBH = new System.Windows.Forms.Button();
 			this.label21 = new System.Windows.Forms.Label();
@@ -115,10 +114,10 @@ namespace QuanLyShopQuanAo
 			this.panel26 = new System.Windows.Forms.Panel();
 			this.dtgvKH = new System.Windows.Forms.DataGridView();
 			this.dtgvHD = new System.Windows.Forms.DataGridView();
+			this.dtgvChiTietBanHang = new System.Windows.Forms.DataGridView();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dtgvMatHang)).BeginInit();
 			this.panel13.SuspendLayout();
 			this.panel11.SuspendLayout();
 			this.tpQuanAo.SuspendLayout();
@@ -154,6 +153,7 @@ namespace QuanLyShopQuanAo
 			this.panel26.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvHD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietBanHang)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tcAdmin
@@ -222,23 +222,11 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel19
 			// 
-			this.panel19.Controls.Add(this.dtgvMatHang);
+			this.panel19.Controls.Add(this.dtgvChiTietBanHang);
 			this.panel19.Location = new System.Drawing.Point(565, 105);
 			this.panel19.Name = "panel19";
 			this.panel19.Size = new System.Drawing.Size(483, 454);
 			this.panel19.TabIndex = 3;
-			// 
-			// dtgvMatHang
-			// 
-			this.dtgvMatHang.BackgroundColor = System.Drawing.Color.White;
-			this.dtgvMatHang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.dtgvMatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dtgvMatHang.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dtgvMatHang.Location = new System.Drawing.Point(0, 0);
-			this.dtgvMatHang.Name = "dtgvMatHang";
-			this.dtgvMatHang.ReadOnly = true;
-			this.dtgvMatHang.Size = new System.Drawing.Size(483, 454);
-			this.dtgvMatHang.TabIndex = 0;
 			// 
 			// panel13
 			// 
@@ -1031,6 +1019,22 @@ namespace QuanLyShopQuanAo
 			this.dtgvHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dtgvHD.Size = new System.Drawing.Size(551, 538);
 			this.dtgvHD.TabIndex = 1;
+			this.dtgvHD.Click += new System.EventHandler(this.dtgvHD_Click);
+			// 
+			// dtgvChiTietBanHang
+			// 
+			this.dtgvChiTietBanHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dtgvChiTietBanHang.BackgroundColor = System.Drawing.Color.White;
+			this.dtgvChiTietBanHang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.dtgvChiTietBanHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dtgvChiTietBanHang.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dtgvChiTietBanHang.Location = new System.Drawing.Point(0, 0);
+			this.dtgvChiTietBanHang.MultiSelect = false;
+			this.dtgvChiTietBanHang.Name = "dtgvChiTietBanHang";
+			this.dtgvChiTietBanHang.ReadOnly = true;
+			this.dtgvChiTietBanHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dtgvChiTietBanHang.Size = new System.Drawing.Size(483, 454);
+			this.dtgvChiTietBanHang.TabIndex = 2;
 			// 
 			// frmAdmin
 			// 
@@ -1046,7 +1050,6 @@ namespace QuanLyShopQuanAo
 			this.tpBanHang.ResumeLayout(false);
 			this.tpBanHang.PerformLayout();
 			this.panel19.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dtgvMatHang)).EndInit();
 			this.panel13.ResumeLayout(false);
 			this.panel13.PerformLayout();
 			this.panel11.ResumeLayout(false);
@@ -1097,6 +1100,7 @@ namespace QuanLyShopQuanAo
 			this.panel26.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvHD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietBanHang)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1153,7 +1157,6 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox txtTongTienBH;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.DataGridView dtgvMatHang;
 		private System.Windows.Forms.Panel panel20;
 		private System.Windows.Forms.Panel panel22;
 		private System.Windows.Forms.NumericUpDown nmSoLuongHDKH;
@@ -1189,5 +1192,6 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.ComboBox cbLoaiQA;
 		private System.Windows.Forms.Button btnXemQA;
 		private System.Windows.Forms.DataGridView dtgvHD;
+		private System.Windows.Forms.DataGridView dtgvChiTietBanHang;
 	}
 }

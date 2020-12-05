@@ -31,7 +31,7 @@ namespace QuanLyShopQuanAo
 		void LoadState()
 		{
 			LoadDefaultDatetimePicker();
-
+			
 			dtgvQA.DataSource = QAList;
 			dtgvLoaiQA.DataSource = LQAList;
 			dtgvKH.DataSource = KHList;
@@ -42,6 +42,12 @@ namespace QuanLyShopQuanAo
 			LoadListThongKeBanHang();
 			//LoadListBH();
 			//LoadCTBH();
+
+			if (dtgvHD.Rows.Count > 0)
+			{
+				dtgvHD.Rows[0].Selected = true;
+				dtgvHD_Click(this, new EventArgs());
+			}
 		}
 
 		void LoadDefaultDatetimePicker()
@@ -210,6 +216,27 @@ namespace QuanLyShopQuanAo
 		private void btnTimKiemBH_Click(object sender, EventArgs e)
 		{
 			BHList.DataSource = SearchBHbyDate(dtpBatDau.Value, dtpKetThuc.Value);
+		}
+
+		private void dtgvHD_Click(object sender, EventArgs e)
+		{
+			if (dtgvHD.SelectedRows.Count == 0) return;
+
+			int ID_BH = Convert.ToInt32(dtgvHD.SelectedRows[0].Cells["ID_BH"].Value);
+			double Discount = Convert.ToDouble(dtgvHD.SelectedRows[0].Cells["Discount"].Value);
+			dtgvChiTietBanHang.DataSource = ChiTietBanHang_DAO.Instance.Load_CTBH(ID_BH);
+			txtDiscountBH.Text = Discount.ToString() + " %";
+
+			double tongSoTien = 0;
+			foreach (DataGridViewRow row in dtgvChiTietBanHang.Rows)
+			{
+				int giaBan = Convert.ToInt32(row.Cells["GiaBan"].Value);
+				int soLuong = Convert.ToInt32(row.Cells["SoLuongSanPham"].Value);
+				tongSoTien += giaBan * soLuong;
+			}
+
+			tongSoTien = (tongSoTien / 100) * Discount;
+			txtTongTienBH.Text = tongSoTien.ToString("###.###.###");
 		}
 	}
 }

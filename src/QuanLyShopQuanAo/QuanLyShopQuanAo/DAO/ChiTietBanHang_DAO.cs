@@ -24,20 +24,14 @@ namespace QuanLyShopQuanAo.DAO
 				return _instance;
 			}
 		}
-		public List<ChiTietBanHang_DTO> Load_CTBH(int id_BH)
+		public DataTable Load_CTBH(int id_BH)
 		{
 			List<ChiTietBanHang_DTO> chitietbanhang = new List<ChiTietBanHang_DTO>();
 			string query = "EXEC sp_select_ChiTietBanHang @ID_BH";
 			object[] param = new object[] { id_BH };
 
 			DataTable CTBH = DataProvider.Instance.ExecuteQuery(query, param);
-			foreach (DataRow row in CTBH.Rows)
-			{
-				ChiTietBanHang_DTO ctbh = new ChiTietBanHang_DTO(row);
-				chitietbanhang.Add(ctbh);
-			}
-
-			return chitietbanhang;
+			return CTBH;
 		}
 
 		public bool Insert_ChiTietBanHang(int id_QA, int id_BH, int soluongsanpham)
