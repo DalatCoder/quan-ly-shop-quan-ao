@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebQuanAo_Demo.Models;
+using QuanLyShopQuanAo.Models;
 
 namespace QuanLyShopQuanAo.DAO
 {
@@ -86,12 +86,12 @@ namespace QuanLyShopQuanAo.DAO
 			return result > 0;
 		}
 
-		//public bool DelleteLQA(int id_LQA)
-		//{
-		//	string query = "EXEC sp_delete_LoaiQuanAo_by_ID @ID_LQA";
-		//	object[] param = new object[] { id_LQA };
-		//	int result = DataProvider.Instance.ExecuteNonQuery(query, param);
-		//	return result > 0;
-		//}
+		/*public bool DelleteLQA(int id_LQA)
+		{
+			string query = "EXEC sp_delete_LoaiQuanAo_by_ID @ID_LQA";
+			object[] param = new object[] { id_LQA };
+			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
+			return result > 0;
+		}*/
 	}
 }

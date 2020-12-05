@@ -116,42 +116,42 @@
 			// 
 			this.tsmThemQA.Name = "tsmThemQA";
 			this.tsmThemQA.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-			this.tsmThemQA.Size = new System.Drawing.Size(249, 22);
+			this.tsmThemQA.Size = new System.Drawing.Size(307, 22);
 			this.tsmThemQA.Text = "Thêm quần áo";
 			// 
 			// tsmXoaBoLoc
 			// 
 			this.tsmXoaBoLoc.Name = "tsmXoaBoLoc";
 			this.tsmXoaBoLoc.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-			this.tsmXoaBoLoc.Size = new System.Drawing.Size(249, 22);
+			this.tsmXoaBoLoc.Size = new System.Drawing.Size(307, 22);
 			this.tsmXoaBoLoc.Text = "Xóa bộ lọc hiện thời";
 			// 
 			// tsmTaiLaiDS
 			// 
 			this.tsmTaiLaiDS.Name = "tsmTaiLaiDS";
 			this.tsmTaiLaiDS.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-			this.tsmTaiLaiDS.Size = new System.Drawing.Size(249, 22);
+			this.tsmTaiLaiDS.Size = new System.Drawing.Size(307, 22);
 			this.tsmTaiLaiDS.Text = "Tải lại danh sách quần áo";
 			// 
 			// tsmThanhToan
 			// 
 			this.tsmThanhToan.Name = "tsmThanhToan";
 			this.tsmThanhToan.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-			this.tsmThanhToan.Size = new System.Drawing.Size(249, 22);
+			this.tsmThanhToan.Size = new System.Drawing.Size(307, 22);
 			this.tsmThanhToan.Text = "Thanh toán";
 			// 
 			// tsmHuyDon
 			// 
 			this.tsmHuyDon.Name = "tsmHuyDon";
 			this.tsmHuyDon.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
-			this.tsmHuyDon.Size = new System.Drawing.Size(249, 22);
+			this.tsmHuyDon.Size = new System.Drawing.Size(307, 22);
 			this.tsmHuyDon.Text = "Hủy đơn";
 			// 
 			// tsmDangXuat
 			// 
 			this.tsmDangXuat.Name = "tsmDangXuat";
 			this.tsmDangXuat.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-			this.tsmDangXuat.Size = new System.Drawing.Size(249, 22);
+			this.tsmDangXuat.Size = new System.Drawing.Size(307, 22);
 			this.tsmDangXuat.Text = "Đăng xuất";
 			this.tsmDangXuat.Click += new System.EventHandler(this.tsmDangXuat_Click);
 			// 
@@ -254,7 +254,7 @@
 			this.dgvQuanAo.MultiSelect = false;
 			this.dgvQuanAo.Name = "dgvQuanAo";
 			this.dgvQuanAo.ReadOnly = true;
-			this.dgvQuanAo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
+			this.dgvQuanAo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvQuanAo.Size = new System.Drawing.Size(525, 394);
 			this.dgvQuanAo.TabIndex = 0;
 			// 

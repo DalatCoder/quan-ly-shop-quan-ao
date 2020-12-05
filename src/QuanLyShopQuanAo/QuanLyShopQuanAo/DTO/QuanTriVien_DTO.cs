@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-namespace QuanLyShopQuanAo.Models.Models
+namespace QuanLyShopQuanAo.Models
 {
 	class QuanTriVien_DTO
 	{

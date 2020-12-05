@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebQuanAo_Demo.Models;
+using QuanLyShopQuanAo.Models;
 
 namespace QuanLyShopQuanAo.DAO
 {
@@ -55,7 +55,22 @@ namespace QuanLyShopQuanAo.DAO
 
 			return null;
 		}
+		public List<BanHang_DTO> Load_BH_By_Date(DateTime ngaybatdau, DateTime ngayketthuc)
+		{
+			List<BanHang_DTO> banhang = new List<BanHang_DTO>();
+			string query = "EXEC sp_select_BanHang_by_ngay @ngaybatdau,@ngayketthuc";
+			object[] param = new object[] { ngaybatdau,ngayketthuc };
 
+			DataTable BH = DataProvider.Instance.ExecuteQuery(query, param);
+
+			foreach (DataRow row in BH.Rows)
+			{
+				BanHang_DTO bh = new BanHang_DTO(row);
+				banhang.Add(bh);
+			}
+
+			return banhang;
+		}
 		public bool Insert_BanHang(int id_GD, DateTime ngaybanhang, string hoten, string sdt)
 		{
 			string query = "EXEC sp_insert_BanHang @ID_GD , @NgayBanHang , @HoTen , @SDT";

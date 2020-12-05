@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace WebQuanAo_Demo.Models
+namespace QuanLyShopQuanAo.Models
 {
     class QuanAo_DTO
     {
@@ -33,7 +33,7 @@ namespace WebQuanAo_Demo.Models
         public string HinhQAP { get { return _HinhQAP; } set { _HinhQAP = value; } }
         public string Ten_LQA { get { return _Ten_LQA; } set { _Ten_LQA = value; } }
 
-        public QuanAo_DTO(int _ID_QA, string _Ten_QA, string _Size, float _GiaBan, int _SoLuong, string _GhiChu, float _Discount, int _ID_HQA, int _ID_LQA, byte[] _HinhQA, string _HinhQAP, string _Ten_LQA)
+        public QuanAo_DTO(int _ID_QA, string _Ten_QA, string _Size, float _GiaBan, int _SoLuong, string _GhiChu, int _ID_HQA, int _ID_LQA, byte[] _HinhQA, string _HinhQAP, string _Ten_LQA)
 		{
             ID_QA = _ID_QA;
             Ten_QA = _Ten_QA;
@@ -51,16 +51,19 @@ namespace WebQuanAo_Demo.Models
         public QuanAo_DTO(DataRow row)
 		{
             ID_QA = (int)row["ID_QA"];
-            Ten_QA = row["Ten_QA "].ToString();
+            Ten_QA = row["Ten_QA"].ToString();
             Size = row["Size"].ToString();
-            GiaBan = (float)row["GiaBan"];
+            GiaBan = (float)Convert.ToDouble(row["GiaBan"]);
             SoLuong = (int)row["SoLuong"];
-            GhiChu = row["GhiChu "].ToString();
+            GhiChu = row["GhiChu"].ToString();
             ID_HQA = (int)row["ID_HQA"];
             ID_LQA = (int)row["ID_LQA"];
-            HinhQA = (byte[])row["HinhQA"];
-            HinhQAP = row["HinhQAP"].ToString();
             Ten_LQA = row["Ten_LQA"].ToString();
         }
+
+        public void SetHinhQuanAo(byte[] hinhQA)
+		{
+            HinhQA = hinhQA;
+		}
     }
 }

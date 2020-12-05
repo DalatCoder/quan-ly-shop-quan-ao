@@ -31,8 +31,6 @@ namespace QuanLyShopQuanAo.DAO
 			object[] param = new object[] { tenDangNhap, matKhau };
 			DataTable result = DataProvider.Instance.ExecuteQuery(query, param);
 			return result.Rows.Count > 0;
-		}
-
+		}		
 	}
-
 }

@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebQuanAo_Demo.Models;
+using QuanLyShopQuanAo.Models;
 
 namespace QuanLyShopQuanAo.DAO
 {

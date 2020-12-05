@@ -59,6 +59,7 @@ namespace QuanLyShopQuanAo
 			this.txtUserName.Name = "txtUserName";
 			this.txtUserName.Size = new System.Drawing.Size(317, 25);
 			this.txtUserName.TabIndex = 1;
+			this.txtUserName.Text = "TRONGHIEU";
 			// 
 			// label1
 			// 
@@ -84,6 +85,7 @@ namespace QuanLyShopQuanAo
 			this.txtPass.Name = "txtPass";
 			this.txtPass.Size = new System.Drawing.Size(317, 25);
 			this.txtPass.TabIndex = 1;
+			this.txtPass.Text = "123";
 			this.txtPass.UseSystemPasswordChar = true;
 			// 
 			// label2

@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebQuanAo_Demo.Models;
+using QuanLyShopQuanAo.Models;
 
 namespace QuanLyShopQuanAo.DAO
 {
@@ -93,7 +93,7 @@ namespace QuanLyShopQuanAo.DAO
 			return quanao;
 		}
 
-		public List<QuanAo_DTO> Load_QA_By_GiaCa_Discount(float giacathap, float giacacao)
+		public List<QuanAo_DTO> Load_QA_By_GiaCa(float giacathap, float giacacao)
 		{
 			List<QuanAo_DTO> quanao = new List<QuanAo_DTO>();
 
@@ -111,29 +111,29 @@ namespace QuanLyShopQuanAo.DAO
 			return quanao;
 		}
 
-		public bool Insert_QuanAo(string ten_QA, string size, float giaban, int soluong, string ghichu, float discount, int id_LQA,byte[] hinhQA, string hinhQAP)
+		public bool Insert_QuanAo(string ten_QA, string size, float giaban, int soluong, string ghichu, int id_LQA,byte[] hinhQA, string hinhQAP)
 		{
-			string query = "EXEC sp_insert_QuanAo @Ten_QA , @Size, @GiaBan, @SoLuong, @GhiChu, @Discount, @ID_LQA, @HinhQA, @HinhQAP";
-			object[] param = new object[] { ten_QA, size, giaban, soluong, ghichu, discount, id_LQA, hinhQA, hinhQAP };
+			string query = "EXEC sp_insert_QuanAo @Ten_QA , @Size, @GiaBan, @SoLuong, @GhiChu, @ID_LQA, @HinhQA, @HinhQAP";
+			object[] param = new object[] { ten_QA, size, giaban, soluong, ghichu, id_LQA, hinhQA, hinhQAP };
 			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
 			return result > 0;
 		}
 
-		public bool UpdateQA(int id_QA, string ten_QA, string size, float giaban, int soluong, string ghichu, float discount, int id_LQA, int id_HQA, byte[] hinhQA, string hinhQAP)
+		public bool UpdateQA(int id_QA, string ten_QA, string size, float giaban, int soluong, string ghichu, int id_LQA, int id_HQA, byte[] hinhQA, string hinhQAP)
 		{
-			string query = "EXEC sp_update_QuanAo @Ten_QA , @Size, @GiaBan, @SoLuong, @GhiChu, @Discount, @ID_LQA, @HinhQA, @HinhQAP";
-			object[] param = new object[] { id_QA, ten_QA, size, giaban, soluong, ghichu, discount, id_LQA, id_HQA, hinhQA, hinhQAP };
+			string query = "EXEC sp_update_QuanAo @Ten_QA , @Size, @GiaBan, @SoLuong, @GhiChu, @ID_LQA, @HinhQA, @HinhQAP";
+			object[] param = new object[] { id_QA, ten_QA, size, giaban, soluong, ghichu, id_LQA, id_HQA, hinhQA, hinhQAP };
 			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
 			return result > 0;
 		}
 
-		//public bool DelleteQA(int id_QA)
-		//{
-		//	string query = "EXEC sp_delete_QuanAo_By_ID @ID_QA";
-		//	object[] param = new object[] { id_QA };
-		//	int result = DataProvider.Instance.ExecuteNonQuery(query, param);
-		//	return result > 0;
-		//}
+		/*public bool DelleteQA(int id_QA)
+		{
+			string query = "EXEC sp_delete_QuanAo_By_ID @ID_QA";
+			object[] param = new object[] { id_QA };
+			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
+			return result > 0;
+		}*/
 
 	}
 }

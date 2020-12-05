@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-namespace WebQuanAo_Demo.Models
+namespace QuanLyShopQuanAo.Models
 {
     class LoaiQA_DTO
     {
@@ -22,8 +22,8 @@ namespace WebQuanAo_Demo.Models
 
         public LoaiQA_DTO(DataRow row)
 		{
-            ID_LQA = (int)row["ID_LQA "];
-            Ten_LQA = row["Ten_LQA "].ToString();
+            ID_LQA = (int)row["ID_LQA"];
+            Ten_LQA = row["Ten_LQA"].ToString();
 		}
     }
 }

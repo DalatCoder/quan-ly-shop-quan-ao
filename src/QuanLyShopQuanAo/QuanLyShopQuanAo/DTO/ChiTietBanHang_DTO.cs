@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-namespace WebQuanAo_Demo.Models
+namespace QuanLyShopQuanAo.Models
 {
     class ChiTietBanHang_DTO
     {

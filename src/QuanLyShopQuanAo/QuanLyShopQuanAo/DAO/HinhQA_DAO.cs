@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebQuanAo_Demo.Models;
+using QuanLyShopQuanAo.Models;
 
 namespace QuanLyShopQuanAo.DAO
 {
@@ -23,20 +23,21 @@ namespace QuanLyShopQuanAo.DAO
 				return _instance;
 			}
 		}
-		public List<QuanAo_DTO> Load_HinhSanPham(int id_HQA)
+
+		public byte[] Load_HinhSanPham(int id_HQA)
 		{
-			List<QuanAo_DTO> hinhquanao = new List<QuanAo_DTO>();
-			string query = "EXEC sp_select_HinhSanPham @ID_HQA";
+			byte[] hinhQuanAo = null;
+			string query = "EXEC sp_select_HinhSanPham	 @ID_HQA";
 			object[] param = new object[] { id_HQA };
 
 			DataTable HQA = DataProvider.Instance.ExecuteQuery(query, param);
 			foreach (DataRow row in HQA.Rows)
 			{
-				QuanAo_DTO hqa = new QuanAo_DTO(row);
-				hinhquanao.Add(hqa);
+				hinhQuanAo = (byte[])row["HinhQA"];
+				return hinhQuanAo;
 			}
 
-			return hinhquanao;
+			return null;
 		}
 
 	}
