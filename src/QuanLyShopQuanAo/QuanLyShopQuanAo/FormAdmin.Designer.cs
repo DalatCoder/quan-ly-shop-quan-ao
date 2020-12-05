@@ -253,6 +253,7 @@ namespace QuanLyShopQuanAo
 			this.btnXemBH.TabIndex = 0;
 			this.btnXemBH.Text = "Tải lại danh sách";
 			this.btnXemBH.UseVisualStyleBackColor = true;
+			this.btnXemBH.Click += new System.EventHandler(this.btnXemBH_Click);
 			// 
 			// label21
 			// 

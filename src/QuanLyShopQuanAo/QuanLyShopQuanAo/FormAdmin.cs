@@ -78,7 +78,7 @@ namespace QuanLyShopQuanAo
 
 		void LoadListThongKeBanHang()
 		{
-			BHList.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHang(dtpBatDau.Value, dtpKetThuc.Value);
+			BHList.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHangInTime(dtpBatDau.Value, dtpKetThuc.Value);
 		}
 
 		void LoadListBH()
@@ -208,14 +208,11 @@ namespace QuanLyShopQuanAo
 		{
 			LoadListKH();
 		}
-		List<BanHang_DTO> SearchBHbyDate(DateTime ngaydau, DateTime ngaycuoi)
-		{
-			List<BanHang_DTO> listBH = BanHang_DAO.Instance.Load_BH_By_Date(ngaydau, ngaycuoi);
-			return listBH;
-		}
+		
+
 		private void btnTimKiemBH_Click(object sender, EventArgs e)
 		{
-			BHList.DataSource = SearchBHbyDate(dtpBatDau.Value, dtpKetThuc.Value);
+			dtgvHD.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHangInTime(dtpBatDau.Value, dtpKetThuc.Value);
 		}
 
 		private void dtgvHD_Click(object sender, EventArgs e)
@@ -237,6 +234,17 @@ namespace QuanLyShopQuanAo
 
 			tongSoTien = (tongSoTien / 100) * Discount;
 			txtTongTienBH.Text = tongSoTien.ToString("###.###.###");
+		}
+
+		private void btnXemBH_Click(object sender, EventArgs e)
+		{
+			dtgvHD.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHang();
+
+			if (dtgvHD.Rows.Count > 0)
+			{
+				dtgvHD.Rows[0].Selected = true;
+				dtgvHD_Click(this, new EventArgs());
+			}
 		}
 	}
 }

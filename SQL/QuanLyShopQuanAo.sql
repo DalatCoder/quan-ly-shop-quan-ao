@@ -469,10 +469,11 @@ GO
 ----------------------------------- Ban Hang -----------------------------------
 CREATE PROCEDURE sp_select_BanHang_All
 AS
-	BEGIN
-		SELECT  ID_BH, ID_GD, NgayBanHang, Discount, HoTen, SDT, DiaChi
+	BEGIN		
+		SELECT ID_BH, ID_GD, HoTen, SDT, NgayBanHang, Discount
 		FROM dbo.BanHang
 		JOIN KhachHang ON BanHang.ID_KH = KhachHang.ID_KH
+		WHERE ID_GD IS NOT NULL
 	END	
 GO
 
@@ -483,10 +484,10 @@ CREATE PROCEDURE sp_select_BanHang_by_ID
 @ID_BH INT
 AS
 	BEGIN
-		SELECT ID_GD, NgayBanHang, Discount, HoTen, SDT, DiaChi
+		SELECT  ID_BH, ID_GD, NgayBanHang, Discount, HoTen, SDT
 		FROM dbo.BanHang
 		JOIN KhachHang ON BanHang.ID_KH = KhachHang.ID_KH
-		WHERE BanHang.ID_BH = @ID_BH
+		WHERE BanHang.ID_BH = @ID_BH AND ID_GD IS NOT NULL
 	END
 GO
 
@@ -769,7 +770,7 @@ CREATE PROC sp_select_banHang_FromDateToDate
 @fromDate DATETIME, @toDate DATETIME
 AS
 BEGIN
-	SELECT ID_GD, HoTen, SDT, NgayBanHang, Discount FROM BanHang
+	SELECT ID_BH, ID_GD, HoTen, SDT, NgayBanHang, Discount FROM BanHang
 	JOIN KhachHang ON BanHang.ID_KH = KhachHang.ID_KH
 	WHERE 
 		ID_GD IS NOT NULL AND 

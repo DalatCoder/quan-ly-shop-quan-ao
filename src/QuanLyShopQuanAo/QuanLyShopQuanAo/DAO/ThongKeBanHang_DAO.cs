@@ -25,10 +25,14 @@ namespace QuanLyShopQuanAo.DAO
 			}
 		}
 
-		public DataTable GetListThongKeBanHang(DateTime fromDate, DateTime toDate)
+		public DataTable GetListThongKeBanHang()
 		{
-			List<ThongKeBanHang_DTO> thongKeBanHangs = new List<ThongKeBanHang_DTO>();
+			string query = "EXEC sp_select_BanHang_All";
+			return DataProvider.Instance.ExecuteQuery(query);
+		}
 
+		public DataTable GetListThongKeBanHangInTime(DateTime fromDate, DateTime toDate)
+		{
 			string query = "EXEC sp_select_banHang_FromDateToDate @fromDate , @toDate";
 			object[] param = new object[] { fromDate, toDate };
 
