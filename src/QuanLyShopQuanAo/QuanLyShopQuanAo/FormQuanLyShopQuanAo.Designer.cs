@@ -65,6 +65,11 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.btnHuyDon = new System.Windows.Forms.Button();
 			this.btnThanhToan = new System.Windows.Forms.Button();
+			this.colID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colGiaBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colThanhTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.menuStrip1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).BeginInit();
@@ -157,6 +162,7 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
 			this.groupBox1.Controls.Add(this.btnThem);
 			this.groupBox1.Controls.Add(this.nmSoLuong);
 			this.groupBox1.Controls.Add(this.btnTaiLaiDS);
@@ -238,6 +244,9 @@
 			// 
 			// groupBox2
 			// 
+			this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBox2.Controls.Add(this.dgvQuanAo);
 			this.groupBox2.Location = new System.Drawing.Point(0, 118);
 			this.groupBox2.Name = "groupBox2";
@@ -260,9 +269,11 @@
 			this.dgvQuanAo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvQuanAo.Size = new System.Drawing.Size(525, 394);
 			this.dgvQuanAo.TabIndex = 0;
+			this.dgvQuanAo.Click += new System.EventHandler(this.dgvQuanAo_Click);
 			// 
 			// groupBox3
 			// 
+			this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
 			this.groupBox3.Controls.Add(this.txtDiaChi);
 			this.groupBox3.Controls.Add(this.label8);
 			this.groupBox3.Controls.Add(this.txtSDT);
@@ -326,6 +337,9 @@
 			// 
 			// groupBox4
 			// 
+			this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBox4.Controls.Add(this.lvDonHang);
 			this.groupBox4.Location = new System.Drawing.Point(537, 118);
 			this.groupBox4.Name = "groupBox4";
@@ -336,6 +350,12 @@
 			// 
 			// lvDonHang
 			// 
+			this.lvDonHang.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colID,
+            this.colTen,
+            this.colGiaBan,
+            this.colSoLuong,
+            this.colThanhTien});
 			this.lvDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lvDonHang.FullRowSelect = true;
 			this.lvDonHang.GridLines = true;
@@ -349,6 +369,7 @@
 			// 
 			// groupBox5
 			// 
+			this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
 			this.groupBox5.Controls.Add(this.lblTongTienGhiBangChu);
 			this.groupBox5.Controls.Add(this.lblTongTienCuoiCung);
 			this.groupBox5.Controls.Add(this.lblTongTien);
@@ -469,6 +490,29 @@
 			this.btnThanhToan.Text = "Thanh toán";
 			this.btnThanhToan.UseVisualStyleBackColor = true;
 			// 
+			// colID
+			// 
+			this.colID.Text = "Mã SP";
+			// 
+			// colTen
+			// 
+			this.colTen.Text = "Tên SP";
+			// 
+			// colGiaBan
+			// 
+			this.colGiaBan.Text = "Giá bán";
+			this.colGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
+			// colSoLuong
+			// 
+			this.colSoLuong.Text = "Số lượng";
+			this.colSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// colThanhTien
+			// 
+			this.colThanhTien.Text = "Thành tiền";
+			this.colThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			// 
 			// fQLShopQuanAo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -545,5 +589,10 @@
 		private System.Windows.Forms.Label lblTongTienGhiBangChu;
 		private System.Windows.Forms.Label lblTongTienCuoiCung;
 		private System.Windows.Forms.Label lblTongTien;
+		private System.Windows.Forms.ColumnHeader colID;
+		private System.Windows.Forms.ColumnHeader colTen;
+		private System.Windows.Forms.ColumnHeader colGiaBan;
+		private System.Windows.Forms.ColumnHeader colSoLuong;
+		private System.Windows.Forms.ColumnHeader colThanhTien;
 	}
 }

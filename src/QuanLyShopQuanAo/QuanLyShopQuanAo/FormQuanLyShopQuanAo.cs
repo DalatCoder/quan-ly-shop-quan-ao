@@ -86,6 +86,14 @@ namespace QuanLyShopQuanAo
 			LoadListQuanAo();
 		}
 
+		private void dgvQuanAo_Click(object sender, EventArgs e)
+		{
+			if (dgvQuanAo.SelectedRows.Count == 0) return;
+
+			int soLuongToiDa = Convert.ToInt32(dgvQuanAo.SelectedRows[0].Cells[SanPham.SoLuong].Value);
+			nmSoLuong.Maximum = soLuongToiDa;
+		}
+
 		#endregion
 	}
 }
