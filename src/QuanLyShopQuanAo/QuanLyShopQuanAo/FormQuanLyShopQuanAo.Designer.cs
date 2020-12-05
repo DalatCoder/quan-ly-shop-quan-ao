@@ -54,6 +54,11 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.lvDonHang = new System.Windows.Forms.ListView();
+			this.colID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colGiaBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.colThanhTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.lblTongTienGhiBangChu = new System.Windows.Forms.Label();
 			this.lblTongTienCuoiCung = new System.Windows.Forms.Label();
@@ -65,11 +70,6 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.btnHuyDon = new System.Windows.Forms.Button();
 			this.btnThanhToan = new System.Windows.Forms.Button();
-			this.colID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colGiaBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colThanhTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.menuStrip1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).BeginInit();
@@ -367,6 +367,33 @@
 			this.lvDonHang.UseCompatibleStateImageBehavior = false;
 			this.lvDonHang.View = System.Windows.Forms.View.Details;
 			// 
+			// colID
+			// 
+			this.colID.Text = "Mã SP";
+			// 
+			// colTen
+			// 
+			this.colTen.Text = "Tên SP";
+			this.colTen.Width = 180;
+			// 
+			// colGiaBan
+			// 
+			this.colGiaBan.Text = "Giá bán";
+			this.colGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.colGiaBan.Width = 80;
+			// 
+			// colSoLuong
+			// 
+			this.colSoLuong.Text = "Số lượng";
+			this.colSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.colSoLuong.Width = 80;
+			// 
+			// colThanhTien
+			// 
+			this.colThanhTien.Text = "Thành tiền";
+			this.colThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.colThanhTien.Width = 100;
+			// 
 			// groupBox5
 			// 
 			this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -489,29 +516,6 @@
 			this.btnThanhToan.TabIndex = 5;
 			this.btnThanhToan.Text = "Thanh toán";
 			this.btnThanhToan.UseVisualStyleBackColor = true;
-			// 
-			// colID
-			// 
-			this.colID.Text = "Mã SP";
-			// 
-			// colTen
-			// 
-			this.colTen.Text = "Tên SP";
-			// 
-			// colGiaBan
-			// 
-			this.colGiaBan.Text = "Giá bán";
-			this.colGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// colSoLuong
-			// 
-			this.colSoLuong.Text = "Số lượng";
-			this.colSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			// 
-			// colThanhTien
-			// 
-			this.colThanhTien.Text = "Thành tiền";
-			this.colThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// fQLShopQuanAo
 			// 
