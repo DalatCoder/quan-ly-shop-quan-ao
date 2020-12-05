@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyShopQuanAo.DAO
 {
-	class DataProvider
+	public class DataProvider
 	{
 		
 			private static DataProvider _instance;

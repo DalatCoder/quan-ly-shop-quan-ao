@@ -8,7 +8,7 @@ using QuanLyShopQuanAo.Models;
 
 namespace QuanLyShopQuanAo.DAO
 {
-	class HinhQA_DAO
+	public class HinhQA_DAO
 	{
 		private HinhQA_DAO() { }
 		private static HinhQA_DAO _instance;

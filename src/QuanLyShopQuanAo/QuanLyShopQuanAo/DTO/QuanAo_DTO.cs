@@ -7,7 +7,7 @@ using System.Data;
 
 namespace QuanLyShopQuanAo.Models
 {
-    class QuanAo_DTO
+    public class QuanAo_DTO
     {
         private int _ID_QA;
         private string _Ten_QA;

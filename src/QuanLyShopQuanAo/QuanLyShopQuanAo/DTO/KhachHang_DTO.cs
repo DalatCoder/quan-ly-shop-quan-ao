@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+
 namespace QuanLyShopQuanAo.Models
 {
-    class KhachHang_DTO
+    public class KhachHang_DTO
     {
         private int _ID_KH;
         private string _HoTen;

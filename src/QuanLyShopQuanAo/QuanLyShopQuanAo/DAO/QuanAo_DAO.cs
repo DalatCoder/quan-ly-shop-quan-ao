@@ -8,7 +8,7 @@ using QuanLyShopQuanAo.Models;
 
 namespace QuanLyShopQuanAo.DAO
 {
-	class QuanAo_DAO
+	public class QuanAo_DAO
 	{
 		private QuanAo_DAO() { }
 

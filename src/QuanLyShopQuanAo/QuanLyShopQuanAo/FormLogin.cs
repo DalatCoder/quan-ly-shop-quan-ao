@@ -20,6 +20,7 @@ namespace QuanLyShopQuanAo
 		{
 			InitializeComponent();
 		}
+
 		bool Login(string userName, string password)
 		{
 			return QuanTriVien_DAO.Instance.Login(userName, password);
@@ -29,16 +30,28 @@ namespace QuanLyShopQuanAo
 		{
 			var tenDangNhap = txtUserName.Text;
 			var matKhau = txtPass.Text;
-			StringValidator.CheckRequire(tenDangNhap, "Tên đăng nhập");
-			StringValidator.CheckRequire(matKhau, "Mật khẩu");
-			string UserName = txtUserName.Text;
-			string Pass = txtPass.Text;
-			if (!Login(UserName, Pass))
+
+			try
+			{
+				StringValidator.CheckRequire(tenDangNhap, "Tên đăng nhập");
+				StringValidator.CheckRequire(matKhau, "Mật khẩu");
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			
+			if (!Login(tenDangNhap, matKhau))
 			{
 				MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông tin không hợp lệ");
 				return;
 			}
-			fQLShopQuanAo f = new fQLShopQuanAo();
+
+			QuanTriVien_DTO loginAccount = QuanTriVien_DAO.Instance.GetAccountByUserName(tenDangNhap);
+
+			fQLShopQuanAo f = new fQLShopQuanAo(loginAccount);
 			this.Hide();
 			f.ShowDialog();
 			this.Show();

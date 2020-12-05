@@ -36,6 +36,8 @@ namespace QuanLyShopQuanAo
 
 			LoadListQA();
 			LoadListLQA();
+			//LoadListBH();
+			//LoadCTBH();
 		}
 
 		void LoadListQA()

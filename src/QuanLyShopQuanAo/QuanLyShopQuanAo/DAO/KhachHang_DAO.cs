@@ -8,7 +8,7 @@ using QuanLyShopQuanAo.Models;
 
 namespace QuanLyShopQuanAo.DAO
 {
-	class KhachHang_DAO
+	public class KhachHang_DAO
 	{
 		private KhachHang_DAO() { }
 		private static KhachHang_DAO _instance;

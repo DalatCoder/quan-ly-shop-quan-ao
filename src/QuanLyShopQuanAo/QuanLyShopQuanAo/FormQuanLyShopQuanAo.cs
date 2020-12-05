@@ -1,5 +1,6 @@
 ﻿using QuanLyShopQuanAo.Commons;
 using QuanLyShopQuanAo.DAO;
+using QuanLyShopQuanAo.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,12 +17,10 @@ namespace QuanLyShopQuanAo
 	{
 		BindingSource listQuanAo = new BindingSource();
 
-		public fQLShopQuanAo()
+		public fQLShopQuanAo(QuanTriVien_DTO loginAccount)
 		{
 			InitializeComponent();
-
-			
-
+			this.Text = "Quản lý cửa hàng quần áo - Xin chào " + loginAccount.TenDangNhap + "!";
 			LoadListQuanAo();
 		}
 
@@ -65,7 +64,5 @@ namespace QuanLyShopQuanAo
 		{
 			lbChu.Text = TienIch.So_chu(int.Parse(lbSo.Text.Replace(".", string.Empty)));
 		}
-
-		
 	}
 }

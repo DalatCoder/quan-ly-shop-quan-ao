@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+
 namespace QuanLyShopQuanAo.Models
 {
-    class LoaiQA_DTO
+    public class LoaiQA_DTO
     {
         private int _ID_LQA;
         private string _Ten_LQA;
