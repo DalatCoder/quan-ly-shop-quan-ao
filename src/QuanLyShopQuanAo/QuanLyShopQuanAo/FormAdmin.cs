@@ -40,24 +40,6 @@ namespace QuanLyShopQuanAo
 
 		#endregion
 
-		List<QuanAo_DTO> SearchQA(string Ten)
-		{
-			List<QuanAo_DTO> listQA = QuanAo_DAO.Instance.Load_QA_Search(Ten);
-			return listQA;
-		}
-
-		List<QuanAo_DTO> SearchQAbyGia(float Giacao, float Giathap)
-		{
-			List<QuanAo_DTO> listQA = QuanAo_DAO.Instance.Load_QA_By_GiaCa(Giathap, Giacao);
-			return listQA;
-		}
-
-		private void btnTimQA_Click(object sender, EventArgs e)
-		{
-			QAList.DataSource = SearchQA(txtTimQA.Text);
-			QAList.DataSource = SearchQAbyGia(float.Parse(txtTimTuGiaQA.Text), float.Parse(txtTimDenGiaQA.Text));
-		}
-
 		#region Thong ke hoa don
 
 		void InitStateThongKeHoaDon()
@@ -259,6 +241,24 @@ namespace QuanLyShopQuanAo
 				bitmapImage.Save(ms, ImageFormat.Jpeg);
 				imageData = ms.ToArray();
 			}
+		}
+
+		List<QuanAo_DTO> SearchQA(string Ten)
+		{
+			List<QuanAo_DTO> listQA = QuanAo_DAO.Instance.Load_QA_Search(Ten);
+			return listQA;
+		}
+
+		List<QuanAo_DTO> SearchQAbyGia(float Giacao, float Giathap)
+		{
+			List<QuanAo_DTO> listQA = QuanAo_DAO.Instance.Load_QA_By_GiaCa(Giathap, Giacao);
+			return listQA;
+		}
+
+		private void btnTimQA_Click(object sender, EventArgs e)
+		{
+			QAList.DataSource = SearchQA(txtTimQA.Text);
+			QAList.DataSource = SearchQAbyGia(float.Parse(txtTimTuGiaQA.Text), float.Parse(txtTimDenGiaQA.Text));
 		}
 
 		#endregion
