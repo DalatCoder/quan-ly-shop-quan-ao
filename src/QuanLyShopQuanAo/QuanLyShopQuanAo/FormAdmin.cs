@@ -20,7 +20,6 @@ namespace QuanLyShopQuanAo
 		BindingSource LQAList = new BindingSource();
 		BindingSource KHList = new BindingSource();
 		BindingSource BHList = new BindingSource();
-		BindingSource CTBHList = new BindingSource();
 
 		public frmAdmin()
 		{
@@ -31,33 +30,21 @@ namespace QuanLyShopQuanAo
 		#region Init State
 		void LoadState()
 		{
-			LoadDefaultDatetimePicker();
-			
 			dtgvQA.DataSource = QAList;
 			dtgvLoaiQA.DataSource = LQAList;
-			dtgvHD.DataSource = BHList;
 
 			LoadListQA();
 			LoadListLQA();
-			LoadListThongKeBanHang();
 			//LoadListBH();
 			//LoadCTBH();
 
-			if (dtgvHD.Rows.Count > 0)
-			{
-				dtgvHD.Rows[0].Selected = true;
-				dtgvHD_Click(this, new EventArgs());
-			}
+			
 
+			InitStateThongKeHoaDon();
 			InitStateKhachHang();
 		}
 
-		void LoadDefaultDatetimePicker()
-		{
-			DateTime today = DateTime.Now;
-			dtpBatDau.Value = new DateTime(today.Year, today.Month, 1);
-			dtpKetThuc.Value = dtpBatDau.Value.AddMonths(1).AddDays(-1);
-		}
+		
 
 		#endregion
 
@@ -71,24 +58,6 @@ namespace QuanLyShopQuanAo
 		void LoadListLQA()
 		{
 			LQAList.DataSource = LoaiQA_DAO.Instance.Load_LQA();
-		}
-
-		
-
-		void LoadListThongKeBanHang()
-		{
-			BHList.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHangInTime(dtpBatDau.Value, dtpKetThuc.Value);
-		}
-
-		void LoadListBH()
-		{
-			BHList.DataSource = BanHang_DAO.Instance.Load_BH();
-		}
-
-		void LoadCTBH()
-		{
-			int BH_ID = int.Parse(dtgvHD.Rows[0].Cells.ToString());
-			CTBHList.DataSource = ChiTietBanHang_DAO.Instance.Load_CTBH(BH_ID);
 		}
 
 		void LoadCategoryIntoCombobox(ComboBox cb)
@@ -203,18 +172,43 @@ namespace QuanLyShopQuanAo
 			LoadListLQA();
 		}
 
-		
+
 
 
 
 		#region Thong ke hoa don
 
-		private void btnTimKiemBH_Click(object sender, EventArgs e)
+		void InitStateThongKeHoaDon()
+		{
+			dtgvHD.DataSource = BHList;
+			LoadDefaultDatetimePicker();
+			LoadListThongKeBanHang();
+
+			if (dtgvHD.Rows.Count > 0)
+			{
+				dtgvHD.Rows[0].Selected = true;
+				dtgvHD_Click(dtgvHD.Rows[0], new EventArgs());
+			}
+		}
+
+		void LoadDefaultDatetimePicker()
+		{
+			DateTime today = DateTime.Now;
+			dtpBatDau.Value = new DateTime(today.Year, today.Month, 1);
+			dtpKetThuc.Value = dtpBatDau.Value.AddMonths(1).AddDays(-1);
+		}
+
+		void LoadListThongKeBanHang()
+		{
+			BHList.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHangInTime(dtpBatDau.Value, dtpKetThuc.Value);
+		}
+
+		void btnTimKiemBH_Click(object sender, EventArgs e)
 		{
 			dtgvHD.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHangInTime(dtpBatDau.Value, dtpKetThuc.Value);
 		}
 
-		private void btnXemBH_Click(object sender, EventArgs e)
+		void btnXemBH_Click(object sender, EventArgs e)
 		{
 			dtgvHD.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHang();
 
@@ -225,7 +219,7 @@ namespace QuanLyShopQuanAo
 			}
 		}
 
-		private void dtgvHD_Click(object sender, EventArgs e)
+		void dtgvHD_Click(object sender, EventArgs e)
 		{
 			if (dtgvHD.SelectedRows.Count == 0) return;
 
