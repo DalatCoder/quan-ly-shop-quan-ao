@@ -265,14 +265,9 @@ namespace QuanLyShopQuanAo
 
 		void AddDataBindingKhachHang()
 		{
-			txtTenKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "HoTen"));
-			txtSoDTKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "SDT"));
-			txtDiaChiKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "DiaChi"));
-		}
-
-		void btnXemKH_Click(object sender, EventArgs e)
-		{
-			LoadListKH();
+			txtTenKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "HoTen", true, DataSourceUpdateMode.Never));
+			txtSoDTKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "SDT", true, DataSourceUpdateMode.Never));
+			txtDiaChiKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
 		}
 
 		void txtSoDTKH_TextChanged(object sender, EventArgs e)
