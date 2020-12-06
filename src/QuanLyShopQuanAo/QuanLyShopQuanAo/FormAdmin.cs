@@ -31,16 +31,15 @@ namespace QuanLyShopQuanAo
 		void LoadState()
 		{
 			dtgvQA.DataSource = QAList;
-			dtgvLoaiQA.DataSource = LQAList;
 
 			LoadListQA();
-			LoadListLQA();
 			//LoadListBH();
 			//LoadCTBH();
 
 			
 
 			InitStateThongKeHoaDon();
+			InitStateLoaiQuanAo();
 			InitStateKhachHang();
 		}
 
@@ -55,10 +54,7 @@ namespace QuanLyShopQuanAo
 			QAList.DataSource = QuanAo_DAO.Instance.Load_QA();
 		}
 
-		void LoadListLQA()
-		{
-			LQAList.DataSource = LoaiQA_DAO.Instance.Load_LQA();
-		}
+		
 
 		void LoadCategoryIntoCombobox(ComboBox cb)
 		{
@@ -136,41 +132,9 @@ namespace QuanLyShopQuanAo
 			QAList.DataSource = SearchQAbyGia(float.Parse(txtTimTuGiaQA.Text), float.Parse(txtTimDenGiaQA.Text));
 		}
 
-		private void btnThemLoaiQA_Click(object sender, EventArgs e)
-		{
-			string Ten = txtTenLoaiQA.Text;
+		
 
-			if (LoaiQA_DAO.Instance.Insert_LoaiQuanAo(Ten))
-			{
-				MessageBox.Show("Thêm loại quần áo thành công");
-				LoadListQA();
-			}
-			else
-			{
-				MessageBox.Show("Có lỗi khi thêm loại quần áo");
-			}
-		}
-
-
-		private void btnSuaLoaiQA_Click(object sender, EventArgs e)
-		{
-			string Ten = txtTenLoaiQA.Text;
-			int QA_ID = int.Parse(txtIDLoaiQA.Text);
-			if (LoaiQA_DAO.Instance.UpdateLQA(QA_ID, Ten))
-			{
-				MessageBox.Show("Cập nhật loại quần áo thành công");
-				LoadListQA();
-			}
-			else
-			{
-				MessageBox.Show("Có lỗi khi cập nhật loại quần áo");
-			}
-		}
-
-		private void btnXemLoaiQA_Click(object sender, EventArgs e)
-		{
-			LoadListLQA();
-		}
+		
 
 
 
@@ -238,6 +202,71 @@ namespace QuanLyShopQuanAo
 
 			tongSoTien = (tongSoTien / 100) * Discount;
 			txtTongTienBH.Text = tongSoTien.ToString("###.###.###");
+		}
+
+		#endregion
+
+		#region Loai quan ao
+
+		void InitStateLoaiQuanAo()
+		{
+			dtgvLoaiQuanAo.DataSource = LQAList;
+			LoadListLQA();
+			AddDataBindingLoaiQuanAo();
+		}
+
+		void LoadListLQA()
+		{
+			LQAList.DataSource = LoaiQA_DAO.Instance.Load_LQA();
+		}
+
+		void AddDataBindingLoaiQuanAo()
+		{
+			txtIDLoaiQA.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "ID_LQA", true, DataSourceUpdateMode.Never));
+			txtTenLoaiQA.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "Ten_LQA", true, DataSourceUpdateMode.Never));
+		}
+
+		void btnThemLoaiQA_Click(object sender, EventArgs e)
+		{
+			string Ten = txtTenLoaiQA.Text;
+			string msg;
+
+			if (LoaiQA_DAO.Instance.Insert_LoaiQuanAo(Ten))
+			{
+				msg = "Thêm loại quần áo thành công";
+				LoadListLQA();
+			}
+			else
+			{
+				msg = "Có lỗi khi thêm loại quần áo";
+			}
+
+			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+
+		void btnSuaLoaiQA_Click(object sender, EventArgs e)
+		{
+			string Ten = txtTenLoaiQA.Text;
+			int ID_LQA = int.Parse(txtIDLoaiQA.Text);
+			string msg;
+
+			if (LoaiQA_DAO.Instance.UpdateLQA(ID_LQA, Ten))
+			{
+				msg = "Cập nhật loại quần áo thành công";
+				LoadListLQA();
+			}
+			else
+			{
+				msg = "Có lỗi khi cập nhật loại quần áo";
+			}
+
+			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		void btnXemLoaiQA_Click(object sender, EventArgs e)
+		{
+			LoadListLQA();
 		}
 
 		#endregion

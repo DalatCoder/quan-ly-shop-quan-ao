@@ -92,7 +92,6 @@ namespace QuanLyShopQuanAo
 			this.txtIDLoaiQA = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.panel16 = new System.Windows.Forms.Panel();
-			this.dtgvLoaiQA = new System.Windows.Forms.DataGridView();
 			this.panel18 = new System.Windows.Forms.Panel();
 			this.btnXemLoaiQA = new System.Windows.Forms.Button();
 			this.btnSuaLoaiQA = new System.Windows.Forms.Button();
@@ -103,6 +102,7 @@ namespace QuanLyShopQuanAo
 			this.txtDiaChiKH = new System.Windows.Forms.TextBox();
 			this.label15 = new System.Windows.Forms.Label();
 			this.panel22 = new System.Windows.Forms.Panel();
+			this.txtSoLuongHoaDonKH = new System.Windows.Forms.TextBox();
 			this.label11 = new System.Windows.Forms.Label();
 			this.panel23 = new System.Windows.Forms.Panel();
 			this.txtSoDTKH = new System.Windows.Forms.TextBox();
@@ -112,7 +112,7 @@ namespace QuanLyShopQuanAo
 			this.label13 = new System.Windows.Forms.Label();
 			this.panel26 = new System.Windows.Forms.Panel();
 			this.dtgvKH = new System.Windows.Forms.DataGridView();
-			this.txtSoLuongHoaDonKH = new System.Windows.Forms.TextBox();
+			this.dtgvLoaiQuanAo = new System.Windows.Forms.DataGridView();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
@@ -140,7 +140,6 @@ namespace QuanLyShopQuanAo
 			this.panel14.SuspendLayout();
 			this.panel15.SuspendLayout();
 			this.panel16.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dtgvLoaiQA)).BeginInit();
 			this.panel18.SuspendLayout();
 			this.tpKhachHang.SuspendLayout();
 			this.panel20.SuspendLayout();
@@ -150,6 +149,7 @@ namespace QuanLyShopQuanAo
 			this.panel24.SuspendLayout();
 			this.panel26.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvLoaiQuanAo)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tcAdmin
@@ -792,22 +792,11 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel16
 			// 
-			this.panel16.Controls.Add(this.dtgvLoaiQA);
+			this.panel16.Controls.Add(this.dtgvLoaiQuanAo);
 			this.panel16.Location = new System.Drawing.Point(9, 114);
 			this.panel16.Name = "panel16";
 			this.panel16.Size = new System.Drawing.Size(550, 529);
 			this.panel16.TabIndex = 6;
-			// 
-			// dtgvLoaiQA
-			// 
-			this.dtgvLoaiQA.BackgroundColor = System.Drawing.Color.White;
-			this.dtgvLoaiQA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.dtgvLoaiQA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dtgvLoaiQA.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dtgvLoaiQA.Location = new System.Drawing.Point(0, 0);
-			this.dtgvLoaiQA.Name = "dtgvLoaiQA";
-			this.dtgvLoaiQA.Size = new System.Drawing.Size(550, 529);
-			this.dtgvLoaiQA.TabIndex = 0;
 			// 
 			// panel18
 			// 
@@ -919,6 +908,13 @@ namespace QuanLyShopQuanAo
 			this.panel22.Size = new System.Drawing.Size(438, 52);
 			this.panel22.TabIndex = 3;
 			// 
+			// txtSoLuongHoaDonKH
+			// 
+			this.txtSoLuongHoaDonKH.Location = new System.Drawing.Point(180, 14);
+			this.txtSoLuongHoaDonKH.Name = "txtSoLuongHoaDonKH";
+			this.txtSoLuongHoaDonKH.Size = new System.Drawing.Size(245, 25);
+			this.txtSoLuongHoaDonKH.TabIndex = 5;
+			// 
 			// label11
 			// 
 			this.label11.AutoSize = true;
@@ -1002,12 +998,20 @@ namespace QuanLyShopQuanAo
 			this.dtgvKH.Size = new System.Drawing.Size(550, 635);
 			this.dtgvKH.TabIndex = 2;
 			// 
-			// txtSoLuongHoaDonKH
+			// dtgvLoaiQuanAo
 			// 
-			this.txtSoLuongHoaDonKH.Location = new System.Drawing.Point(180, 14);
-			this.txtSoLuongHoaDonKH.Name = "txtSoLuongHoaDonKH";
-			this.txtSoLuongHoaDonKH.Size = new System.Drawing.Size(245, 25);
-			this.txtSoLuongHoaDonKH.TabIndex = 5;
+			this.dtgvLoaiQuanAo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dtgvLoaiQuanAo.BackgroundColor = System.Drawing.Color.White;
+			this.dtgvLoaiQuanAo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.dtgvLoaiQuanAo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dtgvLoaiQuanAo.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dtgvLoaiQuanAo.Location = new System.Drawing.Point(0, 0);
+			this.dtgvLoaiQuanAo.MultiSelect = false;
+			this.dtgvLoaiQuanAo.Name = "dtgvLoaiQuanAo";
+			this.dtgvLoaiQuanAo.ReadOnly = true;
+			this.dtgvLoaiQuanAo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dtgvLoaiQuanAo.Size = new System.Drawing.Size(550, 529);
+			this.dtgvLoaiQuanAo.TabIndex = 2;
 			// 
 			// frmAdmin
 			// 
@@ -1058,7 +1062,6 @@ namespace QuanLyShopQuanAo
 			this.panel15.ResumeLayout(false);
 			this.panel15.PerformLayout();
 			this.panel16.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dtgvLoaiQA)).EndInit();
 			this.panel18.ResumeLayout(false);
 			this.tpKhachHang.ResumeLayout(false);
 			this.panel20.ResumeLayout(false);
@@ -1072,6 +1075,7 @@ namespace QuanLyShopQuanAo
 			this.panel24.PerformLayout();
 			this.panel26.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvLoaiQuanAo)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1113,7 +1117,6 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.TextBox txtIDLoaiQA;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Panel panel16;
-		private System.Windows.Forms.DataGridView dtgvLoaiQA;
 		private System.Windows.Forms.Panel panel18;
 		private System.Windows.Forms.Button btnXemLoaiQA;
 		private System.Windows.Forms.Button btnSuaLoaiQA;
@@ -1162,5 +1165,6 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.DataGridView dtgvChiTietBanHang;
 		private System.Windows.Forms.DataGridView dtgvKH;
 		private System.Windows.Forms.TextBox txtSoLuongHoaDonKH;
+		private System.Windows.Forms.DataGridView dtgvLoaiQuanAo;
 	}
 }
