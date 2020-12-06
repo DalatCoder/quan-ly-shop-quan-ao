@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyShopQuanAo.Commons;
 using QuanLyShopQuanAo.DAO;
 using QuanLyShopQuanAo.Models;
 
@@ -34,7 +35,6 @@ namespace QuanLyShopQuanAo
 			
 			dtgvQA.DataSource = QAList;
 			dtgvLoaiQA.DataSource = LQAList;
-			dtgvKH.DataSource = KHList;
 			dtgvHD.DataSource = BHList;
 
 			LoadListQA();
@@ -48,6 +48,8 @@ namespace QuanLyShopQuanAo
 				dtgvHD.Rows[0].Selected = true;
 				dtgvHD_Click(this, new EventArgs());
 			}
+
+			InitStateKhachHang();
 		}
 
 		void LoadDefaultDatetimePicker()
@@ -71,10 +73,7 @@ namespace QuanLyShopQuanAo
 			LQAList.DataSource = LoaiQA_DAO.Instance.Load_LQA();
 		}
 
-		void LoadListKH()
-		{
-			KHList.DataSource = KhachHang_DAO.Instance.Load_KH();
-		}
+		
 
 		void LoadListThongKeBanHang()
 		{
@@ -204,10 +203,7 @@ namespace QuanLyShopQuanAo
 			LoadListLQA();
 		}
 
-		private void btnXemKH_Click(object sender, EventArgs e)
-		{
-			LoadListKH();
-		}
+		
 
 
 
@@ -251,5 +247,41 @@ namespace QuanLyShopQuanAo
 		}
 
 		#endregion
+
+		#region Khach Hang
+
+		void InitStateKhachHang()
+		{
+			dtgvKH.DataSource = KHList;
+			LoadListKH();
+			AddDataBindingKhachHang();
+			dtgvKH.HideColumns("ID_KH");
+		}
+
+		void LoadListKH()
+		{
+			KHList.DataSource = KhachHang_DAO.Instance.Load_KH();
+		}
+
+		void AddDataBindingKhachHang()
+		{
+			txtTenKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "HoTen"));
+			txtSoDTKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "SDT"));
+			txtDiaChiKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "DiaChi"));
+		}
+
+		void btnXemKH_Click(object sender, EventArgs e)
+		{
+			LoadListKH();
+		}
+
+		void txtSoDTKH_TextChanged(object sender, EventArgs e)
+		{
+			string sdt = txtSoDTKH.Text;
+			txtSoLuongHoaDonKH.Text = BanHang_DAO.Instance.Get_SoLuongBanHang_By_KhachHang(sdt).ToString();
+		}
+
+		#endregion
+
 	}
 }

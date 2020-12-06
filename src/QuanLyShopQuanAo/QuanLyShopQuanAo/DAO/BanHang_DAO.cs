@@ -78,5 +78,31 @@ namespace QuanLyShopQuanAo.DAO
 			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
 			return result > 0;
 		}
+
+		/// <summary>
+		/// Phương thức lấy số lượng đơn hàng đã thanh toán của mỗi khách hàng
+		/// </summary>
+		/// <param name="id_kh">Mã số khách hàng</param>
+		/// <returns>Số lượng đơn hàng của khách</returns>
+		public int Get_SoLuongBanHang_By_KhachHang(int id_kh)
+		{
+			string query = "EXEC sp_select_BanHang_By_KhacHang_ID @ID_KH";
+			object[] param = new object[] { id_kh };
+			int result = (int)DataProvider.Instance.ExecuteScalar(query, param);
+			return result;
+		}
+
+		/// <summary>
+		/// Phương thức lấy số lượng đơn hàng đã thanh toán của mỗi khách hàng
+		/// </summary>
+		/// <param name="SDT">Số điện thoại của khách hàng</param>
+		/// <returns>Số lượng đơn hàng của khách</returns>
+		public int Get_SoLuongBanHang_By_KhachHang(string SDT)
+		{
+			string query = "EXEC sp_select_BanHang_By_KhachHang_SDT @SDT";
+			object[] param = new object[] { SDT };
+			int result = (int)DataProvider.Instance.ExecuteScalar(query, param);
+			return result;
+		}
 	}
 }

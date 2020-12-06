@@ -24,20 +24,10 @@ namespace QuanLyShopQuanAo.DAO
 			}
 		}
 
-		public List<KhachHang_DTO> Load_KH()
+		public DataTable Load_KH()
 		{
-			List<KhachHang_DTO> khachhang = new List<KhachHang_DTO>();
 			string query = "EXEC sp_select_KhachHang";
-			DataTable KH = DataProvider.Instance.ExecuteQuery(query);
-
-			foreach (DataRow row in KH.Rows)
-			{
-				KhachHang_DTO kh = new KhachHang_DTO(row);
-				khachhang.Add(kh);
-			}
-
-			return khachhang;
+			return DataProvider.Instance.ExecuteQuery(query);
 		}
-
 	}
 }

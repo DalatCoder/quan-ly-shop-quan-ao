@@ -779,3 +779,29 @@ END
 GO
 
 EXEC sp_select_banHang_FromDateToDate '20201201', '20201231'
+GO
+
+-- tinh so luong don hang cua 1 khach hang
+CREATE PROCEDURE sp_select_BanHang_By_KhacHang_ID
+@ID_KH INT
+AS
+BEGIN
+	SELECT COUNT(*) FROM BanHang WHERE ID_KH = @ID_KH AND ID_GD IS NOT NULL
+END
+GO
+
+EXEC sp_select_BanHang_By_KhacHang_ID 2
+GO
+
+CREATE PROCEDURE sp_select_BanHang_By_KhachHang_SDT
+@SDT NVARCHAR(100) 
+AS
+BEGIN
+	SELECT COUNT(*) FROM BanHang
+	JOIN KhachHang ON KhachHang.ID_KH = BanHang.ID_KH
+	WHERE SDT = @SDT AND ID_GD IS NOT NULL
+END
+GO
+
+EXEC sp_select_BanHang_By_KhachHang_SDT '0374408253';
+GO
