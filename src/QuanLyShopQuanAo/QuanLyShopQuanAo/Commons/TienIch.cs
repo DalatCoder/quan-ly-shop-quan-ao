@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -183,6 +186,34 @@ namespace QuanLyShopQuanAo.Commons
 
             return lso_chu.ToString().Trim();
 
+        }
+
+        public static byte[] ConvertImageToByteArray(Image imageToConvert)
+        {
+            ImageFormat format = imageToConvert.RawFormat;
+            ImageCodecInfo codec = ImageCodecInfo.GetImageDecoders().First(c => c.FormatID == format.Guid);
+            string mimeType = codec.MimeType;
+
+            using (var ms = new MemoryStream())
+            {
+                ImageFormat imgFormat;
+				switch (mimeType)
+                {
+                    case "image/png":
+                        imgFormat = ImageFormat.Png;
+                        break;
+                    case "image/gif":
+                        imgFormat = ImageFormat.Gif;
+                        break;
+                    default:
+                        imgFormat = ImageFormat.Jpeg;
+                        break;
+                }
+
+                imageToConvert.Save(ms, imgFormat);
+                var img = Image.FromStream(ms);
+                return ms.ToArray();
+            }
         }
     }
 }

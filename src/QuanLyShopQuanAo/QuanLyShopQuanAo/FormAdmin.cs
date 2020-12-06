@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -28,40 +29,16 @@ namespace QuanLyShopQuanAo
 		}
 
 		#region Init State
+
 		void LoadState()
 		{
-			dtgvQA.DataSource = QAList;
-
-			LoadListQA();
-			//LoadListBH();
-			//LoadCTBH();
-
-			
-
 			InitStateThongKeHoaDon();
+			InitStateQuanAo();
 			InitStateLoaiQuanAo();
 			InitStateKhachHang();
 		}
 
-		
-
 		#endregion
-
-		
-
-		void LoadListQA()
-		{
-			QAList.DataSource = QuanAo_DAO.Instance.Load_QA();
-		}
-
-		
-
-		void LoadCategoryIntoCombobox(ComboBox cb)
-		{
-			cb.DataSource = LoaiQA_DAO.Instance.Load_LQA();
-			cb.DisplayMember = "Ten_LQA ";
-			cb.ValueMember = "ID_LQA ";
-		}
 
 		List<QuanAo_DTO> SearchQA(string Ten)
 		{
@@ -69,61 +46,10 @@ namespace QuanLyShopQuanAo
 			return listQA;
 		}
 
-		List<QuanAo_DTO> SearchQAbyGia(float Giacao,float Giathap)
+		List<QuanAo_DTO> SearchQAbyGia(float Giacao, float Giathap)
 		{
 			List<QuanAo_DTO> listQA = QuanAo_DAO.Instance.Load_QA_By_GiaCa(Giathap, Giacao);
 			return listQA;
-		}
-
-		private void btnThemQA_Click(object sender, EventArgs e)
-		{
-			string Ten = txtTenQA.Text;
-			string Size = txtSizeQA.Text;
-			int SoLuong = (int)nmSoLuongQA.Value;
-			int LoaiQA = (int)cbLoaiQA.SelectedValue;
-			float GiaBan = float.Parse(nmGiaBanQA.Text);
-			string GhiChu = txtGhiChuQA.Text;
-
-			//if (QuanAo_DAO.Instance.Insert_QuanAo(Ten, Size,GiaBan,SoLuong,GhiChu,LoaiQA,hinhQA,hinhQAP))
-			//{
-			//	MessageBox.Show("Thêm quần áo thành công");
-			//	LoadListQA();
-			//}
-			//else
-			//{
-			//	MessageBox.Show("Có lỗi khi thêm quần áo");
-			//}
-		}
-
-		private void button3_Click(object sender, EventArgs e)
-		{
-
-		}
-
-
-		private void btnSuaQA_Click(object sender, EventArgs e)
-		{
-			string Ten = txtTenQA.Text;
-			string Size = txtSizeQA.Text;
-			int LoaiQA = (int)cbLoaiQA.SelectedValue;
-			int Soluong = (int)nmSoLuongQA.Value;
-			float GiaBan = float.Parse(nmGiaBanQA.Text);
-			string GhiChu = txtGhiChuQA.Text;
-			int QA_ID = int.Parse(txtIDQA.Text);
-			//if (QuanAo_DAO.Instance.UpdateQA(QA_ID, Ten, Size,GiaBan,Soluong,GhiChu, LoaiQA, hinhQA, hinhQAP))
-			//{
-			//	MessageBox.Show("Cập nhật loại quần áo thành công");
-			//	LoadListQA();
-			//}
-			//else
-			//{
-			//	MessageBox.Show("Có lỗi khi cập nhật món");
-			//}
-		}
-
-		private void btnXemQA_Click(object sender, EventArgs e)
-		{
-			LoadListQA();
 		}
 
 		private void btnTimQA_Click(object sender, EventArgs e)
@@ -131,14 +57,6 @@ namespace QuanLyShopQuanAo
 			QAList.DataSource = SearchQA(txtTimQA.Text);
 			QAList.DataSource = SearchQAbyGia(float.Parse(txtTimTuGiaQA.Text), float.Parse(txtTimDenGiaQA.Text));
 		}
-
-		
-
-		
-
-
-
-
 
 		#region Thong ke hoa don
 
@@ -206,6 +124,145 @@ namespace QuanLyShopQuanAo
 
 		#endregion
 
+		#region Quan ao
+
+		void InitStateQuanAo()
+		{
+			dtgvQuanAo.DataSource = QAList;
+			LoadListQA();
+			LoadLoaiQuanAoCombobox();
+			dtgvQuanAo.HideColumns(SanPham.GhiChu, SanPham.ID_HQA, SanPham.ID_LQA);
+			AddDataBindingQuanAo();
+		}
+
+		void LoadListQA()
+		{
+			QAList.DataSource = QuanAo_DAO.Instance.Load_QA();
+		}
+
+		void LoadLoaiQuanAoCombobox()
+		{
+			cbLoaiQA.DataSource = LoaiQA_DAO.Instance.Load_LQA();
+			cbLoaiQA.DisplayMember = "Ten_LQA";
+			cbLoaiQA.ValueMember = "ID_LQA";
+		}
+
+		void AddDataBindingQuanAo()
+		{
+			txtIDQA.DataBindings.Add(new Binding("Text", dtgvQuanAo.DataSource, SanPham.ID_QA, true, DataSourceUpdateMode.Never));
+			txtTenQA.DataBindings.Add(new Binding("Text", dtgvQuanAo.DataSource, SanPham.Ten_QA, true, DataSourceUpdateMode.Never));
+			txtSizeQA.DataBindings.Add(new Binding("Text", dtgvQuanAo.DataSource, SanPham.Size, true, DataSourceUpdateMode.Never));
+			txtGhiChuQA.DataBindings.Add(new Binding("Text", dtgvQuanAo.DataSource, SanPham.GhiChu, true, DataSourceUpdateMode.Never));
+			nmGiaBanQA.DataBindings.Add(new Binding("Value", dtgvQuanAo.DataSource, SanPham.GiaBan, true, DataSourceUpdateMode.Never));
+			nmSoLuongQA.DataBindings.Add(new Binding("Value", dtgvQuanAo.DataSource, SanPham.SoLuong, true, DataSourceUpdateMode.Never));
+			cbLoaiQA.DataBindings.Add(new Binding("SelectedValue", dtgvQuanAo.DataSource, SanPham.ID_LQA, true, DataSourceUpdateMode.Never));
+			pbHinhQA.DataBindings.Add(new Binding("Tag", dtgvQuanAo.DataSource, SanPham.ID_HQA, true, DataSourceUpdateMode.Never));
+		}
+
+		void btnThemQA_Click(object sender, EventArgs e)
+		{
+			string ten = txtTenQA.Text;
+			string size = txtSizeQA.Text;
+			float giaBan = (float)Convert.ToDouble(nmGiaBanQA.Value);
+			int soLuong = Convert.ToInt32(nmSoLuongQA.Value);
+			string ghiChu = txtGhiChuQA.Text;
+			int idLQA = (int)cbLoaiQA.SelectedValue;
+			Image hinhQA = pbHinhQA.Image;
+			Bitmap imageBitmap = new Bitmap(hinhQA);
+			string hinhQAP = pbHinhQA.ImageLocation;
+
+			byte[] imageData;
+			using (var ms = new MemoryStream())
+			{
+				imageBitmap.Save(ms, ImageFormat.Jpeg);
+				imageData = ms.ToArray();
+			}
+
+			string msg;
+			if (QuanAo_DAO.Instance.Insert_QuanAo(ten, size, giaBan, soLuong, ghiChu, idLQA, imageData, hinhQAP))
+			{
+				msg = "Thêm quần áo thành công";
+				LoadListQA();
+			}
+			else
+			{
+				msg = "Có lỗi khi thêm quần áo";
+			}
+
+			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		private void btnSuaQA_Click(object sender, EventArgs e)
+		{
+			int idQA = Convert.ToInt32(txtIDQA.Text);
+			string ten = txtTenQA.Text;
+			string size = txtSizeQA.Text;
+			float giaBan = (float)Convert.ToDouble(nmGiaBanQA.Value);
+			int soLuong = Convert.ToInt32(nmSoLuongQA.Value);
+			string ghiChu = txtGhiChuQA.Text;
+			int idLQA = (int)cbLoaiQA.SelectedValue;
+			int idHQA = (int)pbHinhQA.Tag;
+			Image hinhQA = pbHinhQA.Image;
+			Bitmap image = new Bitmap(hinhQA);
+			string hinhQAP = pbHinhQA.ImageLocation;
+
+			byte[] imageData;
+			using (var ms = new MemoryStream())
+			{
+				image.Save(ms, ImageFormat.Jpeg);
+				imageData = ms.ToArray();
+			}
+
+			string msg;
+			if (QuanAo_DAO.Instance.UpdateQA(idQA, ten, size, giaBan, soLuong, ghiChu, idLQA, idHQA, imageData, hinhQAP))
+			{
+				msg = "Cập nhật quần áo thành công";
+				LoadListQA();
+			}
+			else
+			{
+				msg = "Có lỗi xảy ra trong quá trình cập nhật quần áo";
+			}
+
+			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		void btnXemQA_Click(object sender, EventArgs e)
+		{
+			LoadListQA();
+		}
+
+		void txtIDQA_TextChanged(object sender, EventArgs e)
+		{
+			if (string.IsNullOrWhiteSpace(txtIDQA.Text)) return;
+
+			int ID_QA = Convert.ToInt32(txtIDQA.Text);
+			pbHinhQA.Image = HinhQA_DAO.Instance.Load_HinhSanPham(ID_QA);
+		}
+
+		void btnBrowseHinhQA_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog dialog = new OpenFileDialog();
+			var result = dialog.ShowDialog();
+			if (result != DialogResult.OK) return;
+
+			string fileName = dialog.FileName;
+			var image = Image.FromFile(fileName);
+			var bitmapImage = new Bitmap(image);
+
+			pbHinhQA.Image = image;
+			pbHinhQA.ImageLocation = fileName;
+
+			byte[] imageData;
+			using (var ms = new MemoryStream())
+			{
+				bitmapImage.Save(ms, ImageFormat.Jpeg);
+				imageData = ms.ToArray();
+			}
+		}
+
+		#endregion
+
 		#region Loai quan ao
 
 		void InitStateLoaiQuanAo()
@@ -243,7 +300,6 @@ namespace QuanLyShopQuanAo
 
 			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
-
 
 		void btnSuaLoaiQA_Click(object sender, EventArgs e)
 		{
@@ -300,6 +356,5 @@ namespace QuanLyShopQuanAo
 		}
 
 		#endregion
-
 	}
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,21 +26,22 @@ namespace QuanLyShopQuanAo.DAO
 			}
 		}
 
-		public byte[] Load_HinhSanPham(int id_HQA)
+		public Image Load_HinhSanPham(int id_QA)
 		{
-			byte[] hinhQuanAo = null;
-			string query = "EXEC sp_select_HinhSanPham	 @ID_HQA";
-			object[] param = new object[] { id_HQA };
+			string query = "EXEC sp_select_HinhAnh_By_QuanAo_ID @ID_QA";
+			object[] param = new object[] { id_QA };
 
-			DataTable HQA = DataProvider.Instance.ExecuteQuery(query, param);
-			foreach (DataRow row in HQA.Rows)
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
+			if (table.Rows.Count == 0) return null;
+
+			DataRow row = table.Rows[0];
+			byte[] raw = (byte[])row["HinhQA"];
+
+			using (var ms = new MemoryStream(raw))
 			{
-				hinhQuanAo = (byte[])row["HinhQA"];
-				return hinhQuanAo;
+				Image image = Image.FromStream(ms);
+				return image;
 			}
-
-			return null;
 		}
-
 	}
 }

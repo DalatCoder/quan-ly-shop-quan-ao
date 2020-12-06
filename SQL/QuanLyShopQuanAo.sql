@@ -160,29 +160,17 @@ VALUES
 GO
 SELECT * FROM LoaiQA
 
-INSERT QuanAo(Ten_QA, ID_LQA, Size, SoLuong, GiaBan, GhiChu)
-VALUES
-	(N'Quần jean ngắn', 1, 'M', 100, 100000, N'Quần jean hấp dẫn cho ngày hè năng động'),
-	(N'Quần jean dài', 1, 'M', 100, 120000, N'Quần jean hấp dẫn cho ngày đông buốt giá'),
-	(N'Áo thun hiệu con bò cười', 2, 'M', 50, 50000, N'Áo thun con bò'),
-	(N'Áo thun Doremon', 2, 'M', 100, 50000, N'Áo thun doremon'),
-	(N'Váy Doremon', 3, 'M', 70, 50000, N'Váy doremon'),
-	(N'Váy dài', 3, 'M', 70, 150000, N'Váy dài siêu cấp'),
-	(N'Áo len mỏng', 4, 'M', 70, 200000, N'Áo len mát mẻ'),
-	(N'Áo len dày', 4, 'M', 70, 300000, N'Áo len ấm áp')
-SELECT * FROM QuanAo
-
-INSERT HinhQA(ID_QA, HinhQAP, HinhQA)
-VALUES
-	(1, N'D:/image1.jpg', 0x89504E470D0A1A0A00000),
-	(2, N'D:/image2.jpg', 0x89504E470D0A1A0A00000),
-	(3, N'D:/image3.jpg', 0x89504E470D0A1A0A00000),
-	(4, N'D:/image4.jpg', 0x89504E470D0A1A0A00000),
-	(5, N'D:/image5.jpg', 0x89504E470D0A1A0A00000),
-	(6, N'D:/image6.jpg', 0x89504E470D0A1A0A00000),
-	(7, N'D:/image7.jpg', 0x89504E470D0A1A0A00000),
-	(8, N'D:/image8.jpg', 0x89504E470D0A1A0A00000)
-SELECT * FROM HinhQA
+-- INSERT QuanAo(Ten_QA, ID_LQA, Size, SoLuong, GiaBan, GhiChu)
+-- VALUES
+-- 	(N'Quần jean ngắn', 1, 'M', 100, 100000, N'Quần jean hấp dẫn cho ngày hè năng động'),
+-- 	(N'Quần jean dài', 1, 'M', 100, 120000, N'Quần jean hấp dẫn cho ngày đông buốt giá'),
+-- 	(N'Áo thun hiệu con bò cười', 2, 'M', 50, 50000, N'Áo thun con bò'),
+-- 	(N'Áo thun Doremon', 2, 'M', 100, 50000, N'Áo thun doremon'),
+-- 	(N'Váy Doremon', 3, 'M', 70, 50000, N'Váy doremon'),
+-- 	(N'Váy dài', 3, 'M', 70, 150000, N'Váy dài siêu cấp'),
+-- 	(N'Áo len mỏng', 4, 'M', 70, 200000, N'Áo len mát mẻ'),
+-- 	(N'Áo len dày', 4, 'M', 70, 300000, N'Áo len ấm áp')
+-- SELECT * FROM QuanAo
 
 INSERT QuanTriVien(TenDangNhap, MatKhau)
 VALUES
@@ -192,33 +180,33 @@ VALUES
 	(N'HONGNHUNG', N'123')
 SELECT * FROM QuanTriVien
 
-INSERT KhachHang(HoTen, SDT, DiaChi)
-VALUES
-	(N'Nguyễn Trọng Hiếu', '0374408253', N'Đà Lạt'),
-	(N'Nguyễn Thị Hà', '0374408254', N'Đà Lạt'),
-	(N'Trần Hữu Khải Quân', '0374408255', N'Đà Lạt')
-SELECT * FROM KhachHang
+-- INSERT KhachHang(HoTen, SDT, DiaChi)
+-- VALUES
+-- 	(N'Nguyễn Trọng Hiếu', '0374408253', N'Đà Lạt'),
+-- 	(N'Nguyễn Thị Hà', '0374408254', N'Đà Lạt'),
+-- 	(N'Trần Hữu Khải Quân', '0374408255', N'Đà Lạt')
+-- SELECT * FROM KhachHang
 
-INSERT BanHang(ID_KH, ID_GD, Discount, NgayBanHang)
-VALUES
-	(1, '202001121054', 30, GETDATE()),
-	(2, '202002121055', 50, GETDATE()),
-	(3, '202003122054', 10, GETDATE())
-SELECT * FROM BanHang
-SELECT * FROM QuanAo
+-- INSERT BanHang(ID_KH, ID_GD, Discount, NgayBanHang)
+-- VALUES
+-- 	(1, '202001121054', 30, GETDATE()),
+-- 	(2, '202002121055', 50, GETDATE()),
+-- 	(3, '202003122054', 10, GETDATE())
+-- SELECT * FROM BanHang
+-- SELECT * FROM QuanAo
 
-INSERT ChiTietBanHang(ID_BH, ID_QA, SoLuongSanPham)
-VALUES
-	(1, 1, 2),
-	(1, 2, 2),
-	(1, 3, 1),
-	(2, 4, 1),
-	(2, 5, 2),
-	(1, 6, 3),
-	(3, 7, 5),
-	(3, 8, 1)
-SELECT * FROM ChiTietBanHang
-GO
+-- INSERT ChiTietBanHang(ID_BH, ID_QA, SoLuongSanPham)
+-- VALUES
+-- 	(1, 1, 2),
+-- 	(1, 2, 2),
+-- 	(1, 3, 1),
+-- 	(2, 4, 1),
+-- 	(2, 5, 2),
+-- 	(1, 6, 3),
+-- 	(3, 7, 5),
+-- 	(3, 8, 1)
+-- SELECT * FROM ChiTietBanHang
+-- GO
 --------------------------------------------------------------------------------
 --                                 PROCEDURE                                  --
 --------------------------------------------------------------------------------
@@ -299,9 +287,18 @@ BEGIN
 END
 GO
 
------------------------------------ Quan Ao ------------------------------------
+CREATE PROCEDURE sp_select_HinhAnh_By_QuanAo_ID
+@ID_QA INT
+AS
+BEGIN
+	SELECT TOP 1 HinhQA FROM HinhQA WHERE ID_QA = @ID_QA
+END
+GO
 
-ALTER PROCEDURE sp_select_QuanAo
+-- EXEC sp_select_HinhAnh_By_QuanAo_ID 1	
+
+----------------------------------- Quan Ao ------------------------------------
+CREATE PROCEDURE sp_select_QuanAo
 AS
 BEGIN
 	SELECT 
@@ -380,6 +377,7 @@ AS
 BEGIN
 	SELECT QuanAo.ID_QA, Ten_QA, Size, GiaBan, SoLuong, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu, ID_HQA, LoaiQA.ID_LQA, Ten_LQA
 	FROM QuanAo
+	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
 	JOIN HinhQA ON QuanAo.ID_QA = HinhQA.ID_HQA
 	WHERE (@GiaBanThap <= GiaBan AND GiaBan <= @GiaBanCao)
 END
@@ -458,7 +456,7 @@ BEGIN
 	SET
 		HinhQA = @HinhQA,
 		HinhQAP = @HinhQAP
-	WHERE ID_HQA = ID_HQA
+	WHERE ID_HQA = @ID_HQA
 END
 GO
 
@@ -729,8 +727,8 @@ BEGIN
 END
 GO
 
-EXEC sp_select_Account_By_UserName N'TRONGHIEU'
-GO
+-- EXEC sp_select_Account_By_UserName N'TRONGHIEU'
+-- GO
 
 -- EXEC sp_select_DangNhapAdmin N'TRONGHIEU', N'123'
 
@@ -740,8 +738,8 @@ CREATE PROCEDURE sp_select_KhachHang
 AS SELECT * FROM KhachHang
 GO
 
-EXEC sp_select_KhachHang
-GO
+-- EXEC sp_select_KhachHang
+-- GO
 
 CREATE PROCEDURE sp_select_KhachHang_By_ID
 @id INT
@@ -751,8 +749,8 @@ BEGIN
 END
 GO
 
-EXEC sp_select_KhachHang_By_ID 1
-GO
+-- EXEC sp_select_KhachHang_By_ID 1
+-- GO
 
 CREATE PROCEDURE sp_selectKhachHang_By_SDT
 @sdt NVARCHAR(50)
@@ -762,8 +760,8 @@ BEGIN
 END
 GO
 
-EXEC sp_selectKhachHang_By_SDT '0374408253';
-GO
+-- EXEC sp_selectKhachHang_By_SDT '0374408253';
+-- GO
 
 -- them proc tim don hang theo ngay
 CREATE PROC sp_select_banHang_FromDateToDate
@@ -778,8 +776,8 @@ BEGIN
 END
 GO
 
-EXEC sp_select_banHang_FromDateToDate '20201201', '20201231'
-GO
+-- EXEC sp_select_banHang_FromDateToDate '20201201', '20201231'
+-- GO
 
 -- tinh so luong don hang cua 1 khach hang
 CREATE PROCEDURE sp_select_BanHang_By_KhacHang_ID
@@ -790,8 +788,8 @@ BEGIN
 END
 GO
 
-EXEC sp_select_BanHang_By_KhacHang_ID 2
-GO
+-- EXEC sp_select_BanHang_By_KhacHang_ID 2
+-- GO
 
 CREATE PROCEDURE sp_select_BanHang_By_KhachHang_SDT
 @SDT NVARCHAR(100) 
@@ -803,5 +801,12 @@ BEGIN
 END
 GO
 
-EXEC sp_select_BanHang_By_KhachHang_SDT '0374408253';
-GO
+-- EXEC sp_select_BanHang_By_KhachHang_SDT '0374408253';
+-- GO
+
+-- exec sp_select_QuanAo
+-- EXEC sp_select_LoaiQuanAo_All
+
+-- exec sp_help sp_insert_QuanAo
+
+-- select * from HinhQA
