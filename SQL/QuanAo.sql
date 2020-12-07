@@ -160,7 +160,7 @@ GO
 
 -- EXEC sp_update_QuanAo 9, N'Ten sau khi update 1', 'L', 200000, 100, N'Day la ghi chu', 4, NULL, NULL
 -- EXEC sp_select_QuanAo_All
--- GO
+-- GO	
 
 CREATE FUNCTION [dbo].[fuConvertToUnsign1] ( @strInput NVARCHAR(4000) ) RETURNS NVARCHAR(4000) AS BEGIN IF @strInput IS NULL RETURN @strInput IF @strInput = '' RETURN @strInput DECLARE @RT NVARCHAR(4000) DECLARE @SIGN_CHARS NCHAR(136) DECLARE @UNSIGN_CHARS NCHAR (136) SET @SIGN_CHARS = N'ăâđêôơưàảãạáằẳẵặắầẩẫậấèẻẽẹéềểễệế ìỉĩịíòỏõọóồổỗộốờởỡợớùủũụúừửữựứỳỷỹỵý ĂÂĐÊÔƠƯÀẢÃẠÁẰẲẴẶẮẦẨẪẬẤÈẺẼẸÉỀỂỄỆẾÌỈĨỊÍ ÒỎÕỌÓỒỔỖỘỐỜỞỠỢỚÙỦŨỤÚỪỬỮỰỨỲỶỸỴÝ' +NCHAR(272)+ NCHAR(208) SET @UNSIGN_CHARS = N'aadeoouaaaaaaaaaaaaaaaeeeeeeeeee iiiiiooooooooooooooouuuuuuuuuuyyyyy AADEOOUAAAAAAAAAAAAAAAEEEEEEEEEEIIIII OOOOOOOOOOOOOOOUUUUUUUUUUYYYYYDD' DECLARE @COUNTER int DECLARE @COUNTER1 int SET @COUNTER = 1 WHILE (@COUNTER <=LEN(@strInput)) BEGIN SET @COUNTER1 = 1 WHILE (@COUNTER1 <=LEN(@SIGN_CHARS)+1) BEGIN IF UNICODE(SUBSTRING(@SIGN_CHARS, @COUNTER1,1)) = UNICODE(SUBSTRING(@strInput,@COUNTER ,1) ) BEGIN IF @COUNTER=1 SET @strInput = SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)-1) ELSE SET @strInput = SUBSTRING(@strInput, 1, @COUNTER-1) +SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1) + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)- @COUNTER) BREAK END SET @COUNTER1 = @COUNTER1 +1 END SET @COUNTER = @COUNTER +1 END SET @strInput = replace(@strInput,' ','-') RETURN @strInput END
 GO
@@ -215,3 +215,31 @@ GO
 
 -- EXEC sp_select_QuanAo_By_Price 150000, 200000
 -- GO
+
+CREATE PROCEDURE sp_select_search_QuanAo_GiaCa
+@ten NVARCHAR(255),
+@GiaBanThap FLOAT, 
+@GiaBanCao FLOAT
+AS
+BEGIN
+	SELECT 
+		ID_QA, 
+		Ten_QA, 
+		Size, 
+		GiaBan, 
+		SoLuong, 
+        CASE 
+            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'            
+		END AS [GhiChu], 
+		LoaiQA.ID_LQA, 
+		Ten_LQA
+	FROM QuanAo
+	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
+	WHERE
+		dbo.fuConvertToUnsign1(Ten_QA) LIKE '%' + dbo.fuConvertToUnsign1(@ten) + '%' AND
+		(@GiaBanThap <= GiaBan AND GiaBan <= @GiaBanCao)
+		
+END
+GO
+
+EXEC sp_select_search_QuanAo_GiaCa 'ao',100000,250000

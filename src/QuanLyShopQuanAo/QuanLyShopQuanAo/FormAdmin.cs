@@ -257,8 +257,38 @@ namespace QuanLyShopQuanAo
 
 		private void btnTimQA_Click(object sender, EventArgs e)
 		{
-			QAList.DataSource = SearchQA(txtTimQA.Text);
-			QAList.DataSource = SearchQAbyGia(float.Parse(txtTimTuGiaQA.Text), float.Parse(txtTimDenGiaQA.Text));
+			string tenQA = txtTimQA.Text;
+			
+
+			if (string.IsNullOrWhiteSpace(tenQA))
+			{
+				if (string.IsNullOrWhiteSpace(txtTimTuGiaQA.Text)||string.IsNullOrWhiteSpace(txtTimDenGiaQA.Text))
+				{
+					MessageBox.Show("Vui lòng nhập thông tin tìm kiếm");
+				}
+				else
+				{
+					float giathap = (float)Convert.ToDouble(txtTimTuGiaQA.Text);
+					float giacao = (float)Convert.ToDouble(txtTimDenGiaQA.Text);
+
+					QAList.DataSource = QuanAo_DAO.Instance.Load_QA_By_GiaCa(giathap, giacao);
+				}
+			}
+			else
+			{
+				if (string.IsNullOrWhiteSpace(txtTimTuGiaQA.Text) || string.IsNullOrWhiteSpace(txtTimDenGiaQA.Text))
+				{
+					QAList.DataSource = QuanAo_DAO.Instance.Load_QA_Search(tenQA);
+				}
+				else
+				{
+					float giathap = (float)Convert.ToDouble(txtTimTuGiaQA.Text);
+					float giacao = (float)Convert.ToDouble(txtTimDenGiaQA.Text);
+
+					QAList.DataSource = QuanAo_DAO.Instance.Load_QA_By_TenQA_GiaCa(tenQA, giathap, giacao);
+				}
+
+			}	
 		}
 
 		#endregion
@@ -286,6 +316,9 @@ namespace QuanLyShopQuanAo
 		void btnThemLoaiQA_Click(object sender, EventArgs e)
 		{
 			string Ten = txtTenLoaiQA.Text;
+
+
+
 			string msg;
 
 			if (LoaiQA_DAO.Instance.Insert_LoaiQuanAo(Ten))

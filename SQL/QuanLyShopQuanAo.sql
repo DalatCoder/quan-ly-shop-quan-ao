@@ -151,14 +151,7 @@ GO
 --------------------------------------------------------------------------------
 --                                Du lieu mau                                 --
 --------------------------------------------------------------------------------
-INSERT LoaiQA(Ten_LQA)
-VALUES 
-	(N'Quần jean'),
-	(N'Áo thun'),
-	(N'Váy'),
-	(N'Áo len')
-GO
-SELECT * FROM LoaiQA
+
 
 INSERT QuanAo(Ten_QA, ID_LQA, Size, SoLuong, GiaBan, GhiChu)
 VALUES
@@ -171,6 +164,15 @@ VALUES
 	(N'Áo len mỏng', 4, 'M', 70, 200000, N'Áo len mát mẻ'),
 	(N'Áo len dày', 4, 'M', 70, 300000, N'Áo len ấm áp')
 SELECT * FROM QuanAo
+
+INSERT LoaiQA(Ten_LQA)
+VALUES 
+	(N'Quần jean'),
+	(N'Áo thun'),
+	(N'Váy'),
+	(N'Áo len')
+GO
+SELECT * FROM LoaiQA
 
 INSERT QuanTriVien(TenDangNhap, MatKhau)
 VALUES
@@ -185,6 +187,7 @@ VALUES
 	(N'Nguyễn Trọng Hiếu', '0374408253', N'Đà Lạt'),
 	(N'Nguyễn Thị Hà', '0374408254', N'Đà Lạt'),
 	(N'Trần Hữu Khải Quân', '0374408255', N'Đà Lạt')
+
 SELECT * FROM KhachHang
 
 INSERT BanHang(ID_KH, ID_GD, Discount, NgayBanHang)
