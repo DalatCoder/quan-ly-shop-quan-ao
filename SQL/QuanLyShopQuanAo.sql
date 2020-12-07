@@ -2,7 +2,6 @@
 --------------------------------------------------------------------------------
 --                          SHOP MANAGEMENT DATABASE                          --
 --------------------------------------------------------------------------------
-
 CREATE DATABASE QL_ShopQuanAo
 GO
 
@@ -152,6 +151,14 @@ GO
 --                                Du lieu mau                                 --
 --------------------------------------------------------------------------------
 
+INSERT LoaiQA(Ten_LQA)
+VALUES 
+	(N'Quần jean'),
+	(N'Áo thun'),
+	(N'Váy'),
+	(N'Áo len')
+GO
+SELECT * FROM LoaiQA
 
 INSERT QuanAo(Ten_QA, ID_LQA, Size, SoLuong, GiaBan, GhiChu)
 VALUES
@@ -164,15 +171,6 @@ VALUES
 	(N'Áo len mỏng', 4, 'M', 70, 200000, N'Áo len mát mẻ'),
 	(N'Áo len dày', 4, 'M', 70, 300000, N'Áo len ấm áp')
 SELECT * FROM QuanAo
-
-INSERT LoaiQA(Ten_LQA)
-VALUES 
-	(N'Quần jean'),
-	(N'Áo thun'),
-	(N'Váy'),
-	(N'Áo len')
-GO
-SELECT * FROM LoaiQA
 
 INSERT QuanTriVien(TenDangNhap, MatKhau)
 VALUES

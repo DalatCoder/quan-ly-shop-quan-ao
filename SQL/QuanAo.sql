@@ -242,4 +242,4 @@ BEGIN
 END
 GO
 
-EXEC sp_select_search_QuanAo_GiaCa 'ao',100000,250000
+-- EXEC sp_select_search_QuanAo_GiaCa 'ao',100000,250000

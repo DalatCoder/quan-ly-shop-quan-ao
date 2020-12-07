@@ -42,5 +42,5 @@ END
 GO
 
 
-EXEC sp_select_KhachHang_By_KeyWord 'hieu'
-EXEC sp_select_KhachHang_By_KeyWord '037'
+-- EXEC sp_select_KhachHang_By_KeyWord 'hieu'
+-- EXEC sp_select_KhachHang_By_KeyWord '037'

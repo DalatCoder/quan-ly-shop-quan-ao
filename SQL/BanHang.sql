@@ -11,8 +11,8 @@ AS
 	END	
 GO
 
-EXEC sp_select_BanHang_All
-GO
+-- EXEC sp_select_BanHang_All
+-- GO
 
 CREATE PROCEDURE sp_select_BanHang_by_ID
 @ID_BH INT
@@ -78,10 +78,10 @@ BEGIN
 END
 GO
 
-SELECT * FROM BanHang
+-- SELECT * FROM BanHang
 
-EXEC sp_select_BanHang_ChuaThanhToan_By_KhachHang 2
-GO
+-- EXEC sp_select_BanHang_ChuaThanhToan_By_KhachHang 2
+-- GO
 
 -- TẠO ĐƠN HÀNG MỚI, CHƯA ĐƯỢC THANH TOÁN
 CREATE PROCEDURE sp_insert_BanHang_ChuaThanhToan
@@ -108,15 +108,15 @@ BEGIN
 END
 GO
 
-EXEC sp_insert_BanHang_ChuaThanhToan N'Nguyễn Trọng Hiếu', N'0374408253', N'Đà Lạt';
-GO
+-- EXEC sp_insert_BanHang_ChuaThanhToan N'Nguyễn Trọng Hiếu', N'0374408253', N'Đà Lạt';
+-- GO
 
-SELECT * FROM KhachHang
+-- SELECT * FROM KhachHang
 
-EXEC sp_select_BanHang_ChuaThanhToan_By_KhachHang 1
+-- EXEC sp_select_BanHang_ChuaThanhToan_By_KhachHang 1
 
-SELECT * FROM BanHang;
-GO
+-- SELECT * FROM BanHang;
+-- GO
 
 -- THANH TOÁN ĐƠN HÀNG
 CREATE PROCEDURE sp_ThanhToanBanHang
@@ -134,10 +134,10 @@ BEGIN
 END
 GO
 
-EXEC sp_ThanhToanBanHang 8, '20201120', 10
+-- EXEC sp_ThanhToanBanHang 8, '20201120', 10
 
-SELECT * FROM BanHang
-GO
+-- SELECT * FROM BanHang
+-- GO
 
 -- HỦY ĐƠN HÀNG
 CREATE PROCEDURE sp_delete_BanHang
@@ -155,8 +155,8 @@ BEGIN
 END
 GO
 
-EXEC sp_delete_BanHang 8
-GO
+-- EXEC sp_delete_BanHang 8
+-- GO
 
 CREATE PROC USP_HaOcCho
 @message NVARCHAR(100)
