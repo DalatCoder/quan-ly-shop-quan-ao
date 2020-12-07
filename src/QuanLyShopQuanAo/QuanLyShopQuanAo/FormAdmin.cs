@@ -407,14 +407,10 @@ namespace QuanLyShopQuanAo
 		{
 			string chuoiTimKiem = txtKhachHang_TimKiem_TenSDT.Text;
 
-			if (string.IsNullOrWhiteSpace(chuoiTimKiem))
-			{
-				MessageBox.Show("Vui lòng nhập tên hoặc số điện thoại tương ứng");
-			}
-			else
-			{
+			if (string.IsNullOrWhiteSpace(chuoiTimKiem)) return;
+			
 				KHList.DataSource = KhachHang_DAO.Instance.Search_KH(chuoiTimKiem);
-			}
+			
 		}
 
 		#endregion
