@@ -86,10 +86,10 @@ namespace QuanLyShopQuanAo
 			this.tpLoaiQuanAo = new System.Windows.Forms.TabPage();
 			this.panel10 = new System.Windows.Forms.Panel();
 			this.panel14 = new System.Windows.Forms.Panel();
-			this.txtTenLoaiQA = new System.Windows.Forms.TextBox();
+			this.txtLoaiQA_Ten = new System.Windows.Forms.TextBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.panel15 = new System.Windows.Forms.Panel();
-			this.txtIDLoaiQA = new System.Windows.Forms.TextBox();
+			this.txtLoaiQA_ID = new System.Windows.Forms.TextBox();
 			this.label10 = new System.Windows.Forms.Label();
 			this.panel16 = new System.Windows.Forms.Panel();
 			this.dtgvLoaiQuanAo = new System.Windows.Forms.DataGridView();
@@ -100,19 +100,30 @@ namespace QuanLyShopQuanAo
 			this.tpKhachHang = new System.Windows.Forms.TabPage();
 			this.panel20 = new System.Windows.Forms.Panel();
 			this.panel28 = new System.Windows.Forms.Panel();
-			this.txtDiaChiKH = new System.Windows.Forms.TextBox();
+			this.txtKhachHang_DiaChi = new System.Windows.Forms.TextBox();
 			this.label15 = new System.Windows.Forms.Label();
 			this.panel22 = new System.Windows.Forms.Panel();
-			this.txtSoLuongHoaDonKH = new System.Windows.Forms.TextBox();
+			this.txtKhachHang_SoLuongHoaDon = new System.Windows.Forms.TextBox();
 			this.label11 = new System.Windows.Forms.Label();
 			this.panel23 = new System.Windows.Forms.Panel();
-			this.txtSoDTKH = new System.Windows.Forms.TextBox();
+			this.txtKhachHang_SDT = new System.Windows.Forms.TextBox();
 			this.label12 = new System.Windows.Forms.Label();
 			this.panel24 = new System.Windows.Forms.Panel();
-			this.txtTenKH = new System.Windows.Forms.TextBox();
+			this.txtKhachHang_Ten = new System.Windows.Forms.TextBox();
 			this.label13 = new System.Windows.Forms.Label();
 			this.panel26 = new System.Windows.Forms.Panel();
 			this.dtgvKH = new System.Windows.Forms.DataGridView();
+			this.panel12 = new System.Windows.Forms.Panel();
+			this.label19 = new System.Windows.Forms.Label();
+			this.txtLoaiQA_TimKiemTen = new System.Windows.Forms.TextBox();
+			this.button1 = new System.Windows.Forms.Button();
+			this.panel17 = new System.Windows.Forms.Panel();
+			this.txtLoaiQA_SoLuongSP = new System.Windows.Forms.TextBox();
+			this.label22 = new System.Windows.Forms.Label();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.btnKhachHang_TaiLaiDS = new System.Windows.Forms.Button();
+			this.btnKhachHang_XoaBoLoc = new System.Windows.Forms.Button();
+			this.txtKhachHang_TimKiem_TenSDT = new System.Windows.Forms.TextBox();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
@@ -150,6 +161,9 @@ namespace QuanLyShopQuanAo
 			this.panel24.SuspendLayout();
 			this.panel26.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).BeginInit();
+			this.panel12.SuspendLayout();
+			this.panel17.SuspendLayout();
+			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tcAdmin
@@ -174,10 +188,10 @@ namespace QuanLyShopQuanAo
 			this.tpBanHang.Controls.Add(this.panel19);
 			this.tpBanHang.Controls.Add(this.panel13);
 			this.tpBanHang.Controls.Add(this.panel11);
-			this.tpBanHang.Location = new System.Drawing.Point(4, 31);
+			this.tpBanHang.Location = new System.Drawing.Point(4, 26);
 			this.tpBanHang.Name = "tpBanHang";
 			this.tpBanHang.Padding = new System.Windows.Forms.Padding(3);
-			this.tpBanHang.Size = new System.Drawing.Size(1056, 646);
+			this.tpBanHang.Size = new System.Drawing.Size(1056, 651);
 			this.tpBanHang.TabIndex = 1;
 			this.tpBanHang.Text = "Bán Hàng";
 			this.tpBanHang.UseVisualStyleBackColor = true;
@@ -187,7 +201,7 @@ namespace QuanLyShopQuanAo
 			this.txtDiscountBH.Location = new System.Drawing.Point(840, 599);
 			this.txtDiscountBH.Name = "txtDiscountBH";
 			this.txtDiscountBH.ReadOnly = true;
-			this.txtDiscountBH.Size = new System.Drawing.Size(208, 29);
+			this.txtDiscountBH.Size = new System.Drawing.Size(208, 25);
 			this.txtDiscountBH.TabIndex = 7;
 			// 
 			// label7
@@ -195,7 +209,7 @@ namespace QuanLyShopQuanAo
 			this.label7.AutoSize = true;
 			this.label7.Location = new System.Drawing.Point(909, 579);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(84, 22);
+			this.label7.Size = new System.Drawing.Size(66, 17);
 			this.label7.TabIndex = 6;
 			this.label7.Text = "Discount";
 			// 
@@ -204,7 +218,7 @@ namespace QuanLyShopQuanAo
 			this.txtTongTienBH.Location = new System.Drawing.Point(569, 599);
 			this.txtTongTienBH.Name = "txtTongTienBH";
 			this.txtTongTienBH.ReadOnly = true;
-			this.txtTongTienBH.Size = new System.Drawing.Size(208, 29);
+			this.txtTongTienBH.Size = new System.Drawing.Size(208, 25);
 			this.txtTongTienBH.TabIndex = 5;
 			// 
 			// label6
@@ -212,7 +226,7 @@ namespace QuanLyShopQuanAo
 			this.label6.AutoSize = true;
 			this.label6.Location = new System.Drawing.Point(635, 579);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(95, 22);
+			this.label6.Size = new System.Drawing.Size(72, 17);
 			this.label6.TabIndex = 4;
 			this.label6.Text = "Tổng Tiền";
 			// 
@@ -272,7 +286,7 @@ namespace QuanLyShopQuanAo
 			this.label21.AutoSize = true;
 			this.label21.Location = new System.Drawing.Point(615, 21);
 			this.label21.Name = "label21";
-			this.label21.Size = new System.Drawing.Size(93, 22);
+			this.label21.Size = new System.Drawing.Size(72, 17);
 			this.label21.TabIndex = 6;
 			this.label21.Text = "Đến Ngày";
 			// 
@@ -282,7 +296,7 @@ namespace QuanLyShopQuanAo
 			this.dtpKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
 			this.dtpKetThuc.Location = new System.Drawing.Point(533, 46);
 			this.dtpKetThuc.Name = "dtpKetThuc";
-			this.dtpKetThuc.Size = new System.Drawing.Size(243, 29);
+			this.dtpKetThuc.Size = new System.Drawing.Size(243, 25);
 			this.dtpKetThuc.TabIndex = 5;
 			// 
 			// label20
@@ -290,7 +304,7 @@ namespace QuanLyShopQuanAo
 			this.label20.AutoSize = true;
 			this.label20.Location = new System.Drawing.Point(102, 22);
 			this.label20.Name = "label20";
-			this.label20.Size = new System.Drawing.Size(83, 22);
+			this.label20.Size = new System.Drawing.Size(64, 17);
 			this.label20.TabIndex = 4;
 			this.label20.Text = "Từ Ngày";
 			// 
@@ -300,7 +314,7 @@ namespace QuanLyShopQuanAo
 			this.dtpBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
 			this.dtpBatDau.Location = new System.Drawing.Point(30, 47);
 			this.dtpBatDau.Name = "dtpBatDau";
-			this.dtpBatDau.Size = new System.Drawing.Size(243, 29);
+			this.dtpBatDau.Size = new System.Drawing.Size(243, 25);
 			this.dtpBatDau.TabIndex = 1;
 			// 
 			// btnTimKiemBH
@@ -348,10 +362,10 @@ namespace QuanLyShopQuanAo
 			this.tpQuanAo.Controls.Add(this.panel3);
 			this.tpQuanAo.Controls.Add(this.panel2);
 			this.tpQuanAo.Controls.Add(this.panel1);
-			this.tpQuanAo.Location = new System.Drawing.Point(4, 31);
+			this.tpQuanAo.Location = new System.Drawing.Point(4, 26);
 			this.tpQuanAo.Name = "tpQuanAo";
 			this.tpQuanAo.Padding = new System.Windows.Forms.Padding(3);
-			this.tpQuanAo.Size = new System.Drawing.Size(1056, 646);
+			this.tpQuanAo.Size = new System.Drawing.Size(1056, 651);
 			this.tpQuanAo.TabIndex = 2;
 			this.tpQuanAo.Text = "Quần Áo";
 			this.tpQuanAo.UseVisualStyleBackColor = true;
@@ -386,7 +400,7 @@ namespace QuanLyShopQuanAo
 			this.label8.AutoSize = true;
 			this.label8.Location = new System.Drawing.Point(316, 94);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(78, 22);
+			this.label8.Size = new System.Drawing.Size(61, 17);
 			this.label8.TabIndex = 9;
 			this.label8.Text = "Ghi Chú";
 			// 
@@ -418,7 +432,7 @@ namespace QuanLyShopQuanAo
 			this.cbLoaiQA.FormattingEnabled = true;
 			this.cbLoaiQA.Location = new System.Drawing.Point(147, 3);
 			this.cbLoaiQA.Name = "cbLoaiQA";
-			this.cbLoaiQA.Size = new System.Drawing.Size(278, 30);
+			this.cbLoaiQA.Size = new System.Drawing.Size(278, 25);
 			this.cbLoaiQA.TabIndex = 1;
 			// 
 			// label14
@@ -426,7 +440,7 @@ namespace QuanLyShopQuanAo
 			this.label14.AutoSize = true;
 			this.label14.Location = new System.Drawing.Point(17, 7);
 			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(125, 22);
+			this.label14.Size = new System.Drawing.Size(96, 17);
 			this.label14.TabIndex = 0;
 			this.label14.Text = "Loại Quần Áo";
 			// 
@@ -463,7 +477,7 @@ namespace QuanLyShopQuanAo
             0,
             0});
 			this.nmGiaBanQA.Name = "nmGiaBanQA";
-			this.nmGiaBanQA.Size = new System.Drawing.Size(278, 29);
+			this.nmGiaBanQA.Size = new System.Drawing.Size(278, 25);
 			this.nmGiaBanQA.TabIndex = 2;
 			this.nmGiaBanQA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -472,7 +486,7 @@ namespace QuanLyShopQuanAo
 			this.label5.AutoSize = true;
 			this.label5.Location = new System.Drawing.Point(17, 7);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(77, 22);
+			this.label5.Size = new System.Drawing.Size(60, 17);
 			this.label5.TabIndex = 0;
 			this.label5.Text = "Giá Bán";
 			// 
@@ -494,7 +508,7 @@ namespace QuanLyShopQuanAo
             0,
             0});
 			this.nmSoLuongQA.Name = "nmSoLuongQA";
-			this.nmSoLuongQA.Size = new System.Drawing.Size(278, 29);
+			this.nmSoLuongQA.Size = new System.Drawing.Size(278, 25);
 			this.nmSoLuongQA.TabIndex = 1;
 			this.nmSoLuongQA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -503,7 +517,7 @@ namespace QuanLyShopQuanAo
 			this.label4.AutoSize = true;
 			this.label4.Location = new System.Drawing.Point(17, 6);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(96, 22);
+			this.label4.Size = new System.Drawing.Size(74, 17);
 			this.label4.TabIndex = 0;
 			this.label4.Text = "Số Lượng";
 			// 
@@ -520,7 +534,7 @@ namespace QuanLyShopQuanAo
 			// 
 			this.txtSizeQA.Location = new System.Drawing.Point(147, 3);
 			this.txtSizeQA.Name = "txtSizeQA";
-			this.txtSizeQA.Size = new System.Drawing.Size(278, 29);
+			this.txtSizeQA.Size = new System.Drawing.Size(278, 25);
 			this.txtSizeQA.TabIndex = 2;
 			// 
 			// label3
@@ -528,7 +542,7 @@ namespace QuanLyShopQuanAo
 			this.label3.AutoSize = true;
 			this.label3.Location = new System.Drawing.Point(17, 6);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(47, 22);
+			this.label3.Size = new System.Drawing.Size(37, 17);
 			this.label3.TabIndex = 0;
 			this.label3.Text = "Size";
 			// 
@@ -545,7 +559,7 @@ namespace QuanLyShopQuanAo
 			// 
 			this.txtTenQA.Location = new System.Drawing.Point(147, 3);
 			this.txtTenQA.Name = "txtTenQA";
-			this.txtTenQA.Size = new System.Drawing.Size(278, 29);
+			this.txtTenQA.Size = new System.Drawing.Size(278, 25);
 			this.txtTenQA.TabIndex = 1;
 			// 
 			// label2
@@ -553,7 +567,7 @@ namespace QuanLyShopQuanAo
 			this.label2.AutoSize = true;
 			this.label2.Location = new System.Drawing.Point(17, 6);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(122, 22);
+			this.label2.Size = new System.Drawing.Size(94, 17);
 			this.label2.TabIndex = 0;
 			this.label2.Text = "Tên Quần Áo";
 			// 
@@ -571,7 +585,7 @@ namespace QuanLyShopQuanAo
 			this.txtIDQA.Location = new System.Drawing.Point(147, 3);
 			this.txtIDQA.Name = "txtIDQA";
 			this.txtIDQA.ReadOnly = true;
-			this.txtIDQA.Size = new System.Drawing.Size(278, 29);
+			this.txtIDQA.Size = new System.Drawing.Size(278, 25);
 			this.txtIDQA.TabIndex = 1;
 			this.txtIDQA.TextChanged += new System.EventHandler(this.txtIDQA_TextChanged);
 			// 
@@ -580,7 +594,7 @@ namespace QuanLyShopQuanAo
 			this.label1.AutoSize = true;
 			this.label1.Location = new System.Drawing.Point(17, 6);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(30, 22);
+			this.label1.Size = new System.Drawing.Size(22, 17);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "ID";
 			// 
@@ -625,14 +639,14 @@ namespace QuanLyShopQuanAo
 			// 
 			this.txtTimDenGiaQA.Location = new System.Drawing.Point(231, 68);
 			this.txtTimDenGiaQA.Name = "txtTimDenGiaQA";
-			this.txtTimDenGiaQA.Size = new System.Drawing.Size(127, 29);
+			this.txtTimDenGiaQA.Size = new System.Drawing.Size(127, 25);
 			this.txtTimDenGiaQA.TabIndex = 6;
 			// 
 			// txtTimTuGiaQA
 			// 
 			this.txtTimTuGiaQA.Location = new System.Drawing.Point(231, 36);
 			this.txtTimTuGiaQA.Name = "txtTimTuGiaQA";
-			this.txtTimTuGiaQA.Size = new System.Drawing.Size(127, 29);
+			this.txtTimTuGiaQA.Size = new System.Drawing.Size(127, 25);
 			this.txtTimTuGiaQA.TabIndex = 5;
 			// 
 			// label17
@@ -640,7 +654,7 @@ namespace QuanLyShopQuanAo
 			this.label17.AutoSize = true;
 			this.label17.Location = new System.Drawing.Point(273, 7);
 			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(39, 22);
+			this.label17.Size = new System.Drawing.Size(30, 17);
 			this.label17.TabIndex = 4;
 			this.label17.Text = "Giá";
 			// 
@@ -649,7 +663,7 @@ namespace QuanLyShopQuanAo
 			this.label16.AutoSize = true;
 			this.label16.Location = new System.Drawing.Point(64, 7);
 			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(122, 22);
+			this.label16.Size = new System.Drawing.Size(94, 17);
 			this.label16.TabIndex = 3;
 			this.label16.Text = "Tên Quần Áo";
 			// 
@@ -657,7 +671,7 @@ namespace QuanLyShopQuanAo
 			// 
 			this.txtTimQA.Location = new System.Drawing.Point(22, 53);
 			this.txtTimQA.Name = "txtTimQA";
-			this.txtTimQA.Size = new System.Drawing.Size(186, 29);
+			this.txtTimQA.Size = new System.Drawing.Size(186, 25);
 			this.txtTimQA.TabIndex = 2;
 			// 
 			// btnTimQA
@@ -704,7 +718,7 @@ namespace QuanLyShopQuanAo
 			this.btnSuaQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSuaQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSuaQA.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnSuaQA.Location = new System.Drawing.Point(298, 24);
+			this.btnSuaQA.Location = new System.Drawing.Point(234, 24);
 			this.btnSuaQA.Name = "btnSuaQA";
 			this.btnSuaQA.Size = new System.Drawing.Size(85, 54);
 			this.btnSuaQA.TabIndex = 2;
@@ -728,19 +742,21 @@ namespace QuanLyShopQuanAo
 			// 
 			// tpLoaiQuanAo
 			// 
+			this.tpLoaiQuanAo.Controls.Add(this.panel12);
 			this.tpLoaiQuanAo.Controls.Add(this.panel10);
 			this.tpLoaiQuanAo.Controls.Add(this.panel16);
 			this.tpLoaiQuanAo.Controls.Add(this.panel18);
-			this.tpLoaiQuanAo.Location = new System.Drawing.Point(4, 31);
+			this.tpLoaiQuanAo.Location = new System.Drawing.Point(4, 26);
 			this.tpLoaiQuanAo.Name = "tpLoaiQuanAo";
 			this.tpLoaiQuanAo.Padding = new System.Windows.Forms.Padding(3);
-			this.tpLoaiQuanAo.Size = new System.Drawing.Size(1056, 646);
+			this.tpLoaiQuanAo.Size = new System.Drawing.Size(1056, 651);
 			this.tpLoaiQuanAo.TabIndex = 3;
 			this.tpLoaiQuanAo.Text = "Loại Quần Áo";
 			this.tpLoaiQuanAo.UseVisualStyleBackColor = true;
 			// 
 			// panel10
 			// 
+			this.panel10.Controls.Add(this.panel17);
 			this.panel10.Controls.Add(this.panel14);
 			this.panel10.Controls.Add(this.panel15);
 			this.panel10.Location = new System.Drawing.Point(565, 114);
@@ -750,52 +766,52 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel14
 			// 
-			this.panel14.Controls.Add(this.txtTenLoaiQA);
+			this.panel14.Controls.Add(this.txtLoaiQA_Ten);
 			this.panel14.Controls.Add(this.label9);
 			this.panel14.Location = new System.Drawing.Point(22, 86);
 			this.panel14.Name = "panel14";
 			this.panel14.Size = new System.Drawing.Size(438, 52);
 			this.panel14.TabIndex = 1;
 			// 
-			// txtTenLoaiQA
+			// txtLoaiQA_Ten
 			// 
-			this.txtTenLoaiQA.Location = new System.Drawing.Point(147, 14);
-			this.txtTenLoaiQA.Name = "txtTenLoaiQA";
-			this.txtTenLoaiQA.Size = new System.Drawing.Size(278, 29);
-			this.txtTenLoaiQA.TabIndex = 1;
+			this.txtLoaiQA_Ten.Location = new System.Drawing.Point(183, 14);
+			this.txtLoaiQA_Ten.Name = "txtLoaiQA_Ten";
+			this.txtLoaiQA_Ten.Size = new System.Drawing.Size(242, 25);
+			this.txtLoaiQA_Ten.TabIndex = 1;
 			// 
 			// label9
 			// 
 			this.label9.AutoSize = true;
 			this.label9.Location = new System.Drawing.Point(17, 17);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(163, 22);
+			this.label9.Size = new System.Drawing.Size(125, 17);
 			this.label9.TabIndex = 0;
 			this.label9.Text = "Tên Loại Quần Áo";
 			// 
 			// panel15
 			// 
-			this.panel15.Controls.Add(this.txtIDLoaiQA);
+			this.panel15.Controls.Add(this.txtLoaiQA_ID);
 			this.panel15.Controls.Add(this.label10);
 			this.panel15.Location = new System.Drawing.Point(22, 28);
 			this.panel15.Name = "panel15";
 			this.panel15.Size = new System.Drawing.Size(438, 52);
 			this.panel15.TabIndex = 0;
 			// 
-			// txtIDLoaiQA
+			// txtLoaiQA_ID
 			// 
-			this.txtIDLoaiQA.Location = new System.Drawing.Point(147, 14);
-			this.txtIDLoaiQA.Name = "txtIDLoaiQA";
-			this.txtIDLoaiQA.ReadOnly = true;
-			this.txtIDLoaiQA.Size = new System.Drawing.Size(278, 29);
-			this.txtIDLoaiQA.TabIndex = 1;
+			this.txtLoaiQA_ID.Location = new System.Drawing.Point(183, 14);
+			this.txtLoaiQA_ID.Name = "txtLoaiQA_ID";
+			this.txtLoaiQA_ID.ReadOnly = true;
+			this.txtLoaiQA_ID.Size = new System.Drawing.Size(242, 25);
+			this.txtLoaiQA_ID.TabIndex = 1;
 			// 
 			// label10
 			// 
 			this.label10.AutoSize = true;
 			this.label10.Location = new System.Drawing.Point(17, 17);
 			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(30, 22);
+			this.label10.Size = new System.Drawing.Size(22, 17);
 			this.label10.TabIndex = 0;
 			this.label10.Text = "ID";
 			// 
@@ -830,7 +846,7 @@ namespace QuanLyShopQuanAo
 			this.panel18.Controls.Add(this.btnThemLoaiQA);
 			this.panel18.Location = new System.Drawing.Point(9, 7);
 			this.panel18.Name = "panel18";
-			this.panel18.Size = new System.Drawing.Size(1039, 100);
+			this.panel18.Size = new System.Drawing.Size(550, 100);
 			this.panel18.TabIndex = 4;
 			// 
 			// btnXemLoaiQA
@@ -839,7 +855,7 @@ namespace QuanLyShopQuanAo
 			this.btnXemLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnXemLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnXemLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnXemLoaiQA.Location = new System.Drawing.Point(841, 24);
+			this.btnXemLoaiQA.Location = new System.Drawing.Point(437, 24);
 			this.btnXemLoaiQA.Name = "btnXemLoaiQA";
 			this.btnXemLoaiQA.Size = new System.Drawing.Size(85, 54);
 			this.btnXemLoaiQA.TabIndex = 3;
@@ -853,7 +869,7 @@ namespace QuanLyShopQuanAo
 			this.btnSuaLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSuaLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSuaLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnSuaLoaiQA.Location = new System.Drawing.Point(516, 24);
+			this.btnSuaLoaiQA.Location = new System.Drawing.Point(240, 24);
 			this.btnSuaLoaiQA.Name = "btnSuaLoaiQA";
 			this.btnSuaLoaiQA.Size = new System.Drawing.Size(85, 54);
 			this.btnSuaLoaiQA.TabIndex = 2;
@@ -877,12 +893,13 @@ namespace QuanLyShopQuanAo
 			// 
 			// tpKhachHang
 			// 
+			this.tpKhachHang.Controls.Add(this.groupBox1);
 			this.tpKhachHang.Controls.Add(this.panel20);
 			this.tpKhachHang.Controls.Add(this.panel26);
-			this.tpKhachHang.Location = new System.Drawing.Point(4, 31);
+			this.tpKhachHang.Location = new System.Drawing.Point(4, 26);
 			this.tpKhachHang.Name = "tpKhachHang";
 			this.tpKhachHang.Padding = new System.Windows.Forms.Padding(3);
-			this.tpKhachHang.Size = new System.Drawing.Size(1056, 646);
+			this.tpKhachHang.Size = new System.Drawing.Size(1056, 651);
 			this.tpKhachHang.TabIndex = 4;
 			this.tpKhachHang.Text = "Khách Hàng";
 			this.tpKhachHang.UseVisualStyleBackColor = true;
@@ -893,110 +910,111 @@ namespace QuanLyShopQuanAo
 			this.panel20.Controls.Add(this.panel22);
 			this.panel20.Controls.Add(this.panel23);
 			this.panel20.Controls.Add(this.panel24);
-			this.panel20.Location = new System.Drawing.Point(565, 8);
+			this.panel20.Location = new System.Drawing.Point(565, 101);
 			this.panel20.Name = "panel20";
-			this.panel20.Size = new System.Drawing.Size(483, 635);
+			this.panel20.Size = new System.Drawing.Size(483, 542);
 			this.panel20.TabIndex = 7;
 			// 
 			// panel28
 			// 
-			this.panel28.Controls.Add(this.txtDiaChiKH);
+			this.panel28.Controls.Add(this.txtKhachHang_DiaChi);
 			this.panel28.Controls.Add(this.label15);
 			this.panel28.Location = new System.Drawing.Point(22, 197);
 			this.panel28.Name = "panel28";
 			this.panel28.Size = new System.Drawing.Size(438, 106);
 			this.panel28.TabIndex = 4;
 			// 
-			// txtDiaChiKH
+			// txtKhachHang_DiaChi
 			// 
-			this.txtDiaChiKH.Location = new System.Drawing.Point(180, 17);
-			this.txtDiaChiKH.Multiline = true;
-			this.txtDiaChiKH.Name = "txtDiaChiKH";
-			this.txtDiaChiKH.Size = new System.Drawing.Size(245, 86);
-			this.txtDiaChiKH.TabIndex = 1;
+			this.txtKhachHang_DiaChi.Location = new System.Drawing.Point(180, 17);
+			this.txtKhachHang_DiaChi.Multiline = true;
+			this.txtKhachHang_DiaChi.Name = "txtKhachHang_DiaChi";
+			this.txtKhachHang_DiaChi.Size = new System.Drawing.Size(245, 86);
+			this.txtKhachHang_DiaChi.TabIndex = 1;
 			// 
 			// label15
 			// 
 			this.label15.AutoSize = true;
 			this.label15.Location = new System.Drawing.Point(17, 17);
 			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(71, 22);
+			this.label15.Size = new System.Drawing.Size(56, 17);
 			this.label15.TabIndex = 0;
 			this.label15.Text = "Địa Chỉ";
 			// 
 			// panel22
 			// 
-			this.panel22.Controls.Add(this.txtSoLuongHoaDonKH);
+			this.panel22.Controls.Add(this.txtKhachHang_SoLuongHoaDon);
 			this.panel22.Controls.Add(this.label11);
 			this.panel22.Location = new System.Drawing.Point(22, 309);
 			this.panel22.Name = "panel22";
 			this.panel22.Size = new System.Drawing.Size(438, 52);
 			this.panel22.TabIndex = 3;
 			// 
-			// txtSoLuongHoaDonKH
+			// txtKhachHang_SoLuongHoaDon
 			// 
-			this.txtSoLuongHoaDonKH.Location = new System.Drawing.Point(180, 14);
-			this.txtSoLuongHoaDonKH.Name = "txtSoLuongHoaDonKH";
-			this.txtSoLuongHoaDonKH.Size = new System.Drawing.Size(245, 29);
-			this.txtSoLuongHoaDonKH.TabIndex = 5;
+			this.txtKhachHang_SoLuongHoaDon.Location = new System.Drawing.Point(180, 14);
+			this.txtKhachHang_SoLuongHoaDon.Name = "txtKhachHang_SoLuongHoaDon";
+			this.txtKhachHang_SoLuongHoaDon.ReadOnly = true;
+			this.txtKhachHang_SoLuongHoaDon.Size = new System.Drawing.Size(245, 25);
+			this.txtKhachHang_SoLuongHoaDon.TabIndex = 5;
 			// 
 			// label11
 			// 
 			this.label11.AutoSize = true;
 			this.label11.Location = new System.Drawing.Point(17, 17);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(181, 22);
+			this.label11.Size = new System.Drawing.Size(141, 17);
 			this.label11.TabIndex = 0;
 			this.label11.Text = "Số Lượng  Hóa Đơn";
 			// 
 			// panel23
 			// 
-			this.panel23.Controls.Add(this.txtSoDTKH);
+			this.panel23.Controls.Add(this.txtKhachHang_SDT);
 			this.panel23.Controls.Add(this.label12);
 			this.panel23.Location = new System.Drawing.Point(22, 139);
 			this.panel23.Name = "panel23";
 			this.panel23.Size = new System.Drawing.Size(438, 52);
 			this.panel23.TabIndex = 2;
 			// 
-			// txtSoDTKH
+			// txtKhachHang_SDT
 			// 
-			this.txtSoDTKH.Location = new System.Drawing.Point(180, 17);
-			this.txtSoDTKH.Name = "txtSoDTKH";
-			this.txtSoDTKH.Size = new System.Drawing.Size(245, 29);
-			this.txtSoDTKH.TabIndex = 1;
-			this.txtSoDTKH.TextChanged += new System.EventHandler(this.txtSoDTKH_TextChanged);
+			this.txtKhachHang_SDT.Location = new System.Drawing.Point(180, 17);
+			this.txtKhachHang_SDT.Name = "txtKhachHang_SDT";
+			this.txtKhachHang_SDT.Size = new System.Drawing.Size(245, 25);
+			this.txtKhachHang_SDT.TabIndex = 1;
+			this.txtKhachHang_SDT.TextChanged += new System.EventHandler(this.txtSoDTKH_TextChanged);
 			// 
 			// label12
 			// 
 			this.label12.AutoSize = true;
 			this.label12.Location = new System.Drawing.Point(17, 17);
 			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(130, 22);
+			this.label12.Size = new System.Drawing.Size(100, 17);
 			this.label12.TabIndex = 0;
 			this.label12.Text = "Số Điện Thoại";
 			// 
 			// panel24
 			// 
-			this.panel24.Controls.Add(this.txtTenKH);
+			this.panel24.Controls.Add(this.txtKhachHang_Ten);
 			this.panel24.Controls.Add(this.label13);
 			this.panel24.Location = new System.Drawing.Point(22, 81);
 			this.panel24.Name = "panel24";
 			this.panel24.Size = new System.Drawing.Size(438, 52);
 			this.panel24.TabIndex = 1;
 			// 
-			// txtTenKH
+			// txtKhachHang_Ten
 			// 
-			this.txtTenKH.Location = new System.Drawing.Point(180, 14);
-			this.txtTenKH.Name = "txtTenKH";
-			this.txtTenKH.Size = new System.Drawing.Size(245, 29);
-			this.txtTenKH.TabIndex = 1;
+			this.txtKhachHang_Ten.Location = new System.Drawing.Point(180, 14);
+			this.txtKhachHang_Ten.Name = "txtKhachHang_Ten";
+			this.txtKhachHang_Ten.Size = new System.Drawing.Size(245, 25);
+			this.txtKhachHang_Ten.TabIndex = 1;
 			// 
 			// label13
 			// 
 			this.label13.AutoSize = true;
 			this.label13.Location = new System.Drawing.Point(17, 17);
 			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(150, 22);
+			this.label13.Size = new System.Drawing.Size(117, 17);
 			this.label13.TabIndex = 0;
 			this.label13.Text = "Tên Khách Hàng";
 			// 
@@ -1024,9 +1042,120 @@ namespace QuanLyShopQuanAo
 			this.dtgvKH.Size = new System.Drawing.Size(550, 635);
 			this.dtgvKH.TabIndex = 2;
 			// 
+			// panel12
+			// 
+			this.panel12.Controls.Add(this.label19);
+			this.panel12.Controls.Add(this.txtLoaiQA_TimKiemTen);
+			this.panel12.Controls.Add(this.button1);
+			this.panel12.Location = new System.Drawing.Point(565, 8);
+			this.panel12.Name = "panel12";
+			this.panel12.Size = new System.Drawing.Size(483, 100);
+			this.panel12.TabIndex = 8;
+			// 
+			// label19
+			// 
+			this.label19.AutoSize = true;
+			this.label19.Location = new System.Drawing.Point(7, 40);
+			this.label19.Name = "label19";
+			this.label19.Size = new System.Drawing.Size(129, 17);
+			this.label19.TabIndex = 3;
+			this.label19.Text = "Tên Loại Quần Áo:";
+			// 
+			// txtLoaiQA_TimKiemTen
+			// 
+			this.txtLoaiQA_TimKiemTen.Location = new System.Drawing.Point(142, 37);
+			this.txtLoaiQA_TimKiemTen.Name = "txtLoaiQA_TimKiemTen";
+			this.txtLoaiQA_TimKiemTen.Size = new System.Drawing.Size(227, 25);
+			this.txtLoaiQA_TimKiemTen.TabIndex = 2;
+			// 
+			// button1
+			// 
+			this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.button1.Location = new System.Drawing.Point(375, 21);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(85, 54);
+			this.button1.TabIndex = 1;
+			this.button1.Text = "Tìm Kiếm";
+			this.button1.UseVisualStyleBackColor = true;
+			// 
+			// panel17
+			// 
+			this.panel17.Controls.Add(this.txtLoaiQA_SoLuongSP);
+			this.panel17.Controls.Add(this.label22);
+			this.panel17.Location = new System.Drawing.Point(22, 144);
+			this.panel17.Name = "panel17";
+			this.panel17.Size = new System.Drawing.Size(438, 52);
+			this.panel17.TabIndex = 2;
+			// 
+			// txtLoaiQA_SoLuongSP
+			// 
+			this.txtLoaiQA_SoLuongSP.Location = new System.Drawing.Point(183, 14);
+			this.txtLoaiQA_SoLuongSP.Name = "txtLoaiQA_SoLuongSP";
+			this.txtLoaiQA_SoLuongSP.ReadOnly = true;
+			this.txtLoaiQA_SoLuongSP.Size = new System.Drawing.Size(242, 25);
+			this.txtLoaiQA_SoLuongSP.TabIndex = 1;
+			// 
+			// label22
+			// 
+			this.label22.AutoSize = true;
+			this.label22.Location = new System.Drawing.Point(17, 17);
+			this.label22.Name = "label22";
+			this.label22.Size = new System.Drawing.Size(138, 17);
+			this.label22.TabIndex = 0;
+			this.label22.Text = "Số lượng sản phẩm";
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+			this.groupBox1.Controls.Add(this.btnKhachHang_TaiLaiDS);
+			this.groupBox1.Controls.Add(this.btnKhachHang_XoaBoLoc);
+			this.groupBox1.Controls.Add(this.txtKhachHang_TimKiem_TenSDT);
+			this.groupBox1.Location = new System.Drawing.Point(565, 8);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(483, 87);
+			this.groupBox1.TabIndex = 8;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Tìm kiếm khách hàng theo tên hoặc số điện thoại";
+			// 
+			// btnKhachHang_TaiLaiDS
+			// 
+			this.btnKhachHang_TaiLaiDS.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnKhachHang_TaiLaiDS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnKhachHang_TaiLaiDS.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnKhachHang_TaiLaiDS.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btnKhachHang_TaiLaiDS.Location = new System.Drawing.Point(306, 53);
+			this.btnKhachHang_TaiLaiDS.Name = "btnKhachHang_TaiLaiDS";
+			this.btnKhachHang_TaiLaiDS.Size = new System.Drawing.Size(154, 25);
+			this.btnKhachHang_TaiLaiDS.TabIndex = 2;
+			this.btnKhachHang_TaiLaiDS.Text = "Tải lại danh sách";
+			this.btnKhachHang_TaiLaiDS.UseVisualStyleBackColor = true;
+			// 
+			// btnKhachHang_XoaBoLoc
+			// 
+			this.btnKhachHang_XoaBoLoc.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnKhachHang_XoaBoLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnKhachHang_XoaBoLoc.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnKhachHang_XoaBoLoc.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btnKhachHang_XoaBoLoc.Location = new System.Drawing.Point(42, 53);
+			this.btnKhachHang_XoaBoLoc.Name = "btnKhachHang_XoaBoLoc";
+			this.btnKhachHang_XoaBoLoc.Size = new System.Drawing.Size(111, 25);
+			this.btnKhachHang_XoaBoLoc.TabIndex = 1;
+			this.btnKhachHang_XoaBoLoc.Text = "Xóa bộ lọc";
+			this.btnKhachHang_XoaBoLoc.UseVisualStyleBackColor = true;
+			// 
+			// txtKhachHang_TimKiem_TenSDT
+			// 
+			this.txtKhachHang_TimKiem_TenSDT.Location = new System.Drawing.Point(42, 24);
+			this.txtKhachHang_TimKiem_TenSDT.Name = "txtKhachHang_TimKiem_TenSDT";
+			this.txtKhachHang_TimKiem_TenSDT.Size = new System.Drawing.Size(418, 25);
+			this.txtKhachHang_TimKiem_TenSDT.TabIndex = 0;
+			// 
 			// frmAdmin
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1064, 681);
 			this.Controls.Add(this.tcAdmin);
@@ -1034,7 +1163,6 @@ namespace QuanLyShopQuanAo
 			this.Name = "frmAdmin";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Admin";
-			this.Load += new System.EventHandler(this.frmAdmin_Load);
 			this.tcAdmin.ResumeLayout(false);
 			this.tpBanHang.ResumeLayout(false);
 			this.tpBanHang.PerformLayout();
@@ -1088,6 +1216,12 @@ namespace QuanLyShopQuanAo
 			this.panel24.PerformLayout();
 			this.panel26.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).EndInit();
+			this.panel12.ResumeLayout(false);
+			this.panel12.PerformLayout();
+			this.panel17.ResumeLayout(false);
+			this.panel17.PerformLayout();
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -1122,10 +1256,10 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.Button btnThemQA;
 		private System.Windows.Forms.Panel panel10;
 		private System.Windows.Forms.Panel panel14;
-		private System.Windows.Forms.TextBox txtTenLoaiQA;
+		private System.Windows.Forms.TextBox txtLoaiQA_Ten;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Panel panel15;
-		private System.Windows.Forms.TextBox txtIDLoaiQA;
+		private System.Windows.Forms.TextBox txtLoaiQA_ID;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Panel panel16;
 		private System.Windows.Forms.Panel panel18;
@@ -1148,19 +1282,19 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.Panel panel23;
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Panel panel24;
-		private System.Windows.Forms.TextBox txtTenKH;
+		private System.Windows.Forms.TextBox txtKhachHang_Ten;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Panel panel26;
 		private System.Windows.Forms.Button btnBrowseHinhQA;
 		private System.Windows.Forms.Panel panel25;
 		private System.Windows.Forms.Label label14;
-		private System.Windows.Forms.TextBox txtSoDTKH;
+		private System.Windows.Forms.TextBox txtKhachHang_SDT;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.TextBox txtGhiChuQA;
 		private System.Windows.Forms.NumericUpDown nmGiaBanQA;
 		private System.Windows.Forms.TextBox txtSizeQA;
 		private System.Windows.Forms.Panel panel28;
-		private System.Windows.Forms.TextBox txtDiaChiKH;
+		private System.Windows.Forms.TextBox txtKhachHang_DiaChi;
 		private System.Windows.Forms.Label label15;
 		private System.Windows.Forms.Label label21;
 		private System.Windows.Forms.DateTimePicker dtpKetThuc;
@@ -1175,8 +1309,19 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.DataGridView dtgvHD;
 		private System.Windows.Forms.DataGridView dtgvChiTietBanHang;
 		private System.Windows.Forms.DataGridView dtgvKH;
-		private System.Windows.Forms.TextBox txtSoLuongHoaDonKH;
+		private System.Windows.Forms.TextBox txtKhachHang_SoLuongHoaDon;
 		private System.Windows.Forms.DataGridView dtgvLoaiQuanAo;
 		private System.Windows.Forms.DataGridView dtgvQuanAo;
+		private System.Windows.Forms.Panel panel12;
+		private System.Windows.Forms.Label label19;
+		private System.Windows.Forms.TextBox txtLoaiQA_TimKiemTen;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Panel panel17;
+		private System.Windows.Forms.TextBox txtLoaiQA_SoLuongSP;
+		private System.Windows.Forms.Label label22;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.Button btnKhachHang_TaiLaiDS;
+		private System.Windows.Forms.Button btnKhachHang_XoaBoLoc;
+		private System.Windows.Forms.TextBox txtKhachHang_TimKiem_TenSDT;
 	}
 }

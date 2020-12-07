@@ -309,13 +309,13 @@ namespace QuanLyShopQuanAo
 
 		void AddDataBindingLoaiQuanAo()
 		{
-			txtIDLoaiQA.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "ID_LQA", true, DataSourceUpdateMode.Never));
-			txtTenLoaiQA.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "Ten_LQA", true, DataSourceUpdateMode.Never));
+			txtLoaiQA_ID.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "ID_LQA", true, DataSourceUpdateMode.Never));
+			txtLoaiQA_Ten.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "Ten_LQA", true, DataSourceUpdateMode.Never));
 		}
 
 		void btnThemLoaiQA_Click(object sender, EventArgs e)
 		{
-			string Ten = txtTenLoaiQA.Text;
+			string Ten = txtLoaiQA_Ten.Text;
 
 
 
@@ -336,8 +336,8 @@ namespace QuanLyShopQuanAo
 
 		void btnSuaLoaiQA_Click(object sender, EventArgs e)
 		{
-			string Ten = txtTenLoaiQA.Text;
-			int ID_LQA = int.Parse(txtIDLoaiQA.Text);
+			string Ten = txtLoaiQA_Ten.Text;
+			int ID_LQA = int.Parse(txtLoaiQA_ID.Text);
 			string msg;
 
 			if (LoaiQA_DAO.Instance.UpdateLQA(ID_LQA, Ten))
@@ -377,15 +377,15 @@ namespace QuanLyShopQuanAo
 
 		void AddDataBindingKhachHang()
 		{
-			txtTenKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "HoTen", true, DataSourceUpdateMode.Never));
-			txtSoDTKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "SDT", true, DataSourceUpdateMode.Never));
-			txtDiaChiKH.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
+			txtKhachHang_Ten.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "HoTen", true, DataSourceUpdateMode.Never));
+			txtKhachHang_SDT.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "SDT", true, DataSourceUpdateMode.Never));
+			txtKhachHang_DiaChi.DataBindings.Add(new Binding("Text", dtgvKH.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
 		}
 
 		void txtSoDTKH_TextChanged(object sender, EventArgs e)
 		{
-			string sdt = txtSoDTKH.Text;
-			txtSoLuongHoaDonKH.Text = BanHang_DAO.Instance.Get_SoLuongBanHang_By_KhachHang(sdt).ToString();
+			string sdt = txtKhachHang_SDT.Text;
+			txtKhachHang_SoLuongHoaDon.Text = BanHang_DAO.Instance.Get_SoLuongBanHang_By_KhachHang(sdt).ToString();
 		}
 
 		#endregion
