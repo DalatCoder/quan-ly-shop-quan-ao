@@ -151,14 +151,7 @@ GO
 --------------------------------------------------------------------------------
 --                                Du lieu mau                                 --
 --------------------------------------------------------------------------------
-INSERT LoaiQA(Ten_LQA)
-VALUES 
-	(N'Quần jean'),
-	(N'Áo thun'),
-	(N'Váy'),
-	(N'Áo len')
-GO
-SELECT * FROM LoaiQA
+
 
 -- INSERT QuanAo(Ten_QA, ID_LQA, Size, SoLuong, GiaBan, GhiChu)
 -- VALUES
@@ -171,6 +164,15 @@ SELECT * FROM LoaiQA
 -- 	(N'Áo len mỏng', 4, 'M', 70, 200000, N'Áo len mát mẻ'),
 -- 	(N'Áo len dày', 4, 'M', 70, 300000, N'Áo len ấm áp')
 -- SELECT * FROM QuanAo
+
+INSERT LoaiQA(Ten_LQA)
+VALUES 
+	(N'Quần jean'),
+	(N'Áo thun'),
+	(N'Váy'),
+	(N'Áo len')
+GO
+SELECT * FROM LoaiQA
 
 INSERT QuanTriVien(TenDangNhap, MatKhau)
 VALUES
@@ -385,6 +387,25 @@ GO
 
 -- EXEC sp_select_QuanAo_By_GiaCa 100000, 200000
 -- GO
+
+CREATE PROCEDURE sp_select_search_QuanAo_GiaCa
+@ten NVARCHAR(255),
+@GiaBanThap FLOAT, 
+@GiaBanCao FLOAT
+AS
+BEGIN
+	SELECT QuanAo.ID_QA, Ten_QA, Size, GiaBan, SoLuong, SUBSTRING(GhiChu, 1, 150) + '...' AS GhiChu, ID_HQA, LoaiQA.ID_LQA, Ten_LQA
+	FROM QuanAo
+	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
+	JOIN HinhQA ON HinhQA.ID_QA = QuanAo.ID_QA
+	WHERE
+		dbo.fuConvertToUnsign1(Ten_QA) LIKE '%' + dbo.fuConvertToUnsign1(@ten) + '%' AND
+		(@GiaBanThap <= GiaBan AND GiaBan <= @GiaBanCao)
+		
+END
+GO
+
+EXEC sp_select_search_QuanAo_GiaCa 'ao',100000,250000
 
 CREATE PROCEDURE sp_insert_QuanAo
 @Ten_QA NVARCHAR(100),

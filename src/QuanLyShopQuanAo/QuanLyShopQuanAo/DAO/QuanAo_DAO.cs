@@ -88,7 +88,7 @@ namespace QuanLyShopQuanAo.DAO
 		{
 			List<QuanAo_DTO> quanao = new List<QuanAo_DTO>();
 
-			string query = "EXEC sp_select_QuanAo_By_GiaCa_Discount @GiaBanThap , @GiaBanCao";
+			string query = "EXEC sp_select_QuanAo_By_GiaCa @GiaBanThap , @GiaBanCao";
 			object[] param = new object[] { giacathap, giacacao };
 
 			DataTable QA = DataProvider.Instance.ExecuteQuery(query, param);
@@ -99,6 +99,23 @@ namespace QuanLyShopQuanAo.DAO
 				quanao.Add(qa);
 			}
 
+			return quanao;
+		}
+
+		public List<QuanAo_DTO> Load_QA_By_TenQA_GiaCa(string tenQA, float giathap, float giacao)
+		{
+			List<QuanAo_DTO> quanao = new List<QuanAo_DTO>();
+
+			string query = "EXEC sp_select_search_QuanAo_GiaCa @ten , @GiaBanThap , @GiaBanCao";
+			object[] param = new object[] { tenQA, giathap, giacao };
+
+			DataTable tableQA = DataProvider.Instance.ExecuteQuery(query, param);
+
+			foreach  (DataRow row in tableQA.Rows)
+			{
+				QuanAo_DTO qa = new QuanAo_DTO(row);
+				quanao.Add(qa);
+			}
 			return quanao;
 		}
 
