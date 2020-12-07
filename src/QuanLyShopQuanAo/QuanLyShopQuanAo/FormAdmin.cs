@@ -153,6 +153,7 @@ namespace QuanLyShopQuanAo
 			{
 				pbHinhQA.Image = hinhQA.ToImage();
 				pbHinhQA.Tag = hinhQA;
+				pbHinhQA.SizeMode = PictureBoxSizeMode.StretchImage;
 			}
 			else
 			{
@@ -170,8 +171,9 @@ namespace QuanLyShopQuanAo
 			string ghiChu = txtGhiChuQA.Text;
 			int idLQA = (int)cbLoaiQA.SelectedValue;
 
-			byte[] hinhQA = null;
-			string hinhQAP = null;
+			string defaultImagePath = TienIch.GetPathTo("Assests", "image.jpg");
+			byte[] hinhQA = TienIch.ConvertImageToByteArray(Image.FromFile(defaultImagePath));
+			string hinhQAP = defaultImagePath;
 
 			if (pbHinhQA.Image != null)
 			{
@@ -203,8 +205,9 @@ namespace QuanLyShopQuanAo
 			string ghiChu = txtGhiChuQA.Text;
 			int idLQA = (int)cbLoaiQA.SelectedValue;
 
-			byte[] hinhQA = null;
-			string hinhQAP = null;
+			string defaultImagePath = TienIch.GetPathTo("Assests", "image.jpg");
+			byte[] hinhQA = TienIch.ConvertImageToByteArray(Image.FromFile(defaultImagePath));
+			string hinhQAP = defaultImagePath;
 
 			if (pbHinhQA.Image != null)
 			{
@@ -242,6 +245,7 @@ namespace QuanLyShopQuanAo
 
 			pbHinhQA.Image = image;
 			pbHinhQA.ImageLocation = fileName;
+			pbHinhQA.SizeMode = PictureBoxSizeMode.StretchImage;
 		}
 
 		List<QuanAo_DTO> SearchQA(string Ten)
