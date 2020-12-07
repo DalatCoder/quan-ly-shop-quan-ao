@@ -359,6 +359,20 @@ namespace QuanLyShopQuanAo
 			LoadListLQA();
 		}
 
+		private void btnLoaiQA_TimKiem_Click(object sender, EventArgs e)
+		{
+			string tenLoaiQA = txtLoaiQA_TimKiemTen.Text;
+
+			if (string.IsNullOrWhiteSpace(tenLoaiQA))
+			{
+				MessageBox.Show("Vui lòng nhập tên loại quần áo");
+			}
+			else
+			{
+				LQAList.DataSource = LoaiQA_DAO.Instance.Load_LQA_by_Name(tenLoaiQA);
+			}
+		}
+
 		#endregion
 
 		#region Khach Hang
@@ -389,6 +403,9 @@ namespace QuanLyShopQuanAo
 			txtKhachHang_SoLuongHoaDon.Text = BanHang_DAO.Instance.Get_SoLuongBanHang_By_KhachHang(sdt).ToString();
 		}
 
+
 		#endregion
+
+	
 	}
 }
