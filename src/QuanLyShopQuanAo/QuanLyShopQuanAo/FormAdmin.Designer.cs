@@ -1015,6 +1015,7 @@ namespace QuanLyShopQuanAo
 			this.txtKhachHang_TimKiem_TenSDT.Name = "txtKhachHang_TimKiem_TenSDT";
 			this.txtKhachHang_TimKiem_TenSDT.Size = new System.Drawing.Size(418, 25);
 			this.txtKhachHang_TimKiem_TenSDT.TabIndex = 0;
+			this.txtKhachHang_TimKiem_TenSDT.TextChanged += new System.EventHandler(this.txtKhachHang_TimKiem_TenSDT_TextChanged);
 			// 
 			// panel20
 			// 

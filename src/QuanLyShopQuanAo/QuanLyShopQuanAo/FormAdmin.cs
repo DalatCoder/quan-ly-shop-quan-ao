@@ -403,9 +403,22 @@ namespace QuanLyShopQuanAo
 			txtKhachHang_SoLuongHoaDon.Text = BanHang_DAO.Instance.Get_SoLuongBanHang_By_KhachHang(sdt).ToString();
 		}
 
+		private void txtKhachHang_TimKiem_TenSDT_TextChanged(object sender, EventArgs e)
+		{
+			string chuoiTimKiem = txtKhachHang_TimKiem_TenSDT.Text;
+
+			if (string.IsNullOrWhiteSpace(chuoiTimKiem))
+			{
+				MessageBox.Show("Vui lòng nhập tên hoặc số điện thoại tương ứng");
+			}
+			else
+			{
+				KHList.DataSource = KhachHang_DAO.Instance.Search_KH(chuoiTimKiem);
+			}
+		}
 
 		#endregion
 
-	
+
 	}
 }
