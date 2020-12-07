@@ -25,19 +25,37 @@ namespace QuanLyShopQuanAo.DAO
 			}
 		}
 
-		public DataTable GetListThongKeBanHang()
+		public List<ThongKeBanHang_DTO> GetListThongKeBanHang()
 		{
+			List<ThongKeBanHang_DTO> listThongKe = new List<ThongKeBanHang_DTO>();
 			string query = "EXEC sp_select_BanHang_All";
-			return DataProvider.Instance.ExecuteQuery(query);
+
+			DataTable table = DataProvider.Instance.ExecuteQuery(query);
+
+			foreach (DataRow row in table.Rows)
+			{
+				ThongKeBanHang_DTO thongKe = new ThongKeBanHang_DTO(row);
+				listThongKe.Add(thongKe);
+			}
+
+			return listThongKe;
 		}
 
-		public DataTable GetListThongKeBanHangInTime(DateTime fromDate, DateTime toDate)
+		public List<ThongKeBanHang_DTO> GetListThongKeBanHangInTime(DateTime fromDate, DateTime toDate)
 		{
+			List<ThongKeBanHang_DTO> listThongKe = new List<ThongKeBanHang_DTO>();
 			string query = "EXEC sp_select_banHang_FromDateToDate @fromDate , @toDate";
 			object[] param = new object[] { fromDate, toDate };
 
 			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
-			return table;
+
+			foreach (DataRow row in table.Rows)
+			{
+				ThongKeBanHang_DTO thongKe = new ThongKeBanHang_DTO(row);
+				listThongKe.Add(thongKe);
+			}
+
+			return listThongKe;
 		}
 	}
 }

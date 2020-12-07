@@ -24,14 +24,22 @@ namespace QuanLyShopQuanAo.DAO
 				return _instance;
 			}
 		}
-		public DataTable Load_CTBH(int id_BH)
+		public List<ChiTietBanHang_DTO> Load_CTBH(int id_BH)
 		{
-			List<ChiTietBanHang_DTO> chitietbanhang = new List<ChiTietBanHang_DTO>();
+			List<ChiTietBanHang_DTO> listCTBH = new List<ChiTietBanHang_DTO>();
+
 			string query = "EXEC sp_select_ChiTietBanHang @ID_BH";
 			object[] param = new object[] { id_BH };
 
-			DataTable CTBH = DataProvider.Instance.ExecuteQuery(query, param);
-			return CTBH;
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
+
+			foreach (DataRow row in table.Rows)
+			{
+				ChiTietBanHang_DTO chiTietBanHang = new ChiTietBanHang_DTO(row);
+				listCTBH.Add(chiTietBanHang);
+			}
+
+			return listCTBH;
 		}
 
 		public bool Insert_ChiTietBanHang(int id_QA, int id_BH, int soluongsanpham)
@@ -41,6 +49,5 @@ namespace QuanLyShopQuanAo.DAO
 			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
 			return result > 0;
 		}
-
 	}
 }

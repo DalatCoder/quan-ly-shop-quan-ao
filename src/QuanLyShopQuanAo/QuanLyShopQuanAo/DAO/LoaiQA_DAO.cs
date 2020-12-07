@@ -41,7 +41,6 @@ namespace QuanLyShopQuanAo.DAO
 
 		public LoaiQA_DTO Load_LQA_by_ID(int id_LQA)
 		{
-			List<LoaiQA_DTO> loaiquanao = new List<LoaiQA_DTO>();
 			string query = "EXEC sp_select_LoaiQuanAo_by_ID @ID_LQA";
 			object[] param = new object[] { id_LQA };
 
