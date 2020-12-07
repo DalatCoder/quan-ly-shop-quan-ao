@@ -312,6 +312,7 @@ namespace QuanLyShopQuanAo
 		{
 			txtLoaiQA_ID.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "ID_LQA", true, DataSourceUpdateMode.Never));
 			txtLoaiQA_Ten.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "Ten_LQA", true, DataSourceUpdateMode.Never));
+			
 		}
 
 		void btnThemLoaiQA_Click(object sender, EventArgs e)
@@ -403,9 +404,32 @@ namespace QuanLyShopQuanAo
 			txtKhachHang_SoLuongHoaDon.Text = BanHang_DAO.Instance.Get_SoLuongBanHang_By_KhachHang(sdt).ToString();
 		}
 
+		private void txtKhachHang_TimKiem_TenSDT_TextChanged(object sender, EventArgs e)
+		{
+			string chuoiTimKiem = txtKhachHang_TimKiem_TenSDT.Text;
+
+			if (string.IsNullOrWhiteSpace(chuoiTimKiem)) return;
+			
+				KHList.DataSource = KhachHang_DAO.Instance.Search_KH(chuoiTimKiem);
+			
+		}
+		private void btnKhachHang_XoaBoLoc_Click(object sender, EventArgs e)
+		{
+			txtKhachHang_TimKiem_TenSDT.Text = "";
+		}
+
+		private void btnKhachHang_TaiLaiDS_Click(object sender, EventArgs e)
+		{
+			LoadListKH();
+		}
+
 
 		#endregion
 
-	
+		private void txtLoaiQA_ID_TextChanged(object sender, EventArgs e)
+		{
+			int soluong = LoaiQA_DAO.Instance.GetSoLuongSanPham(int.Parse(txtLoaiQA_ID.Text));
+			txtLoaiQA_SoLuongSP.Text = soluong.ToString();
+		}
 	}
 }
