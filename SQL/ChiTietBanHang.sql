@@ -63,8 +63,8 @@ GO
 -- SELECT * FROM ChiTietBanHang
 -- GO
 
-select * from ChiTietBanHang
-go
+-- select * from ChiTietBanHang
+-- go
 
 CREATE PROCEDURE sp_select_ChiTietBanHang
 @ID_BH INT
@@ -77,4 +77,4 @@ BEGIN
 END
 GO
 
-exec sp_select_ChiTietBanHang 1
+-- exec sp_select_ChiTietBanHang 1
