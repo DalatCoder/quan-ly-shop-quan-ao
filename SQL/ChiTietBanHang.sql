@@ -63,13 +63,18 @@ GO
 -- SELECT * FROM ChiTietBanHang
 -- GO
 
+select * from ChiTietBanHang
+go
+
 CREATE PROCEDURE sp_select_ChiTietBanHang
 @ID_BH INT
 AS
 BEGIN
-	SELECT Ten_QA, GiaBan, SoLuongSanPham
+	SELECT ID_CTBH, Ten_QA, GiaBan, SoLuongSanPham
 	FROM ChiTietBanHang 
 	INNER JOIN QuanAo ON QuanAo.ID_QA = ChiTietBanHang.ID_QA
 	WHERE ID_BH = @ID_BH
 END
 GO
+
+exec sp_select_ChiTietBanHang 1

@@ -47,6 +47,7 @@ namespace QuanLyShopQuanAo
 			dtgvHD.DataSource = BHList;
 			LoadDefaultDatetimePicker();
 			LoadListThongKeBanHang();
+			dtgvHD.HideColumns("ID_BH", "ID_GD");
 
 			if (dtgvHD.Rows.Count > 0)
 			{
@@ -89,16 +90,16 @@ namespace QuanLyShopQuanAo
 
 			int ID_BH = Convert.ToInt32(dtgvHD.SelectedRows[0].Cells["ID_BH"].Value);
 			double Discount = Convert.ToDouble(dtgvHD.SelectedRows[0].Cells["Discount"].Value);
-			dtgvChiTietBanHang.DataSource = ChiTietBanHang_DAO.Instance.Load_CTBH(ID_BH);
+			List<ChiTietBanHang_DTO> listCTBH = ChiTietBanHang_DAO.Instance.Load_CTBH(ID_BH);
+
+			dtgvChiTietBanHang.DataSource = listCTBH;
+			dtgvChiTietBanHang.HideColumns("ID_CTBH");
+
 			txtDiscountBH.Text = Discount.ToString() + " %";
 
 			double tongSoTien = 0;
-			foreach (DataGridViewRow row in dtgvChiTietBanHang.Rows)
-			{
-				int giaBan = Convert.ToInt32(row.Cells["GiaBan"].Value);
-				int soLuong = Convert.ToInt32(row.Cells["SoLuongSanPham"].Value);
-				tongSoTien += giaBan * soLuong;
-			}
+			foreach (ChiTietBanHang_DTO chiTietBanHang in listCTBH)
+				tongSoTien += chiTietBanHang.ThanhTien;
 
 			tongSoTien = (tongSoTien / 100) * Discount;
 			txtTongTienBH.Text = tongSoTien.ToString("###.###.###");
