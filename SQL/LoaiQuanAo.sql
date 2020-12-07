@@ -80,4 +80,17 @@ GO
 -- EXEC sp_select_Master_LoaiQA
 -- GO
 
+CREATE PROCEDURE sp_select_SoLuongSanPham_by_ID_LQA
+@ID_LQA INT
+AS
+BEGIN
+	SELECT COUNT(*) FROM LoaiQA
+	JOIN QuanAo ON LoaiQA.ID_LQA = QuanAo.ID_LQA
+	WHERE LoaiQA.ID_LQA = @ID_LQA
+END
+GO
+
+-- EXEC sp_select_SoLuongSanPham_by_ID_LQA 1
+-- GO
+
 

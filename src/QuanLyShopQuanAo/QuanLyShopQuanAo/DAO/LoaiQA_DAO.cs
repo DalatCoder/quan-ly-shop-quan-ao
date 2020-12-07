@@ -110,5 +110,13 @@ namespace QuanLyShopQuanAo.DAO
 			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
 			return result > 0;
 		}*/
+
+		public int GetSoLuongSanPham(int id_LQA)
+		{
+			string query = "EXEC sp_select_SoLuongSanPham_by_ID_LQA @ID_LQA";
+			object[] param = new object[] { id_LQA };
+			int result = (int)DataProvider.Instance.ExecuteScalar(query, param);
+			return result;
+		}
 	}
 }
