@@ -312,6 +312,7 @@ namespace QuanLyShopQuanAo
 		{
 			txtLoaiQA_ID.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "ID_LQA", true, DataSourceUpdateMode.Never));
 			txtLoaiQA_Ten.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "Ten_LQA", true, DataSourceUpdateMode.Never));
+			
 		}
 
 		void btnThemLoaiQA_Click(object sender, EventArgs e)
@@ -422,8 +423,13 @@ namespace QuanLyShopQuanAo
 			LoadListKH();
 		}
 
+
 		#endregion
 
-
+		private void txtLoaiQA_ID_TextChanged(object sender, EventArgs e)
+		{
+			int soluong = LoaiQA_DAO.Instance.GetSoLuongSanPham(int.Parse(txtLoaiQA_ID.Text));
+			txtLoaiQA_SoLuongSP.Text = soluong.ToString();
+		}
 	}
 }

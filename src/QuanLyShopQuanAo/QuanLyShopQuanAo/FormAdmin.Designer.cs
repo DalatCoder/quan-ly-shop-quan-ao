@@ -871,6 +871,7 @@ namespace QuanLyShopQuanAo
 			this.txtLoaiQA_ID.ReadOnly = true;
 			this.txtLoaiQA_ID.Size = new System.Drawing.Size(242, 25);
 			this.txtLoaiQA_ID.TabIndex = 1;
+			this.txtLoaiQA_ID.TextChanged += new System.EventHandler(this.txtLoaiQA_ID_TextChanged);
 			// 
 			// label10
 			// 
