@@ -995,6 +995,7 @@ namespace QuanLyShopQuanAo
 			this.btnKhachHang_TaiLaiDS.TabIndex = 2;
 			this.btnKhachHang_TaiLaiDS.Text = "Tải lại danh sách";
 			this.btnKhachHang_TaiLaiDS.UseVisualStyleBackColor = true;
+			this.btnKhachHang_TaiLaiDS.Click += new System.EventHandler(this.btnKhachHang_TaiLaiDS_Click);
 			// 
 			// btnKhachHang_XoaBoLoc
 			// 
@@ -1008,6 +1009,7 @@ namespace QuanLyShopQuanAo
 			this.btnKhachHang_XoaBoLoc.TabIndex = 1;
 			this.btnKhachHang_XoaBoLoc.Text = "Xóa bộ lọc";
 			this.btnKhachHang_XoaBoLoc.UseVisualStyleBackColor = true;
+			this.btnKhachHang_XoaBoLoc.Click += new System.EventHandler(this.btnKhachHang_XoaBoLoc_Click);
 			// 
 			// txtKhachHang_TimKiem_TenSDT
 			// 

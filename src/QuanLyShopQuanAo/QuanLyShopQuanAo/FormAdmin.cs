@@ -412,6 +412,15 @@ namespace QuanLyShopQuanAo
 				KHList.DataSource = KhachHang_DAO.Instance.Search_KH(chuoiTimKiem);
 			
 		}
+		private void btnKhachHang_XoaBoLoc_Click(object sender, EventArgs e)
+		{
+			txtKhachHang_TimKiem_TenSDT.Text = "";
+		}
+
+		private void btnKhachHang_TaiLaiDS_Click(object sender, EventArgs e)
+		{
+			LoadListKH();
+		}
 
 		#endregion
 
