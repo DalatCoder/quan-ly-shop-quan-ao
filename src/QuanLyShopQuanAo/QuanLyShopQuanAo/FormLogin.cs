@@ -31,18 +31,26 @@ namespace QuanLyShopQuanAo
 			var tenDangNhap = txtUserName.Text;
 			var matKhau = txtPass.Text;
 
-			try
+			InputValidator inputValidator = new InputValidator();
+
+			inputValidator
+				.SetTitle("Tên đăng nhập")
+				.SetInputString(tenDangNhap)
+				.sanitizeString()
+				.Require();
+
+			inputValidator
+				.SetTitle("Mật khẩu")
+				.SetInputString(matKhau)
+				.sanitizeString()
+				.Require();
+
+			if (inputValidator.HasError)
 			{
-				StringValidator.CheckRequire(tenDangNhap, "Tên đăng nhập");
-				StringValidator.CheckRequire(matKhau, "Mật khẩu");
-			}
-			catch(Exception ex)
-			{
-				MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(inputValidator.GetErrorMessage(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
-			
 			if (!Login(tenDangNhap, matKhau))
 			{
 				MessageBox.Show("Sai tên tài khoản hoặc mật khẩu", "Thông tin không hợp lệ");
