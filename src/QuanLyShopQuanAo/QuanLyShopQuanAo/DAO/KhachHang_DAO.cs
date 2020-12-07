@@ -24,10 +24,36 @@ namespace QuanLyShopQuanAo.DAO
 			}
 		}
 
-		public DataTable Load_KH()
+		public List<KhachHang_DTO> Load_KH()
 		{
+			List<KhachHang_DTO> listKhachHang = new List<KhachHang_DTO>();
 			string query = "EXEC sp_select_KhachHang";
-			return DataProvider.Instance.ExecuteQuery(query);
+			DataTable table = DataProvider.Instance.ExecuteQuery(query);
+
+			foreach (DataRow row in table.Rows)
+			{
+				KhachHang_DTO khachHang = new KhachHang_DTO(row);
+				listKhachHang.Add(khachHang);
+			}
+
+			return listKhachHang;
+		}
+
+		public List<KhachHang_DTO> Search_KH(string tieuChuanTim)
+		{
+			List<KhachHang_DTO> listKhachHang = new List<KhachHang_DTO>();
+			string query = "EXEC sp_select_KhachHang_By_KeyWord @TieuChuanTim";
+			object[] param = new object[] { tieuChuanTim };
+
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
+
+			foreach (DataRow row in table.Rows)
+			{
+				KhachHang_DTO khachHang = new KhachHang_DTO(row);
+				listKhachHang.Add(khachHang);
+			}
+
+			return listKhachHang;
 		}
 	}
 }

@@ -28,3 +28,19 @@ BEGIN
 	SELECT * FROM KhachHang WHERE SDT = @sdt
 END
 GO
+
+CREATE PROCEDURE sp_select_KhachHang_By_KeyWord
+@TieuChuanTim NVARCHAR(100)
+AS
+BEGIN
+	SELECT *
+	FROM KhachHang
+	WHERE 
+		dbo.fuConvertToUnsign1(HoTen) LIKE '%' + dbo.fuConvertToUnsign1(@TieuChuanTim) + '%' OR
+		SDT LIKE '%' + @TieuChuanTim + '%'
+END
+GO
+
+
+EXEC sp_select_KhachHang_By_KeyWord 'hieu'
+EXEC sp_select_KhachHang_By_KeyWord '037'
