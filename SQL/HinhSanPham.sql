@@ -1,0 +1,25 @@
+USE QL_ShopQuanAo;
+GO
+
+CREATE PROCEDURE sp_select_HinhSanPham_By_ID
+@ID_HQA INT
+AS
+BEGIN
+	SELECT *
+	FROM HinhQA
+	WHERE ID_HQA = @ID_HQA
+END
+GO
+
+-- EXEC sp_select_HinhSanPham_By_ID 1
+-- GO
+
+CREATE PROCEDURE sp_select_HinhSanPham_By_ID_QA
+@ID_QA INT
+AS
+BEGIN
+	SELECT TOP 1 * FROM HinhQA WHERE ID_QA = @ID_QA
+END
+GO
+
+-- EXEC sp_select_HinhAnh_By_ID_QA 1

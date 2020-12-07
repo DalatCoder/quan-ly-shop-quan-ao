@@ -27,13 +27,10 @@ namespace QuanLyShopQuanAo.Models
         private int _ID_QA;
         private string _Ten_QA;
         private string _Size;
-        private int _ID_LQA;
         private float _GiaBan;
         private int _SoLuong;
         private string _GhiChu;
-		private int _ID_HQA;
-        private byte[] _HinhQA;
-        private string _HinhQAP;
+        private int _ID_LQA;
         private string _Ten_LQA;
 
         public int ID_QA { get { return _ID_QA; } set { _ID_QA = value; } }
@@ -42,27 +39,8 @@ namespace QuanLyShopQuanAo.Models
         public float GiaBan { get { return _GiaBan; } set {_GiaBan=value; } }
         public int SoLuong { get { return _SoLuong; } set { _SoLuong = value; } }
         public string GhiChu { get { return _GhiChu; } set { _GhiChu = value; } }
-        public int ID_HQA { get { return _ID_HQA; } set { _ID_HQA = value; } }
         public int ID_LQA { get { return _ID_LQA; } set { _ID_LQA = value; } }
-        public byte[] HinhQA { get { return _HinhQA; } set { _HinhQA = value; } }
-        public string HinhQAP { get { return _HinhQAP; } set { _HinhQAP = value; } }
         public string Ten_LQA { get { return _Ten_LQA; } set { _Ten_LQA = value; } }
-
-        public QuanAo_DTO(int _ID_QA, string _Ten_QA, string _Size, float _GiaBan, int _SoLuong, string _GhiChu, int _ID_HQA, int _ID_LQA, byte[] _HinhQA, string _HinhQAP, string _Ten_LQA)
-		{
-            ID_QA = _ID_QA;
-            Ten_QA = _Ten_QA;
-            Size = _Size;
-            GiaBan = _GiaBan;
-            SoLuong = _SoLuong;
-            GhiChu = _GhiChu;
-            ID_HQA = _ID_HQA;
-            ID_LQA = _ID_LQA;
-            HinhQA = _HinhQA;
-            HinhQAP = _HinhQAP;
-            Ten_LQA = _Ten_LQA;
-
-		}
 
         public QuanAo_DTO(DataRow row)
 		{
@@ -72,14 +50,20 @@ namespace QuanLyShopQuanAo.Models
             GiaBan = (float)Convert.ToDouble(row[SanPham.GiaBan]);
             SoLuong = (int)row[SanPham.SoLuong];
             GhiChu = row[SanPham.GhiChu].ToString();
-            ID_HQA = (int)row[SanPham.ID_HQA];
             ID_LQA = (int)row[SanPham.ID_LQA];
             Ten_LQA = row[SanPham.Ten_LQA].ToString();
         }
 
-        public void SetHinhQuanAo(byte[] hinhQA)
+		public QuanAo_DTO(int iD_QA, string ten_QA, string size, float giaBan, int soLuong, string ghiChu, int iD_LQA, string ten_LQA)
 		{
-            HinhQA = hinhQA;
+			ID_QA = iD_QA;
+			Ten_QA = ten_QA;
+			Size = size;
+			GiaBan = giaBan;
+			SoLuong = soLuong;
+			GhiChu = ghiChu;
+			ID_LQA = iD_LQA;
+			Ten_LQA = ten_LQA;
 		}
-    }
+	}
 }

@@ -190,30 +190,16 @@ namespace QuanLyShopQuanAo.Commons
 
         public static byte[] ConvertImageToByteArray(Image imageToConvert)
         {
-            ImageFormat format = imageToConvert.RawFormat;
-            ImageCodecInfo codec = ImageCodecInfo.GetImageDecoders().First(c => c.FormatID == format.Guid);
-            string mimeType = codec.MimeType;
+            Bitmap imageBitmap = new Bitmap(imageToConvert);
 
+            byte[] imageData;
             using (var ms = new MemoryStream())
             {
-                ImageFormat imgFormat;
-				switch (mimeType)
-                {
-                    case "image/png":
-                        imgFormat = ImageFormat.Png;
-                        break;
-                    case "image/gif":
-                        imgFormat = ImageFormat.Gif;
-                        break;
-                    default:
-                        imgFormat = ImageFormat.Jpeg;
-                        break;
-                }
-
-                imageToConvert.Save(ms, imgFormat);
-                var img = Image.FromStream(ms);
-                return ms.ToArray();
+                imageBitmap.Save(ms, ImageFormat.Jpeg);
+                imageData = ms.ToArray();
             }
+
+            return imageData;
         }
     }
 }

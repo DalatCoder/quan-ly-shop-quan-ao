@@ -113,7 +113,7 @@ namespace QuanLyShopQuanAo
 			dtgvQuanAo.DataSource = QAList;
 			LoadListQA();
 			LoadLoaiQuanAoCombobox();
-			dtgvQuanAo.HideColumns(SanPham.GhiChu, SanPham.ID_HQA, SanPham.ID_LQA);
+			dtgvQuanAo.HideColumns(SanPham.GhiChu, SanPham.ID_LQA);
 			AddDataBindingQuanAo();
 		}
 
@@ -138,7 +138,26 @@ namespace QuanLyShopQuanAo
 			nmGiaBanQA.DataBindings.Add(new Binding("Value", dtgvQuanAo.DataSource, SanPham.GiaBan, true, DataSourceUpdateMode.Never));
 			nmSoLuongQA.DataBindings.Add(new Binding("Value", dtgvQuanAo.DataSource, SanPham.SoLuong, true, DataSourceUpdateMode.Never));
 			cbLoaiQA.DataBindings.Add(new Binding("SelectedValue", dtgvQuanAo.DataSource, SanPham.ID_LQA, true, DataSourceUpdateMode.Never));
-			pbHinhQA.DataBindings.Add(new Binding("Tag", dtgvQuanAo.DataSource, SanPham.ID_HQA, true, DataSourceUpdateMode.Never));
+		}
+
+		// Binding HinhQA tương ứng với ID sản phẩm
+		void txtIDQA_TextChanged(object sender, EventArgs e)
+		{
+			if (string.IsNullOrWhiteSpace(txtIDQA.Text)) return;
+
+			int ID_QA = Convert.ToInt32(txtIDQA.Text);
+			HinhQA_DTO hinhQA = HinhQA_DAO.Instance.Load_HinhSanPham(ID_QA);
+
+			if (hinhQA != null)
+			{
+				pbHinhQA.Image = hinhQA.ToImage();
+				pbHinhQA.Tag = hinhQA;
+			}
+			else
+			{
+				pbHinhQA.Image = null;
+				pbHinhQA.Tag = null;
+			}
 		}
 
 		void btnThemQA_Click(object sender, EventArgs e)
@@ -149,19 +168,18 @@ namespace QuanLyShopQuanAo
 			int soLuong = Convert.ToInt32(nmSoLuongQA.Value);
 			string ghiChu = txtGhiChuQA.Text;
 			int idLQA = (int)cbLoaiQA.SelectedValue;
-			Image hinhQA = pbHinhQA.Image;
-			Bitmap imageBitmap = new Bitmap(hinhQA);
-			string hinhQAP = pbHinhQA.ImageLocation;
 
-			byte[] imageData;
-			using (var ms = new MemoryStream())
+			byte[] hinhQA = null;
+			string hinhQAP = null;
+
+			if (pbHinhQA.Image != null)
 			{
-				imageBitmap.Save(ms, ImageFormat.Jpeg);
-				imageData = ms.ToArray();
+				hinhQA = TienIch.ConvertImageToByteArray(pbHinhQA.Image);
+				hinhQAP = pbHinhQA.ImageLocation;
 			}
 
 			string msg;
-			if (QuanAo_DAO.Instance.Insert_QuanAo(ten, size, giaBan, soLuong, ghiChu, idLQA, imageData, hinhQAP))
+			if (QuanAo_DAO.Instance.Insert_QuanAo(ten, size, giaBan, soLuong, ghiChu, idLQA, hinhQA, hinhQAP))
 			{
 				msg = "Thêm quần áo thành công";
 				LoadListQA();
@@ -183,20 +201,18 @@ namespace QuanLyShopQuanAo
 			int soLuong = Convert.ToInt32(nmSoLuongQA.Value);
 			string ghiChu = txtGhiChuQA.Text;
 			int idLQA = (int)cbLoaiQA.SelectedValue;
-			int idHQA = (int)pbHinhQA.Tag;
-			Image hinhQA = pbHinhQA.Image;
-			Bitmap image = new Bitmap(hinhQA);
-			string hinhQAP = pbHinhQA.ImageLocation;
 
-			byte[] imageData;
-			using (var ms = new MemoryStream())
+			byte[] hinhQA = null;
+			string hinhQAP = null;
+
+			if (pbHinhQA.Image != null)
 			{
-				image.Save(ms, ImageFormat.Jpeg);
-				imageData = ms.ToArray();
+				hinhQA = TienIch.ConvertImageToByteArray(pbHinhQA.Image);
+				hinhQAP = pbHinhQA.ImageLocation;
 			}
 
 			string msg;
-			if (QuanAo_DAO.Instance.UpdateQA(idQA, ten, size, giaBan, soLuong, ghiChu, idLQA, idHQA, imageData, hinhQAP))
+			if (QuanAo_DAO.Instance.Update_QuanAo(idQA, ten, size, giaBan, soLuong, ghiChu, idLQA, hinhQA, hinhQAP))
 			{
 				msg = "Cập nhật quần áo thành công";
 				LoadListQA();
@@ -214,14 +230,6 @@ namespace QuanLyShopQuanAo
 			LoadListQA();
 		}
 
-		void txtIDQA_TextChanged(object sender, EventArgs e)
-		{
-			if (string.IsNullOrWhiteSpace(txtIDQA.Text)) return;
-
-			int ID_QA = Convert.ToInt32(txtIDQA.Text);
-			pbHinhQA.Image = HinhQA_DAO.Instance.Load_HinhSanPham(ID_QA);
-		}
-
 		void btnBrowseHinhQA_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog dialog = new OpenFileDialog();
@@ -230,17 +238,9 @@ namespace QuanLyShopQuanAo
 
 			string fileName = dialog.FileName;
 			var image = Image.FromFile(fileName);
-			var bitmapImage = new Bitmap(image);
 
 			pbHinhQA.Image = image;
 			pbHinhQA.ImageLocation = fileName;
-
-			byte[] imageData;
-			using (var ms = new MemoryStream())
-			{
-				bitmapImage.Save(ms, ImageFormat.Jpeg);
-				imageData = ms.ToArray();
-			}
 		}
 
 		List<QuanAo_DTO> SearchQA(string Ten)

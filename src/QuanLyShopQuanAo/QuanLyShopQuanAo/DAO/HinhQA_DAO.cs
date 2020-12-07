@@ -26,22 +26,15 @@ namespace QuanLyShopQuanAo.DAO
 			}
 		}
 
-		public Image Load_HinhSanPham(int id_QA)
+		public HinhQA_DTO Load_HinhSanPham(int id_QA)
 		{
-			string query = "EXEC sp_select_HinhAnh_By_QuanAo_ID @ID_QA";
+			string query = "EXEC sp_select_HinhSanPham_By_ID_QA @ID_QA";
 			object[] param = new object[] { id_QA };
 
 			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
 			if (table.Rows.Count == 0) return null;
 
-			DataRow row = table.Rows[0];
-			byte[] raw = (byte[])row["HinhQA"];
-
-			using (var ms = new MemoryStream(raw))
-			{
-				Image image = Image.FromStream(ms);
-				return image;
-			}
+			return new HinhQA_DTO(table.Rows[0]);
 		}
 	}
 }

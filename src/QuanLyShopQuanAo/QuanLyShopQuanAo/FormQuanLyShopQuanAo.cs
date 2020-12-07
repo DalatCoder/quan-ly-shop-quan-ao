@@ -41,7 +41,7 @@ namespace QuanLyShopQuanAo
 		{
 			dgvQuanAo.DataSource = listQuanAo;
 			LoadListQuanAo();
-			dgvQuanAo.HideColumns(SanPham.GhiChu, SanPham.ID_HQA, SanPham.ID_LQA);
+			dgvQuanAo.HideColumns(SanPham.GhiChu, SanPham.ID_LQA);
 		}
 
 		#endregion

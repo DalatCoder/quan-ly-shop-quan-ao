@@ -25,24 +25,33 @@ namespace QuanLyShopQuanAo.DAO
 			}
 		}
 
-		public DataTable Load_QA()
+		public List<QuanAo_DTO> Load_QA()
 		{
-			List<QuanAo_DTO> quanao = new List<QuanAo_DTO>();
-			string query = "EXEC sp_select_QuanAo";
-			return DataProvider.Instance.ExecuteQuery(query);
+			List<QuanAo_DTO> listQuanAo = new List<QuanAo_DTO>();
+			string query = "EXEC sp_select_QuanAo_All";
+
+			var table = DataProvider.Instance.ExecuteQuery(query);
+
+			foreach (DataRow row in table.Rows)
+			{
+				QuanAo_DTO quanAo = new QuanAo_DTO(row);
+				listQuanAo.Add(quanAo);
+			}
+
+			return listQuanAo;
 		}
 
 		public QuanAo_DTO Load_QA_by_ID(int id_QA)
 		{
-			List<QuanAo_DTO> quanao = new List<QuanAo_DTO>();
 			string query = "EXEC sp_select_QuanAo_by_ID @ID_QA";
 			object[] param = new object[] { id_QA };
 
-			DataTable QA = DataProvider.Instance.ExecuteQuery(query, param);
-			foreach (DataRow row in QA.Rows)
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
+
+			foreach (DataRow row in table.Rows)
 			{
-				QuanAo_DTO qa = new QuanAo_DTO(row);
-				return qa;
+				QuanAo_DTO quanAo = new QuanAo_DTO(row);
+				return quanAo;
 			}
 
 			return null;
@@ -50,56 +59,56 @@ namespace QuanLyShopQuanAo.DAO
 
 		public List<QuanAo_DTO> Load_QA_by_ID_LQA(int id_LQA)
 		{
-			List<QuanAo_DTO> quanao = new List<QuanAo_DTO>();
+			List<QuanAo_DTO> listQuanAo = new List<QuanAo_DTO>();
 
 			string query = "EXEC sp_select_QuanAo_by_ID_LQA @ID_LQA";
 			object[] param = new object[] { id_LQA };
 
-			DataTable QA = DataProvider.Instance.ExecuteQuery(query, param);
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
 
-			foreach (DataRow row in QA.Rows)
+			foreach (DataRow row in table.Rows)
 			{
-				QuanAo_DTO qa = new QuanAo_DTO(row);
-				quanao.Add(qa);
+				QuanAo_DTO quanAo = new QuanAo_DTO(row);
+				listQuanAo.Add(quanAo);
 			}
 
-			return quanao;
+			return listQuanAo;
 		}
 
-		public List<QuanAo_DTO> Load_QA_Search(string tieuchuantim)
+		public List<QuanAo_DTO> Load_QA_Search(string tieuChuanTim)
 		{
-			List<QuanAo_DTO> quanao = new List<QuanAo_DTO>();
+			List<QuanAo_DTO> listQuanAo = new List<QuanAo_DTO>();
 
-			string query = "EXEC sp_select_search_QuanAo @TieuChuanTim";
-			object[] param = new object[] { tieuchuantim };
+			string query = "EXEC sp_select_QuanAo_By_Keyword @TieuChuanTim";
+			object[] param = new object[] { tieuChuanTim };
 
-			DataTable QA = DataProvider.Instance.ExecuteQuery(query, param);
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
 
-			foreach (DataRow row in QA.Rows)
+			foreach (DataRow row in table.Rows)
 			{
-				QuanAo_DTO qa = new QuanAo_DTO(row);
-				quanao.Add(qa);
+				QuanAo_DTO quanAo = new QuanAo_DTO(row);
+				listQuanAo.Add(quanAo);
 			}
 
-			return quanao;
+			return listQuanAo;
 		}
 
-		public List<QuanAo_DTO> Load_QA_By_GiaCa(float giacathap, float giacacao)
+		public List<QuanAo_DTO> Load_QA_By_GiaCa(float giaThap, float giaCao)
 		{
-			List<QuanAo_DTO> quanao = new List<QuanAo_DTO>();
+			List<QuanAo_DTO> listQuanAo = new List<QuanAo_DTO>();
 
-			string query = "EXEC sp_select_QuanAo_By_GiaCa_Discount @GiaBanThap , @GiaBanCao";
-			object[] param = new object[] { giacathap, giacacao };
+			string query = "EXEC sp_select_QuanAo_By_Price @GiaBanThap , @GiaBanCao";
+			object[] param = new object[] { giaThap, giaCao };
 
-			DataTable QA = DataProvider.Instance.ExecuteQuery(query, param);
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
 
-			foreach (DataRow row in QA.Rows)
+			foreach (DataRow row in table.Rows)
 			{
-				QuanAo_DTO qa = new QuanAo_DTO(row);
-				quanao.Add(qa);
+				QuanAo_DTO quanAo = new QuanAo_DTO(row);
+				listQuanAo.Add(quanAo);
 			}
 
-			return quanao;
+			return listQuanAo;
 		}
 
 		public bool Insert_QuanAo(string ten_QA, string size, float giaban, int soluong, string ghichu, int id_LQA, byte[] hinhQA, string hinhQAP)
@@ -110,10 +119,10 @@ namespace QuanLyShopQuanAo.DAO
 			return result > 0;
 		}
 
-		public bool UpdateQA(int id_QA, string ten_QA, string size, float giaban, int soluong, string ghichu, int id_LQA, int id_HQA, byte[] hinhQA, string hinhQAP)
+		public bool Update_QuanAo(int id_QA, string ten_QA, string size, float giaban, int soluong, string ghichu, int id_LQA, byte[] hinhQA, string hinhQAP)
 		{
-			string query = "EXEC sp_update_QuanAo @ID_QA , @Ten_QA , @Size , @GiaBan , @SoLuong , @GhiChu , @ID_LQA , @ID_HQA , @HinhQA , @HinhQAP";
-			object[] param = new object[] { id_QA, ten_QA, size, giaban, soluong, ghichu, id_LQA, id_HQA, hinhQA, hinhQAP };
+			string query = "EXEC sp_update_QuanAo @ID_QA , @Ten_QA , @Size , @GiaBan , @SoLuong , @GhiChu , @ID_LQA , @HinhQA , @HinhQAP";
+			object[] param = new object[] { id_QA, ten_QA, size, giaban, soluong, ghichu, id_LQA, hinhQA, hinhQAP };
 			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
 			return result > 0;
 		}
