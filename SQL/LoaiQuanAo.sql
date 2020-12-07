@@ -22,6 +22,18 @@ GO
 -- EXEC sp_select_LoaiQuanAo_by_ID 1
 -- GO
 
+CREATE PROCEDURE sp_select_LoaiQuanAo_by_Name
+@Name NVARCHAR(200)
+AS
+BEGIN
+	SELECT * FROM LoaiQA
+	WHERE dbo.fuConvertToUnsign1(Ten_LQA) LIKE '%' + dbo.fuConvertToUnsign1(@Name) + '%'
+END
+GO
+
+-- EXEC sp_select_LoaiQuanAo_by_Name 'ao'
+-- GO
+
 CREATE PROCEDURE sp_insert_LoaiQuanAo
 @Ten_LQA NVARCHAR(30)
 AS

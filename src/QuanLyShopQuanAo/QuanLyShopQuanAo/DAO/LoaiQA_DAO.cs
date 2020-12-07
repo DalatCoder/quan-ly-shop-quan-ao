@@ -26,17 +26,17 @@ namespace QuanLyShopQuanAo.DAO
 
 		public List<LoaiQA_DTO> Load_LQA()
 		{
-			List<LoaiQA_DTO> loaiquanao = new List<LoaiQA_DTO>();
+			List<LoaiQA_DTO> listLQA = new List<LoaiQA_DTO>();
 			string query = "EXEC sp_select_LoaiQuanAo_All";
 			DataTable LQA = DataProvider.Instance.ExecuteQuery(query);
 
 			foreach (DataRow row in LQA.Rows)
 			{
 				LoaiQA_DTO lqa = new LoaiQA_DTO(row);
-				loaiquanao.Add(lqa);
+				listLQA.Add(lqa);
 			}
 
-			return loaiquanao;
+			return listLQA;
 		}
 
 		public LoaiQA_DTO Load_LQA_by_ID(int id_LQA)
@@ -45,14 +45,31 @@ namespace QuanLyShopQuanAo.DAO
 			string query = "EXEC sp_select_LoaiQuanAo_by_ID @ID_LQA";
 			object[] param = new object[] { id_LQA };
 
-			DataTable LQA = DataProvider.Instance.ExecuteQuery(query, param);
-			foreach (DataRow row in LQA.Rows)
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
+			foreach (DataRow row in table.Rows)
 			{
 				LoaiQA_DTO lqa = new LoaiQA_DTO(row);
 				return lqa;
 			}
 
 			return null;
+		}
+
+		public List<LoaiQA_DTO> Load_LQA_by_Name(string name)
+		{
+			List<LoaiQA_DTO> listLQA = new List<LoaiQA_DTO>();
+			string query = "EXEC sp_select_LoaiQuanAo_by_Name @Name";
+			object[] param = new object[] { name };
+
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
+
+			foreach (DataRow row in table.Rows)
+			{
+				LoaiQA_DTO lqa = new LoaiQA_DTO(row);
+				listLQA.Add(lqa);
+			}
+
+			return listLQA;
 		}
 
 		//public List<LoaiQA_DTO> Load_Master_LQA()
