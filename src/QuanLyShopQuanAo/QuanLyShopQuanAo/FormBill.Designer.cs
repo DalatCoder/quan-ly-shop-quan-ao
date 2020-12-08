@@ -38,14 +38,6 @@ namespace QuanLyShopQuanAo
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.lbBill_CheckoutDate = new System.Windows.Forms.Label();
-			this.lbBill_IDKH = new System.Windows.Forms.Label();
-			this.lbBill_ID = new System.Windows.Forms.Label();
-			this.label11 = new System.Windows.Forms.Label();
-			this.label10 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.lbBill_SDTKH = new System.Windows.Forms.Label();
 			this.label20 = new System.Windows.Forms.Label();
@@ -59,18 +51,17 @@ namespace QuanLyShopQuanAo
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.lbBill_ThanhToan = new System.Windows.Forms.Label();
-			this.lbBill_Discount = new System.Windows.Forms.Label();
-			this.lbBill_TongTien = new System.Windows.Forms.Label();
 			this.label24 = new System.Windows.Forms.Label();
-			this.label23 = new System.Windows.Forms.Label();
-			this.label22 = new System.Windows.Forms.Label();
 			this.label28 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.btnBill_ThanhToan = new System.Windows.Forms.Button();
 			this.btnBill_Thoat = new System.Windows.Forms.Button();
+			this.label22 = new System.Windows.Forms.Label();
+			this.label23 = new System.Windows.Forms.Label();
+			this.lbBill_TongTien = new System.Windows.Forms.Label();
+			this.lbBill_Discount = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
-			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).BeginInit();
@@ -158,85 +149,6 @@ namespace QuanLyShopQuanAo
 			this.label1.Size = new System.Drawing.Size(150, 17);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "SHOP BẠCH TUYẾT";
-			// 
-			// panel2
-			// 
-			this.panel2.Controls.Add(this.lbBill_CheckoutDate);
-			this.panel2.Controls.Add(this.lbBill_IDKH);
-			this.panel2.Controls.Add(this.lbBill_ID);
-			this.panel2.Controls.Add(this.label11);
-			this.panel2.Controls.Add(this.label10);
-			this.panel2.Controls.Add(this.label9);
-			this.panel2.Controls.Add(this.label8);
-			this.panel2.Location = new System.Drawing.Point(12, 470);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(327, 118);
-			this.panel2.TabIndex = 1;
-			// 
-			// lbBill_CheckoutDate
-			// 
-			this.lbBill_CheckoutDate.AutoSize = true;
-			this.lbBill_CheckoutDate.Location = new System.Drawing.Point(207, 96);
-			this.lbBill_CheckoutDate.Name = "lbBill_CheckoutDate";
-			this.lbBill_CheckoutDate.Size = new System.Drawing.Size(80, 17);
-			this.lbBill_CheckoutDate.TabIndex = 6;
-			this.lbBill_CheckoutDate.Text = "12/08/2020";
-			// 
-			// lbBill_IDKH
-			// 
-			this.lbBill_IDKH.AutoSize = true;
-			this.lbBill_IDKH.Location = new System.Drawing.Point(207, 68);
-			this.lbBill_IDKH.Name = "lbBill_IDKH";
-			this.lbBill_IDKH.Size = new System.Drawing.Size(32, 17);
-			this.lbBill_IDKH.TabIndex = 5;
-			this.lbBill_IDKH.Text = "123";
-			// 
-			// lbBill_ID
-			// 
-			this.lbBill_ID.AutoSize = true;
-			this.lbBill_ID.Location = new System.Drawing.Point(204, 37);
-			this.lbBill_ID.Name = "lbBill_ID";
-			this.lbBill_ID.Size = new System.Drawing.Size(32, 17);
-			this.lbBill_ID.TabIndex = 4;
-			this.lbBill_ID.Text = "123";
-			// 
-			// label11
-			// 
-			this.label11.AutoSize = true;
-			this.label11.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.label11.Location = new System.Drawing.Point(23, 10);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(166, 17);
-			this.label11.TabIndex = 3;
-			this.label11.Text = "THÔNG TIN HÓA ĐƠN";
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(16, 96);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(117, 17);
-			this.label10.TabIndex = 2;
-			this.label10.Text = "Ngày thanh toán:";
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(16, 68);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(130, 17);
-			this.label9.TabIndex = 1;
-			this.label9.Text = "Mã số khách hàng:";
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(16, 37);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(109, 17);
-			this.label8.TabIndex = 0;
-			this.label8.Text = "Mã số hóa đơn:";
 			// 
 			// panel3
 			// 
@@ -345,7 +257,7 @@ namespace QuanLyShopQuanAo
 			this.panel5.Controls.Add(this.label24);
 			this.panel5.Controls.Add(this.label23);
 			this.panel5.Controls.Add(this.label22);
-			this.panel5.Location = new System.Drawing.Point(378, 470);
+			this.panel5.Location = new System.Drawing.Point(219, 470);
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(231, 118);
 			this.panel5.TabIndex = 4;
@@ -368,24 +280,6 @@ namespace QuanLyShopQuanAo
 			this.lbBill_ThanhToan.TabIndex = 5;
 			this.lbBill_ThanhToan.Text = "150.000";
 			// 
-			// lbBill_Discount
-			// 
-			this.lbBill_Discount.AutoSize = true;
-			this.lbBill_Discount.Location = new System.Drawing.Point(144, 50);
-			this.lbBill_Discount.Name = "lbBill_Discount";
-			this.lbBill_Discount.Size = new System.Drawing.Size(37, 17);
-			this.lbBill_Discount.TabIndex = 4;
-			this.lbBill_Discount.Text = "50%";
-			// 
-			// lbBill_TongTien
-			// 
-			this.lbBill_TongTien.AutoSize = true;
-			this.lbBill_TongTien.Location = new System.Drawing.Point(144, 11);
-			this.lbBill_TongTien.Name = "lbBill_TongTien";
-			this.lbBill_TongTien.Size = new System.Drawing.Size(60, 17);
-			this.lbBill_TongTien.TabIndex = 3;
-			this.lbBill_TongTien.Text = "300.000";
-			// 
 			// label24
 			// 
 			this.label24.AutoSize = true;
@@ -394,24 +288,6 @@ namespace QuanLyShopQuanAo
 			this.label24.Size = new System.Drawing.Size(85, 17);
 			this.label24.TabIndex = 2;
 			this.label24.Text = "Thanh toán:";
-			// 
-			// label23
-			// 
-			this.label23.AutoSize = true;
-			this.label23.Location = new System.Drawing.Point(14, 50);
-			this.label23.Name = "label23";
-			this.label23.Size = new System.Drawing.Size(97, 17);
-			this.label23.TabIndex = 1;
-			this.label23.Text = "Giảm giá (%):";
-			// 
-			// label22
-			// 
-			this.label22.AutoSize = true;
-			this.label22.Location = new System.Drawing.Point(14, 11);
-			this.label22.Name = "label22";
-			this.label22.Size = new System.Drawing.Size(72, 17);
-			this.label22.TabIndex = 0;
-			this.label22.Text = "Tổng tiền:";
 			// 
 			// label28
 			// 
@@ -473,6 +349,42 @@ namespace QuanLyShopQuanAo
 			this.btnBill_Thoat.UseVisualStyleBackColor = true;
 			this.btnBill_Thoat.Click += new System.EventHandler(this.btnBill_Thoat_Click);
 			// 
+			// label22
+			// 
+			this.label22.AutoSize = true;
+			this.label22.Location = new System.Drawing.Point(14, 11);
+			this.label22.Name = "label22";
+			this.label22.Size = new System.Drawing.Size(72, 17);
+			this.label22.TabIndex = 0;
+			this.label22.Text = "Tổng tiền:";
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.Location = new System.Drawing.Point(14, 50);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(97, 17);
+			this.label23.TabIndex = 1;
+			this.label23.Text = "Giảm giá (%):";
+			// 
+			// lbBill_TongTien
+			// 
+			this.lbBill_TongTien.AutoSize = true;
+			this.lbBill_TongTien.Location = new System.Drawing.Point(144, 11);
+			this.lbBill_TongTien.Name = "lbBill_TongTien";
+			this.lbBill_TongTien.Size = new System.Drawing.Size(60, 17);
+			this.lbBill_TongTien.TabIndex = 3;
+			this.lbBill_TongTien.Text = "300.000";
+			// 
+			// lbBill_Discount
+			// 
+			this.lbBill_Discount.AutoSize = true;
+			this.lbBill_Discount.Location = new System.Drawing.Point(144, 50);
+			this.lbBill_Discount.Name = "lbBill_Discount";
+			this.lbBill_Discount.Size = new System.Drawing.Size(37, 17);
+			this.lbBill_Discount.TabIndex = 4;
+			this.lbBill_Discount.Text = "50%";
+			// 
 			// frmBill
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -487,7 +399,6 @@ namespace QuanLyShopQuanAo
 			this.Controls.Add(this.panel5);
 			this.Controls.Add(this.panel4);
 			this.Controls.Add(this.panel3);
-			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(4);
@@ -496,8 +407,6 @@ namespace QuanLyShopQuanAo
 			this.Text = "Bill";
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
-			this.panel2.ResumeLayout(false);
-			this.panel2.PerformLayout();
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
 			this.panel4.ResumeLayout(false);
@@ -520,14 +429,6 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.Label lbBill_CheckoutDate;
-		private System.Windows.Forms.Label lbBill_IDKH;
-		private System.Windows.Forms.Label lbBill_ID;
-		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Label lbBill_SDTKH;
 		private System.Windows.Forms.Label label20;
@@ -540,16 +441,16 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.DataGridView dtgvBill;
 		private System.Windows.Forms.Panel panel5;
 		private System.Windows.Forms.Label lbBill_ThanhToan;
-		private System.Windows.Forms.Label lbBill_Discount;
-		private System.Windows.Forms.Label lbBill_TongTien;
 		private System.Windows.Forms.Label label24;
-		private System.Windows.Forms.Label label23;
-		private System.Windows.Forms.Label label22;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label28;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.Button btnBill_ThanhToan;
 		private System.Windows.Forms.Button btnBill_Thoat;
+		private System.Windows.Forms.Label lbBill_Discount;
+		private System.Windows.Forms.Label lbBill_TongTien;
+		private System.Windows.Forms.Label label23;
+		private System.Windows.Forms.Label label22;
 	}
 }

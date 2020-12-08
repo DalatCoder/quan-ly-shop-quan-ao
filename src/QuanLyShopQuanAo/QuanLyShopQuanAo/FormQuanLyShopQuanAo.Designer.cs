@@ -53,6 +53,7 @@
 			this.txtHoTen = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.dgvCTBH = new System.Windows.Forms.DataGridView();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.lblTongTienGhiBangChu = new System.Windows.Forms.Label();
 			this.lblTongTienCuoiCung = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.btnHuyDon = new System.Windows.Forms.Button();
 			this.btnThanhToan = new System.Windows.Forms.Button();
-			this.dvgCTBH = new System.Windows.Forms.DataGridView();
 			this.menuStrip1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).BeginInit();
@@ -72,9 +72,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.dgvQuanAo)).BeginInit();
 			this.groupBox3.SuspendLayout();
 			this.groupBox4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvCTBH)).BeginInit();
 			this.groupBox5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmGiamGia)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dvgCTBH)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -337,13 +337,28 @@
 			this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.groupBox4.Controls.Add(this.dvgCTBH);
+			this.groupBox4.Controls.Add(this.dgvCTBH);
 			this.groupBox4.Location = new System.Drawing.Point(537, 118);
 			this.groupBox4.Name = "groupBox4";
 			this.groupBox4.Size = new System.Drawing.Size(515, 418);
 			this.groupBox4.TabIndex = 3;
 			this.groupBox4.TabStop = false;
 			this.groupBox4.Text = "Thông tin đơn hàng";
+			// 
+			// dgvCTBH
+			// 
+			this.dgvCTBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvCTBH.BackgroundColor = System.Drawing.Color.White;
+			this.dgvCTBH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.dgvCTBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvCTBH.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dgvCTBH.Location = new System.Drawing.Point(3, 21);
+			this.dgvCTBH.MultiSelect = false;
+			this.dgvCTBH.Name = "dgvCTBH";
+			this.dgvCTBH.ReadOnly = true;
+			this.dgvCTBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvCTBH.Size = new System.Drawing.Size(509, 394);
+			this.dgvCTBH.TabIndex = 1;
 			// 
 			// groupBox5
 			// 
@@ -397,6 +412,7 @@
 			this.lblTongTien.Size = new System.Drawing.Size(60, 18);
 			this.lblTongTien.TabIndex = 18;
 			this.lblTongTien.Text = "300.000";
+			this.lblTongTien.TextChanged += new System.EventHandler(this.lblTongTien_TextChanged);
 			// 
 			// label3
 			// 
@@ -432,6 +448,7 @@
 			this.nmGiamGia.Size = new System.Drawing.Size(59, 25);
 			this.nmGiamGia.TabIndex = 12;
 			this.nmGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.nmGiamGia.ValueChanged += new System.EventHandler(this.nmGiamGia_ValueChanged);
 			// 
 			// label5
 			// 
@@ -469,21 +486,6 @@
 			this.btnThanhToan.UseVisualStyleBackColor = true;
 			this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
 			// 
-			// dvgCTBH
-			// 
-			this.dvgCTBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dvgCTBH.BackgroundColor = System.Drawing.Color.White;
-			this.dvgCTBH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.dvgCTBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dvgCTBH.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dvgCTBH.Location = new System.Drawing.Point(3, 21);
-			this.dvgCTBH.MultiSelect = false;
-			this.dvgCTBH.Name = "dvgCTBH";
-			this.dvgCTBH.ReadOnly = true;
-			this.dvgCTBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dvgCTBH.Size = new System.Drawing.Size(509, 394);
-			this.dvgCTBH.TabIndex = 1;
-			// 
 			// fQLShopQuanAo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -513,10 +515,10 @@
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox3.PerformLayout();
 			this.groupBox4.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvCTBH)).EndInit();
 			this.groupBox5.ResumeLayout(false);
 			this.groupBox5.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmGiamGia)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dvgCTBH)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -560,6 +562,6 @@
 		private System.Windows.Forms.Label lblTongTienGhiBangChu;
 		private System.Windows.Forms.Label lblTongTienCuoiCung;
 		private System.Windows.Forms.Label lblTongTien;
-		private System.Windows.Forms.DataGridView dvgCTBH;
+		private System.Windows.Forms.DataGridView dgvCTBH;
 	}
 }

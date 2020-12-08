@@ -15,12 +15,12 @@ namespace QuanLyShopQuanAo
 {
 	public partial class fQLShopQuanAo : Form
 	{
-		BindingSource listQuanAo = new BindingSource();
-		BindingSource listCTBH = new BindingSource();
-		QuanTriVien_DTO loginAccount;
 		private int ID_BH;
+		QuanTriVien_DTO loginAccount;
 		List<ChiTietBanHang_DTO> listCTBHTamThoi = new List<ChiTietBanHang_DTO>();
-
+		public double TongTienHoaDonHienTai => listCTBHTamThoi.Sum(v => v.ThanhTien);
+		public double DiscountHienTai => Convert.ToDouble(nmGiamGia.Value);
+		public double TongTienThanhToanCuoiCung => TongTienHoaDonHienTai - (TongTienHoaDonHienTai * DiscountHienTai / 100);
 
 		public fQLShopQuanAo(QuanTriVien_DTO loginAccount)
 		{
@@ -43,7 +43,6 @@ namespace QuanLyShopQuanAo
 
 		void InitState()
 		{
-			dgvQuanAo.DataSource = listQuanAo;
 			LoadListQuanAo();
 			dgvQuanAo.HideColumns(SanPham.GhiChu, SanPham.ID_LQA);
 		}
@@ -54,71 +53,12 @@ namespace QuanLyShopQuanAo
 
 		void LoadListQuanAo()
 		{
-			listQuanAo.DataSource = QuanAo_DAO.Instance.Load_QA();
+			dgvQuanAo.DataSource = null;
+			dgvQuanAo.DataSource = QuanAo_DAO.Instance.Load_QA();
 		}
-
-		#endregion
-
-		#region Events
-
-		void tsmAdmin_Click(object sender, EventArgs e)
-		{
-			frmAdmin f = new frmAdmin();
-			f.ShowDialog();
-		}
-
-		void tsmDangXuat_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
-
-		void txtTimKiem_TextChanged(object sender, EventArgs e)
-		{
-			string chuoiTimKiem = txtTimKiem.Text;
-			if (string.IsNullOrWhiteSpace(chuoiTimKiem)) return;
-
-			listQuanAo.DataSource = QuanAo_DAO.Instance.Load_QA_Search(chuoiTimKiem);
-		}
-
-		void btnXoaBoLoc_Click(object sender, EventArgs e)
-		{
-			txtTimKiem.Text = "";
-		}
-
-		void btnTaiLaiDS_Click(object sender, EventArgs e)
-		{
-			LoadListQuanAo();
-		}
-
-		private void dgvQuanAo_Click(object sender, EventArgs e)
-		{
-			if (dgvQuanAo.SelectedRows.Count == 0) return;
-
-			int soLuongToiDa = Convert.ToInt32(dgvQuanAo.SelectedRows[0].Cells[SanPham.SoLuong].Value);
-			nmSoLuong.Maximum = soLuongToiDa;
-		}
-
-		#endregion
-
-		//List<ChiTietBanHang_DTO> GetChiTietHoaDonFromDataGridView(DataGridView lv)
-		//{
-		//	List<ChiTietBanHang_DTO> listQA = new List<ChiTietBanHang_DTO>();
-		//	foreach (ListViewItem item in lv.Items)
-		//	{
-		//		string tenQA = item.SubItems[1].Text;
-		//		float giaBan = float.Parse( item.SubItems[2].Text);
-		//		int soLuong = int.Parse(item.SubItems[3].Text);
-
-		//		ChiTietBanHang_DTO chiTietBanHang_DTO = new ChiTietBanHang_DTO(tenQA, giaBan, soLuong);
-		//		listQA.Add(chiTietBanHang_DTO);
-		//	}
-
-		//	return listQA;
-		//}
 
 		KhachHang_DTO LayThongTinKhachHang()
 		{
-
 			string tenKH = txtHoTen.Text;
 			string diaChi = txtDiaChi.Text;
 			string soDT = txtSDT.Text;
@@ -133,15 +73,15 @@ namespace QuanLyShopQuanAo
 			string DiaChi = txtDiaChi.Text;
 			string SDT = txtSDT.Text;
 			float discount = (float)Convert.ToDouble(nmGiamGia.Value);
+			string ID_GD = (DateTime.Now).ToString("ddMMyyyyhhmmss");
+
+			ID_BH = BanHang_DAO.Instance.Insert_BanHang(ID_GD, discount, TenKH, SDT, DiaChi);
 
 			string msg;
-
-			ID_BH = BanHang_DAO.Instance.Insert_BanHang((DateTime.Now).ToString("ddMMyyyyhhmmss"), discount, TenKH, SDT, DiaChi);
-
 			if (ID_BH != -1)
 			{
 				msg = "Thanh toán thành công";
-				// dvgCTBH.DataSource = null;
+				dgvCTBH.DataSource = null;
 			}
 			else
 			{
@@ -153,30 +93,70 @@ namespace QuanLyShopQuanAo
 
 		void LuuChiTietBanHang()
 		{
-
 			foreach (ChiTietBanHang_DTO chiTietBanHang in listCTBHTamThoi)
 			{
-				int MaQA = QuanAo_DAO.Instance.Load_QA_by_Name(chiTietBanHang.Ten_QA).ID_QA;
+				int MaQA = chiTietBanHang.ID_QA;
 				int SLBan = chiTietBanHang.SoLuongSanPham;
-				if (!ChiTietBanHang_DAO.Instance.Insert_ChiTietBanHang(MaQA, ID_BH, SLBan)) 
+
+				if (!ChiTietBanHang_DAO.Instance.Insert_ChiTietBanHang(MaQA, ID_BH, SLBan))
 				{
-					MessageBox.Show("Loi");
+					string msg = "Có lỗi trong quá trình thêm tạo đơn hàng";
+					MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 					return;
 				}
 			}
 		}
 
+		#endregion
 
-		private void btnThanhToan_Click(object sender, EventArgs e)
+		#region Events
+
+		void tsmAdmin_Click(object sender, EventArgs e)
 		{
-			frmBill frmBill = new frmBill(listCTBHTamThoi, LayThongTinKhachHang());
-			var kq = frmBill.ShowDialog();
-			if (kq == DialogResult.OK)
+			if (listCTBHTamThoi.Count > 0)
 			{
-				LuuBanHang();
-				LuuChiTietBanHang();
-				// thanh toan
+				string msg = "Vui lòng hoàn thành đơn hàng hiện tại";
+				MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
 			}
+
+			frmAdmin f = new frmAdmin();
+			f.ShowDialog();
+
+			// Tải lại danh sách quần áo - Nếu như người dùng chỉnh sửa trong trang quản lý
+			LoadListQuanAo();
+		}
+
+		void tsmDangXuat_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		void txtTimKiem_TextChanged(object sender, EventArgs e)
+		{
+			string chuoiTimKiem = txtTimKiem.Text;
+			if (string.IsNullOrWhiteSpace(chuoiTimKiem)) return;
+
+			dgvQuanAo.DataSource = QuanAo_DAO.Instance.Load_QA_Search(chuoiTimKiem);
+		}
+
+		void btnXoaBoLoc_Click(object sender, EventArgs e)
+		{
+			txtTimKiem.Text = "";
+		}
+
+		void btnTaiLaiDS_Click(object sender, EventArgs e)
+		{
+			LoadListQuanAo();
+		}
+
+		// Đặt số lượng tối đa cho numericUpDown - Không cho người dùng chọn quá số lượng sản phẩm hiện có
+		private void dgvQuanAo_Click(object sender, EventArgs e)
+		{
+			if (dgvQuanAo.SelectedRows.Count == 0) return;
+
+			int soLuongToiDa = Convert.ToInt32(dgvQuanAo.SelectedRows[0].Cells[SanPham.SoLuong].Value);
+			nmSoLuong.Maximum = soLuongToiDa;
 		}
 
 		private void btnThem_Click(object sender, EventArgs e)
@@ -184,31 +164,63 @@ namespace QuanLyShopQuanAo
 			if (dgvQuanAo.SelectedRows.Count == 0)
 				return;
 
-			ChiTietBanHang_DTO ctbh = new ChiTietBanHang_DTO();
-			ctbh.Ten_QA = dgvQuanAo.SelectedRows[0].Cells[SanPham.Ten_QA].Value.ToString();
-			ctbh.GiaBan = (float)Convert.ToDouble(dgvQuanAo.SelectedRows[0].Cells[SanPham.GiaBan].Value);
-			ctbh.SoLuongSanPham = (int)nmSoLuong.Value;
+			ChiTietBanHang_DTO chiTietBanHang = new ChiTietBanHang_DTO();
+			chiTietBanHang.ID_QA = Convert.ToInt32(dgvQuanAo.SelectedRows[0].Cells[SanPham.ID_QA].Value);
+			chiTietBanHang.Ten_QA = dgvQuanAo.SelectedRows[0].Cells[SanPham.Ten_QA].Value.ToString();
+			chiTietBanHang.GiaBan = (float)Convert.ToDouble(dgvQuanAo.SelectedRows[0].Cells[SanPham.GiaBan].Value);
+			chiTietBanHang.SoLuongSanPham = (int)nmSoLuong.Value;
 
-
-			int index = listCTBHTamThoi.FindIndex(v => v.Ten_QA.Equals(ctbh.Ten_QA));
-			if (index != -1)
+			int index = listCTBHTamThoi.FindIndex(v => v.ID_QA == chiTietBanHang.ID_QA);
+			if (index == -1)
 			{
-				int SLMoi = listCTBHTamThoi[index].SoLuongSanPham + ctbh.SoLuongSanPham;
-				if (SLMoi > 0)
-					listCTBHTamThoi[index].SoLuongSanPham += ctbh.SoLuongSanPham;
-				else
-					listCTBHTamThoi.RemoveAt(index);
+				if (chiTietBanHang.SoLuongSanPham > 0)
+					listCTBHTamThoi.Add(chiTietBanHang);
 			}
 			else
 			{
-				listCTBHTamThoi.Add(ctbh);
+				int SLMoi = listCTBHTamThoi[index].SoLuongSanPham + chiTietBanHang.SoLuongSanPham;
+				if (SLMoi > 0)
+					listCTBHTamThoi[index].SoLuongSanPham += chiTietBanHang.SoLuongSanPham;
+				else
+					listCTBHTamThoi.RemoveAt(index);
 			}
 
 			nmSoLuong.Value = 1;
 
-			dvgCTBH.DataSource = null;
-			dvgCTBH.DataSource = listCTBHTamThoi;
+			dgvCTBH.DataSource = null;
+			dgvCTBH.DataSource = listCTBHTamThoi;
+			dgvCTBH.HideColumns("ID_CTBH", "ID_QA");
+
+			lblTongTien.Text = TongTienHoaDonHienTai.ToString();
 		}
 
+		private void btnThanhToan_Click(object sender, EventArgs e)
+		{
+			KhachHang_DTO khachHang = LayThongTinKhachHang();
+
+			frmBill frmBill = new frmBill(listCTBHTamThoi, khachHang, DiscountHienTai);
+			var result = frmBill.ShowDialog();
+
+			if (result == DialogResult.OK)
+			{
+				LuuBanHang();
+				LuuChiTietBanHang();
+				listCTBHTamThoi.Clear();
+			}
+		}
+
+		private void lblTongTien_TextChanged(object sender, EventArgs e)
+		{
+			lblTongTienCuoiCung.Text = TongTienThanhToanCuoiCung.ToString();
+			lblTongTienGhiBangChu.Text = TienIch.So_chu(TongTienThanhToanCuoiCung);
+		}
+
+		private void nmGiamGia_ValueChanged(object sender, EventArgs e)
+		{
+			lblTongTienCuoiCung.Text = TongTienThanhToanCuoiCung.ToString();
+			lblTongTienGhiBangChu.Text = TienIch.So_chu(TongTienThanhToanCuoiCung);
+		}
+
+		#endregion
 	}
 }
