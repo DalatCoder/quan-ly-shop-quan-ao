@@ -64,7 +64,7 @@ namespace QuanLyShopQuanAo.Commons
 			{
 				if (rawString.Contains(symbol.ToString()))
 				{
-					errorBuilder.AppendLine(title + " không được chứa các ký tự không họp lệ");
+					errorBuilder.AppendLine(title + " không được chứa các ký tự không hợp lệ");
 					break;
 				}
 			}
@@ -77,7 +77,7 @@ namespace QuanLyShopQuanAo.Commons
 			{
 				if (rawString.Contains(symbol.ToString()))
 				{
-					errorBuilder.AppendLine(title + " không được chứa các ký tự không họp lệ: " + symbol.ToString());
+					errorBuilder.AppendLine(title + " không được chứa các ký tự không hợp lệ: " + symbol.ToString());
 					break;
 				}
 			}

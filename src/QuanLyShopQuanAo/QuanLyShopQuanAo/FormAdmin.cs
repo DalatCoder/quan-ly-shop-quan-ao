@@ -164,6 +164,7 @@ namespace QuanLyShopQuanAo
 
 		void btnThemQA_Click(object sender, EventArgs e)
 		{
+			string loaiQA = cbLoaiQA.Text;
 			string ten = txtTenQA.Text;
 			string size = txtSizeQA.Text;
 			float giaBan = (float)Convert.ToDouble(nmGiaBanQA.Value);
@@ -174,6 +175,44 @@ namespace QuanLyShopQuanAo
 			string defaultImagePath = TienIch.GetPathTo("Assests", "image.jpg");
 			byte[] hinhQA = TienIch.ConvertImageToByteArray(Image.FromFile(defaultImagePath));
 			string hinhQAP = defaultImagePath;
+
+
+			InputValidator inputValidator = new InputValidator();
+			inputValidator
+				.SetTitle("Tên quần áo")
+				.SetInputString(ten)
+				.SanitizeInput()
+				.Require()
+				.MustBeValidString();
+
+			ten = ten.Sanitize();
+
+			//inputValidator
+			//	.SetTitle("Tên loại quần áo")
+			//	.SetInputString(loaiQA)
+			//	.SanitizeInput()
+			//	.Require()
+			//	.MustBeValidString();
+
+			//loaiQA = loaiQA.Sanitize();
+
+
+			inputValidator
+				.SetTitle("Size quần áo")
+				.SetInputString(size)
+				.SanitizeInput()
+				.Require()
+				.MustBeValidString();
+
+			size = size.Sanitize();
+
+
+			if (inputValidator.HasError)
+			{
+				MessageBox.Show(inputValidator.GetErrorMessage());
+				return;
+			}
+
 
 			if (pbHinhQA.Image != null)
 			{
@@ -208,6 +247,46 @@ namespace QuanLyShopQuanAo
 			string defaultImagePath = TienIch.GetPathTo("Assests", "image.jpg");
 			byte[] hinhQA = TienIch.ConvertImageToByteArray(Image.FromFile(defaultImagePath));
 			string hinhQAP = defaultImagePath;
+
+
+
+
+			InputValidator inputValidator = new InputValidator();
+			inputValidator
+				.SetTitle("Tên quần áo")
+				.SetInputString(ten)
+				.SanitizeInput()
+				.Require()
+				.MustBeValidString();
+
+			ten = ten.Sanitize();
+
+			//inputValidator
+			//	.SetTitle("Tên loại quần áo")
+			//	.SetInputString(loaiQA)
+			//	.SanitizeInput()
+			//	.Require()
+			//	.MustBeValidString();
+
+			//loaiQA = loaiQA.Sanitize();
+
+
+			inputValidator
+				.SetTitle("Size quần áo")
+				.SetInputString(size)
+				.SanitizeInput()
+				.Require()
+				.MustBeValidString();
+
+			size = size.Sanitize();
+
+
+			if (inputValidator.HasError)
+			{
+				MessageBox.Show(inputValidator.GetErrorMessage());
+				return;
+			}
+
 
 			if (pbHinhQA.Image != null)
 			{
