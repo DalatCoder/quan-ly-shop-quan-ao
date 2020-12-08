@@ -71,10 +71,33 @@ namespace QuanLyShopQuanAo.DAO
 
 			return banhang;
 		}
-		public bool Insert_BanHang(int id_GD, DateTime ngaybanhang, string hoten, string sdt)
+		public bool Insert_BanHang(string hoten, string sdt, string diaChi)
 		{
-			string query = "EXEC sp_insert_BanHang @ID_GD , @NgayBanHang , @HoTen , @SDT";
-			object[] param = new object[] { id_GD, ngaybanhang, hoten, sdt };
+			string query = "EXEC sp_insert_BanHang_ChuaThanhToan @HoTen , @SDT , @DiaChi";
+			object[] param = new object[] { hoten, sdt, diaChi };
+			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
+			return result > 0;
+		}
+
+		public int GetHoaDonBanHangChuaDuocThanhToan(int id_KH)
+		{
+			string query = "EXEC sp_select_BanHang_ChuaThanhToan_By_KhachHang @ID_KH";
+			object[] param = new object[] { id_KH };
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
+
+			int ID_BH = -1;
+			foreach (DataRow row in table.Rows)
+			{
+				ID_BH = (int)row["ID_BH"];
+			}
+
+			return ID_BH;
+		}
+
+		public bool ThanhToanHoaDon(int id_BH, string id_GD, float discount)
+		{
+			string query = "EXEC sp_ThanhToanBanHang @ID_BH , @ID_GD , @discount";
+			object[] param = new object[] { id_BH, id_GD, discount };
 			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
 			return result > 0;
 		}

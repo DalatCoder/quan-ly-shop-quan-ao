@@ -78,3 +78,23 @@ END
 GO
 
 -- exec sp_select_ChiTietBanHang 1
+CREATE TRIGGER UTG_Delete_ChiTietBanHang
+ON ChiTietBanHang FOR DELETE
+AS
+BEGIN
+	SELECT * FROM ChiTietBanHang
+	DECLARE @id_QA INT
+	DECLARE @soSanPhamDuocChon INT
+
+	SELECT @id_QA = ID_QA, @soSanPhamDuocChon = SoLuongSanPham FROM deleted
+
+	DECLARE @soLuongSanPhamTrongKho INT
+	SELECT @soLuongSanPhamTrongKho = SoLuong FROM QuanAo WHERE ID_QA = @id_QA
+
+	DECLARE @soLuongSanPhamMoi INT = @soSanPhamDuocChon + @soLuongSanPhamTrongKho
+	UPDATE QuanAo
+	SET 
+		SoLuong = @soLuongSanPhamMoi
+	WHERE ID_QA = @id_QA
+END
+GO
