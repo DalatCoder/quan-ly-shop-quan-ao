@@ -435,5 +435,10 @@ namespace QuanLyShopQuanAo
 			int soluong = LoaiQA_DAO.Instance.GetSoLuongSanPham(int.Parse(txtLoaiQA_ID.Text));
 			txtLoaiQA_SoLuongSP.Text = soluong.ToString();
 		}
+
+		private void btnXoaQA_Click(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }

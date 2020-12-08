@@ -102,6 +102,7 @@ namespace QuanLyShopQuanAo
 			this.panel16 = new System.Windows.Forms.Panel();
 			this.dtgvLoaiQuanAo = new System.Windows.Forms.DataGridView();
 			this.panel18 = new System.Windows.Forms.Panel();
+			this.btnXoaLoaiQA = new System.Windows.Forms.Button();
 			this.btnXemLoaiQA = new System.Windows.Forms.Button();
 			this.btnSuaLoaiQA = new System.Windows.Forms.Button();
 			this.btnThemLoaiQA = new System.Windows.Forms.Button();
@@ -125,7 +126,6 @@ namespace QuanLyShopQuanAo
 			this.label13 = new System.Windows.Forms.Label();
 			this.panel26 = new System.Windows.Forms.Panel();
 			this.dtgvKH = new System.Windows.Forms.DataGridView();
-			this.btnXoaLoaiQA = new System.Windows.Forms.Button();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
@@ -713,6 +713,7 @@ namespace QuanLyShopQuanAo
 			this.btnXoaQA.TabIndex = 4;
 			this.btnXoaQA.Text = "Xóa";
 			this.btnXoaQA.UseVisualStyleBackColor = true;
+			this.btnXoaQA.Click += new System.EventHandler(this.btnXoaQA_Click);
 			// 
 			// btnXemQA
 			// 
@@ -932,6 +933,19 @@ namespace QuanLyShopQuanAo
 			this.panel18.Name = "panel18";
 			this.panel18.Size = new System.Drawing.Size(550, 100);
 			this.panel18.TabIndex = 4;
+			// 
+			// btnXoaLoaiQA
+			// 
+			this.btnXoaLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnXoaLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXoaLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXoaLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btnXoaLoaiQA.Location = new System.Drawing.Point(297, 24);
+			this.btnXoaLoaiQA.Name = "btnXoaLoaiQA";
+			this.btnXoaLoaiQA.Size = new System.Drawing.Size(85, 54);
+			this.btnXoaLoaiQA.TabIndex = 4;
+			this.btnXoaLoaiQA.Text = "Xóa";
+			this.btnXoaLoaiQA.UseVisualStyleBackColor = true;
 			// 
 			// btnXemLoaiQA
 			// 
@@ -1174,19 +1188,6 @@ namespace QuanLyShopQuanAo
 			this.dtgvKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dtgvKH.Size = new System.Drawing.Size(550, 635);
 			this.dtgvKH.TabIndex = 2;
-			// 
-			// btnXoaLoaiQA
-			// 
-			this.btnXoaLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-			this.btnXoaLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnXoaLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnXoaLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnXoaLoaiQA.Location = new System.Drawing.Point(297, 24);
-			this.btnXoaLoaiQA.Name = "btnXoaLoaiQA";
-			this.btnXoaLoaiQA.Size = new System.Drawing.Size(85, 54);
-			this.btnXoaLoaiQA.TabIndex = 4;
-			this.btnXoaLoaiQA.Text = "Xóa";
-			this.btnXoaLoaiQA.UseVisualStyleBackColor = true;
 			// 
 			// frmAdmin
 			// 
