@@ -196,7 +196,15 @@ namespace QuanLyShopQuanAo
 
 		private void btnThanhToan_Click(object sender, EventArgs e)
 		{
+
+			if (listCTBHTamThoi.Count==0)
+			{
+				MessageBox.Show("Vui lòng thêm quần áo cần mua", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				return;
+			}
 			KhachHang_DTO khachHang = LayThongTinKhachHang();
+
+			
 
 			frmBill frmBill = new frmBill(listCTBHTamThoi, khachHang, DiscountHienTai);
 			var result = frmBill.ShowDialog();
