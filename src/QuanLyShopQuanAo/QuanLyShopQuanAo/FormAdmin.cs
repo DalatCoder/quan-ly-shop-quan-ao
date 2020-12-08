@@ -377,6 +377,11 @@ namespace QuanLyShopQuanAo
 				LQAList.DataSource = LoaiQA_DAO.Instance.Load_LQA_by_Name(tenLoaiQA);
 			}
 		}
+		private void txtLoaiQA_ID_TextChanged(object sender, EventArgs e)
+		{
+			int soluong = LoaiQA_DAO.Instance.GetSoLuongSanPham(int.Parse(txtLoaiQA_ID.Text));
+			txtLoaiQA_SoLuongSP.Text = soluong.ToString();
+		}
 
 		#endregion
 
@@ -430,15 +435,42 @@ namespace QuanLyShopQuanAo
 
 		#endregion
 
-		private void txtLoaiQA_ID_TextChanged(object sender, EventArgs e)
-		{
-			int soluong = LoaiQA_DAO.Instance.GetSoLuongSanPham(int.Parse(txtLoaiQA_ID.Text));
-			txtLoaiQA_SoLuongSP.Text = soluong.ToString();
-		}
+		
 
 		private void btnXoaQA_Click(object sender, EventArgs e)
 		{
-			
+			int idQA = int.Parse(txtIDQA.Text);
+			string msg;
+
+			if (QuanAo_DAO.Instance.Delete_QuanAo(idQA))
+			{
+				msg = "Xóa quần áo thành công";
+				LoadListQA();
+			}
+			else
+			{
+				msg = "Có lỗi khi xóa quần áo";
+			}
+
+			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		private void btnXoaLoaiQA_Click(object sender, EventArgs e)
+		{
+			int idLQA = int.Parse(txtLoaiQA_ID.Text);
+			string msg;
+
+			if (LoaiQA_DAO.Instance.DeleteQA(idLQA))
+			{
+				msg = "Xóa quần áo thành công";
+				LoadListLQA();
+			}
+			else
+			{
+				msg = "Có lỗi khi xóa quần áo";
+			}
+
+			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 	}
 }

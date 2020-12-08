@@ -19,6 +19,8 @@ namespace QuanLyShopQuanAo.Models
         public string SDT { get { return _SDT; } set { _SDT = value; } }
         public string DiaChi { get { return _Diachi; } set { _Diachi = value; } }
 
+		
+
         public KhachHang_DTO(int _ID_KH, string _HoTen, string _SDT, string _Diachi)
 		{
             ID_KH = _ID_KH;
@@ -35,5 +37,11 @@ namespace QuanLyShopQuanAo.Models
             DiaChi = row["DiaChi"].ToString();
         }
 
-    }
+		public KhachHang_DTO(string hoTen, string sDT, string diaChi)
+		{
+			HoTen = hoTen;
+			SDT = sDT;
+			DiaChi = diaChi;
+		}
+	}
 }

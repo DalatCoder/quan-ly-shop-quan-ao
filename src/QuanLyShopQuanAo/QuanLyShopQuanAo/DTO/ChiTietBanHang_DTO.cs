@@ -30,6 +30,13 @@ namespace QuanLyShopQuanAo.Models
 			SoLuongSanPham = (int)row["SoLuongSanPham"];
 		}
 
+		public ChiTietBanHang_DTO(string ten_QA, float giaBan, int soLuongSanPham)
+		{
+			Ten_QA = ten_QA;
+			GiaBan = giaBan;
+			SoLuongSanPham = soLuongSanPham;
+		}
+
 		public int ID_CTBH { get => _ID_CTBH; set => _ID_CTBH = value; }
 		public string Ten_QA { get => _Ten_QA; set => _Ten_QA = value; }
 		public float GiaBan { get => _GiaBan; set => _GiaBan = value; }

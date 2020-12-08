@@ -946,6 +946,7 @@ namespace QuanLyShopQuanAo
 			this.btnXoaLoaiQA.TabIndex = 4;
 			this.btnXoaLoaiQA.Text = "Xóa";
 			this.btnXoaLoaiQA.UseVisualStyleBackColor = true;
+			this.btnXoaLoaiQA.Click += new System.EventHandler(this.btnXoaLoaiQA_Click);
 			// 
 			// btnXemLoaiQA
 			// 
