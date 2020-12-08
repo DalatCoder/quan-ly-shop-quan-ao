@@ -310,6 +310,8 @@ namespace QuanLyShopQuanAo
 		void btnThemLoaiQA_Click(object sender, EventArgs e)
 		{
 			string Ten = txtLoaiQA_Ten.Text;
+			string msg;
+
 
 			InputValidator inputValidator = new InputValidator();
 			inputValidator
@@ -319,18 +321,22 @@ namespace QuanLyShopQuanAo
 				.Require()
 				.MustBeValidString();
 
+			Ten = Ten.Sanitize();
+
 			if (inputValidator.HasError)
 			{
 				MessageBox.Show(inputValidator.GetErrorMessage());
 				return;
 			}
 
-			string msg;
 
 			if (LoaiQA_DAO.Instance.Insert_LoaiQuanAo(Ten))
 			{
 				msg = "Thêm loại quần áo thành công";
 				LoadListLQA();
+
+				LoadListQA();
+				LoadLoaiQuanAoCombobox();
 			}
 			else
 			{
@@ -340,20 +346,64 @@ namespace QuanLyShopQuanAo
 			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
+		
 		void btnSuaLoaiQA_Click(object sender, EventArgs e)
 		{
 			string Ten = txtLoaiQA_Ten.Text;
 			int ID_LQA = int.Parse(txtLoaiQA_ID.Text);
 			string msg;
 
+
+			InputValidator inputValidator = new InputValidator();
+			inputValidator
+				.SetTitle("Tên loại quần áo")
+				.SetInputString(Ten)
+				.SanitizeInput()
+				.Require()
+				.MustBeValidString();
+
+			Ten = Ten.Sanitize();
+
+			if (inputValidator.HasError)
+			{
+				MessageBox.Show(inputValidator.GetErrorMessage());
+				return;
+			}
+
+
 			if (LoaiQA_DAO.Instance.UpdateLQA(ID_LQA, Ten))
 			{
 				msg = "Cập nhật loại quần áo thành công";
 				LoadListLQA();
+
+				LoadListQA();
+				LoadLoaiQuanAoCombobox();
 			}
 			else
 			{
 				msg = "Có lỗi khi cập nhật loại quần áo";
+			}
+
+			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		private void btnXoaLoaiQA_Click(object sender, EventArgs e)
+		{
+			int idLQA = int.Parse(txtLoaiQA_ID.Text);
+			string msg;
+			
+
+			if (LoaiQA_DAO.Instance.DeleteQA(idLQA))
+			{
+				msg = "Xóa quần áo thành công";
+				LoadListLQA();
+
+				LoadListQA();
+				LoadLoaiQuanAoCombobox();
+			}
+			else
+			{
+				msg = "Có lỗi khi xóa quần áo";
 			}
 
 			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -455,22 +505,6 @@ namespace QuanLyShopQuanAo
 			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
-		private void btnXoaLoaiQA_Click(object sender, EventArgs e)
-		{
-			int idLQA = int.Parse(txtLoaiQA_ID.Text);
-			string msg;
-
-			if (LoaiQA_DAO.Instance.DeleteQA(idLQA))
-			{
-				msg = "Xóa quần áo thành công";
-				LoadListLQA();
-			}
-			else
-			{
-				msg = "Có lỗi khi xóa quần áo";
-			}
-
-			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-		}
+		
 	}
 }
