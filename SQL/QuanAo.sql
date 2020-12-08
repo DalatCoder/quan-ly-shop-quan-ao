@@ -17,6 +17,7 @@ BEGIN
 		Ten_LQA
 	FROM QuanAo
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
+	WHERE QuanAo.Is_Alive = 1 AND LoaiQA.Is_Alive = 1
 END
 GO
 
@@ -40,7 +41,7 @@ BEGIN
 		Ten_LQA
 	FROM QuanAo
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
-	WHERE QuanAo.ID_QA = @ID_QA
+	WHERE QuanAo.ID_QA = @ID_QA AND QuanAo.Is_Alive = 1 AND LoaiQA.Is_Alive = 1
 END
 GO
 
@@ -64,7 +65,7 @@ BEGIN
 		Ten_LQA
 	FROM QuanAo
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
-	WHERE LoaiQA.ID_LQA = @ID_LQA
+	WHERE LoaiQA.ID_LQA = @ID_LQA AND QuanAo.Is_Alive = 1 AND LoaiQA.Is_Alive = 1
 END
 GO
 
@@ -137,7 +138,7 @@ BEGIN
 		SoLuong = @SoLuong,
 		GhiChu = @GhiChu,
 		ID_LQA = @ID_LQA
-	WHERE ID_QA = @ID_QA
+	WHERE ID_QA = @ID_QA AND QuanAo.Is_Alive = 1
 
 	IF (@HinhQA IS NULL OR @HinhQAP IS NULL OR @HinhQAP = '')
 		RETURN
@@ -183,8 +184,10 @@ BEGIN
 	FROM QuanAo
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
 	WHERE
-		dbo.fuConvertToUnsign1(Ten_QA) LIKE '%' + dbo.fuConvertToUnsign1(@TieuChuanTim) + '%' OR
-		QuanAo.ID_QA LIKE '%' + @TieuChuanTim + '%'
+		QuanAo.Is_Alive = 1 AND LoaiQA.Is_Alive = 1 AND (
+			dbo.fuConvertToUnsign1(Ten_QA) LIKE '%' + dbo.fuConvertToUnsign1(@TieuChuanTim) + '%' OR
+			QuanAo.ID_QA LIKE '%' + @TieuChuanTim + '%'
+		)
 END
 GO
 
@@ -209,7 +212,7 @@ BEGIN
 		Ten_LQA
 	FROM QuanAo
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
-	WHERE (@GiaBanThap <= GiaBan AND GiaBan <= @GiaBanCao)
+	WHERE QuanAo.Is_Alive = 1 AND LoaiQA.Is_Alive = 1 AND (@GiaBanThap <= GiaBan AND GiaBan <= @GiaBanCao)
 END
 GO
 
@@ -236,6 +239,7 @@ BEGIN
 	FROM QuanAo
 	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
 	WHERE
+		QuanAo.Is_Alive = 1 AND LoaiQA.Is_Alive = 1 AND
 		dbo.fuConvertToUnsign1(Ten_QA) LIKE '%' + dbo.fuConvertToUnsign1(@ten) + '%' AND
 		(@GiaBanThap <= GiaBan AND GiaBan <= @GiaBanCao)
 		
@@ -243,3 +247,20 @@ END
 GO
 
 -- EXEC sp_select_search_QuanAo_GiaCa 'ao',100000,250000
+
+CREATE PROCEDURE sp_delete_QuanAo
+@ID_QA INT
+AS
+BEGIN
+	UPDATE QuanAo
+	SET
+		Is_Alive = 0
+	WHERE ID_QA = @ID_QA
+END
+GO
+
+-- EXEC sp_delete_QuanAo 5
+
+-- SELECT * FROM QuanAo
+
+-- EXEC sp_select_QuanAo_All

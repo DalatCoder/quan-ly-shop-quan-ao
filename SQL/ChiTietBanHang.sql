@@ -7,7 +7,7 @@ CREATE PROCEDURE sp_insert_ChiTietBanHang
 @SoLuongSanPham INT
 AS
 BEGIN
-	IF (NOT EXISTS (SELECT * FROM QuanAo WHERE QuanAo.ID_QA = @ID_QA))
+	IF (NOT EXISTS (SELECT * FROM QuanAo WHERE QuanAo.ID_QA = @ID_QA OR QuanAo.Is_Alive = 1))
 		RETURN
 
 	IF (NOT EXISTS (SELECT * FROM BanHang WHERE BanHang.ID_BH = @ID_BH))

@@ -16,5 +16,23 @@ namespace QuanLyShopQuanAo.Commons
 				dgv.Columns[column].Visible = false;
 			}
 		}
+
+		public static string Sanitize(this string rawString)
+		{
+			if (rawString.Length == 0)
+				return rawString;
+
+			string resultString = "";
+			foreach (var letter in rawString.ToCharArray())
+			{
+				if (letter != ' ')
+					resultString += letter.ToString();
+				else
+					if (resultString[resultString.Length - 1] != ' ')
+					resultString += letter.ToString();
+			}
+
+			return resultString.Trim();
+		}
 	}
 }

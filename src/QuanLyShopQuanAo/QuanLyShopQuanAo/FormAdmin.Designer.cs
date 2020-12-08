@@ -80,6 +80,7 @@ namespace QuanLyShopQuanAo
 			this.txtTimQA = new System.Windows.Forms.TextBox();
 			this.btnTimQA = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.btnXoaQA = new System.Windows.Forms.Button();
 			this.btnXemQA = new System.Windows.Forms.Button();
 			this.btnSuaQA = new System.Windows.Forms.Button();
 			this.btnThemQA = new System.Windows.Forms.Button();
@@ -124,6 +125,7 @@ namespace QuanLyShopQuanAo
 			this.label13 = new System.Windows.Forms.Label();
 			this.panel26 = new System.Windows.Forms.Panel();
 			this.dtgvKH = new System.Windows.Forms.DataGridView();
+			this.btnXoaLoaiQA = new System.Windows.Forms.Button();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
@@ -690,6 +692,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel1
 			// 
+			this.panel1.Controls.Add(this.btnXoaQA);
 			this.panel1.Controls.Add(this.btnXemQA);
 			this.panel1.Controls.Add(this.btnSuaQA);
 			this.panel1.Controls.Add(this.btnThemQA);
@@ -697,6 +700,19 @@ namespace QuanLyShopQuanAo
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(550, 100);
 			this.panel1.TabIndex = 0;
+			// 
+			// btnXoaQA
+			// 
+			this.btnXoaQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnXoaQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXoaQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXoaQA.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btnXoaQA.Location = new System.Drawing.Point(297, 24);
+			this.btnXoaQA.Name = "btnXoaQA";
+			this.btnXoaQA.Size = new System.Drawing.Size(85, 54);
+			this.btnXoaQA.TabIndex = 4;
+			this.btnXoaQA.Text = "Xóa";
+			this.btnXoaQA.UseVisualStyleBackColor = true;
 			// 
 			// btnXemQA
 			// 
@@ -718,7 +734,7 @@ namespace QuanLyShopQuanAo
 			this.btnSuaQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSuaQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSuaQA.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnSuaQA.Location = new System.Drawing.Point(234, 24);
+			this.btnSuaQA.Location = new System.Drawing.Point(159, 24);
 			this.btnSuaQA.Name = "btnSuaQA";
 			this.btnSuaQA.Size = new System.Drawing.Size(85, 54);
 			this.btnSuaQA.TabIndex = 2;
@@ -908,6 +924,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel18
 			// 
+			this.panel18.Controls.Add(this.btnXoaLoaiQA);
 			this.panel18.Controls.Add(this.btnXemLoaiQA);
 			this.panel18.Controls.Add(this.btnSuaLoaiQA);
 			this.panel18.Controls.Add(this.btnThemLoaiQA);
@@ -922,7 +939,7 @@ namespace QuanLyShopQuanAo
 			this.btnXemLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnXemLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnXemLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnXemLoaiQA.Location = new System.Drawing.Point(437, 24);
+			this.btnXemLoaiQA.Location = new System.Drawing.Point(435, 24);
 			this.btnXemLoaiQA.Name = "btnXemLoaiQA";
 			this.btnXemLoaiQA.Size = new System.Drawing.Size(85, 54);
 			this.btnXemLoaiQA.TabIndex = 3;
@@ -936,7 +953,7 @@ namespace QuanLyShopQuanAo
 			this.btnSuaLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSuaLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSuaLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnSuaLoaiQA.Location = new System.Drawing.Point(240, 24);
+			this.btnSuaLoaiQA.Location = new System.Drawing.Point(159, 24);
 			this.btnSuaLoaiQA.Name = "btnSuaLoaiQA";
 			this.btnSuaLoaiQA.Size = new System.Drawing.Size(85, 54);
 			this.btnSuaLoaiQA.TabIndex = 2;
@@ -1158,6 +1175,19 @@ namespace QuanLyShopQuanAo
 			this.dtgvKH.Size = new System.Drawing.Size(550, 635);
 			this.dtgvKH.TabIndex = 2;
 			// 
+			// btnXoaLoaiQA
+			// 
+			this.btnXoaLoaiQA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnXoaLoaiQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnXoaLoaiQA.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnXoaLoaiQA.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btnXoaLoaiQA.Location = new System.Drawing.Point(297, 24);
+			this.btnXoaLoaiQA.Name = "btnXoaLoaiQA";
+			this.btnXoaLoaiQA.Size = new System.Drawing.Size(85, 54);
+			this.btnXoaLoaiQA.TabIndex = 4;
+			this.btnXoaLoaiQA.Text = "Xóa";
+			this.btnXoaLoaiQA.UseVisualStyleBackColor = true;
+			// 
 			// frmAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1328,5 +1358,7 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.Button btnKhachHang_TaiLaiDS;
 		private System.Windows.Forms.Button btnKhachHang_XoaBoLoc;
 		private System.Windows.Forms.TextBox txtKhachHang_TimKiem_TenSDT;
+		private System.Windows.Forms.Button btnXoaQA;
+		private System.Windows.Forms.Button btnXoaLoaiQA;
 	}
 }
