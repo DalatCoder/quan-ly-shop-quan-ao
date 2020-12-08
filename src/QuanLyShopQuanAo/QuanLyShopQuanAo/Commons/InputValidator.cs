@@ -35,15 +35,17 @@ namespace QuanLyShopQuanAo.Commons
 			if (rawString.Length == 0)
 				return this;
 
-			string resultString = rawString[0].ToString();
-
-			for (int i = 1; i < rawString.Length; i++)
+			string resultString = "";
+			foreach (var letter in rawString.ToCharArray())
 			{
-				if (resultString[resultString.Length - 1] != ' ')
-					resultString += rawString[i].ToString();
+				if (letter != ' ')
+					resultString += letter.ToString();
+				else
+					if (resultString[resultString.Length - 1] != ' ')
+					resultString += letter.ToString();
 			}
 
-			rawString = resultString.Trim();
+			rawString = resultString;
 
 			return this;
 		}
