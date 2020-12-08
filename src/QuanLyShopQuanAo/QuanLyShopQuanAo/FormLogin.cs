@@ -36,12 +36,14 @@ namespace QuanLyShopQuanAo
 			inputValidator
 				.SetTitle("Tên đăng nhập")
 				.SetInputString(tenDangNhap)
+				.SanitizeInput()
 				.Require()
 				.MustBeValidString();
 
 			inputValidator
 				.SetTitle("Mật khẩu")
 				.SetInputString(matKhau)
+				.SanitizeInput()
 				.Require();
 
 			if (inputValidator.HasError)

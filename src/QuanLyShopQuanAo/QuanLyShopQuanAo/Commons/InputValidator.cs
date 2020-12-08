@@ -32,13 +32,19 @@ namespace QuanLyShopQuanAo.Commons
 
 		public InputValidator SanitizeInput()
 		{
-			string invalidChar = " ~!@#$%^&*()+_`-=,./<>?;':[]{}\\|";
-			foreach (var symbol in invalidChar.ToCharArray())
+			if (rawString.Length == 0)
+				return this;
+
+			string resultString = rawString[0].ToString();
+
+			for (int i = 1; i < rawString.Length; i++)
 			{
-				rawString = rawString.Replace(symbol.ToString(), string.Empty);
+				if (resultString[resultString.Length - 1] != ' ')
+					resultString += rawString[i].ToString();
 			}
 
-			rawString = rawString.Trim();
+			rawString = resultString.Trim();
+
 			return this;
 		}
 
@@ -60,6 +66,33 @@ namespace QuanLyShopQuanAo.Commons
 					break;
 				}
 			}
+			return this;
+		}
+
+		public InputValidator DoesNotContains(params char[] invalidLetters)
+		{
+			foreach (var symbol in invalidLetters)
+			{
+				if (rawString.Contains(symbol.ToString()))
+				{
+					errorBuilder.AppendLine(title + " không được chứa các ký tự không họp lệ: " + symbol.ToString());
+					break;
+				}
+			}
+			return this;
+		}
+
+		public InputValidator DoesNotContains(params string[] phrases)
+		{
+			foreach (var phrase in phrases)
+			{
+				if (rawString.ToLower().Contains(phrase.ToLower()))
+				{
+					errorBuilder.AppendLine(title + " không được chứa các cụm từ không hợp lệ: " + phrase);
+					break;
+				}
+			}
+
 			return this;
 		}
 
