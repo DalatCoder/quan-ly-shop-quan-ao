@@ -311,7 +311,19 @@ namespace QuanLyShopQuanAo
 		{
 			string Ten = txtLoaiQA_Ten.Text;
 
+			InputValidator inputValidator = new InputValidator();
+			inputValidator
+				.SetTitle("Tên loại quần áo")
+				.SetInputString(Ten)
+				.SanitizeInput()
+				.Require()
+				.MustBeValidString();
 
+			if (inputValidator.HasError)
+			{
+				MessageBox.Show(inputValidator.GetErrorMessage());
+				return;
+			}
 
 			string msg;
 

@@ -95,5 +95,11 @@ namespace QuanLyShopQuanAo
 		}
 
 		#endregion
+
+		private void btnThanhToan_Click(object sender, EventArgs e)
+		{
+			frmBill frmBill = new frmBill();
+			frmBill.ShowDialog();
+		}
 	}
 }
