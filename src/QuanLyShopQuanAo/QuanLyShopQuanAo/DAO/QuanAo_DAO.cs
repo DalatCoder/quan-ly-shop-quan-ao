@@ -144,13 +144,13 @@ namespace QuanLyShopQuanAo.DAO
 			return result > 0;
 		}
 
-		/*public bool DelleteQA(int id_QA)
+		public bool Delete_QuanAo(int id_QA)
 		{
-			string query = "EXEC sp_delete_QuanAo_By_ID @ID_QA";
+			string query = "EXEC sp_delete_QuanAo @ID_QA";
 			object[] param = new object[] { id_QA };
 			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
 			return result > 0;
-		}*/
+		}
 
 	}
 }

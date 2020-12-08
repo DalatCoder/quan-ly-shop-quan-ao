@@ -102,13 +102,13 @@ namespace QuanLyShopQuanAo.DAO
 			return result > 0;
 		}
 
-		/*public bool DelleteLQA(int id_LQA)
+		public bool DeleteQA(int id_LQA)
 		{
-			string query = "EXEC sp_delete_LoaiQuanAo_by_ID @ID_LQA";
+			string query = "sp_delete_LoaiQA @ID_LQA";
 			object[] param = new object[] { id_LQA };
 			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
 			return result > 0;
-		}*/
+		}
 
 		public int GetSoLuongSanPham(int id_LQA)
 		{
