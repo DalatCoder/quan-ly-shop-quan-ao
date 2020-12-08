@@ -1,10 +1,9 @@
-﻿
---------------------------------------------------------------------------------
+﻿--------------------------------------------------------------------------------
 --                          SHOP MANAGEMENT DATABASE                          --
 --------------------------------------------------------------------------------
 CREATE DATABASE QL_ShopQuanAo
 GO
-
+	
 USE QL_ShopQuanAo
 GO
 
@@ -14,7 +13,8 @@ GO
 CREATE TABLE LoaiQA
 (
 	ID_LQA INT NOT NULL IDENTITY(1,1),
-	Ten_LQA NVARCHAR(100) NOT NULL
+	Ten_LQA NVARCHAR(100) NOT NULL,
+	Is_Alive BIT NOT NULL DEFAULT 1
 )
 GO
 
@@ -35,7 +35,8 @@ CREATE TABLE QuanAo
 	ID_LQA INT NOT NULL,
 	GiaBan FLOAT NOT NULL,
 	SoLuong INT NOT NULL,
-	GhiChu NVARCHAR(MAX) NULL
+	GhiChu NVARCHAR(MAX) NULL,
+	Is_Alive BIT NOT NULL DEFAULT 1
 )
 GO
 
@@ -70,7 +71,8 @@ CREATE TABLE ChiTietBanHang
 	ID_CTBH INT NOT NULL IDENTITY(1,1),
 	ID_QA INT NOT NULL,
 	ID_BH INT NOT NULL,
-	SoLuongSanPham INT NOT NULL,
+	SoLuongSanPham INT NOT NULL
+	-- GiaBan FLOAT NOT NULL
 )
 GO
 

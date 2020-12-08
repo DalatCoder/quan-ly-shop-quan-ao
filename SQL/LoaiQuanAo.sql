@@ -5,6 +5,7 @@ CREATE PROCEDURE sp_select_LoaiQuanAo_All
 AS
 	BEGIN
 		SELECT * FROM dbo.LoaiQA
+		WHERE Is_Alive = 1
 	END
 GO
 
@@ -15,7 +16,8 @@ CREATE PROCEDURE sp_select_LoaiQuanAo_by_ID
 @ID_LQA INT
 AS
 	BEGIN
-		SELECT * FROM dbo.LoaiQA WHERE [ID_LQA] = @ID_LQA
+		SELECT * FROM dbo.LoaiQA 
+		WHERE [ID_LQA] = @ID_LQA AND Is_Alive = 1
 	END
 GO
 
@@ -27,7 +29,8 @@ CREATE PROCEDURE sp_select_LoaiQuanAo_by_Name
 AS
 BEGIN
 	SELECT * FROM LoaiQA
-	WHERE dbo.fuConvertToUnsign1(Ten_LQA) LIKE '%' + dbo.fuConvertToUnsign1(@Name) + '%'
+	WHERE dbo.fuConvertToUnsign1(Ten_LQA) LIKE '%' + dbo.fuConvertToUnsign1(@Name) + '%' AND
+		Is_Alive = 1
 END
 GO
 
@@ -86,11 +89,20 @@ AS
 BEGIN
 	SELECT COUNT(*) FROM LoaiQA
 	JOIN QuanAo ON LoaiQA.ID_LQA = QuanAo.ID_LQA
-	WHERE LoaiQA.ID_LQA = @ID_LQA
+	WHERE LoaiQA.ID_LQA = @ID_LQA AND LoaiQA.Is_Alive = 1
 END
 GO
 
 -- EXEC sp_select_SoLuongSanPham_by_ID_LQA 1
 -- GO
 
-
+CREATE PROCEDURE sp_delete_LoaiQA
+@ID_LQA INT
+AS
+BEGIN
+	UPDATE LoaiQA
+	SET
+		Is_Alive = 0
+	WHERE ID_LQA = @ID_LQA
+END
+GO
