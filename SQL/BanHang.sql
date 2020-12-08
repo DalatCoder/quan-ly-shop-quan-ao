@@ -72,7 +72,7 @@ CREATE PROCEDURE sp_select_BanHang_ChuaThanhToan_By_KhachHang
 @ID_KH INT
 AS
 BEGIN
-	SELECT *
+	SELECT ID_BH
 	FROM BanHang
 	WHERE ID_KH = @ID_KH AND ID_GD IS NULL
 END
