@@ -248,18 +248,6 @@ namespace QuanLyShopQuanAo
 			pbHinhQA.SizeMode = PictureBoxSizeMode.StretchImage;
 		}
 
-		List<QuanAo_DTO> SearchQA(string Ten)
-		{
-			List<QuanAo_DTO> listQA = QuanAo_DAO.Instance.Load_QA_Search(Ten);
-			return listQA;
-		}
-
-		List<QuanAo_DTO> SearchQAbyGia(float Giacao, float Giathap)
-		{
-			List<QuanAo_DTO> listQA = QuanAo_DAO.Instance.Load_QA_By_GiaCa(Giathap, Giacao);
-			return listQA;
-		}
-
 		private void btnTimQA_Click(object sender, EventArgs e)
 		{
 			string tenQA = txtTimQA.Text;
