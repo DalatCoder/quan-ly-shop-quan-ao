@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyShopQuanAo.Commons;
+using QuanLyShopQuanAo.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +14,17 @@ namespace QuanLyShopQuanAo
 {
 	public partial class frmBill : Form
 	{
-		public frmBill()
+		public frmBill(List<ChiTietBanHang_DTO> listQA,KhachHang_DTO khachHang)
 		{
 			InitializeComponent();
+			dtgvBill.DataSource = listQA;
+			dtgvBill.HideColumns("ID_CTBH");
+
+			lbBill_TenKH.Text = khachHang.HoTen;
+			lbBill_SDTKH.Text = khachHang.SDT;
+			lbBill_DiaChiKH.Text = khachHang.DiaChi;
 		}
 
-		private void frmBill_Load(object sender, EventArgs e)
-		{
-
-		}
-
-		private void label28_Click(object sender, EventArgs e)
-		{
-
-		}
+		
 	}
 }

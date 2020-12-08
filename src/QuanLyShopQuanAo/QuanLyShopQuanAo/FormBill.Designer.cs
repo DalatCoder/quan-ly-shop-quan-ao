@@ -327,6 +327,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// dtgvBill
 			// 
+			this.dtgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dtgvBill.BackgroundColor = System.Drawing.Color.White;
 			this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dtgvBill.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -423,7 +424,6 @@ namespace QuanLyShopQuanAo
 			this.label28.TabIndex = 5;
 			this.label28.Text = "          Cảm ơn quý khách đã mua hàng!!!\r\nHẹn gặp lại khách hàng một ngày sớm nh" +
     "ất!!!";
-			this.label28.Click += new System.EventHandler(this.label28_Click);
 			// 
 			// pictureBox1
 			// 
@@ -492,7 +492,6 @@ namespace QuanLyShopQuanAo
 			this.Name = "frmBill";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Bill";
-			this.Load += new System.EventHandler(this.frmBill_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.panel2.ResumeLayout(false);

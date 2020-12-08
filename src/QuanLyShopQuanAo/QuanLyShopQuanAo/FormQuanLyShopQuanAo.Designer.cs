@@ -510,7 +510,7 @@
 			this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnThanhToan.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnThanhToan.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnThanhToan.Location = new System.Drawing.Point(845, 32);
+			this.btnThanhToan.Location = new System.Drawing.Point(845, 35);
 			this.btnThanhToan.Name = "btnThanhToan";
 			this.btnThanhToan.Size = new System.Drawing.Size(84, 69);
 			this.btnThanhToan.TabIndex = 5;

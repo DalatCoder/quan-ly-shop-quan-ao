@@ -18,6 +18,7 @@ namespace QuanLyShopQuanAo
 		BindingSource listQuanAo = new BindingSource();
 		QuanTriVien_DTO loginAccount;
 
+		
 		public fQLShopQuanAo(QuanTriVien_DTO loginAccount)
 		{
 			InitializeComponent();
@@ -96,10 +97,44 @@ namespace QuanLyShopQuanAo
 
 		#endregion
 
+		List<ChiTietBanHang_DTO> GetChiTietHoaDonFromListView(ListView lv)
+		{
+			List<ChiTietBanHang_DTO> listQA = new List<ChiTietBanHang_DTO>();
+			foreach (ListViewItem item in lv.Items)
+			{
+				string tenQA = item.SubItems[1].Text;
+				float giaBan = float.Parse( item.SubItems[2].Text);
+				int soLuong = int.Parse(item.SubItems[3].Text);
+
+				ChiTietBanHang_DTO chiTietBanHang_DTO = new ChiTietBanHang_DTO(tenQA, giaBan, soLuong);
+				listQA.Add(chiTietBanHang_DTO);
+			}
+
+			return listQA;
+		}
+
+		KhachHang_DTO LayThongTinKhachHang()
+		{
+			
+			string tenKH = txtHoTen.Text;
+			string diaChi = txtDiaChi.Text;
+			string soDT = txtSDT.Text;
+
+			KhachHang_DTO khachHang = new KhachHang_DTO(tenKH, soDT, diaChi);
+			return khachHang;
+		}
+
+
+
 		private void btnThanhToan_Click(object sender, EventArgs e)
 		{
-			frmBill frmBill = new frmBill();
+			List<ChiTietBanHang_DTO> listCTBH = GetChiTietHoaDonFromListView(lvDonHang);
+			KhachHang_DTO khachHang = LayThongTinKhachHang();
+
+			frmBill frmBill = new frmBill(listCTBH,khachHang);
 			frmBill.ShowDialog();
+			
+			
 		}
 	}
 }
