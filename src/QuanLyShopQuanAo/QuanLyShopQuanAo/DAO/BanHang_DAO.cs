@@ -55,6 +55,7 @@ namespace QuanLyShopQuanAo.DAO
 
 			return null;
 		}
+
 		public List<BanHang_DTO> Load_BH_By_Date(DateTime ngaybatdau, DateTime ngayketthuc)
 		{
 			List<BanHang_DTO> banhang = new List<BanHang_DTO>();
@@ -71,12 +72,20 @@ namespace QuanLyShopQuanAo.DAO
 
 			return banhang;
 		}
-		public bool Insert_BanHang(string hoten, string sdt, string diaChi)
+
+		public int Insert_BanHang(string id_GD, float discount, string hoten, string sdt, string diaChi)
 		{
-			string query = "EXEC sp_insert_BanHang_ChuaThanhToan @HoTen , @SDT , @DiaChi";
-			object[] param = new object[] { hoten, sdt, diaChi };
-			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
-			return result > 0;
+			string query = "EXEC sp_insert_BanHang @ID_GD , @Discount , @HoTen , @SDT , @DiaChi";
+			object[] param = new object[] { id_GD, discount, hoten, sdt, diaChi };
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
+
+			int result = -1;
+			foreach (DataRow row in table.Rows)
+			{
+				result = (int)row["ID_BH"];
+			}
+
+			return result;
 		}
 
 		public int GetHoaDonBanHangChuaDuocThanhToan(int id_KH)

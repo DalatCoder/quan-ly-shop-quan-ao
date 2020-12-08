@@ -54,6 +54,11 @@ BEGIN
 
 	INSERT BanHang(ID_GD, ID_KH, NgayBanHang, Discount)
 	VALUES (@ID_GD, @ID_KH, GETDATE(), @Discount)
+
+	DECLARE @ID INT;
+	SELECT @ID = MAX(ID_BH) FROM BanHang;
+
+	SELECT * FROM BanHang WHERE ID_BH = @ID;
 END
 GO
 
@@ -61,7 +66,7 @@ GO
 -- SELECT * FROM KhachHang
 
 -- EXEC sp_insert_BanHang '202002120105', 10, 'Nguyen Trong Hieu', '0374408253', 'Da Lat'
--- EXEC sp_insert_BanHang '202002120106', 10, N'Phạm Thị Hồng Nhung', '0374408256', 'Da Lat'
+-- EXEC sp_insert_BanHang '202002120108', 10, N'Phạm Thị Hồng Nhung', '0374408256', 'Da Lat'
 -- GO
 
 -- BÁN HÀNG --
