@@ -14,6 +14,11 @@ namespace QuanLyShopQuanAo.Models
         private float _GiaBan;
         private int _SoLuongSanPham;
 
+		public ChiTietBanHang_DTO()
+		{
+
+		}
+
 		public ChiTietBanHang_DTO(int iD_CTBH, string ten_QA, float giaBan, int soLuongSanPham)
 		{
 			ID_CTBH = iD_CTBH;

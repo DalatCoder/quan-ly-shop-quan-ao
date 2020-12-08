@@ -457,6 +457,7 @@ namespace QuanLyShopQuanAo
 			this.btnBill_ThanhToan.TabIndex = 8;
 			this.btnBill_ThanhToan.Text = "Xác nhận thanh toán";
 			this.btnBill_ThanhToan.UseVisualStyleBackColor = true;
+			this.btnBill_ThanhToan.Click += new System.EventHandler(this.btnBill_ThanhToan_Click);
 			// 
 			// btnBill_Thoat
 			// 
@@ -470,6 +471,7 @@ namespace QuanLyShopQuanAo
 			this.btnBill_Thoat.TabIndex = 9;
 			this.btnBill_Thoat.Text = "Thoát";
 			this.btnBill_Thoat.UseVisualStyleBackColor = true;
+			this.btnBill_Thoat.Click += new System.EventHandler(this.btnBill_Thoat_Click);
 			// 
 			// frmBill
 			// 

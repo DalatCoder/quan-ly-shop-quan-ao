@@ -53,12 +53,6 @@
 			this.txtHoTen = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
-			this.lvDonHang = new System.Windows.Forms.ListView();
-			this.colID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colGiaBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.colThanhTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.lblTongTienGhiBangChu = new System.Windows.Forms.Label();
 			this.lblTongTienCuoiCung = new System.Windows.Forms.Label();
@@ -70,6 +64,7 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.btnHuyDon = new System.Windows.Forms.Button();
 			this.btnThanhToan = new System.Windows.Forms.Button();
+			this.dvgCTBH = new System.Windows.Forms.DataGridView();
 			this.menuStrip1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmSoLuong)).BeginInit();
@@ -79,6 +74,7 @@
 			this.groupBox4.SuspendLayout();
 			this.groupBox5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmGiamGia)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dvgCTBH)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -187,6 +183,7 @@
 			this.btnThem.TabIndex = 4;
 			this.btnThem.Text = "Thêm quần áo";
 			this.btnThem.UseVisualStyleBackColor = true;
+			this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
 			// 
 			// nmSoLuong
 			// 
@@ -340,59 +337,13 @@
 			this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.groupBox4.Controls.Add(this.lvDonHang);
+			this.groupBox4.Controls.Add(this.dvgCTBH);
 			this.groupBox4.Location = new System.Drawing.Point(537, 118);
 			this.groupBox4.Name = "groupBox4";
 			this.groupBox4.Size = new System.Drawing.Size(515, 418);
 			this.groupBox4.TabIndex = 3;
 			this.groupBox4.TabStop = false;
 			this.groupBox4.Text = "Thông tin đơn hàng";
-			// 
-			// lvDonHang
-			// 
-			this.lvDonHang.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colID,
-            this.colTen,
-            this.colGiaBan,
-            this.colSoLuong,
-            this.colThanhTien});
-			this.lvDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lvDonHang.FullRowSelect = true;
-			this.lvDonHang.GridLines = true;
-			this.lvDonHang.Location = new System.Drawing.Point(3, 21);
-			this.lvDonHang.MultiSelect = false;
-			this.lvDonHang.Name = "lvDonHang";
-			this.lvDonHang.Size = new System.Drawing.Size(509, 394);
-			this.lvDonHang.TabIndex = 0;
-			this.lvDonHang.UseCompatibleStateImageBehavior = false;
-			this.lvDonHang.View = System.Windows.Forms.View.Details;
-			// 
-			// colID
-			// 
-			this.colID.Text = "Mã SP";
-			// 
-			// colTen
-			// 
-			this.colTen.Text = "Tên SP";
-			this.colTen.Width = 180;
-			// 
-			// colGiaBan
-			// 
-			this.colGiaBan.Text = "Giá bán";
-			this.colGiaBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.colGiaBan.Width = 80;
-			// 
-			// colSoLuong
-			// 
-			this.colSoLuong.Text = "Số lượng";
-			this.colSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.colSoLuong.Width = 80;
-			// 
-			// colThanhTien
-			// 
-			this.colThanhTien.Text = "Thành tiền";
-			this.colThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.colThanhTien.Width = 100;
 			// 
 			// groupBox5
 			// 
@@ -518,6 +469,21 @@
 			this.btnThanhToan.UseVisualStyleBackColor = true;
 			this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
 			// 
+			// dvgCTBH
+			// 
+			this.dvgCTBH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dvgCTBH.BackgroundColor = System.Drawing.Color.White;
+			this.dvgCTBH.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.dvgCTBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dvgCTBH.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dvgCTBH.Location = new System.Drawing.Point(3, 21);
+			this.dvgCTBH.MultiSelect = false;
+			this.dvgCTBH.Name = "dvgCTBH";
+			this.dvgCTBH.ReadOnly = true;
+			this.dvgCTBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dvgCTBH.Size = new System.Drawing.Size(509, 394);
+			this.dvgCTBH.TabIndex = 1;
+			// 
 			// fQLShopQuanAo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -550,6 +516,7 @@
 			this.groupBox5.ResumeLayout(false);
 			this.groupBox5.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nmGiamGia)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dvgCTBH)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -575,7 +542,6 @@
 		private System.Windows.Forms.TextBox txtSDT;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtHoTen;
-		private System.Windows.Forms.ListView lvDonHang;
 		private System.Windows.Forms.Button btnHuyDon;
 		private System.Windows.Forms.Button btnThanhToan;
 		private System.Windows.Forms.NumericUpDown nmGiamGia;
@@ -594,10 +560,6 @@
 		private System.Windows.Forms.Label lblTongTienGhiBangChu;
 		private System.Windows.Forms.Label lblTongTienCuoiCung;
 		private System.Windows.Forms.Label lblTongTien;
-		private System.Windows.Forms.ColumnHeader colID;
-		private System.Windows.Forms.ColumnHeader colTen;
-		private System.Windows.Forms.ColumnHeader colGiaBan;
-		private System.Windows.Forms.ColumnHeader colSoLuong;
-		private System.Windows.Forms.ColumnHeader colThanhTien;
+		private System.Windows.Forms.DataGridView dvgCTBH;
 	}
 }

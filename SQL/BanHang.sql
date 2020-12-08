@@ -62,7 +62,7 @@ BEGIN
 END
 GO
 
--- SELECT * FROM BanHang
+-- SELECT * FROM ChiTietBanHang
 -- SELECT * FROM KhachHang
 
 -- EXEC sp_insert_BanHang '202002120105', 10, 'Nguyen Trong Hieu', '0374408253', 'Da Lat'

@@ -21,6 +21,27 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE sp_select_QuanAo_By_Name
+@Name NVARCHAR(100)
+AS
+BEGIN
+	SELECT 
+		ID_QA, 
+		Ten_QA, 
+		Size, 
+		GiaBan, 
+		SoLuong, 
+        CASE 
+            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'            
+		END AS [GhiChu], 
+		LoaiQA.ID_LQA, 
+		Ten_LQA
+	FROM QuanAo
+	JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
+	WHERE QuanAo.Is_Alive = 1 AND LoaiQA.Is_Alive = 1 AND Ten_QA = @Name
+END
+GO
+
 -- EXEC sp_select_QuanAo_All
 -- GO
 

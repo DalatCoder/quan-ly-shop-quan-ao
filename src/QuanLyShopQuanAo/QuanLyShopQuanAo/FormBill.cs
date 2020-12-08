@@ -18,13 +18,23 @@ namespace QuanLyShopQuanAo
 		{
 			InitializeComponent();
 			dtgvBill.DataSource = listQA;
-			dtgvBill.HideColumns("ID_CTBH");
+			//dtgvBill.HideColumns("ID_CTBH");
 
 			lbBill_TenKH.Text = khachHang.HoTen;
 			lbBill_SDTKH.Text = khachHang.SDT;
 			lbBill_DiaChiKH.Text = khachHang.DiaChi;
 		}
 
-		
+		private void btnBill_ThanhToan_Click(object sender, EventArgs e)
+		{
+			this.DialogResult = DialogResult.OK;
+			this.Close();
+		}
+
+		private void btnBill_Thoat_Click(object sender, EventArgs e)
+		{
+			this.DialogResult = DialogResult.Cancel;
+			this.Close();
+		}
 	}
 }

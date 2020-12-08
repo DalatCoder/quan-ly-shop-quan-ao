@@ -1,6 +1,7 @@
 USE QL_ShopQuanAo;
 GO
 
+
 CREATE PROCEDURE sp_insert_ChiTietBanHang
 @ID_QA INT,
 @ID_BH INT,
@@ -13,31 +14,8 @@ BEGIN
 	IF (NOT EXISTS (SELECT * FROM BanHang WHERE BanHang.ID_BH = @ID_BH))
 		RETURN
 
-	DECLARE @isBillCheckout INT = -1
-	SELECT @isBillCheckout = ID_BH FROM BanHang WHERE BanHang.ID_BH = @ID_BH AND BanHang.ID_GD <> NULL
-
-	IF (@isBillCheckout > -1)
-		RETURN
-
-	DECLARE @isExistsChiTietBanHang INT = -1
-	DECLARE @SLSanPhamCoSan INT = 0
-	SELECT @isExistsChiTietBanHang = ID_CTBH, @SLSanPhamCoSan = SoLuongSanPham FROM ChiTietBanHang WHERE ID_BH = @ID_BH AND ID_QA = @ID_QA
-
-	IF (@isExistsChiTietBanHang > 0)
-	BEGIN
-		DECLARE @SLSanPhamMoi INT = @SLSanPhamCoSan + @SoLuongSanPham
-		IF (@SLSanPhamMoi > 0)
-			UPDATE ChiTietBanHang
-			SET SoLuongSanPham = @SLSanPhamMoi
-			WHERE ID_BH = @ID_BH AND ID_QA = @ID_QA
-		ELSE
-			DELETE ChiTietBanHang WHERE ID_BH = @ID_BH AND ID_QA = @ID_QA
-	END
-	ELSE
-	BEGIN
-		INSERT ChiTietBanHang(ID_BH, ID_QA, SoLuongSanPham)
-		VALUES (@ID_BH, @ID_QA, @SoLuongSanPham)
-	END
+	INSERT ChiTietBanHang(ID_BH, ID_QA, SoLuongSanPham)
+	VALUES (@ID_BH, @ID_QA, @SoLuongSanPham)
 END
 GO
 

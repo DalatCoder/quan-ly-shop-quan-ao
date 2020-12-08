@@ -57,6 +57,22 @@ namespace QuanLyShopQuanAo.DAO
 			return null;
 		}
 
+		public QuanAo_DTO Load_QA_by_Name(string name)
+		{
+			string query = "EXEC sp_select_QuanAo_By_Name @Name";
+			object[] param = new object[] { name };
+
+			DataTable table = DataProvider.Instance.ExecuteQuery(query, param);
+
+			foreach (DataRow row in table.Rows)
+			{
+				QuanAo_DTO quanAo = new QuanAo_DTO(row);
+				return quanAo;
+			}
+
+			return null;
+		}
+
 		public List<QuanAo_DTO> Load_QA_by_ID_LQA(int id_LQA)
 		{
 			List<QuanAo_DTO> listQuanAo = new List<QuanAo_DTO>();
