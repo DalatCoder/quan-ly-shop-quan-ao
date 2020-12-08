@@ -31,39 +31,39 @@ namespace QuanLyShopQuanAo
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBill));
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.panel3 = new System.Windows.Forms.Panel();
-			this.panel4 = new System.Windows.Forms.Panel();
-			this.panel5 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
-			this.label10 = new System.Windows.Forms.Label();
-			this.label11 = new System.Windows.Forms.Label();
-			this.lbBill_ID = new System.Windows.Forms.Label();
-			this.lbBill_IDKH = new System.Windows.Forms.Label();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.panel2 = new System.Windows.Forms.Panel();
 			this.lbBill_CheckoutDate = new System.Windows.Forms.Label();
-			this.label15 = new System.Windows.Forms.Label();
-			this.label16 = new System.Windows.Forms.Label();
-			this.lbBill_TenKH = new System.Windows.Forms.Label();
-			this.label18 = new System.Windows.Forms.Label();
-			this.lbBill_DiaChiKH = new System.Windows.Forms.Label();
-			this.label20 = new System.Windows.Forms.Label();
+			this.lbBill_IDKH = new System.Windows.Forms.Label();
+			this.lbBill_ID = new System.Windows.Forms.Label();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.panel3 = new System.Windows.Forms.Panel();
 			this.lbBill_SDTKH = new System.Windows.Forms.Label();
+			this.label20 = new System.Windows.Forms.Label();
+			this.lbBill_DiaChiKH = new System.Windows.Forms.Label();
+			this.label18 = new System.Windows.Forms.Label();
+			this.lbBill_TenKH = new System.Windows.Forms.Label();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.panel4 = new System.Windows.Forms.Panel();
 			this.dtgvBill = new System.Windows.Forms.DataGridView();
-			this.label22 = new System.Windows.Forms.Label();
-			this.label23 = new System.Windows.Forms.Label();
-			this.label24 = new System.Windows.Forms.Label();
-			this.lbBill_TongTien = new System.Windows.Forms.Label();
-			this.lbBill_Discount = new System.Windows.Forms.Label();
-			this.lbBill_ThanhToan = new System.Windows.Forms.Label();
+			this.panel5 = new System.Windows.Forms.Panel();
 			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.lbBill_ThanhToan = new System.Windows.Forms.Label();
+			this.lbBill_Discount = new System.Windows.Forms.Label();
+			this.lbBill_TongTien = new System.Windows.Forms.Label();
+			this.label24 = new System.Windows.Forms.Label();
+			this.label23 = new System.Windows.Forms.Label();
+			this.label22 = new System.Windows.Forms.Label();
 			this.label28 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
@@ -73,8 +73,8 @@ namespace QuanLyShopQuanAo
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel4.SuspendLayout();
-			this.panel5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).BeginInit();
+			this.panel5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -87,60 +87,66 @@ namespace QuanLyShopQuanAo
 			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.label1);
-			this.panel1.Location = new System.Drawing.Point(13, 13);
+			this.panel1.Location = new System.Drawing.Point(13, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(327, 155);
+			this.panel1.Size = new System.Drawing.Size(327, 132);
 			this.panel1.TabIndex = 0;
 			// 
-			// panel2
+			// label7
 			// 
-			this.panel2.Controls.Add(this.lbBill_CheckoutDate);
-			this.panel2.Controls.Add(this.lbBill_IDKH);
-			this.panel2.Controls.Add(this.lbBill_ID);
-			this.panel2.Controls.Add(this.label11);
-			this.panel2.Controls.Add(this.label10);
-			this.panel2.Controls.Add(this.label9);
-			this.panel2.Controls.Add(this.label8);
-			this.panel2.Location = new System.Drawing.Point(13, 545);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(327, 161);
-			this.panel2.TabIndex = 1;
+			this.label7.AutoSize = true;
+			this.label7.Location = new System.Drawing.Point(10, 37);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(57, 17);
+			this.label7.TabIndex = 6;
+			this.label7.Text = "Địa chỉ:";
 			// 
-			// panel3
+			// label6
 			// 
-			this.panel3.Controls.Add(this.lbBill_SDTKH);
-			this.panel3.Controls.Add(this.label20);
-			this.panel3.Controls.Add(this.lbBill_DiaChiKH);
-			this.panel3.Controls.Add(this.label18);
-			this.panel3.Controls.Add(this.lbBill_TenKH);
-			this.panel3.Controls.Add(this.label16);
-			this.panel3.Controls.Add(this.label15);
-			this.panel3.Location = new System.Drawing.Point(13, 174);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(327, 142);
-			this.panel3.TabIndex = 2;
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(100, 92);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(88, 17);
+			this.label6.TabIndex = 5;
+			this.label6.Text = "0702383756";
 			// 
-			// panel4
+			// label5
 			// 
-			this.panel4.Controls.Add(this.dtgvBill);
-			this.panel4.Location = new System.Drawing.Point(13, 322);
-			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(596, 213);
-			this.panel4.TabIndex = 3;
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.label5.Location = new System.Drawing.Point(100, 111);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(183, 17);
+			this.label5.TabIndex = 4;
+			this.label5.Text = "shopbachtuye@gmail.com";
 			// 
-			// panel5
+			// label4
 			// 
-			this.panel5.Controls.Add(this.textBox1);
-			this.panel5.Controls.Add(this.lbBill_ThanhToan);
-			this.panel5.Controls.Add(this.lbBill_Discount);
-			this.panel5.Controls.Add(this.lbBill_TongTien);
-			this.panel5.Controls.Add(this.label24);
-			this.panel5.Controls.Add(this.label23);
-			this.panel5.Controls.Add(this.label22);
-			this.panel5.Location = new System.Drawing.Point(378, 545);
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(231, 118);
-			this.panel5.TabIndex = 4;
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(9, 111);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(70, 17);
+			this.label4.TabIndex = 3;
+			this.label4.Text = "Website: ";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(9, 92);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(58, 17);
+			this.label3.TabIndex = 2;
+			this.label3.Text = "Phone: ";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(100, 37);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(178, 51);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "1 Phù Đổng Thiên Vương,\r\n Phường 8, \r\nThành phố Đà Lạt";
 			// 
 			// label1
 			// 
@@ -153,88 +159,46 @@ namespace QuanLyShopQuanAo
 			this.label1.TabIndex = 0;
 			this.label1.Text = "SHOP BẠCH TUYẾT";
 			// 
-			// label2
+			// panel2
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(100, 37);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(178, 51);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "1 Phù Đổng Thiên Vương,\r\n Phường 8, \r\nThành phố Đà Lạt";
+			this.panel2.Controls.Add(this.lbBill_CheckoutDate);
+			this.panel2.Controls.Add(this.lbBill_IDKH);
+			this.panel2.Controls.Add(this.lbBill_ID);
+			this.panel2.Controls.Add(this.label11);
+			this.panel2.Controls.Add(this.label10);
+			this.panel2.Controls.Add(this.label9);
+			this.panel2.Controls.Add(this.label8);
+			this.panel2.Location = new System.Drawing.Point(12, 470);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(327, 118);
+			this.panel2.TabIndex = 1;
 			// 
-			// label3
+			// lbBill_CheckoutDate
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(9, 98);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(58, 17);
-			this.label3.TabIndex = 2;
-			this.label3.Text = "Phone: ";
+			this.lbBill_CheckoutDate.AutoSize = true;
+			this.lbBill_CheckoutDate.Location = new System.Drawing.Point(207, 96);
+			this.lbBill_CheckoutDate.Name = "lbBill_CheckoutDate";
+			this.lbBill_CheckoutDate.Size = new System.Drawing.Size(80, 17);
+			this.lbBill_CheckoutDate.TabIndex = 6;
+			this.lbBill_CheckoutDate.Text = "12/08/2020";
 			// 
-			// label4
+			// lbBill_IDKH
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(9, 127);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(70, 17);
-			this.label4.TabIndex = 3;
-			this.label4.Text = "Website: ";
+			this.lbBill_IDKH.AutoSize = true;
+			this.lbBill_IDKH.Location = new System.Drawing.Point(207, 68);
+			this.lbBill_IDKH.Name = "lbBill_IDKH";
+			this.lbBill_IDKH.Size = new System.Drawing.Size(32, 17);
+			this.lbBill_IDKH.TabIndex = 5;
+			this.lbBill_IDKH.Text = "123";
 			// 
-			// label5
+			// lbBill_ID
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.label5.Location = new System.Drawing.Point(100, 127);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(183, 17);
-			this.label5.TabIndex = 4;
-			this.label5.Text = "shopbachtuye@gmail.com";
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(100, 98);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(88, 17);
-			this.label6.TabIndex = 5;
-			this.label6.Text = "0702383756";
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(10, 37);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(57, 17);
-			this.label7.TabIndex = 6;
-			this.label7.Text = "Địa chỉ:";
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(16, 37);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(109, 17);
-			this.label8.TabIndex = 0;
-			this.label8.Text = "Mã số hóa đơn:";
-			// 
-			// label9
-			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(16, 82);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(130, 17);
-			this.label9.TabIndex = 1;
-			this.label9.Text = "Mã số khách hàng:";
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(16, 127);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(117, 17);
-			this.label10.TabIndex = 2;
-			this.label10.Text = "Ngày thanh toán:";
+			this.lbBill_ID.AutoSize = true;
+			this.lbBill_ID.Location = new System.Drawing.Point(204, 37);
+			this.lbBill_ID.Name = "lbBill_ID";
+			this.lbBill_ID.Size = new System.Drawing.Size(32, 17);
+			this.lbBill_ID.TabIndex = 4;
+			this.lbBill_ID.Text = "123";
 			// 
 			// label11
 			// 
@@ -247,32 +211,100 @@ namespace QuanLyShopQuanAo
 			this.label11.TabIndex = 3;
 			this.label11.Text = "THÔNG TIN HÓA ĐƠN";
 			// 
-			// lbBill_ID
+			// label10
 			// 
-			this.lbBill_ID.AutoSize = true;
-			this.lbBill_ID.Location = new System.Drawing.Point(204, 37);
-			this.lbBill_ID.Name = "lbBill_ID";
-			this.lbBill_ID.Size = new System.Drawing.Size(32, 17);
-			this.lbBill_ID.TabIndex = 4;
-			this.lbBill_ID.Text = "123";
+			this.label10.AutoSize = true;
+			this.label10.Location = new System.Drawing.Point(16, 96);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(117, 17);
+			this.label10.TabIndex = 2;
+			this.label10.Text = "Ngày thanh toán:";
 			// 
-			// lbBill_IDKH
+			// label9
 			// 
-			this.lbBill_IDKH.AutoSize = true;
-			this.lbBill_IDKH.Location = new System.Drawing.Point(207, 82);
-			this.lbBill_IDKH.Name = "lbBill_IDKH";
-			this.lbBill_IDKH.Size = new System.Drawing.Size(32, 17);
-			this.lbBill_IDKH.TabIndex = 5;
-			this.lbBill_IDKH.Text = "123";
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(16, 68);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(130, 17);
+			this.label9.TabIndex = 1;
+			this.label9.Text = "Mã số khách hàng:";
 			// 
-			// lbBill_CheckoutDate
+			// label8
 			// 
-			this.lbBill_CheckoutDate.AutoSize = true;
-			this.lbBill_CheckoutDate.Location = new System.Drawing.Point(207, 127);
-			this.lbBill_CheckoutDate.Name = "lbBill_CheckoutDate";
-			this.lbBill_CheckoutDate.Size = new System.Drawing.Size(80, 17);
-			this.lbBill_CheckoutDate.TabIndex = 6;
-			this.lbBill_CheckoutDate.Text = "12/08/2020";
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(16, 37);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(109, 17);
+			this.label8.TabIndex = 0;
+			this.label8.Text = "Mã số hóa đơn:";
+			// 
+			// panel3
+			// 
+			this.panel3.Controls.Add(this.lbBill_SDTKH);
+			this.panel3.Controls.Add(this.label20);
+			this.panel3.Controls.Add(this.lbBill_DiaChiKH);
+			this.panel3.Controls.Add(this.label18);
+			this.panel3.Controls.Add(this.lbBill_TenKH);
+			this.panel3.Controls.Add(this.label16);
+			this.panel3.Controls.Add(this.label15);
+			this.panel3.Location = new System.Drawing.Point(13, 138);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(327, 107);
+			this.panel3.TabIndex = 2;
+			// 
+			// lbBill_SDTKH
+			// 
+			this.lbBill_SDTKH.AutoSize = true;
+			this.lbBill_SDTKH.Location = new System.Drawing.Point(134, 84);
+			this.lbBill_SDTKH.Name = "lbBill_SDTKH";
+			this.lbBill_SDTKH.Size = new System.Drawing.Size(88, 17);
+			this.lbBill_SDTKH.TabIndex = 6;
+			this.lbBill_SDTKH.Text = "0167489579";
+			// 
+			// label20
+			// 
+			this.label20.AutoSize = true;
+			this.label20.Location = new System.Drawing.Point(12, 84);
+			this.label20.Name = "label20";
+			this.label20.Size = new System.Drawing.Size(40, 17);
+			this.label20.TabIndex = 5;
+			this.label20.Text = "SĐT:";
+			// 
+			// lbBill_DiaChiKH
+			// 
+			this.lbBill_DiaChiKH.AutoSize = true;
+			this.lbBill_DiaChiKH.Location = new System.Drawing.Point(134, 61);
+			this.lbBill_DiaChiKH.Name = "lbBill_DiaChiKH";
+			this.lbBill_DiaChiKH.Size = new System.Drawing.Size(63, 17);
+			this.lbBill_DiaChiKH.TabIndex = 4;
+			this.lbBill_DiaChiKH.Text = "Phú Yên";
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Location = new System.Drawing.Point(12, 61);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(61, 17);
+			this.label18.TabIndex = 3;
+			this.label18.Text = "Địa chỉ: ";
+			// 
+			// lbBill_TenKH
+			// 
+			this.lbBill_TenKH.AutoSize = true;
+			this.lbBill_TenKH.Location = new System.Drawing.Point(134, 39);
+			this.lbBill_TenKH.Name = "lbBill_TenKH";
+			this.lbBill_TenKH.Size = new System.Drawing.Size(103, 17);
+			this.lbBill_TenKH.TabIndex = 2;
+			this.lbBill_TenKH.Text = "Nguyễn Thị Hà";
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Location = new System.Drawing.Point(12, 39);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(116, 17);
+			this.label16.TabIndex = 1;
+			this.label16.Text = "Tên khách hàng:";
 			// 
 			// label15
 			// 
@@ -285,59 +317,13 @@ namespace QuanLyShopQuanAo
 			this.label15.TabIndex = 0;
 			this.label15.Text = "THÔNG TIN KHÁCH HÀNG";
 			// 
-			// label16
+			// panel4
 			// 
-			this.label16.AutoSize = true;
-			this.label16.Location = new System.Drawing.Point(12, 39);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(116, 17);
-			this.label16.TabIndex = 1;
-			this.label16.Text = "Tên khách hàng:";
-			// 
-			// lbBill_TenKH
-			// 
-			this.lbBill_TenKH.AutoSize = true;
-			this.lbBill_TenKH.Location = new System.Drawing.Point(134, 39);
-			this.lbBill_TenKH.Name = "lbBill_TenKH";
-			this.lbBill_TenKH.Size = new System.Drawing.Size(103, 17);
-			this.lbBill_TenKH.TabIndex = 2;
-			this.lbBill_TenKH.Text = "Nguyễn Thị Hà";
-			// 
-			// label18
-			// 
-			this.label18.AutoSize = true;
-			this.label18.Location = new System.Drawing.Point(12, 72);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(61, 17);
-			this.label18.TabIndex = 3;
-			this.label18.Text = "Địa chỉ: ";
-			// 
-			// lbBill_DiaChiKH
-			// 
-			this.lbBill_DiaChiKH.AutoSize = true;
-			this.lbBill_DiaChiKH.Location = new System.Drawing.Point(134, 72);
-			this.lbBill_DiaChiKH.Name = "lbBill_DiaChiKH";
-			this.lbBill_DiaChiKH.Size = new System.Drawing.Size(63, 17);
-			this.lbBill_DiaChiKH.TabIndex = 4;
-			this.lbBill_DiaChiKH.Text = "Phú Yên";
-			// 
-			// label20
-			// 
-			this.label20.AutoSize = true;
-			this.label20.Location = new System.Drawing.Point(12, 109);
-			this.label20.Name = "label20";
-			this.label20.Size = new System.Drawing.Size(40, 17);
-			this.label20.TabIndex = 5;
-			this.label20.Text = "SĐT:";
-			// 
-			// lbBill_SDTKH
-			// 
-			this.lbBill_SDTKH.AutoSize = true;
-			this.lbBill_SDTKH.Location = new System.Drawing.Point(134, 109);
-			this.lbBill_SDTKH.Name = "lbBill_SDTKH";
-			this.lbBill_SDTKH.Size = new System.Drawing.Size(88, 17);
-			this.lbBill_SDTKH.TabIndex = 6;
-			this.lbBill_SDTKH.Text = "0167489579";
+			this.panel4.Controls.Add(this.dtgvBill);
+			this.panel4.Location = new System.Drawing.Point(13, 251);
+			this.panel4.Name = "panel4";
+			this.panel4.Size = new System.Drawing.Size(596, 213);
+			this.panel4.TabIndex = 3;
 			// 
 			// dtgvBill
 			// 
@@ -349,59 +335,19 @@ namespace QuanLyShopQuanAo
 			this.dtgvBill.Size = new System.Drawing.Size(596, 213);
 			this.dtgvBill.TabIndex = 5;
 			// 
-			// label22
+			// panel5
 			// 
-			this.label22.AutoSize = true;
-			this.label22.Location = new System.Drawing.Point(14, 11);
-			this.label22.Name = "label22";
-			this.label22.Size = new System.Drawing.Size(72, 17);
-			this.label22.TabIndex = 0;
-			this.label22.Text = "Tổng tiền:";
-			// 
-			// label23
-			// 
-			this.label23.AutoSize = true;
-			this.label23.Location = new System.Drawing.Point(14, 50);
-			this.label23.Name = "label23";
-			this.label23.Size = new System.Drawing.Size(97, 17);
-			this.label23.TabIndex = 1;
-			this.label23.Text = "Giảm giá (%):";
-			// 
-			// label24
-			// 
-			this.label24.AutoSize = true;
-			this.label24.Location = new System.Drawing.Point(14, 87);
-			this.label24.Name = "label24";
-			this.label24.Size = new System.Drawing.Size(85, 17);
-			this.label24.TabIndex = 2;
-			this.label24.Text = "Thanh toán:";
-			// 
-			// lbBill_TongTien
-			// 
-			this.lbBill_TongTien.AutoSize = true;
-			this.lbBill_TongTien.Location = new System.Drawing.Point(144, 11);
-			this.lbBill_TongTien.Name = "lbBill_TongTien";
-			this.lbBill_TongTien.Size = new System.Drawing.Size(60, 17);
-			this.lbBill_TongTien.TabIndex = 3;
-			this.lbBill_TongTien.Text = "300.000";
-			// 
-			// lbBill_Discount
-			// 
-			this.lbBill_Discount.AutoSize = true;
-			this.lbBill_Discount.Location = new System.Drawing.Point(144, 50);
-			this.lbBill_Discount.Name = "lbBill_Discount";
-			this.lbBill_Discount.Size = new System.Drawing.Size(37, 17);
-			this.lbBill_Discount.TabIndex = 4;
-			this.lbBill_Discount.Text = "50%";
-			// 
-			// lbBill_ThanhToan
-			// 
-			this.lbBill_ThanhToan.AutoSize = true;
-			this.lbBill_ThanhToan.Location = new System.Drawing.Point(141, 87);
-			this.lbBill_ThanhToan.Name = "lbBill_ThanhToan";
-			this.lbBill_ThanhToan.Size = new System.Drawing.Size(60, 17);
-			this.lbBill_ThanhToan.TabIndex = 5;
-			this.lbBill_ThanhToan.Text = "150.000";
+			this.panel5.Controls.Add(this.textBox1);
+			this.panel5.Controls.Add(this.lbBill_ThanhToan);
+			this.panel5.Controls.Add(this.lbBill_Discount);
+			this.panel5.Controls.Add(this.lbBill_TongTien);
+			this.panel5.Controls.Add(this.label24);
+			this.panel5.Controls.Add(this.label23);
+			this.panel5.Controls.Add(this.label22);
+			this.panel5.Location = new System.Drawing.Point(378, 470);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(231, 118);
+			this.panel5.TabIndex = 4;
 			// 
 			// textBox1
 			// 
@@ -412,12 +358,66 @@ namespace QuanLyShopQuanAo
 			this.textBox1.Size = new System.Drawing.Size(180, 1);
 			this.textBox1.TabIndex = 5;
 			// 
+			// lbBill_ThanhToan
+			// 
+			this.lbBill_ThanhToan.AutoSize = true;
+			this.lbBill_ThanhToan.Location = new System.Drawing.Point(141, 87);
+			this.lbBill_ThanhToan.Name = "lbBill_ThanhToan";
+			this.lbBill_ThanhToan.Size = new System.Drawing.Size(60, 17);
+			this.lbBill_ThanhToan.TabIndex = 5;
+			this.lbBill_ThanhToan.Text = "150.000";
+			// 
+			// lbBill_Discount
+			// 
+			this.lbBill_Discount.AutoSize = true;
+			this.lbBill_Discount.Location = new System.Drawing.Point(144, 50);
+			this.lbBill_Discount.Name = "lbBill_Discount";
+			this.lbBill_Discount.Size = new System.Drawing.Size(37, 17);
+			this.lbBill_Discount.TabIndex = 4;
+			this.lbBill_Discount.Text = "50%";
+			// 
+			// lbBill_TongTien
+			// 
+			this.lbBill_TongTien.AutoSize = true;
+			this.lbBill_TongTien.Location = new System.Drawing.Point(144, 11);
+			this.lbBill_TongTien.Name = "lbBill_TongTien";
+			this.lbBill_TongTien.Size = new System.Drawing.Size(60, 17);
+			this.lbBill_TongTien.TabIndex = 3;
+			this.lbBill_TongTien.Text = "300.000";
+			// 
+			// label24
+			// 
+			this.label24.AutoSize = true;
+			this.label24.Location = new System.Drawing.Point(14, 87);
+			this.label24.Name = "label24";
+			this.label24.Size = new System.Drawing.Size(85, 17);
+			this.label24.TabIndex = 2;
+			this.label24.Text = "Thanh toán:";
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.Location = new System.Drawing.Point(14, 50);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(97, 17);
+			this.label23.TabIndex = 1;
+			this.label23.Text = "Giảm giá (%):";
+			// 
+			// label22
+			// 
+			this.label22.AutoSize = true;
+			this.label22.Location = new System.Drawing.Point(14, 11);
+			this.label22.Name = "label22";
+			this.label22.Size = new System.Drawing.Size(72, 17);
+			this.label22.TabIndex = 0;
+			this.label22.Text = "Tổng tiền:";
+			// 
 			// label28
 			// 
 			this.label28.AutoSize = true;
 			this.label28.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label28.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.label28.Location = new System.Drawing.Point(167, 709);
+			this.label28.Location = new System.Drawing.Point(161, 605);
 			this.label28.Name = "label28";
 			this.label28.Size = new System.Drawing.Size(348, 36);
 			this.label28.TabIndex = 5;
@@ -428,9 +428,9 @@ namespace QuanLyShopQuanAo
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(407, 33);
+			this.pictureBox1.Location = new System.Drawing.Point(422, 0);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(202, 267);
+			this.pictureBox1.Size = new System.Drawing.Size(187, 245);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 6;
 			this.pictureBox1.TabStop = false;
@@ -439,7 +439,7 @@ namespace QuanLyShopQuanAo
 			// 
 			this.textBox2.BackColor = System.Drawing.Color.DodgerBlue;
 			this.textBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.textBox2.Location = new System.Drawing.Point(59, 756);
+			this.textBox2.Location = new System.Drawing.Point(59, 654);
 			this.textBox2.Multiline = true;
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(500, 1);
@@ -451,7 +451,7 @@ namespace QuanLyShopQuanAo
 			this.btnBill_ThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnBill_ThanhToan.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnBill_ThanhToan.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnBill_ThanhToan.Location = new System.Drawing.Point(13, 763);
+			this.btnBill_ThanhToan.Location = new System.Drawing.Point(13, 671);
 			this.btnBill_ThanhToan.Name = "btnBill_ThanhToan";
 			this.btnBill_ThanhToan.Size = new System.Drawing.Size(173, 30);
 			this.btnBill_ThanhToan.TabIndex = 8;
@@ -464,7 +464,7 @@ namespace QuanLyShopQuanAo
 			this.btnBill_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnBill_Thoat.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnBill_Thoat.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnBill_Thoat.Location = new System.Drawing.Point(508, 763);
+			this.btnBill_Thoat.Location = new System.Drawing.Point(508, 671);
 			this.btnBill_Thoat.Name = "btnBill_Thoat";
 			this.btnBill_Thoat.Size = new System.Drawing.Size(101, 30);
 			this.btnBill_Thoat.TabIndex = 9;
@@ -476,7 +476,7 @@ namespace QuanLyShopQuanAo
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(621, 797);
+			this.ClientSize = new System.Drawing.Size(621, 707);
 			this.Controls.Add(this.btnBill_Thoat);
 			this.Controls.Add(this.btnBill_ThanhToan);
 			this.Controls.Add(this.textBox2);
@@ -500,9 +500,9 @@ namespace QuanLyShopQuanAo
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
 			this.panel4.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).EndInit();
 			this.panel5.ResumeLayout(false);
 			this.panel5.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
