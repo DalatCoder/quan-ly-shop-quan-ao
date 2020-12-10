@@ -38,6 +38,9 @@ namespace QuanLyShopQuanAo
 			this.panel19 = new System.Windows.Forms.Panel();
 			this.dtgvChiTietBanHang = new System.Windows.Forms.DataGridView();
 			this.panel13 = new System.Windows.Forms.Panel();
+			this.lblSl = new System.Windows.Forms.Label();
+			this.lblChay = new System.Windows.Forms.Label();
+			this.label18 = new System.Windows.Forms.Label();
 			this.btnXemBH = new System.Windows.Forms.Button();
 			this.label21 = new System.Windows.Forms.Label();
 			this.dtpKetThuc = new System.Windows.Forms.DateTimePicker();
@@ -59,6 +62,8 @@ namespace QuanLyShopQuanAo
 			this.nmGiaBanQA = new System.Windows.Forms.NumericUpDown();
 			this.label5 = new System.Windows.Forms.Label();
 			this.panel8 = new System.Windows.Forms.Panel();
+			this.lblDaban = new System.Windows.Forms.Label();
+			this.lblDB = new System.Windows.Forms.Label();
 			this.nmSoLuongQA = new System.Windows.Forms.NumericUpDown();
 			this.label4 = new System.Windows.Forms.Label();
 			this.panel7 = new System.Windows.Forms.Panel();
@@ -126,11 +131,7 @@ namespace QuanLyShopQuanAo
 			this.label13 = new System.Windows.Forms.Label();
 			this.panel26 = new System.Windows.Forms.Panel();
 			this.dtgvKH = new System.Windows.Forms.DataGridView();
-			this.label18 = new System.Windows.Forms.Label();
-			this.lblChay = new System.Windows.Forms.Label();
-			this.lblSl = new System.Windows.Forms.Label();
-			this.lblDB = new System.Windows.Forms.Label();
-			this.lblDaban = new System.Windows.Forms.Label();
+			this.btn_QA_AddLoai = new System.Windows.Forms.Button();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
@@ -276,6 +277,36 @@ namespace QuanLyShopQuanAo
 			this.panel13.Name = "panel13";
 			this.panel13.Size = new System.Drawing.Size(1040, 93);
 			this.panel13.TabIndex = 2;
+			// 
+			// lblSl
+			// 
+			this.lblSl.AutoSize = true;
+			this.lblSl.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.lblSl.Location = new System.Drawing.Point(885, 68);
+			this.lblSl.Name = "lblSl";
+			this.lblSl.Size = new System.Drawing.Size(14, 17);
+			this.lblSl.TabIndex = 9;
+			this.lblSl.Text = "*";
+			// 
+			// lblChay
+			// 
+			this.lblChay.AutoSize = true;
+			this.lblChay.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.lblChay.Location = new System.Drawing.Point(885, 47);
+			this.lblChay.Name = "lblChay";
+			this.lblChay.Size = new System.Drawing.Size(14, 17);
+			this.lblChay.TabIndex = 8;
+			this.lblChay.Text = "*";
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.ForeColor = System.Drawing.Color.Red;
+			this.label18.Location = new System.Drawing.Point(848, 15);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(167, 17);
+			this.label18.TabIndex = 7;
+			this.label18.Text = "Quần Áo Bán Chạy Nhất";
 			// 
 			// btnXemBH
 			// 
@@ -430,6 +461,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel25
 			// 
+			this.panel25.Controls.Add(this.btn_QA_AddLoai);
 			this.panel25.Controls.Add(this.cbLoaiQA);
 			this.panel25.Controls.Add(this.label14);
 			this.panel25.Location = new System.Drawing.Point(22, 356);
@@ -442,7 +474,7 @@ namespace QuanLyShopQuanAo
 			this.cbLoaiQA.FormattingEnabled = true;
 			this.cbLoaiQA.Location = new System.Drawing.Point(147, 3);
 			this.cbLoaiQA.Name = "cbLoaiQA";
-			this.cbLoaiQA.Size = new System.Drawing.Size(278, 25);
+			this.cbLoaiQA.Size = new System.Drawing.Size(220, 25);
 			this.cbLoaiQA.TabIndex = 1;
 			// 
 			// label14
@@ -510,6 +542,24 @@ namespace QuanLyShopQuanAo
 			this.panel8.Name = "panel8";
 			this.panel8.Size = new System.Drawing.Size(438, 33);
 			this.panel8.TabIndex = 3;
+			// 
+			// lblDaban
+			// 
+			this.lblDaban.AutoSize = true;
+			this.lblDaban.Location = new System.Drawing.Point(353, 6);
+			this.lblDaban.Name = "lblDaban";
+			this.lblDaban.Size = new System.Drawing.Size(14, 17);
+			this.lblDaban.TabIndex = 3;
+			this.lblDaban.Text = "*";
+			// 
+			// lblDB
+			// 
+			this.lblDB.AutoSize = true;
+			this.lblDB.Location = new System.Drawing.Point(262, 6);
+			this.lblDB.Name = "lblDB";
+			this.lblDB.Size = new System.Drawing.Size(57, 17);
+			this.lblDB.TabIndex = 2;
+			this.lblDB.Text = "Đã Bán";
 			// 
 			// nmSoLuongQA
 			// 
@@ -1200,53 +1250,19 @@ namespace QuanLyShopQuanAo
 			this.dtgvKH.Size = new System.Drawing.Size(550, 635);
 			this.dtgvKH.TabIndex = 2;
 			// 
-			// label18
+			// btn_QA_AddLoai
 			// 
-			this.label18.AutoSize = true;
-			this.label18.ForeColor = System.Drawing.Color.Red;
-			this.label18.Location = new System.Drawing.Point(848, 15);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(167, 17);
-			this.label18.TabIndex = 7;
-			this.label18.Text = "Quần Áo Bán Chạy Nhất";
-			// 
-			// lblChay
-			// 
-			this.lblChay.AutoSize = true;
-			this.lblChay.ForeColor = System.Drawing.SystemColors.HotTrack;
-			this.lblChay.Location = new System.Drawing.Point(885, 47);
-			this.lblChay.Name = "lblChay";
-			this.lblChay.Size = new System.Drawing.Size(14, 17);
-			this.lblChay.TabIndex = 8;
-			this.lblChay.Text = "*";
-			// 
-			// lblSl
-			// 
-			this.lblSl.AutoSize = true;
-			this.lblSl.ForeColor = System.Drawing.SystemColors.HotTrack;
-			this.lblSl.Location = new System.Drawing.Point(885, 68);
-			this.lblSl.Name = "lblSl";
-			this.lblSl.Size = new System.Drawing.Size(14, 17);
-			this.lblSl.TabIndex = 9;
-			this.lblSl.Text = "*";
-			// 
-			// lblDB
-			// 
-			this.lblDB.AutoSize = true;
-			this.lblDB.Location = new System.Drawing.Point(262, 6);
-			this.lblDB.Name = "lblDB";
-			this.lblDB.Size = new System.Drawing.Size(57, 17);
-			this.lblDB.TabIndex = 2;
-			this.lblDB.Text = "Đã Bán";
-			// 
-			// lblDaban
-			// 
-			this.lblDaban.AutoSize = true;
-			this.lblDaban.Location = new System.Drawing.Point(353, 6);
-			this.lblDaban.Name = "lblDaban";
-			this.lblDaban.Size = new System.Drawing.Size(14, 17);
-			this.lblDaban.TabIndex = 3;
-			this.lblDaban.Text = "*";
+			this.btn_QA_AddLoai.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btn_QA_AddLoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_QA_AddLoai.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_QA_AddLoai.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btn_QA_AddLoai.Location = new System.Drawing.Point(374, 3);
+			this.btn_QA_AddLoai.Name = "btn_QA_AddLoai";
+			this.btn_QA_AddLoai.Size = new System.Drawing.Size(51, 25);
+			this.btn_QA_AddLoai.TabIndex = 2;
+			this.btn_QA_AddLoai.Text = "+";
+			this.btn_QA_AddLoai.UseVisualStyleBackColor = true;
+			this.btn_QA_AddLoai.Click += new System.EventHandler(this.btn_QA_AddLoai_Click);
 			// 
 			// frmAdmin
 			// 
@@ -1425,5 +1441,6 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.Label lblDB;
 		private System.Windows.Forms.Label lblDaban;
+		private System.Windows.Forms.Button btn_QA_AddLoai;
 	}
 }

@@ -585,12 +585,36 @@ namespace QuanLyShopQuanAo
 		}
 
 
+
+
+
+
+
 		#endregion
 
-		
+		private void btn_QA_AddLoai_Click(object sender, EventArgs e)
+		{
+			string loaiQA = cbLoaiQA.Text;
 
-		
+			// Thêm vào cơ sở dữ liệu
+			
 
-		
+			if (!LoaiQA_DAO.Instance.Insert_LoaiQuanAo(loaiQA))
+			{
+				cbLoaiQA.SelectedItem = cbLoaiQA.Items[0];
+				MessageBox.Show("Không thêm được loại quần áo", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			cbLoaiQA.DataSource = LoaiQA_DAO.Instance.Load_LQA();
+			cbLoaiQA.DisplayMember = "Ten_LQA";
+			cbLoaiQA.ValueMember = "ID_LQA";
+
+			cbLoaiQA.SelectedIndex = cbLoaiQA.Items.Count - 1;
+
+			LoadListLQA();
+
+			MessageBox.Show("Thêm loại quần áo thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
 	}
 }
