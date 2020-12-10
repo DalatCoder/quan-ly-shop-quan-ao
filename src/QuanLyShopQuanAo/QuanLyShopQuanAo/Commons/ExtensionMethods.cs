@@ -22,13 +22,13 @@ namespace QuanLyShopQuanAo.Commons
 			if (rawString.Length == 0)
 				return rawString;
 
-			string resultString = "";
+			string resultString = rawString[0].ToString() ;
 			foreach (var letter in rawString.ToCharArray())
 			{
 				if (letter != ' ')
 					resultString += letter.ToString();
 				else
-					if (resultString[resultString.Length - 1] != ' ')
+					if ( resultString.Length > 0 && resultString[resultString.Length - 1] != ' ')
 					resultString += letter.ToString();
 			}
 

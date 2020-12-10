@@ -59,7 +59,6 @@ namespace QuanLyShopQuanAo
 			this.txtUserName.Name = "txtUserName";
 			this.txtUserName.Size = new System.Drawing.Size(317, 25);
 			this.txtUserName.TabIndex = 1;
-			this.txtUserName.Text = "THIHA";
 			// 
 			// label1
 			// 
@@ -85,7 +84,6 @@ namespace QuanLyShopQuanAo
 			this.txtPass.Name = "txtPass";
 			this.txtPass.Size = new System.Drawing.Size(317, 25);
 			this.txtPass.TabIndex = 1;
-			this.txtPass.Text = "123";
 			this.txtPass.UseSystemPasswordChar = true;
 			// 
 			// label2
@@ -112,6 +110,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExit.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExit.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnExit.Location = new System.Drawing.Point(361, 12);
 			this.btnExit.Name = "btnExit";
 			this.btnExit.Size = new System.Drawing.Size(115, 36);
@@ -133,6 +133,8 @@ namespace QuanLyShopQuanAo
 			// 
 			this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnLogin.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLogin.ForeColor = System.Drawing.Color.DodgerBlue;
 			this.btnLogin.Location = new System.Drawing.Point(159, 12);
 			this.btnLogin.Name = "btnLogin";
 			this.btnLogin.Size = new System.Drawing.Size(115, 36);

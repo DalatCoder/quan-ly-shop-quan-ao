@@ -125,6 +125,7 @@ namespace QuanLyShopQuanAo
 
 			// Tải lại danh sách quần áo - Nếu như người dùng chỉnh sửa trong trang quản lý
 			LoadListQuanAo();
+			dgvQuanAo.HideColumns(SanPham.GhiChu, SanPham.ID_LQA);
 		}
 
 		void tsmDangXuat_Click(object sender, EventArgs e)
@@ -185,7 +186,11 @@ namespace QuanLyShopQuanAo
 					listCTBHTamThoi.RemoveAt(index);
 			}
 
+			int SLHienCo = Convert.ToInt32(dgvQuanAo.SelectedRows[0].Cells[SanPham.SoLuong].Value);
+			dgvQuanAo.SelectedRows[0].Cells[SanPham.SoLuong].Value = SLHienCo - chiTietBanHang.SoLuongSanPham;
 			nmSoLuong.Value = 1;
+
+			nmSoLuong.Maximum = SLHienCo - chiTietBanHang.SoLuongSanPham;
 
 			dgvCTBH.DataSource = null;
 			dgvCTBH.DataSource = listCTBHTamThoi;
@@ -197,14 +202,40 @@ namespace QuanLyShopQuanAo
 		private void btnThanhToan_Click(object sender, EventArgs e)
 		{
 
-			if (listCTBHTamThoi.Count==0)
+			if (listCTBHTamThoi.Count == 0)
 			{
 				MessageBox.Show("Vui lòng thêm quần áo cần mua", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				return;
 			}
+
+
 			KhachHang_DTO khachHang = LayThongTinKhachHang();
 
-			
+			InputValidator inputValidator = new InputValidator();
+			inputValidator.SetTitle("Tên khách hàng")
+				.SetInputString(khachHang.HoTen)
+				.SanitizeInput()
+				.Require()
+				.MustBeValidString();
+
+			khachHang.HoTen = khachHang.HoTen.Sanitize();
+
+			inputValidator.SetTitle("SĐT khách hàng")
+				.SetInputString(khachHang.SDT)
+				.SanitizeInput()
+				.Require()
+				.MustBeValidString()
+				.IsNumber();
+				
+
+
+			khachHang.SDT = khachHang.SDT.Sanitize();
+
+			if (inputValidator.HasError)
+			{
+				MessageBox.Show(inputValidator.GetErrorMessage());
+				return;
+			}
 
 			frmBill frmBill = new frmBill(listCTBHTamThoi, khachHang, DiscountHienTai);
 			var result = frmBill.ShowDialog();
@@ -230,5 +261,43 @@ namespace QuanLyShopQuanAo
 		}
 
 		#endregion
+
+		private void tsmThemQA_Click(object sender, EventArgs e)
+		{
+			nmSoLuong.Value = 1;
+			btnThem.PerformClick();
+		}
+
+		private void tsmXoaBoLoc_Click(object sender, EventArgs e)
+		{
+			btnXoaBoLoc.PerformClick();
+		}
+
+		private void tsmTaiLaiDS_Click(object sender, EventArgs e)
+		{
+			btnTaiLaiDS.PerformClick();
+		}
+
+		private void tsmThanhToan_Click(object sender, EventArgs e)
+		{
+			btnThanhToan.PerformClick();
+		}
+
+		private void tsmHuyDon_Click(object sender, EventArgs e)
+		{
+			btnHuyDon.PerformClick();
+		}
+
+		private void btnHuyDon_Click(object sender, EventArgs e)
+		{
+			listCTBHTamThoi.Clear();
+			dgvCTBH.DataSource = null;
+		}
+
+		private void dgvQuanAo_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+			nmSoLuong.Value = 1;
+			btnThem.PerformClick();
+		}
 	}
 }

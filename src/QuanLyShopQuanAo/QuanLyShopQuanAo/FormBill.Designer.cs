@@ -51,16 +51,16 @@ namespace QuanLyShopQuanAo
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.lbBill_ThanhToan = new System.Windows.Forms.Label();
+			this.lbBill_Discount = new System.Windows.Forms.Label();
+			this.lbBill_TongTien = new System.Windows.Forms.Label();
 			this.label24 = new System.Windows.Forms.Label();
+			this.label23 = new System.Windows.Forms.Label();
+			this.label22 = new System.Windows.Forms.Label();
 			this.label28 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.btnBill_ThanhToan = new System.Windows.Forms.Button();
 			this.btnBill_Thoat = new System.Windows.Forms.Button();
-			this.label22 = new System.Windows.Forms.Label();
-			this.label23 = new System.Windows.Forms.Label();
-			this.lbBill_TongTien = new System.Windows.Forms.Label();
-			this.lbBill_Discount = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel4.SuspendLayout();
@@ -241,10 +241,12 @@ namespace QuanLyShopQuanAo
 			// 
 			this.dtgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dtgvBill.BackgroundColor = System.Drawing.Color.White;
+			this.dtgvBill.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dtgvBill.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dtgvBill.Location = new System.Drawing.Point(0, 0);
 			this.dtgvBill.Name = "dtgvBill";
+			this.dtgvBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dtgvBill.Size = new System.Drawing.Size(596, 213);
 			this.dtgvBill.TabIndex = 5;
 			// 
@@ -280,6 +282,24 @@ namespace QuanLyShopQuanAo
 			this.lbBill_ThanhToan.TabIndex = 5;
 			this.lbBill_ThanhToan.Text = "150.000";
 			// 
+			// lbBill_Discount
+			// 
+			this.lbBill_Discount.AutoSize = true;
+			this.lbBill_Discount.Location = new System.Drawing.Point(144, 50);
+			this.lbBill_Discount.Name = "lbBill_Discount";
+			this.lbBill_Discount.Size = new System.Drawing.Size(37, 17);
+			this.lbBill_Discount.TabIndex = 4;
+			this.lbBill_Discount.Text = "50%";
+			// 
+			// lbBill_TongTien
+			// 
+			this.lbBill_TongTien.AutoSize = true;
+			this.lbBill_TongTien.Location = new System.Drawing.Point(144, 11);
+			this.lbBill_TongTien.Name = "lbBill_TongTien";
+			this.lbBill_TongTien.Size = new System.Drawing.Size(60, 17);
+			this.lbBill_TongTien.TabIndex = 3;
+			this.lbBill_TongTien.Text = "300.000";
+			// 
 			// label24
 			// 
 			this.label24.AutoSize = true;
@@ -288,6 +308,24 @@ namespace QuanLyShopQuanAo
 			this.label24.Size = new System.Drawing.Size(85, 17);
 			this.label24.TabIndex = 2;
 			this.label24.Text = "Thanh toán:";
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.Location = new System.Drawing.Point(14, 50);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(97, 17);
+			this.label23.TabIndex = 1;
+			this.label23.Text = "Giảm giá (%):";
+			// 
+			// label22
+			// 
+			this.label22.AutoSize = true;
+			this.label22.Location = new System.Drawing.Point(14, 11);
+			this.label22.Name = "label22";
+			this.label22.Size = new System.Drawing.Size(72, 17);
+			this.label22.TabIndex = 0;
+			this.label22.Text = "Tổng tiền:";
 			// 
 			// label28
 			// 
@@ -348,42 +386,6 @@ namespace QuanLyShopQuanAo
 			this.btnBill_Thoat.Text = "Thoát";
 			this.btnBill_Thoat.UseVisualStyleBackColor = true;
 			this.btnBill_Thoat.Click += new System.EventHandler(this.btnBill_Thoat_Click);
-			// 
-			// label22
-			// 
-			this.label22.AutoSize = true;
-			this.label22.Location = new System.Drawing.Point(14, 11);
-			this.label22.Name = "label22";
-			this.label22.Size = new System.Drawing.Size(72, 17);
-			this.label22.TabIndex = 0;
-			this.label22.Text = "Tổng tiền:";
-			// 
-			// label23
-			// 
-			this.label23.AutoSize = true;
-			this.label23.Location = new System.Drawing.Point(14, 50);
-			this.label23.Name = "label23";
-			this.label23.Size = new System.Drawing.Size(97, 17);
-			this.label23.TabIndex = 1;
-			this.label23.Text = "Giảm giá (%):";
-			// 
-			// lbBill_TongTien
-			// 
-			this.lbBill_TongTien.AutoSize = true;
-			this.lbBill_TongTien.Location = new System.Drawing.Point(144, 11);
-			this.lbBill_TongTien.Name = "lbBill_TongTien";
-			this.lbBill_TongTien.Size = new System.Drawing.Size(60, 17);
-			this.lbBill_TongTien.TabIndex = 3;
-			this.lbBill_TongTien.Text = "300.000";
-			// 
-			// lbBill_Discount
-			// 
-			this.lbBill_Discount.AutoSize = true;
-			this.lbBill_Discount.Location = new System.Drawing.Point(144, 50);
-			this.lbBill_Discount.Name = "lbBill_Discount";
-			this.lbBill_Discount.Size = new System.Drawing.Size(37, 17);
-			this.lbBill_Discount.TabIndex = 4;
-			this.lbBill_Discount.Text = "50%";
 			// 
 			// frmBill
 			// 

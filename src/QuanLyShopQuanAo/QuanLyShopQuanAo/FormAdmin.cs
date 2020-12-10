@@ -90,6 +90,7 @@ namespace QuanLyShopQuanAo
 
 			int ID_BH = Convert.ToInt32(dtgvHD.SelectedRows[0].Cells["ID_BH"].Value);
 			double Discount = Convert.ToDouble(dtgvHD.SelectedRows[0].Cells["Discount"].Value);
+
 			List<ChiTietBanHang_DTO> listCTBH = ChiTietBanHang_DAO.Instance.Load_CTBH(ID_BH);
 
 			dtgvChiTietBanHang.DataSource = listCTBH;
@@ -101,7 +102,7 @@ namespace QuanLyShopQuanAo
 			foreach (ChiTietBanHang_DTO chiTietBanHang in listCTBH)
 				tongSoTien += chiTietBanHang.ThanhTien;
 
-			tongSoTien = (tongSoTien / 100) * Discount;
+			tongSoTien -= (tongSoTien / 100) * Discount;
 			txtTongTienBH.Text = tongSoTien.ToString("###.###.###");
 		}
 
@@ -152,15 +153,18 @@ namespace QuanLyShopQuanAo
 			if (hinhQA != null)
 			{
 				pbHinhQA.Image = hinhQA.ToImage();
-				pbHinhQA.Tag = hinhQA;
 				pbHinhQA.SizeMode = PictureBoxSizeMode.StretchImage;
 			}
 			else
 			{
 				pbHinhQA.Image = null;
-				pbHinhQA.Tag = null;
 			}
+
+			object[] param = new object[] { Convert.ToInt32(txtIDQA.Text) };
+			lblDaban.Text = DataProvider.Instance.ExecuteScalar("exec sp_select_sanphambandduoc @ID_QA", param).ToString();
 		}
+
+
 
 		void btnThemQA_Click(object sender, EventArgs e)
 		{
@@ -185,7 +189,6 @@ namespace QuanLyShopQuanAo
 				.Require()
 				.MustBeValidString();
 
-			ten = ten.Sanitize();
 
 			//inputValidator
 			//	.SetTitle("Tên loại quần áo")
@@ -204,7 +207,6 @@ namespace QuanLyShopQuanAo
 				.Require()
 				.MustBeValidString();
 
-			size = size.Sanitize();
 
 
 			if (inputValidator.HasError)
@@ -259,7 +261,6 @@ namespace QuanLyShopQuanAo
 				.Require()
 				.MustBeValidString();
 
-			ten = ten.Sanitize();
 
 			//inputValidator
 			//	.SetTitle("Tên loại quần áo")
@@ -278,7 +279,6 @@ namespace QuanLyShopQuanAo
 				.Require()
 				.MustBeValidString();
 
-			size = size.Sanitize();
 
 
 			if (inputValidator.HasError)
@@ -316,6 +316,7 @@ namespace QuanLyShopQuanAo
 		void btnBrowseHinhQA_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog dialog = new OpenFileDialog();
+			dialog.Filter = "Image|*.png;*.jpg;*.jpeg";
 			var result = dialog.ShowDialog();
 			if (result != DialogResult.OK) return;
 
@@ -363,6 +364,24 @@ namespace QuanLyShopQuanAo
 			}	
 		}
 
+		private void btnXoaQA_Click(object sender, EventArgs e)
+		{
+			int idQA = int.Parse(txtIDQA.Text);
+			string msg;
+
+			if (QuanAo_DAO.Instance.Delete_QuanAo(idQA))
+			{
+				msg = "Xóa quần áo thành công";
+				LoadListQA();
+			}
+			else
+			{
+				msg = "Có lỗi khi xóa quần áo";
+			}
+
+			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
 		#endregion
 
 		#region Loai quan ao
@@ -372,6 +391,13 @@ namespace QuanLyShopQuanAo
 			dtgvLoaiQuanAo.DataSource = LQAList;
 			LoadListLQA();
 			AddDataBindingLoaiQuanAo();
+			DataTable table = ChiTietBanHang_DAO.Instance.Load_CTBH_BanChay();
+			
+			if (table.Rows.Count > 0)
+			{
+				lblChay.Text = table.Rows[0]["Ten_QA"].ToString();
+				lblSl.Text = table.Rows[0]["SoLuongSanPham"].ToString();
+			}
 		}
 
 		void LoadListLQA()
@@ -400,7 +426,6 @@ namespace QuanLyShopQuanAo
 				.Require()
 				.MustBeValidString();
 
-			Ten = Ten.Sanitize();
 
 			if (inputValidator.HasError)
 			{
@@ -440,8 +465,6 @@ namespace QuanLyShopQuanAo
 				.SanitizeInput()
 				.Require()
 				.MustBeValidString();
-
-			Ten = Ten.Sanitize();
 
 			if (inputValidator.HasError)
 			{
@@ -566,23 +589,7 @@ namespace QuanLyShopQuanAo
 
 		
 
-		private void btnXoaQA_Click(object sender, EventArgs e)
-		{
-			int idQA = int.Parse(txtIDQA.Text);
-			string msg;
-
-			if (QuanAo_DAO.Instance.Delete_QuanAo(idQA))
-			{
-				msg = "Xóa quần áo thành công";
-				LoadListQA();
-			}
-			else
-			{
-				msg = "Có lỗi khi xóa quần áo";
-			}
-
-			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-		}
+		
 
 		
 	}

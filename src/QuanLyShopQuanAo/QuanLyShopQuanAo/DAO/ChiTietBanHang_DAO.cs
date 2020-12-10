@@ -42,6 +42,17 @@ namespace QuanLyShopQuanAo.DAO
 			return listCTBH;
 		}
 
+		public DataTable Load_CTBH_BanChay()
+		{
+			List<ChiTietBanHang_DTO> listCTBH = new List<ChiTietBanHang_DTO>();
+
+			string query = "EXEC sp_select_sanphambanchaynhat ";
+			object[] param = new object[] {  };
+
+			return DataProvider.Instance.ExecuteQuery(query, param);
+		}
+
+
 		public bool Insert_ChiTietBanHang(int id_QA, int id_BH, int soluongsanpham)
 		{
 			string query = "EXEC sp_insert_ChiTietBanHang @ID_QA , @ID_BH , @SoLuongSanPham";

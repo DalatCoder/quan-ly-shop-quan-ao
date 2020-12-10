@@ -216,20 +216,6 @@ namespace QuanLyShopQuanAo.Commons
             return GetCurrentProjectDirectory() + "\\" + relativePath;
         }
 
-        public static string SanitizeInput(string rawString)
-        {
-            if (rawString.Length == 0)
-                return rawString;
-
-            string resultString = rawString[0].ToString();
-
-            for (int i = 1; i < rawString.Length; i++)
-            {
-                if (resultString[resultString.Length - 1] != ' ' && rawString[i] != ' ')
-                    resultString += rawString[i].ToString();
-            }
-
-            return resultString.Trim();
-        }
+        
     }
 }

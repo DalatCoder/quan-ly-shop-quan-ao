@@ -35,13 +35,13 @@ namespace QuanLyShopQuanAo.Commons
 			if (rawString.Length == 0)
 				return this;
 
-			string resultString = "";
+			string resultString = rawString[0].ToString();
 			foreach (var letter in rawString.ToCharArray())
 			{
 				if (letter != ' ')
 					resultString += letter.ToString();
 				else
-					if (resultString[resultString.Length - 1] != ' ')
+					if (resultString.Length > 0 && resultString[resultString.Length - 1] != ' ')
 					resultString += letter.ToString();
 			}
 
@@ -133,11 +133,12 @@ namespace QuanLyShopQuanAo.Commons
 			return this;
 		}
 
-		public InputValidator IsNumber(string raw, string tieude)
+		public InputValidator IsNumber()
 		{
-			bool isDouble = double.TryParse(raw, out _);
+			bool isDouble = double.TryParse(rawString, out _);
 			if (!isDouble)
-				errorBuilder.AppendLine(tieude + " phải là số (¬‿¬)");
+				errorBuilder.AppendLine(title
+					+ " phải là số (¬‿¬)");
 			return this;
 		}
 	}

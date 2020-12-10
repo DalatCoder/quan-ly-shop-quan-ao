@@ -79,6 +79,7 @@
 			// 
 			// menuStrip1
 			// 
+			this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmAdmin,
             this.tsmChucNang});
@@ -119,6 +120,7 @@
 			this.tsmThemQA.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
 			this.tsmThemQA.Size = new System.Drawing.Size(307, 22);
 			this.tsmThemQA.Text = "Thêm quần áo";
+			this.tsmThemQA.Click += new System.EventHandler(this.tsmThemQA_Click);
 			// 
 			// tsmXoaBoLoc
 			// 
@@ -126,6 +128,7 @@
 			this.tsmXoaBoLoc.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
 			this.tsmXoaBoLoc.Size = new System.Drawing.Size(307, 22);
 			this.tsmXoaBoLoc.Text = "Xóa bộ lọc hiện thời";
+			this.tsmXoaBoLoc.Click += new System.EventHandler(this.tsmXoaBoLoc_Click);
 			// 
 			// tsmTaiLaiDS
 			// 
@@ -133,6 +136,7 @@
 			this.tsmTaiLaiDS.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
 			this.tsmTaiLaiDS.Size = new System.Drawing.Size(307, 22);
 			this.tsmTaiLaiDS.Text = "Tải lại danh sách quần áo";
+			this.tsmTaiLaiDS.Click += new System.EventHandler(this.tsmTaiLaiDS_Click);
 			// 
 			// tsmThanhToan
 			// 
@@ -140,6 +144,7 @@
 			this.tsmThanhToan.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
 			this.tsmThanhToan.Size = new System.Drawing.Size(307, 22);
 			this.tsmThanhToan.Text = "Thanh toán";
+			this.tsmThanhToan.Click += new System.EventHandler(this.tsmThanhToan_Click);
 			// 
 			// tsmHuyDon
 			// 
@@ -147,6 +152,7 @@
 			this.tsmHuyDon.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
 			this.tsmHuyDon.Size = new System.Drawing.Size(307, 22);
 			this.tsmHuyDon.Text = "Hủy đơn";
+			this.tsmHuyDon.Click += new System.EventHandler(this.tsmHuyDon_Click);
 			// 
 			// tsmDangXuat
 			// 
@@ -263,9 +269,11 @@
 			this.dgvQuanAo.MultiSelect = false;
 			this.dgvQuanAo.Name = "dgvQuanAo";
 			this.dgvQuanAo.ReadOnly = true;
+			this.dgvQuanAo.RowHeadersWidth = 51;
 			this.dgvQuanAo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvQuanAo.Size = new System.Drawing.Size(525, 394);
 			this.dgvQuanAo.TabIndex = 0;
+			this.dgvQuanAo.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanAo_CellContentDoubleClick);
 			this.dgvQuanAo.Click += new System.EventHandler(this.dgvQuanAo_Click);
 			// 
 			// groupBox3
@@ -356,6 +364,7 @@
 			this.dgvCTBH.MultiSelect = false;
 			this.dgvCTBH.Name = "dgvCTBH";
 			this.dgvCTBH.ReadOnly = true;
+			this.dgvCTBH.RowHeadersWidth = 51;
 			this.dgvCTBH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvCTBH.Size = new System.Drawing.Size(509, 394);
 			this.dgvCTBH.TabIndex = 1;
@@ -471,6 +480,7 @@
 			this.btnHuyDon.TabIndex = 6;
 			this.btnHuyDon.Text = "Hủy đơn";
 			this.btnHuyDon.UseVisualStyleBackColor = true;
+			this.btnHuyDon.Click += new System.EventHandler(this.btnHuyDon_Click);
 			// 
 			// btnThanhToan
 			// 

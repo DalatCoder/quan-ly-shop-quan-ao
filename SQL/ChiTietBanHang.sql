@@ -2,7 +2,7 @@ USE QL_ShopQuanAo;
 GO
 
 
-CREATE PROCEDURE sp_insert_ChiTietBanHang
+create PROCEDURE sp_insert_ChiTietBanHang
 @ID_QA INT,
 @ID_BH INT,
 @SoLuongSanPham INT
@@ -16,6 +16,14 @@ BEGIN
 
 	INSERT ChiTietBanHang(ID_BH, ID_QA, SoLuongSanPham)
 	VALUES (@ID_BH, @ID_QA, @SoLuongSanPham)
+
+	DECLARE @SLtonKho INT;
+	SELECT @SLtonKho = SoLuong FROM QuanAo WHERE ID_QA = @ID_QA
+
+	DECLARE @SLMoi INT = @SLtonKho - @SoLuongSanPham;
+	UPDATE QuanAo
+	SET SoLuong = @SLMoi
+	WHERE ID_QA = @ID_QA
 END
 GO
 
@@ -76,3 +84,23 @@ BEGIN
 	WHERE ID_QA = @id_QA
 END
 GO
+
+CREATE proc sp_select_sanphambanchaynhat
+as
+begin
+Select Top 1 Ten_QA, SUM(SoLuongSanPham) as SoLuongSanPham
+from QuanAo, ChiTietBanHang
+where QuanAo.ID_QA = ChiTietBanHang.ID_QA
+group by Ten_QA
+order by SoLuongSanPham desc
+end
+go
+
+create proc sp_select_sanphambandduoc
+(@ID_QA int)
+as
+begin
+select  SUM(SoLuongSanPham) as SoLuongSanPham
+from QuanAo, ChiTietBanHang
+where QuanAo.ID_QA = ChiTietBanHang.ID_QA and QuanAo.ID_QA =  @ID_QA
+end

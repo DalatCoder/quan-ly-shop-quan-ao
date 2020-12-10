@@ -126,6 +126,11 @@ namespace QuanLyShopQuanAo
 			this.label13 = new System.Windows.Forms.Label();
 			this.panel26 = new System.Windows.Forms.Panel();
 			this.dtgvKH = new System.Windows.Forms.DataGridView();
+			this.label18 = new System.Windows.Forms.Label();
+			this.lblChay = new System.Windows.Forms.Label();
+			this.lblSl = new System.Windows.Forms.Label();
+			this.lblDB = new System.Windows.Forms.Label();
+			this.lblDaban = new System.Windows.Forms.Label();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
@@ -258,6 +263,9 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel13
 			// 
+			this.panel13.Controls.Add(this.lblSl);
+			this.panel13.Controls.Add(this.lblChay);
+			this.panel13.Controls.Add(this.label18);
 			this.panel13.Controls.Add(this.btnXemBH);
 			this.panel13.Controls.Add(this.label21);
 			this.panel13.Controls.Add(this.dtpKetThuc);
@@ -275,9 +283,9 @@ namespace QuanLyShopQuanAo
 			this.btnXemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnXemBH.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnXemBH.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnXemBH.Location = new System.Drawing.Point(821, 21);
+			this.btnXemBH.Location = new System.Drawing.Point(682, 35);
 			this.btnXemBH.Name = "btnXemBH";
-			this.btnXemBH.Size = new System.Drawing.Size(182, 50);
+			this.btnXemBH.Size = new System.Drawing.Size(141, 50);
 			this.btnXemBH.TabIndex = 0;
 			this.btnXemBH.Text = "Tải lại danh sách";
 			this.btnXemBH.UseVisualStyleBackColor = true;
@@ -286,7 +294,7 @@ namespace QuanLyShopQuanAo
 			// label21
 			// 
 			this.label21.AutoSize = true;
-			this.label21.Location = new System.Drawing.Point(615, 21);
+			this.label21.Location = new System.Drawing.Point(470, 22);
 			this.label21.Name = "label21";
 			this.label21.Size = new System.Drawing.Size(72, 17);
 			this.label21.TabIndex = 6;
@@ -296,7 +304,7 @@ namespace QuanLyShopQuanAo
 			// 
 			this.dtpKetThuc.CustomFormat = "dd/MM/yyyy";
 			this.dtpKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dtpKetThuc.Location = new System.Drawing.Point(533, 46);
+			this.dtpKetThuc.Location = new System.Drawing.Point(416, 47);
 			this.dtpKetThuc.Name = "dtpKetThuc";
 			this.dtpKetThuc.Size = new System.Drawing.Size(243, 25);
 			this.dtpKetThuc.TabIndex = 5;
@@ -325,7 +333,7 @@ namespace QuanLyShopQuanAo
 			this.btnTimKiemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnTimKiemBH.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnTimKiemBH.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnTimKiemBH.Location = new System.Drawing.Point(357, 22);
+			this.btnTimKiemBH.Location = new System.Drawing.Point(288, 35);
 			this.btnTimKiemBH.Name = "btnTimKiemBH";
 			this.btnTimKiemBH.Size = new System.Drawing.Size(110, 50);
 			this.btnTimKiemBH.TabIndex = 0;
@@ -494,6 +502,8 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel8
 			// 
+			this.panel8.Controls.Add(this.lblDaban);
+			this.panel8.Controls.Add(this.lblDB);
 			this.panel8.Controls.Add(this.nmSoLuongQA);
 			this.panel8.Controls.Add(this.label4);
 			this.panel8.Location = new System.Drawing.Point(22, 433);
@@ -510,7 +520,7 @@ namespace QuanLyShopQuanAo
             0,
             0});
 			this.nmSoLuongQA.Name = "nmSoLuongQA";
-			this.nmSoLuongQA.Size = new System.Drawing.Size(278, 25);
+			this.nmSoLuongQA.Size = new System.Drawing.Size(89, 25);
 			this.nmSoLuongQA.TabIndex = 1;
 			this.nmSoLuongQA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -1190,6 +1200,54 @@ namespace QuanLyShopQuanAo
 			this.dtgvKH.Size = new System.Drawing.Size(550, 635);
 			this.dtgvKH.TabIndex = 2;
 			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.ForeColor = System.Drawing.Color.Red;
+			this.label18.Location = new System.Drawing.Point(848, 15);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(167, 17);
+			this.label18.TabIndex = 7;
+			this.label18.Text = "Quần Áo Bán Chạy Nhất";
+			// 
+			// lblChay
+			// 
+			this.lblChay.AutoSize = true;
+			this.lblChay.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.lblChay.Location = new System.Drawing.Point(885, 47);
+			this.lblChay.Name = "lblChay";
+			this.lblChay.Size = new System.Drawing.Size(14, 17);
+			this.lblChay.TabIndex = 8;
+			this.lblChay.Text = "*";
+			// 
+			// lblSl
+			// 
+			this.lblSl.AutoSize = true;
+			this.lblSl.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.lblSl.Location = new System.Drawing.Point(885, 68);
+			this.lblSl.Name = "lblSl";
+			this.lblSl.Size = new System.Drawing.Size(14, 17);
+			this.lblSl.TabIndex = 9;
+			this.lblSl.Text = "*";
+			// 
+			// lblDB
+			// 
+			this.lblDB.AutoSize = true;
+			this.lblDB.Location = new System.Drawing.Point(262, 6);
+			this.lblDB.Name = "lblDB";
+			this.lblDB.Size = new System.Drawing.Size(57, 17);
+			this.lblDB.TabIndex = 2;
+			this.lblDB.Text = "Đã Bán";
+			// 
+			// lblDaban
+			// 
+			this.lblDaban.AutoSize = true;
+			this.lblDaban.Location = new System.Drawing.Point(353, 6);
+			this.lblDaban.Name = "lblDaban";
+			this.lblDaban.Size = new System.Drawing.Size(14, 17);
+			this.lblDaban.TabIndex = 3;
+			this.lblDaban.Text = "*";
+			// 
 			// frmAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1362,5 +1420,10 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.TextBox txtKhachHang_TimKiem_TenSDT;
 		private System.Windows.Forms.Button btnXoaQA;
 		private System.Windows.Forms.Button btnXoaLoaiQA;
+		private System.Windows.Forms.Label lblSl;
+		private System.Windows.Forms.Label lblChay;
+		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.Label lblDB;
+		private System.Windows.Forms.Label lblDaban;
 	}
 }
