@@ -28,7 +28,7 @@ namespace QuanLyShopQuanAo.DAO
 
 		public bool Login(string tenDangNhap, string matKhau)
 		{
-			string query = "EXEC sp_select_DangNhapAdmin @TenDangNhap , @MatKhau";
+			string query = "EXEC sp_select_DangNhap @TenDangNhap , @MatKhau";
 			object[] param = new object[] { tenDangNhap, matKhau };
 			DataTable result = DataProvider.Instance.ExecuteQuery(query, param);
 			return result.Rows.Count > 0;

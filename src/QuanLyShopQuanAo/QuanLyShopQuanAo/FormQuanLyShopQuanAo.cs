@@ -26,6 +26,16 @@ namespace QuanLyShopQuanAo
 		{
 			InitializeComponent();
 			this.loginAccount = loginAccount;
+
+			if (loginAccount.Ten_KTK=="Quản trị viên")
+			{
+				tsmAdmin.Enabled = true;
+			}
+			else
+			{
+				tsmAdmin.Enabled = false;
+			}
+
 		}
 
 		#region Init State
