@@ -1407,6 +1407,7 @@ namespace QuanLyShopQuanAo
 			this.btnTK_Them.TabIndex = 1;
 			this.btnTK_Them.Text = "Thêm";
 			this.btnTK_Them.UseVisualStyleBackColor = true;
+			this.btnTK_Them.Click += new System.EventHandler(this.btnTK_Them_Click);
 			// 
 			// btnTK_Xoa
 			// 
@@ -1420,6 +1421,7 @@ namespace QuanLyShopQuanAo
 			this.btnTK_Xoa.TabIndex = 2;
 			this.btnTK_Xoa.Text = "Xóa";
 			this.btnTK_Xoa.UseVisualStyleBackColor = true;
+			this.btnTK_Xoa.Click += new System.EventHandler(this.btnTK_Xoa_Click);
 			// 
 			// panel27
 			// 

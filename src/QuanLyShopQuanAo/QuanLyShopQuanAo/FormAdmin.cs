@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyShopQuanAo.Commons;
 using QuanLyShopQuanAo.DAO;
+using QuanLyShopQuanAo.DTO;
 using QuanLyShopQuanAo.Models;
 
 namespace QuanLyShopQuanAo
@@ -635,8 +636,50 @@ namespace QuanLyShopQuanAo
 			cbTK_Loai.ValueMember = "ID_KTK";
 		}
 
+
 		#endregion
 
+		private void btnTK_Them_Click(object sender, EventArgs e)
+		{
+			string tenDN = txtTK_TenDangNhap.Text;
+			string matKhau = txtTK_MatKhau.Text;
+			KieuTaiKhoan_DTO kieuTaiKhoan = cbTK_Loai.SelectedItem as KieuTaiKhoan_DTO;
+			if (kieuTaiKhoan.Ten_KTK == "Quản trị viên")
+			{
+				DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm một tài khoản quản trị viên không?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+				if (dialogResult == DialogResult.No)
+				{
+					return;
+				}
+			}
+			if (QuanTriVien_DAO.Instance.ThemTaiKhoan(kieuTaiKhoan.ID_KTK,tenDN,matKhau))
+			{
+				MessageBox.Show("Thêm tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				LoadAccount();
+			}
+			else
+			{
+				MessageBox.Show("Thêm tài khoản không thành công", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 
+		private void btnTK_Xoa_Click(object sender, EventArgs e)
+		{
+			if (dtgvTaiKhoan.SelectedRows.Count==0)
+			{
+				return;
+			}
+			int id_qtv = (int) dtgvTaiKhoan.SelectedRows[0].Cells["ID_QTV"].Value;
+
+			if (QuanTriVien_DAO.Instance.XoaTaiKhoan(id_qtv))
+			{
+				MessageBox.Show("Xóa tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				LoadAccount();
+			}
+			else
+			{
+				MessageBox.Show("Xóa tài khoản không thành công", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 	}
 }
