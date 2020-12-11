@@ -38,9 +38,6 @@ namespace QuanLyShopQuanAo
 			this.panel19 = new System.Windows.Forms.Panel();
 			this.dtgvChiTietBanHang = new System.Windows.Forms.DataGridView();
 			this.panel13 = new System.Windows.Forms.Panel();
-			this.lblSl = new System.Windows.Forms.Label();
-			this.lblChay = new System.Windows.Forms.Label();
-			this.label18 = new System.Windows.Forms.Label();
 			this.btnXemBH = new System.Windows.Forms.Button();
 			this.label21 = new System.Windows.Forms.Label();
 			this.dtpKetThuc = new System.Windows.Forms.DateTimePicker();
@@ -134,6 +131,12 @@ namespace QuanLyShopQuanAo
 			this.dtgvKH = new System.Windows.Forms.DataGridView();
 			this.tpTaiKhoan = new System.Windows.Forms.TabPage();
 			this.panel21 = new System.Windows.Forms.Panel();
+			this.panel27 = new System.Windows.Forms.Panel();
+			this.cbTK_Loai = new System.Windows.Forms.ComboBox();
+			this.label23 = new System.Windows.Forms.Label();
+			this.panel33 = new System.Windows.Forms.Panel();
+			this.btnTK_Xoa = new System.Windows.Forms.Button();
+			this.btnTK_Them = new System.Windows.Forms.Button();
 			this.panel30 = new System.Windows.Forms.Panel();
 			this.txtTK_MatKhau = new System.Windows.Forms.TextBox();
 			this.label25 = new System.Windows.Forms.Label();
@@ -142,12 +145,18 @@ namespace QuanLyShopQuanAo
 			this.label26 = new System.Windows.Forms.Label();
 			this.panel32 = new System.Windows.Forms.Panel();
 			this.dtgvTaiKhoan = new System.Windows.Forms.DataGridView();
-			this.panel33 = new System.Windows.Forms.Panel();
-			this.btnTK_Them = new System.Windows.Forms.Button();
-			this.btnTK_Xoa = new System.Windows.Forms.Button();
-			this.panel27 = new System.Windows.Forms.Panel();
-			this.label23 = new System.Windows.Forms.Label();
-			this.cbTK_Loai = new System.Windows.Forms.ComboBox();
+			this.tpDoanhThu = new System.Windows.Forms.TabPage();
+			this.panel29 = new System.Windows.Forms.Panel();
+			this.lblSl = new System.Windows.Forms.Label();
+			this.lblChay = new System.Windows.Forms.Label();
+			this.label18 = new System.Windows.Forms.Label();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.lbTT_ChuaGiamGia = new System.Windows.Forms.Label();
+			this.label24 = new System.Windows.Forms.Label();
+			this.label27 = new System.Windows.Forms.Label();
+			this.label28 = new System.Windows.Forms.Label();
+			this.lbTT_GiamGia = new System.Windows.Forms.Label();
+			this.lbTT_ThucThu = new System.Windows.Forms.Label();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
@@ -190,12 +199,15 @@ namespace QuanLyShopQuanAo
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).BeginInit();
 			this.tpTaiKhoan.SuspendLayout();
 			this.panel21.SuspendLayout();
+			this.panel27.SuspendLayout();
+			this.panel33.SuspendLayout();
 			this.panel30.SuspendLayout();
 			this.panel31.SuspendLayout();
 			this.panel32.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).BeginInit();
-			this.panel33.SuspendLayout();
-			this.panel27.SuspendLayout();
+			this.tpDoanhThu.SuspendLayout();
+			this.panel29.SuspendLayout();
+			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tcAdmin
@@ -205,6 +217,7 @@ namespace QuanLyShopQuanAo
 			this.tcAdmin.Controls.Add(this.tpLoaiQuanAo);
 			this.tcAdmin.Controls.Add(this.tpKhachHang);
 			this.tcAdmin.Controls.Add(this.tpTaiKhoan);
+			this.tcAdmin.Controls.Add(this.tpDoanhThu);
 			this.tcAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tcAdmin.Location = new System.Drawing.Point(0, 0);
 			this.tcAdmin.Name = "tcAdmin";
@@ -214,6 +227,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// tpBanHang
 			// 
+			this.tpBanHang.Controls.Add(this.groupBox2);
 			this.tpBanHang.Controls.Add(this.txtDiscountBH);
 			this.tpBanHang.Controls.Add(this.label7);
 			this.tpBanHang.Controls.Add(this.txtTongTienBH);
@@ -266,9 +280,9 @@ namespace QuanLyShopQuanAo
 			// panel19
 			// 
 			this.panel19.Controls.Add(this.dtgvChiTietBanHang);
-			this.panel19.Location = new System.Drawing.Point(565, 105);
+			this.panel19.Location = new System.Drawing.Point(565, 149);
 			this.panel19.Name = "panel19";
-			this.panel19.Size = new System.Drawing.Size(483, 454);
+			this.panel19.Size = new System.Drawing.Size(483, 410);
 			this.panel19.TabIndex = 3;
 			// 
 			// dtgvChiTietBanHang
@@ -284,14 +298,11 @@ namespace QuanLyShopQuanAo
 			this.dtgvChiTietBanHang.ReadOnly = true;
 			this.dtgvChiTietBanHang.RowHeadersWidth = 51;
 			this.dtgvChiTietBanHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dtgvChiTietBanHang.Size = new System.Drawing.Size(483, 454);
+			this.dtgvChiTietBanHang.Size = new System.Drawing.Size(483, 410);
 			this.dtgvChiTietBanHang.TabIndex = 2;
 			// 
 			// panel13
 			// 
-			this.panel13.Controls.Add(this.lblSl);
-			this.panel13.Controls.Add(this.lblChay);
-			this.panel13.Controls.Add(this.label18);
 			this.panel13.Controls.Add(this.btnXemBH);
 			this.panel13.Controls.Add(this.label21);
 			this.panel13.Controls.Add(this.dtpKetThuc);
@@ -300,38 +311,8 @@ namespace QuanLyShopQuanAo
 			this.panel13.Controls.Add(this.btnTimKiemBH);
 			this.panel13.Location = new System.Drawing.Point(8, 6);
 			this.panel13.Name = "panel13";
-			this.panel13.Size = new System.Drawing.Size(1040, 93);
+			this.panel13.Size = new System.Drawing.Size(551, 137);
 			this.panel13.TabIndex = 2;
-			// 
-			// lblSl
-			// 
-			this.lblSl.AutoSize = true;
-			this.lblSl.ForeColor = System.Drawing.SystemColors.HotTrack;
-			this.lblSl.Location = new System.Drawing.Point(885, 68);
-			this.lblSl.Name = "lblSl";
-			this.lblSl.Size = new System.Drawing.Size(14, 17);
-			this.lblSl.TabIndex = 9;
-			this.lblSl.Text = "*";
-			// 
-			// lblChay
-			// 
-			this.lblChay.AutoSize = true;
-			this.lblChay.ForeColor = System.Drawing.SystemColors.HotTrack;
-			this.lblChay.Location = new System.Drawing.Point(885, 47);
-			this.lblChay.Name = "lblChay";
-			this.lblChay.Size = new System.Drawing.Size(14, 17);
-			this.lblChay.TabIndex = 8;
-			this.lblChay.Text = "*";
-			// 
-			// label18
-			// 
-			this.label18.AutoSize = true;
-			this.label18.ForeColor = System.Drawing.Color.Red;
-			this.label18.Location = new System.Drawing.Point(848, 15);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(167, 17);
-			this.label18.TabIndex = 7;
-			this.label18.Text = "Quần Áo Bán Chạy Nhất";
 			// 
 			// btnXemBH
 			// 
@@ -339,7 +320,7 @@ namespace QuanLyShopQuanAo
 			this.btnXemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnXemBH.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnXemBH.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnXemBH.Location = new System.Drawing.Point(682, 35);
+			this.btnXemBH.Location = new System.Drawing.Point(314, 80);
 			this.btnXemBH.Name = "btnXemBH";
 			this.btnXemBH.Size = new System.Drawing.Size(141, 50);
 			this.btnXemBH.TabIndex = 0;
@@ -350,7 +331,7 @@ namespace QuanLyShopQuanAo
 			// label21
 			// 
 			this.label21.AutoSize = true;
-			this.label21.Location = new System.Drawing.Point(470, 22);
+			this.label21.Location = new System.Drawing.Point(13, 87);
 			this.label21.Name = "label21";
 			this.label21.Size = new System.Drawing.Size(72, 17);
 			this.label21.TabIndex = 6;
@@ -360,15 +341,15 @@ namespace QuanLyShopQuanAo
 			// 
 			this.dtpKetThuc.CustomFormat = "dd/MM/yyyy";
 			this.dtpKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dtpKetThuc.Location = new System.Drawing.Point(416, 47);
+			this.dtpKetThuc.Location = new System.Drawing.Point(93, 81);
 			this.dtpKetThuc.Name = "dtpKetThuc";
-			this.dtpKetThuc.Size = new System.Drawing.Size(243, 25);
+			this.dtpKetThuc.Size = new System.Drawing.Size(136, 25);
 			this.dtpKetThuc.TabIndex = 5;
 			// 
 			// label20
 			// 
 			this.label20.AutoSize = true;
-			this.label20.Location = new System.Drawing.Point(102, 22);
+			this.label20.Location = new System.Drawing.Point(13, 42);
 			this.label20.Name = "label20";
 			this.label20.Size = new System.Drawing.Size(64, 17);
 			this.label20.TabIndex = 4;
@@ -378,9 +359,9 @@ namespace QuanLyShopQuanAo
 			// 
 			this.dtpBatDau.CustomFormat = "dd/MM/yyyy";
 			this.dtpBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dtpBatDau.Location = new System.Drawing.Point(30, 47);
+			this.dtpBatDau.Location = new System.Drawing.Point(93, 37);
 			this.dtpBatDau.Name = "dtpBatDau";
-			this.dtpBatDau.Size = new System.Drawing.Size(243, 25);
+			this.dtpBatDau.Size = new System.Drawing.Size(136, 25);
 			this.dtpBatDau.TabIndex = 1;
 			// 
 			// btnTimKiemBH
@@ -389,9 +370,9 @@ namespace QuanLyShopQuanAo
 			this.btnTimKiemBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnTimKiemBH.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnTimKiemBH.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnTimKiemBH.Location = new System.Drawing.Point(288, 35);
+			this.btnTimKiemBH.Location = new System.Drawing.Point(314, 3);
 			this.btnTimKiemBH.Name = "btnTimKiemBH";
-			this.btnTimKiemBH.Size = new System.Drawing.Size(110, 50);
+			this.btnTimKiemBH.Size = new System.Drawing.Size(141, 50);
 			this.btnTimKiemBH.TabIndex = 0;
 			this.btnTimKiemBH.Text = "Thống Kê";
 			this.btnTimKiemBH.UseVisualStyleBackColor = true;
@@ -400,9 +381,9 @@ namespace QuanLyShopQuanAo
 			// panel11
 			// 
 			this.panel11.Controls.Add(this.dtgvHD);
-			this.panel11.Location = new System.Drawing.Point(8, 105);
+			this.panel11.Location = new System.Drawing.Point(8, 149);
 			this.panel11.Name = "panel11";
-			this.panel11.Size = new System.Drawing.Size(551, 538);
+			this.panel11.Size = new System.Drawing.Size(551, 494);
 			this.panel11.TabIndex = 0;
 			// 
 			// dtgvHD
@@ -418,7 +399,7 @@ namespace QuanLyShopQuanAo
 			this.dtgvHD.ReadOnly = true;
 			this.dtgvHD.RowHeadersWidth = 51;
 			this.dtgvHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dtgvHD.Size = new System.Drawing.Size(551, 538);
+			this.dtgvHD.Size = new System.Drawing.Size(551, 494);
 			this.dtgvHD.TabIndex = 1;
 			this.dtgvHD.Click += new System.EventHandler(this.dtgvHD_Click);
 			// 
@@ -1312,6 +1293,69 @@ namespace QuanLyShopQuanAo
 			this.panel21.Size = new System.Drawing.Size(483, 635);
 			this.panel21.TabIndex = 9;
 			// 
+			// panel27
+			// 
+			this.panel27.Controls.Add(this.cbTK_Loai);
+			this.panel27.Controls.Add(this.label23);
+			this.panel27.Location = new System.Drawing.Point(22, 222);
+			this.panel27.Name = "panel27";
+			this.panel27.Size = new System.Drawing.Size(438, 52);
+			this.panel27.TabIndex = 6;
+			// 
+			// cbTK_Loai
+			// 
+			this.cbTK_Loai.FormattingEnabled = true;
+			this.cbTK_Loai.Location = new System.Drawing.Point(180, 14);
+			this.cbTK_Loai.Name = "cbTK_Loai";
+			this.cbTK_Loai.Size = new System.Drawing.Size(245, 25);
+			this.cbTK_Loai.TabIndex = 1;
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.Location = new System.Drawing.Point(17, 17);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(105, 17);
+			this.label23.TabIndex = 0;
+			this.label23.Text = "Loại Tài Khoản";
+			// 
+			// panel33
+			// 
+			this.panel33.Controls.Add(this.btnTK_Xoa);
+			this.panel33.Controls.Add(this.btnTK_Them);
+			this.panel33.Location = new System.Drawing.Point(22, 423);
+			this.panel33.Name = "panel33";
+			this.panel33.Size = new System.Drawing.Size(438, 81);
+			this.panel33.TabIndex = 5;
+			// 
+			// btnTK_Xoa
+			// 
+			this.btnTK_Xoa.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnTK_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTK_Xoa.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTK_Xoa.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btnTK_Xoa.Location = new System.Drawing.Point(340, 13);
+			this.btnTK_Xoa.Name = "btnTK_Xoa";
+			this.btnTK_Xoa.Size = new System.Drawing.Size(85, 54);
+			this.btnTK_Xoa.TabIndex = 2;
+			this.btnTK_Xoa.Text = "Xóa";
+			this.btnTK_Xoa.UseVisualStyleBackColor = true;
+			this.btnTK_Xoa.Click += new System.EventHandler(this.btnTK_Xoa_Click);
+			// 
+			// btnTK_Them
+			// 
+			this.btnTK_Them.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnTK_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTK_Them.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTK_Them.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btnTK_Them.Location = new System.Drawing.Point(20, 13);
+			this.btnTK_Them.Name = "btnTK_Them";
+			this.btnTK_Them.Size = new System.Drawing.Size(85, 54);
+			this.btnTK_Them.TabIndex = 1;
+			this.btnTK_Them.Text = "Thêm";
+			this.btnTK_Them.UseVisualStyleBackColor = true;
+			this.btnTK_Them.Click += new System.EventHandler(this.btnTK_Them_Click);
+			// 
 			// panel30
 			// 
 			this.panel30.Controls.Add(this.txtTK_MatKhau);
@@ -1386,68 +1430,139 @@ namespace QuanLyShopQuanAo
 			this.dtgvTaiKhoan.Size = new System.Drawing.Size(550, 635);
 			this.dtgvTaiKhoan.TabIndex = 2;
 			// 
-			// panel33
+			// tpDoanhThu
 			// 
-			this.panel33.Controls.Add(this.btnTK_Xoa);
-			this.panel33.Controls.Add(this.btnTK_Them);
-			this.panel33.Location = new System.Drawing.Point(22, 423);
-			this.panel33.Name = "panel33";
-			this.panel33.Size = new System.Drawing.Size(438, 81);
-			this.panel33.TabIndex = 5;
+			this.tpDoanhThu.Controls.Add(this.panel29);
+			this.tpDoanhThu.Location = new System.Drawing.Point(4, 26);
+			this.tpDoanhThu.Name = "tpDoanhThu";
+			this.tpDoanhThu.Padding = new System.Windows.Forms.Padding(3);
+			this.tpDoanhThu.Size = new System.Drawing.Size(1056, 651);
+			this.tpDoanhThu.TabIndex = 6;
+			this.tpDoanhThu.Text = "Thống kê";
+			this.tpDoanhThu.UseVisualStyleBackColor = true;
 			// 
-			// btnTK_Them
+			// panel29
 			// 
-			this.btnTK_Them.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-			this.btnTK_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnTK_Them.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnTK_Them.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnTK_Them.Location = new System.Drawing.Point(20, 13);
-			this.btnTK_Them.Name = "btnTK_Them";
-			this.btnTK_Them.Size = new System.Drawing.Size(85, 54);
-			this.btnTK_Them.TabIndex = 1;
-			this.btnTK_Them.Text = "Thêm";
-			this.btnTK_Them.UseVisualStyleBackColor = true;
-			this.btnTK_Them.Click += new System.EventHandler(this.btnTK_Them_Click);
+			this.panel29.Controls.Add(this.lblSl);
+			this.panel29.Controls.Add(this.lblChay);
+			this.panel29.Controls.Add(this.label18);
+			this.panel29.Location = new System.Drawing.Point(622, 54);
+			this.panel29.Name = "panel29";
+			this.panel29.Size = new System.Drawing.Size(200, 100);
+			this.panel29.TabIndex = 0;
 			// 
-			// btnTK_Xoa
+			// lblSl
 			// 
-			this.btnTK_Xoa.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-			this.btnTK_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnTK_Xoa.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnTK_Xoa.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btnTK_Xoa.Location = new System.Drawing.Point(340, 13);
-			this.btnTK_Xoa.Name = "btnTK_Xoa";
-			this.btnTK_Xoa.Size = new System.Drawing.Size(85, 54);
-			this.btnTK_Xoa.TabIndex = 2;
-			this.btnTK_Xoa.Text = "Xóa";
-			this.btnTK_Xoa.UseVisualStyleBackColor = true;
-			this.btnTK_Xoa.Click += new System.EventHandler(this.btnTK_Xoa_Click);
+			this.lblSl.AutoSize = true;
+			this.lblSl.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.lblSl.Location = new System.Drawing.Point(54, 68);
+			this.lblSl.Name = "lblSl";
+			this.lblSl.Size = new System.Drawing.Size(14, 17);
+			this.lblSl.TabIndex = 12;
+			this.lblSl.Text = "*";
 			// 
-			// panel27
+			// lblChay
 			// 
-			this.panel27.Controls.Add(this.cbTK_Loai);
-			this.panel27.Controls.Add(this.label23);
-			this.panel27.Location = new System.Drawing.Point(22, 222);
-			this.panel27.Name = "panel27";
-			this.panel27.Size = new System.Drawing.Size(438, 52);
-			this.panel27.TabIndex = 6;
+			this.lblChay.AutoSize = true;
+			this.lblChay.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.lblChay.Location = new System.Drawing.Point(54, 47);
+			this.lblChay.Name = "lblChay";
+			this.lblChay.Size = new System.Drawing.Size(14, 17);
+			this.lblChay.TabIndex = 11;
+			this.lblChay.Text = "*";
 			// 
-			// label23
+			// label18
 			// 
-			this.label23.AutoSize = true;
-			this.label23.Location = new System.Drawing.Point(17, 17);
-			this.label23.Name = "label23";
-			this.label23.Size = new System.Drawing.Size(105, 17);
-			this.label23.TabIndex = 0;
-			this.label23.Text = "Loại Tài Khoản";
+			this.label18.AutoSize = true;
+			this.label18.ForeColor = System.Drawing.Color.Red;
+			this.label18.Location = new System.Drawing.Point(17, 15);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(167, 17);
+			this.label18.TabIndex = 10;
+			this.label18.Text = "Quần Áo Bán Chạy Nhất";
 			// 
-			// cbTK_Loai
+			// groupBox2
 			// 
-			this.cbTK_Loai.FormattingEnabled = true;
-			this.cbTK_Loai.Location = new System.Drawing.Point(180, 14);
-			this.cbTK_Loai.Name = "cbTK_Loai";
-			this.cbTK_Loai.Size = new System.Drawing.Size(245, 25);
-			this.cbTK_Loai.TabIndex = 1;
+			this.groupBox2.Controls.Add(this.lbTT_ThucThu);
+			this.groupBox2.Controls.Add(this.lbTT_GiamGia);
+			this.groupBox2.Controls.Add(this.label28);
+			this.groupBox2.Controls.Add(this.label27);
+			this.groupBox2.Controls.Add(this.lbTT_ChuaGiamGia);
+			this.groupBox2.Controls.Add(this.label24);
+			this.groupBox2.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.groupBox2.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.groupBox2.Location = new System.Drawing.Point(569, 6);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(479, 137);
+			this.groupBox2.TabIndex = 8;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Thống kê thực thu";
+			// 
+			// lbTT_ChuaGiamGia
+			// 
+			this.lbTT_ChuaGiamGia.AutoSize = true;
+			this.lbTT_ChuaGiamGia.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbTT_ChuaGiamGia.ForeColor = System.Drawing.Color.Tomato;
+			this.lbTT_ChuaGiamGia.Location = new System.Drawing.Point(33, 87);
+			this.lbTT_ChuaGiamGia.Name = "lbTT_ChuaGiamGia";
+			this.lbTT_ChuaGiamGia.Size = new System.Drawing.Size(109, 22);
+			this.lbTT_ChuaGiamGia.TabIndex = 9;
+			this.lbTT_ChuaGiamGia.Text = "100000000";
+			// 
+			// label24
+			// 
+			this.label24.AutoSize = true;
+			this.label24.ForeColor = System.Drawing.Color.DimGray;
+			this.label24.Location = new System.Drawing.Point(25, 35);
+			this.label24.Name = "label24";
+			this.label24.Size = new System.Drawing.Size(117, 34);
+			this.label24.TabIndex = 6;
+			this.label24.Text = "Tổng Tiền \r\nChưa Giảm Giá";
+			this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// label27
+			// 
+			this.label27.AutoSize = true;
+			this.label27.ForeColor = System.Drawing.Color.DimGray;
+			this.label27.Location = new System.Drawing.Point(218, 33);
+			this.label27.Name = "label27";
+			this.label27.Size = new System.Drawing.Size(82, 34);
+			this.label27.TabIndex = 12;
+			this.label27.Text = "Tổng Tiền \r\nGiảm Giá";
+			this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label28
+			// 
+			this.label28.AutoSize = true;
+			this.label28.ForeColor = System.Drawing.Color.DimGray;
+			this.label28.Location = new System.Drawing.Point(356, 35);
+			this.label28.Name = "label28";
+			this.label28.Size = new System.Drawing.Size(82, 34);
+			this.label28.TabIndex = 13;
+			this.label28.Text = "Tổng Tiền \r\nThực Thu";
+			this.label28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// lbTT_GiamGia
+			// 
+			this.lbTT_GiamGia.AutoSize = true;
+			this.lbTT_GiamGia.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbTT_GiamGia.ForeColor = System.Drawing.Color.Tomato;
+			this.lbTT_GiamGia.Location = new System.Drawing.Point(200, 87);
+			this.lbTT_GiamGia.Name = "lbTT_GiamGia";
+			this.lbTT_GiamGia.Size = new System.Drawing.Size(109, 22);
+			this.lbTT_GiamGia.TabIndex = 14;
+			this.lbTT_GiamGia.Text = "100000000";
+			// 
+			// lbTT_ThucThu
+			// 
+			this.lbTT_ThucThu.AutoSize = true;
+			this.lbTT_ThucThu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbTT_ThucThu.ForeColor = System.Drawing.Color.Tomato;
+			this.lbTT_ThucThu.Location = new System.Drawing.Point(339, 87);
+			this.lbTT_ThucThu.Name = "lbTT_ThucThu";
+			this.lbTT_ThucThu.Size = new System.Drawing.Size(109, 22);
+			this.lbTT_ThucThu.TabIndex = 15;
+			this.lbTT_ThucThu.Text = "100000000";
 			// 
 			// frmAdmin
 			// 
@@ -1520,15 +1635,20 @@ namespace QuanLyShopQuanAo
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).EndInit();
 			this.tpTaiKhoan.ResumeLayout(false);
 			this.panel21.ResumeLayout(false);
+			this.panel27.ResumeLayout(false);
+			this.panel27.PerformLayout();
+			this.panel33.ResumeLayout(false);
 			this.panel30.ResumeLayout(false);
 			this.panel30.PerformLayout();
 			this.panel31.ResumeLayout(false);
 			this.panel31.PerformLayout();
 			this.panel32.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).EndInit();
-			this.panel33.ResumeLayout(false);
-			this.panel27.ResumeLayout(false);
-			this.panel27.PerformLayout();
+			this.tpDoanhThu.ResumeLayout(false);
+			this.panel29.ResumeLayout(false);
+			this.panel29.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
+			this.groupBox2.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -1632,9 +1752,6 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.TextBox txtKhachHang_TimKiem_TenSDT;
 		private System.Windows.Forms.Button btnXoaQA;
 		private System.Windows.Forms.Button btnXoaLoaiQA;
-		private System.Windows.Forms.Label lblSl;
-		private System.Windows.Forms.Label lblChay;
-		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.Label lblDB;
 		private System.Windows.Forms.Label lblDaban;
 		private System.Windows.Forms.Button btn_QA_AddLoai;
@@ -1654,5 +1771,17 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.Panel panel27;
 		private System.Windows.Forms.ComboBox cbTK_Loai;
 		private System.Windows.Forms.Label label23;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.Label lbTT_ThucThu;
+		private System.Windows.Forms.Label lbTT_GiamGia;
+		private System.Windows.Forms.Label label28;
+		private System.Windows.Forms.Label label27;
+		private System.Windows.Forms.Label lbTT_ChuaGiamGia;
+		private System.Windows.Forms.Label label24;
+		private System.Windows.Forms.TabPage tpDoanhThu;
+		private System.Windows.Forms.Panel panel29;
+		private System.Windows.Forms.Label lblSl;
+		private System.Windows.Forms.Label lblChay;
+		private System.Windows.Forms.Label label18;
 	}
 }
