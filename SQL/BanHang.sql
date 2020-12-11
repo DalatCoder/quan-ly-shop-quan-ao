@@ -213,3 +213,28 @@ GO
 
 -- EXEC sp_select_BanHang_By_KhachHang_SDT '0374408253';
 -- GO
+
+ALTER PROC sp_TinhTongTienChuaGiamGia
+@fromdate DATETIME, @todate DATETIME
+AS
+BEGIN
+	SELECT SUM(ChiTietBanHang.SoLuongSanPham * QuanAo.GiaBan) FROM ChiTietBanHang
+	JOIN QuanAo	ON ChiTietBanHang.ID_QA = QuanAo.ID_QA
+	JOIN BanHang ON ChiTietBanHang.ID_BH = BanHang.ID_BH
+	WHERE @fromdate <= NgayBanHang AND NgayBanHang<=@todate
+END
+GO
+
+EXEC sp_TinhTongTienChuaGiamGia
+
+
+CREATE PROC	sp_TinhTongTienGiamGia
+@fromdate DATETIME, @todate DATETIME
+AS
+BEGIN
+	SELECT SUM(ChiTietBanHang.SoLuongSanPham*QuanAo.GiaBan*(BanHang.Discount/100)) FROM ChiTietBanHang
+	JOIN QuanAo	ON ChiTietBanHang.ID_QA = QuanAo.ID_QA
+	JOIN BanHang ON ChiTietBanHang.ID_BH = BanHang.ID_BH
+	WHERE @fromdate <= NgayBanHang AND NgayBanHang<=@todate
+END
+GO
