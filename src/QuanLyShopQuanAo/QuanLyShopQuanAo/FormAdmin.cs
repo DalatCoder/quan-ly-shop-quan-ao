@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyShopQuanAo.Commons;
 using QuanLyShopQuanAo.DAO;
@@ -57,6 +51,8 @@ namespace QuanLyShopQuanAo
 				dtgvHD.Rows[0].Selected = true;
 				dtgvHD_Click(dtgvHD.Rows[0], new EventArgs());
 			}
+
+			LoadDoanhThuBanHang();
 		}
 
 		void LoadDefaultDatetimePicker()
@@ -71,9 +67,24 @@ namespace QuanLyShopQuanAo
 			BHList.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHangInTime(dtpBatDau.Value, dtpKetThuc.Value);
 		}
 
+		void LoadDoanhThuBanHang()
+		{
+			DateTime fromdate = dtpBatDau.Value;
+			DateTime todate = dtpKetThuc.Value;
+
+			decimal tongTienChuaGiamGia = BanHang_DAO.Instance.TinhTongTienChuaGiamGia(fromdate, todate);
+			decimal tongTienGiamGia = BanHang_DAO.Instance.TinhTongTienGiamGia(fromdate, todate);
+			decimal tongTienThucThu = tongTienChuaGiamGia - tongTienGiamGia;
+
+			lbTT_ChuaGiamGia.Text = tongTienChuaGiamGia.ToString();
+			lbTT_GiamGia.Text = tongTienGiamGia.ToString();
+			lbTT_ThucThu.Text = tongTienThucThu.ToString();
+		}
+
 		void btnTimKiemBH_Click(object sender, EventArgs e)
 		{
 			dtgvHD.DataSource = ThongKeBanHang_DAO.Instance.GetListThongKeBanHangInTime(dtpBatDau.Value, dtpKetThuc.Value);
+			LoadDoanhThuBanHang();
 		}
 
 		void btnXemBH_Click(object sender, EventArgs e)
@@ -107,6 +118,14 @@ namespace QuanLyShopQuanAo
 
 			tongSoTien -= (tongSoTien / 100) * Discount;
 			txtTongTienBH.Text = tongSoTien.ToString("###.###.###");
+		}
+
+		private void dtpKetThuc_ValueChanged(object sender, EventArgs e)
+		{
+			if (dtpKetThuc.Value <= dtpBatDau.Value)
+			{
+				dtpKetThuc.Value = dtpKetThuc.Value.AddDays(1);
+			}
 		}
 
 		#endregion
@@ -626,7 +645,7 @@ namespace QuanLyShopQuanAo
 		{
 			dtgvTaiKhoan.DataSource = QuanTriVien_DAO.Instance.GetListAccount();
 		}
-		
+
 		void LoadKieuTaiKhoan()
 		{
 			KieuTaiKhoan_DAO kieuTaiKhoan = new KieuTaiKhoan_DAO();
@@ -635,9 +654,6 @@ namespace QuanLyShopQuanAo
 			cbTK_Loai.DisplayMember = "Ten_KTK";
 			cbTK_Loai.ValueMember = "ID_KTK";
 		}
-
-
-		#endregion
 
 		private void btnTK_Them_Click(object sender, EventArgs e)
 		{
@@ -652,7 +668,7 @@ namespace QuanLyShopQuanAo
 					return;
 				}
 			}
-			if (QuanTriVien_DAO.Instance.ThemTaiKhoan(kieuTaiKhoan.ID_KTK,tenDN,matKhau))
+			if (QuanTriVien_DAO.Instance.ThemTaiKhoan(kieuTaiKhoan.ID_KTK, tenDN, matKhau))
 			{
 				MessageBox.Show("Thêm tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				LoadAccount();
@@ -665,11 +681,11 @@ namespace QuanLyShopQuanAo
 
 		private void btnTK_Xoa_Click(object sender, EventArgs e)
 		{
-			if (dtgvTaiKhoan.SelectedRows.Count==0)
+			if (dtgvTaiKhoan.SelectedRows.Count == 0)
 			{
 				return;
 			}
-			int id_qtv = (int) dtgvTaiKhoan.SelectedRows[0].Cells["ID_QTV"].Value;
+			int id_qtv = (int)dtgvTaiKhoan.SelectedRows[0].Cells["ID_QTV"].Value;
 
 			if (QuanTriVien_DAO.Instance.XoaTaiKhoan(id_qtv))
 			{
@@ -681,5 +697,7 @@ namespace QuanLyShopQuanAo
 				MessageBox.Show("Xóa tài khoản không thành công", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
+
+		#endregion
 	}
 }

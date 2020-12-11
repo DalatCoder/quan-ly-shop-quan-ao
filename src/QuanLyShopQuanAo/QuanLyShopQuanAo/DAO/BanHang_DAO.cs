@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using QuanLyShopQuanAo.Models;
 
 namespace QuanLyShopQuanAo.DAO
@@ -137,19 +134,20 @@ namespace QuanLyShopQuanAo.DAO
 			return result;
 		}
 
-		public int TinhTongTienChuaGiamGia(DateTime fromdate,DateTime todate)
+		public decimal TinhTongTienChuaGiamGia(DateTime fromdate,DateTime todate)
 		{
 			string query = "EXEC sp_TinhTongTienChuaGiamGia @fromdate , @todate";
 			object[] param = new object[] { fromdate, todate };
-			int result = (int)DataProvider.Instance.ExecuteScalar(query, param);
+			decimal result = Convert.ToDecimal(DataProvider.Instance.ExecuteScalar(query, param));
+
 			return result;
 		}
 
-		public int TinhTongTienGiamGia(DateTime fromdate,DateTime todate)
+		public decimal TinhTongTienGiamGia(DateTime fromdate,DateTime todate)
 		{
 			string query = "EXEC sp_TinhTongTienGiamGia @fromdate , @todate";
 			object[] param = new object[] { fromdate, todate };
-			int result = (int)DataProvider.Instance.ExecuteScalar(query, param);
+			decimal result = Convert.ToDecimal(DataProvider.Instance.ExecuteScalar(query, param));
 			return result;
 		}
 	}

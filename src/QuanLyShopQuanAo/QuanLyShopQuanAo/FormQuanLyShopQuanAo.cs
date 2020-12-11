@@ -3,12 +3,7 @@ using QuanLyShopQuanAo.DAO;
 using QuanLyShopQuanAo.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyShopQuanAo
@@ -27,7 +22,7 @@ namespace QuanLyShopQuanAo
 			InitializeComponent();
 			this.loginAccount = loginAccount;
 
-			if (loginAccount.Ten_KTK=="Quản trị viên")
+			if (loginAccount.Ten_KTK == "Quản trị viên")
 			{
 				tsmAdmin.Enabled = true;
 			}
@@ -236,7 +231,7 @@ namespace QuanLyShopQuanAo
 				.Require()
 				.MustBeValidString()
 				.IsNumber();
-				
+
 
 
 			khachHang.SDT = khachHang.SDT.Sanitize();
@@ -269,8 +264,6 @@ namespace QuanLyShopQuanAo
 			lblTongTienCuoiCung.Text = TongTienThanhToanCuoiCung.ToString();
 			lblTongTienGhiBangChu.Text = TienIch.So_chu(TongTienThanhToanCuoiCung);
 		}
-
-		#endregion
 
 		private void tsmThemQA_Click(object sender, EventArgs e)
 		{
@@ -319,7 +312,7 @@ namespace QuanLyShopQuanAo
 				return;
 			}
 			List<KhachHang_DTO> dsKhachHang = KhachHang_DAO.Instance.TimKiemTheoSDT(sdt);
-			if (dsKhachHang.Count==0)
+			if (dsKhachHang.Count == 0)
 			{
 				txtHoTen.Text = "";
 			}
@@ -328,5 +321,7 @@ namespace QuanLyShopQuanAo
 				txtHoTen.Text = dsKhachHang[0].HoTen;
 			}
 		}
+
+		#endregion
 	}
 }

@@ -31,6 +31,13 @@ namespace QuanLyShopQuanAo
 		{
 			this.tcAdmin = new System.Windows.Forms.TabControl();
 			this.tpBanHang = new System.Windows.Forms.TabPage();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.lbTT_ThucThu = new System.Windows.Forms.Label();
+			this.lbTT_GiamGia = new System.Windows.Forms.Label();
+			this.label28 = new System.Windows.Forms.Label();
+			this.label27 = new System.Windows.Forms.Label();
+			this.lbTT_ChuaGiamGia = new System.Windows.Forms.Label();
+			this.label24 = new System.Windows.Forms.Label();
 			this.txtDiscountBH = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.txtTongTienBH = new System.Windows.Forms.TextBox();
@@ -150,15 +157,9 @@ namespace QuanLyShopQuanAo
 			this.lblSl = new System.Windows.Forms.Label();
 			this.lblChay = new System.Windows.Forms.Label();
 			this.label18 = new System.Windows.Forms.Label();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.lbTT_ChuaGiamGia = new System.Windows.Forms.Label();
-			this.label24 = new System.Windows.Forms.Label();
-			this.label27 = new System.Windows.Forms.Label();
-			this.label28 = new System.Windows.Forms.Label();
-			this.lbTT_GiamGia = new System.Windows.Forms.Label();
-			this.lbTT_ThucThu = new System.Windows.Forms.Label();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
+			this.groupBox2.SuspendLayout();
 			this.panel19.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietBanHang)).BeginInit();
 			this.panel13.SuspendLayout();
@@ -207,7 +208,6 @@ namespace QuanLyShopQuanAo
 			((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).BeginInit();
 			this.tpDoanhThu.SuspendLayout();
 			this.panel29.SuspendLayout();
-			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tcAdmin
@@ -242,6 +242,89 @@ namespace QuanLyShopQuanAo
 			this.tpBanHang.TabIndex = 1;
 			this.tpBanHang.Text = "Bán Hàng";
 			this.tpBanHang.UseVisualStyleBackColor = true;
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.lbTT_ThucThu);
+			this.groupBox2.Controls.Add(this.lbTT_GiamGia);
+			this.groupBox2.Controls.Add(this.label28);
+			this.groupBox2.Controls.Add(this.label27);
+			this.groupBox2.Controls.Add(this.lbTT_ChuaGiamGia);
+			this.groupBox2.Controls.Add(this.label24);
+			this.groupBox2.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.groupBox2.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.groupBox2.Location = new System.Drawing.Point(569, 6);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(479, 137);
+			this.groupBox2.TabIndex = 8;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Thống kê thực thu";
+			// 
+			// lbTT_ThucThu
+			// 
+			this.lbTT_ThucThu.AutoSize = true;
+			this.lbTT_ThucThu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbTT_ThucThu.ForeColor = System.Drawing.Color.Tomato;
+			this.lbTT_ThucThu.Location = new System.Drawing.Point(339, 87);
+			this.lbTT_ThucThu.Name = "lbTT_ThucThu";
+			this.lbTT_ThucThu.Size = new System.Drawing.Size(109, 22);
+			this.lbTT_ThucThu.TabIndex = 15;
+			this.lbTT_ThucThu.Text = "100000000";
+			// 
+			// lbTT_GiamGia
+			// 
+			this.lbTT_GiamGia.AutoSize = true;
+			this.lbTT_GiamGia.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbTT_GiamGia.ForeColor = System.Drawing.Color.Tomato;
+			this.lbTT_GiamGia.Location = new System.Drawing.Point(200, 87);
+			this.lbTT_GiamGia.Name = "lbTT_GiamGia";
+			this.lbTT_GiamGia.Size = new System.Drawing.Size(109, 22);
+			this.lbTT_GiamGia.TabIndex = 14;
+			this.lbTT_GiamGia.Text = "100000000";
+			// 
+			// label28
+			// 
+			this.label28.AutoSize = true;
+			this.label28.ForeColor = System.Drawing.Color.DimGray;
+			this.label28.Location = new System.Drawing.Point(356, 35);
+			this.label28.Name = "label28";
+			this.label28.Size = new System.Drawing.Size(82, 34);
+			this.label28.TabIndex = 13;
+			this.label28.Text = "Tổng Tiền \r\nThực Thu";
+			this.label28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// label27
+			// 
+			this.label27.AutoSize = true;
+			this.label27.ForeColor = System.Drawing.Color.DimGray;
+			this.label27.Location = new System.Drawing.Point(218, 33);
+			this.label27.Name = "label27";
+			this.label27.Size = new System.Drawing.Size(82, 34);
+			this.label27.TabIndex = 12;
+			this.label27.Text = "Tổng Tiền \r\nGiảm Giá";
+			this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// lbTT_ChuaGiamGia
+			// 
+			this.lbTT_ChuaGiamGia.AutoSize = true;
+			this.lbTT_ChuaGiamGia.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbTT_ChuaGiamGia.ForeColor = System.Drawing.Color.Tomato;
+			this.lbTT_ChuaGiamGia.Location = new System.Drawing.Point(33, 87);
+			this.lbTT_ChuaGiamGia.Name = "lbTT_ChuaGiamGia";
+			this.lbTT_ChuaGiamGia.Size = new System.Drawing.Size(109, 22);
+			this.lbTT_ChuaGiamGia.TabIndex = 9;
+			this.lbTT_ChuaGiamGia.Text = "100000000";
+			// 
+			// label24
+			// 
+			this.label24.AutoSize = true;
+			this.label24.ForeColor = System.Drawing.Color.DimGray;
+			this.label24.Location = new System.Drawing.Point(25, 35);
+			this.label24.Name = "label24";
+			this.label24.Size = new System.Drawing.Size(117, 34);
+			this.label24.TabIndex = 6;
+			this.label24.Text = "Tổng Tiền \r\nChưa Giảm Giá";
+			this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// txtDiscountBH
 			// 
@@ -345,6 +428,7 @@ namespace QuanLyShopQuanAo
 			this.dtpKetThuc.Name = "dtpKetThuc";
 			this.dtpKetThuc.Size = new System.Drawing.Size(136, 25);
 			this.dtpKetThuc.TabIndex = 5;
+			this.dtpKetThuc.ValueChanged += new System.EventHandler(this.dtpKetThuc_ValueChanged);
 			// 
 			// label20
 			// 
@@ -1481,89 +1565,6 @@ namespace QuanLyShopQuanAo
 			this.label18.TabIndex = 10;
 			this.label18.Text = "Quần Áo Bán Chạy Nhất";
 			// 
-			// groupBox2
-			// 
-			this.groupBox2.Controls.Add(this.lbTT_ThucThu);
-			this.groupBox2.Controls.Add(this.lbTT_GiamGia);
-			this.groupBox2.Controls.Add(this.label28);
-			this.groupBox2.Controls.Add(this.label27);
-			this.groupBox2.Controls.Add(this.lbTT_ChuaGiamGia);
-			this.groupBox2.Controls.Add(this.label24);
-			this.groupBox2.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.groupBox2.Location = new System.Drawing.Point(569, 6);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(479, 137);
-			this.groupBox2.TabIndex = 8;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Thống kê thực thu";
-			// 
-			// lbTT_ChuaGiamGia
-			// 
-			this.lbTT_ChuaGiamGia.AutoSize = true;
-			this.lbTT_ChuaGiamGia.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbTT_ChuaGiamGia.ForeColor = System.Drawing.Color.Tomato;
-			this.lbTT_ChuaGiamGia.Location = new System.Drawing.Point(33, 87);
-			this.lbTT_ChuaGiamGia.Name = "lbTT_ChuaGiamGia";
-			this.lbTT_ChuaGiamGia.Size = new System.Drawing.Size(109, 22);
-			this.lbTT_ChuaGiamGia.TabIndex = 9;
-			this.lbTT_ChuaGiamGia.Text = "100000000";
-			// 
-			// label24
-			// 
-			this.label24.AutoSize = true;
-			this.label24.ForeColor = System.Drawing.Color.DimGray;
-			this.label24.Location = new System.Drawing.Point(25, 35);
-			this.label24.Name = "label24";
-			this.label24.Size = new System.Drawing.Size(117, 34);
-			this.label24.TabIndex = 6;
-			this.label24.Text = "Tổng Tiền \r\nChưa Giảm Giá";
-			this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// label27
-			// 
-			this.label27.AutoSize = true;
-			this.label27.ForeColor = System.Drawing.Color.DimGray;
-			this.label27.Location = new System.Drawing.Point(218, 33);
-			this.label27.Name = "label27";
-			this.label27.Size = new System.Drawing.Size(82, 34);
-			this.label27.TabIndex = 12;
-			this.label27.Text = "Tổng Tiền \r\nGiảm Giá";
-			this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// label28
-			// 
-			this.label28.AutoSize = true;
-			this.label28.ForeColor = System.Drawing.Color.DimGray;
-			this.label28.Location = new System.Drawing.Point(356, 35);
-			this.label28.Name = "label28";
-			this.label28.Size = new System.Drawing.Size(82, 34);
-			this.label28.TabIndex = 13;
-			this.label28.Text = "Tổng Tiền \r\nThực Thu";
-			this.label28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-			// 
-			// lbTT_GiamGia
-			// 
-			this.lbTT_GiamGia.AutoSize = true;
-			this.lbTT_GiamGia.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbTT_GiamGia.ForeColor = System.Drawing.Color.Tomato;
-			this.lbTT_GiamGia.Location = new System.Drawing.Point(200, 87);
-			this.lbTT_GiamGia.Name = "lbTT_GiamGia";
-			this.lbTT_GiamGia.Size = new System.Drawing.Size(109, 22);
-			this.lbTT_GiamGia.TabIndex = 14;
-			this.lbTT_GiamGia.Text = "100000000";
-			// 
-			// lbTT_ThucThu
-			// 
-			this.lbTT_ThucThu.AutoSize = true;
-			this.lbTT_ThucThu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbTT_ThucThu.ForeColor = System.Drawing.Color.Tomato;
-			this.lbTT_ThucThu.Location = new System.Drawing.Point(339, 87);
-			this.lbTT_ThucThu.Name = "lbTT_ThucThu";
-			this.lbTT_ThucThu.Size = new System.Drawing.Size(109, 22);
-			this.lbTT_ThucThu.TabIndex = 15;
-			this.lbTT_ThucThu.Text = "100000000";
-			// 
 			// frmAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1577,6 +1578,8 @@ namespace QuanLyShopQuanAo
 			this.tcAdmin.ResumeLayout(false);
 			this.tpBanHang.ResumeLayout(false);
 			this.tpBanHang.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
+			this.groupBox2.PerformLayout();
 			this.panel19.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dtgvChiTietBanHang)).EndInit();
 			this.panel13.ResumeLayout(false);
@@ -1647,8 +1650,6 @@ namespace QuanLyShopQuanAo
 			this.tpDoanhThu.ResumeLayout(false);
 			this.panel29.ResumeLayout(false);
 			this.panel29.PerformLayout();
-			this.groupBox2.ResumeLayout(false);
-			this.groupBox2.PerformLayout();
 			this.ResumeLayout(false);
 
 		}

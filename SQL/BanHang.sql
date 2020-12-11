@@ -175,7 +175,7 @@ GO
 
 -- them proc tim don hang theo ngay
 CREATE PROC sp_select_banHang_FromDateToDate
-@fromDate DATETIME, @toDate DATETIME
+@fromDate DATE, @toDate DATE
 AS
 BEGIN
 	SELECT ID_BH, ID_GD, HoTen, SDT, NgayBanHang, Discount FROM BanHang
@@ -214,8 +214,8 @@ GO
 -- EXEC sp_select_BanHang_By_KhachHang_SDT '0374408253';
 -- GO
 
-ALTER PROC sp_TinhTongTienChuaGiamGia
-@fromdate DATETIME, @todate DATETIME
+CREATE PROC sp_TinhTongTienChuaGiamGia
+@fromdate DATE, @todate DATE
 AS
 BEGIN
 	SELECT SUM(ChiTietBanHang.SoLuongSanPham * QuanAo.GiaBan) FROM ChiTietBanHang
@@ -225,11 +225,11 @@ BEGIN
 END
 GO
 
-EXEC sp_TinhTongTienChuaGiamGia
+EXEC sp_TinhTongTienChuaGiamGia '20201201', '20201231';
+GO
 
-
-CREATE PROC	sp_TinhTongTienGiamGia
-@fromdate DATETIME, @todate DATETIME
+CREATE PROC	sp_TinhTongTienGiamGia 
+@fromdate DATE, @todate DATE
 AS
 BEGIN
 	SELECT SUM(ChiTietBanHang.SoLuongSanPham*QuanAo.GiaBan*(BanHang.Discount/100)) FROM ChiTietBanHang
@@ -238,3 +238,6 @@ BEGIN
 	WHERE @fromdate <= NgayBanHang AND NgayBanHang<=@todate
 END
 GO
+
+EXEC sp_TinhTongTienGiamGia '20201201', '20201231';
+
