@@ -55,5 +55,22 @@ namespace QuanLyShopQuanAo.DAO
 
 			return listKhachHang;
 		}
+
+		public List<KhachHang_DTO> TimKiemTheoSDT(string SDT)
+		{
+			string query = "EXEC sp_select_TimKiemKhachHang @SDT";
+			object[] param = new object[] { SDT };
+			DataTable data = DataProvider.Instance.ExecuteQuery(query, param);
+
+			List<KhachHang_DTO> dsKhachHang = new List<KhachHang_DTO>();
+
+			foreach (DataRow row in data.Rows)
+			{
+				KhachHang_DTO khachhang = new KhachHang_DTO(row);
+				dsKhachHang.Add(khachhang);
+			}
+
+			return dsKhachHang;
+		}
 	}
 }

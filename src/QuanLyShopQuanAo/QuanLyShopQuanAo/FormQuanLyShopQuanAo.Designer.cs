@@ -46,9 +46,9 @@
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.dgvQuanAo = new System.Windows.Forms.DataGridView();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.txtSDT = new System.Windows.Forms.MaskedTextBox();
 			this.txtDiaChi = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
-			this.txtSDT = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtHoTen = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -279,9 +279,9 @@
 			// groupBox3
 			// 
 			this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+			this.groupBox3.Controls.Add(this.txtSDT);
 			this.groupBox3.Controls.Add(this.txtDiaChi);
 			this.groupBox3.Controls.Add(this.label8);
-			this.groupBox3.Controls.Add(this.txtSDT);
 			this.groupBox3.Controls.Add(this.label2);
 			this.groupBox3.Controls.Add(this.txtHoTen);
 			this.groupBox3.Controls.Add(this.label1);
@@ -291,6 +291,15 @@
 			this.groupBox3.TabIndex = 2;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Thông tin khách hàng";
+			// 
+			// txtSDT
+			// 
+			this.txtSDT.Location = new System.Drawing.Point(347, 24);
+			this.txtSDT.Mask = "0000000000";
+			this.txtSDT.Name = "txtSDT";
+			this.txtSDT.Size = new System.Drawing.Size(156, 25);
+			this.txtSDT.TabIndex = 10;
+			this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
 			// 
 			// txtDiaChi
 			// 
@@ -307,13 +316,6 @@
 			this.label8.Size = new System.Drawing.Size(61, 17);
 			this.label8.TabIndex = 8;
 			this.label8.Text = "Địa chỉ :";
-			// 
-			// txtSDT
-			// 
-			this.txtSDT.Location = new System.Drawing.Point(330, 22);
-			this.txtSDT.Name = "txtSDT";
-			this.txtSDT.Size = new System.Drawing.Size(173, 25);
-			this.txtSDT.TabIndex = 7;
 			// 
 			// label2
 			// 
@@ -551,7 +553,6 @@
 		private System.Windows.Forms.Button btnThem;
 		private System.Windows.Forms.NumericUpDown nmSoLuong;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox txtSDT;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtHoTen;
 		private System.Windows.Forms.Button btnHuyDon;
@@ -573,5 +574,6 @@
 		private System.Windows.Forms.Label lblTongTienCuoiCung;
 		private System.Windows.Forms.Label lblTongTien;
 		private System.Windows.Forms.DataGridView dgvCTBH;
+		private System.Windows.Forms.MaskedTextBox txtSDT;
 	}
 }

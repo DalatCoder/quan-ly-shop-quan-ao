@@ -309,5 +309,24 @@ namespace QuanLyShopQuanAo
 			nmSoLuong.Value = 1;
 			btnThem.PerformClick();
 		}
+
+		private void txtSDT_TextChanged(object sender, EventArgs e)
+		{
+			string sdt = txtSDT.Text;
+			if (string.IsNullOrWhiteSpace(sdt))
+			{
+				txtHoTen.Text = "";
+				return;
+			}
+			List<KhachHang_DTO> dsKhachHang = KhachHang_DAO.Instance.TimKiemTheoSDT(sdt);
+			if (dsKhachHang.Count==0)
+			{
+				txtHoTen.Text = "";
+			}
+			else
+			{
+				txtHoTen.Text = dsKhachHang[0].HoTen;
+			}
+		}
 	}
 }

@@ -45,5 +45,13 @@ GO
 -- EXEC sp_select_KhachHang_By_KeyWord 'hieu'
 -- EXEC sp_select_KhachHang_By_KeyWord '037'
 
-SELECT * FROM KhachHang
-WHERE KhachHang.SDT LIKE '82%'
+CREATE PROC sp_select_TimKiemKhachHang
+@SDT VARCHAR(10)
+AS
+BEGIN
+	SELECT * FROM KhachHang
+	WHERE KhachHang.SDT LIKE '%'+@SDT+'%'
+END
+GO
+
+EXEC sp_select_TimKiemKhachHang '82'
