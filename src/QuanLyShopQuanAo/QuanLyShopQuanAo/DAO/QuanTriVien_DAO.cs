@@ -66,5 +66,32 @@ namespace QuanLyShopQuanAo.DAO
 
 			return dsQuanTriVien;
 		}
+
+		public bool ThemTaiKhoan(int ID_KTK, string tenDangNhap, string matKhau)
+		{
+			string query = "EXEC sp_insert_QuanTriVien @ID_KTK , @TenDangNhap , @MatKhau";
+			object[] param = new object[] { ID_KTK, tenDangNhap, matKhau };
+			int rows = DataProvider.Instance.ExecuteNonQuery(query, param);
+
+			if (rows>0)
+			{
+				return true;
+			}
+
+			return false;
+		}
+
+		public bool XoaTaiKhoan(int id_qtv)
+		{
+			string query = "EXEC sp_delete_QuanTriVien @id_qtv";
+			object[] param = new object[] { id_qtv };
+			int rows = DataProvider.Instance.ExecuteNonQuery(query, param);
+
+			if (rows > 0)
+				return true;
+
+			return false;
+			
+		}
 	}
 }
