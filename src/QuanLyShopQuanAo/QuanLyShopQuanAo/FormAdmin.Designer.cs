@@ -1442,9 +1442,6 @@ namespace QuanLyShopQuanAo
 			// cbTK_Loai
 			// 
 			this.cbTK_Loai.FormattingEnabled = true;
-			this.cbTK_Loai.Items.AddRange(new object[] {
-            "Quản trị viên",
-            "Nhân viên"});
 			this.cbTK_Loai.Location = new System.Drawing.Point(180, 14);
 			this.cbTK_Loai.Name = "cbTK_Loai";
 			this.cbTK_Loai.Size = new System.Drawing.Size(245, 25);

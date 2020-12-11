@@ -54,6 +54,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\HinhQA_DAO.cs" />
     <Compile Include="DAO\KhachHang_DAO.cs" />
+    <Compile Include="DAO\KieuTaiKhoan_DAO.cs" />
     <Compile Include="DAO\LoaiQA_DAO.cs" />
     <Compile Include="DAO\QuanAo_DAO.cs" />
     <Compile Include="DAO\QuanTriVien_DAO.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="DTO\ChiTietBanHang_DTO.cs" />
     <Compile Include="DTO\HinhQA_DTO.cs" />
     <Compile Include="DTO\KhachHang_DTO.cs" />
+    <Compile Include="DTO\KieuTaiKhoan_DTO.cs" />
     <Compile Include="DTO\LoaiQA_DTO.cs" />
     <Compile Include="DTO\QuanAo_DTO.cs" />
     <Compile Include="DTO\QuanTriVien_DTO.cs" />

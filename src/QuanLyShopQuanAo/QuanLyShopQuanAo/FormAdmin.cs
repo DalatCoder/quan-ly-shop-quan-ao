@@ -37,6 +37,7 @@ namespace QuanLyShopQuanAo
 			InitStateLoaiQuanAo();
 			InitStateKhachHang();
 			LoadAccount();
+			LoadKieuTaiKhoan();
 		}
 
 		#endregion
@@ -623,6 +624,15 @@ namespace QuanLyShopQuanAo
 		void LoadAccount()
 		{
 			dtgvTaiKhoan.DataSource = QuanTriVien_DAO.Instance.GetListAccount();
+		}
+		
+		void LoadKieuTaiKhoan()
+		{
+			KieuTaiKhoan_DAO kieuTaiKhoan = new KieuTaiKhoan_DAO();
+			cbTK_Loai.DataSource = kieuTaiKhoan.GetKieuTaiKhoan();
+
+			cbTK_Loai.DisplayMember = "Ten_KTK";
+			cbTK_Loai.ValueMember = "ID_KTK";
 		}
 
 		#endregion
