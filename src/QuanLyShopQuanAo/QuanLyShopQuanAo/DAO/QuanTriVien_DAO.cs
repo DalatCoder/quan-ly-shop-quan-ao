@@ -47,5 +47,24 @@ namespace QuanLyShopQuanAo.DAO
 
 			return null;
 		}
+
+		/// <summary>
+		/// Lấy tất cả tài khoản
+		/// </summary>
+		/// <returns></returns>
+		public List<QuanTriVien_DTO> GetListAccount()
+		{
+			string query = "EXEC sp_select_GetAccount";
+			DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+			List<QuanTriVien_DTO> dsQuanTriVien = new List<QuanTriVien_DTO>();
+			foreach (DataRow row in data.Rows)
+			{
+				QuanTriVien_DTO quantrivien = new QuanTriVien_DTO(row);
+				dsQuanTriVien.Add(quantrivien);
+			}
+
+			return dsQuanTriVien;
+		}
 	}
 }

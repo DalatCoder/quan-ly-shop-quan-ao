@@ -20,7 +20,9 @@ CREATE PROCEDURE sp_select_Account_By_UserName
 @username NVARCHAR(100)
 AS
 BEGIN
-	SELECT * FROM QuanTriVien WHERE @username = TenDangNhap
+	SELECT ID_QTV,TenDangNhap, MatKhau, Ten_KTK FROM QuanTriVien
+	JOIN KieuTaiKhoan ON QuanTriVien.ID_KTK = KieuTaiKhoan.ID_KTK
+	WHERE @username = TenDangNhap
 END
 GO
 

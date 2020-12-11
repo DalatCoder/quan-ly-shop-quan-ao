@@ -55,6 +55,7 @@ namespace QuanLyShopQuanAo
 			this.label8 = new System.Windows.Forms.Label();
 			this.btnBrowseHinhQA = new System.Windows.Forms.Button();
 			this.panel25 = new System.Windows.Forms.Panel();
+			this.btn_QA_AddLoai = new System.Windows.Forms.Button();
 			this.cbLoaiQA = new System.Windows.Forms.ComboBox();
 			this.label14 = new System.Windows.Forms.Label();
 			this.pbHinhQA = new System.Windows.Forms.PictureBox();
@@ -131,7 +132,22 @@ namespace QuanLyShopQuanAo
 			this.label13 = new System.Windows.Forms.Label();
 			this.panel26 = new System.Windows.Forms.Panel();
 			this.dtgvKH = new System.Windows.Forms.DataGridView();
-			this.btn_QA_AddLoai = new System.Windows.Forms.Button();
+			this.tpTaiKhoan = new System.Windows.Forms.TabPage();
+			this.panel21 = new System.Windows.Forms.Panel();
+			this.panel30 = new System.Windows.Forms.Panel();
+			this.txtTK_MatKhau = new System.Windows.Forms.TextBox();
+			this.label25 = new System.Windows.Forms.Label();
+			this.panel31 = new System.Windows.Forms.Panel();
+			this.txtTK_TenDangNhap = new System.Windows.Forms.TextBox();
+			this.label26 = new System.Windows.Forms.Label();
+			this.panel32 = new System.Windows.Forms.Panel();
+			this.dtgvTaiKhoan = new System.Windows.Forms.DataGridView();
+			this.panel33 = new System.Windows.Forms.Panel();
+			this.btnTK_Them = new System.Windows.Forms.Button();
+			this.btnTK_Xoa = new System.Windows.Forms.Button();
+			this.panel27 = new System.Windows.Forms.Panel();
+			this.label23 = new System.Windows.Forms.Label();
+			this.cbTK_Loai = new System.Windows.Forms.ComboBox();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.panel19.SuspendLayout();
@@ -172,6 +188,14 @@ namespace QuanLyShopQuanAo
 			this.panel24.SuspendLayout();
 			this.panel26.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).BeginInit();
+			this.tpTaiKhoan.SuspendLayout();
+			this.panel21.SuspendLayout();
+			this.panel30.SuspendLayout();
+			this.panel31.SuspendLayout();
+			this.panel32.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).BeginInit();
+			this.panel33.SuspendLayout();
+			this.panel27.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tcAdmin
@@ -180,6 +204,7 @@ namespace QuanLyShopQuanAo
 			this.tcAdmin.Controls.Add(this.tpQuanAo);
 			this.tcAdmin.Controls.Add(this.tpLoaiQuanAo);
 			this.tcAdmin.Controls.Add(this.tpKhachHang);
+			this.tcAdmin.Controls.Add(this.tpTaiKhoan);
 			this.tcAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tcAdmin.Location = new System.Drawing.Point(0, 0);
 			this.tcAdmin.Name = "tcAdmin";
@@ -468,6 +493,20 @@ namespace QuanLyShopQuanAo
 			this.panel25.Name = "panel25";
 			this.panel25.Size = new System.Drawing.Size(438, 33);
 			this.panel25.TabIndex = 6;
+			// 
+			// btn_QA_AddLoai
+			// 
+			this.btn_QA_AddLoai.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btn_QA_AddLoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_QA_AddLoai.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_QA_AddLoai.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btn_QA_AddLoai.Location = new System.Drawing.Point(374, 3);
+			this.btn_QA_AddLoai.Name = "btn_QA_AddLoai";
+			this.btn_QA_AddLoai.Size = new System.Drawing.Size(51, 25);
+			this.btn_QA_AddLoai.TabIndex = 2;
+			this.btn_QA_AddLoai.Text = "+";
+			this.btn_QA_AddLoai.UseVisualStyleBackColor = true;
+			this.btn_QA_AddLoai.Click += new System.EventHandler(this.btn_QA_AddLoai_Click);
 			// 
 			// cbLoaiQA
 			// 
@@ -1250,19 +1289,166 @@ namespace QuanLyShopQuanAo
 			this.dtgvKH.Size = new System.Drawing.Size(550, 635);
 			this.dtgvKH.TabIndex = 2;
 			// 
-			// btn_QA_AddLoai
+			// tpTaiKhoan
 			// 
-			this.btn_QA_AddLoai.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-			this.btn_QA_AddLoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn_QA_AddLoai.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btn_QA_AddLoai.ForeColor = System.Drawing.Color.DodgerBlue;
-			this.btn_QA_AddLoai.Location = new System.Drawing.Point(374, 3);
-			this.btn_QA_AddLoai.Name = "btn_QA_AddLoai";
-			this.btn_QA_AddLoai.Size = new System.Drawing.Size(51, 25);
-			this.btn_QA_AddLoai.TabIndex = 2;
-			this.btn_QA_AddLoai.Text = "+";
-			this.btn_QA_AddLoai.UseVisualStyleBackColor = true;
-			this.btn_QA_AddLoai.Click += new System.EventHandler(this.btn_QA_AddLoai_Click);
+			this.tpTaiKhoan.Controls.Add(this.panel21);
+			this.tpTaiKhoan.Controls.Add(this.panel32);
+			this.tpTaiKhoan.Location = new System.Drawing.Point(4, 26);
+			this.tpTaiKhoan.Name = "tpTaiKhoan";
+			this.tpTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
+			this.tpTaiKhoan.Size = new System.Drawing.Size(1056, 651);
+			this.tpTaiKhoan.TabIndex = 5;
+			this.tpTaiKhoan.Text = "Tài Khoản";
+			this.tpTaiKhoan.UseVisualStyleBackColor = true;
+			// 
+			// panel21
+			// 
+			this.panel21.Controls.Add(this.panel27);
+			this.panel21.Controls.Add(this.panel33);
+			this.panel21.Controls.Add(this.panel30);
+			this.panel21.Controls.Add(this.panel31);
+			this.panel21.Location = new System.Drawing.Point(565, 8);
+			this.panel21.Name = "panel21";
+			this.panel21.Size = new System.Drawing.Size(483, 635);
+			this.panel21.TabIndex = 9;
+			// 
+			// panel30
+			// 
+			this.panel30.Controls.Add(this.txtTK_MatKhau);
+			this.panel30.Controls.Add(this.label25);
+			this.panel30.Location = new System.Drawing.Point(22, 289);
+			this.panel30.Name = "panel30";
+			this.panel30.Size = new System.Drawing.Size(438, 52);
+			this.panel30.TabIndex = 2;
+			// 
+			// txtTK_MatKhau
+			// 
+			this.txtTK_MatKhau.Location = new System.Drawing.Point(180, 17);
+			this.txtTK_MatKhau.Name = "txtTK_MatKhau";
+			this.txtTK_MatKhau.Size = new System.Drawing.Size(245, 25);
+			this.txtTK_MatKhau.TabIndex = 1;
+			// 
+			// label25
+			// 
+			this.label25.AutoSize = true;
+			this.label25.Location = new System.Drawing.Point(17, 17);
+			this.label25.Name = "label25";
+			this.label25.Size = new System.Drawing.Size(69, 17);
+			this.label25.TabIndex = 0;
+			this.label25.Text = "Mật Khẩu";
+			// 
+			// panel31
+			// 
+			this.panel31.Controls.Add(this.txtTK_TenDangNhap);
+			this.panel31.Controls.Add(this.label26);
+			this.panel31.Location = new System.Drawing.Point(22, 154);
+			this.panel31.Name = "panel31";
+			this.panel31.Size = new System.Drawing.Size(438, 52);
+			this.panel31.TabIndex = 1;
+			// 
+			// txtTK_TenDangNhap
+			// 
+			this.txtTK_TenDangNhap.Location = new System.Drawing.Point(180, 14);
+			this.txtTK_TenDangNhap.Name = "txtTK_TenDangNhap";
+			this.txtTK_TenDangNhap.Size = new System.Drawing.Size(245, 25);
+			this.txtTK_TenDangNhap.TabIndex = 1;
+			// 
+			// label26
+			// 
+			this.label26.AutoSize = true;
+			this.label26.Location = new System.Drawing.Point(17, 17);
+			this.label26.Name = "label26";
+			this.label26.Size = new System.Drawing.Size(103, 17);
+			this.label26.TabIndex = 0;
+			this.label26.Text = "Tên Tài Khoản";
+			// 
+			// panel32
+			// 
+			this.panel32.Controls.Add(this.dtgvTaiKhoan);
+			this.panel32.Location = new System.Drawing.Point(9, 8);
+			this.panel32.Name = "panel32";
+			this.panel32.Size = new System.Drawing.Size(550, 635);
+			this.panel32.TabIndex = 8;
+			// 
+			// dtgvTaiKhoan
+			// 
+			this.dtgvTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dtgvTaiKhoan.BackgroundColor = System.Drawing.Color.White;
+			this.dtgvTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.dtgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dtgvTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dtgvTaiKhoan.Location = new System.Drawing.Point(0, 0);
+			this.dtgvTaiKhoan.MultiSelect = false;
+			this.dtgvTaiKhoan.Name = "dtgvTaiKhoan";
+			this.dtgvTaiKhoan.ReadOnly = true;
+			this.dtgvTaiKhoan.RowHeadersWidth = 51;
+			this.dtgvTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dtgvTaiKhoan.Size = new System.Drawing.Size(550, 635);
+			this.dtgvTaiKhoan.TabIndex = 2;
+			// 
+			// panel33
+			// 
+			this.panel33.Controls.Add(this.btnTK_Xoa);
+			this.panel33.Controls.Add(this.btnTK_Them);
+			this.panel33.Location = new System.Drawing.Point(22, 423);
+			this.panel33.Name = "panel33";
+			this.panel33.Size = new System.Drawing.Size(438, 81);
+			this.panel33.TabIndex = 5;
+			// 
+			// btnTK_Them
+			// 
+			this.btnTK_Them.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnTK_Them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTK_Them.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTK_Them.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btnTK_Them.Location = new System.Drawing.Point(20, 13);
+			this.btnTK_Them.Name = "btnTK_Them";
+			this.btnTK_Them.Size = new System.Drawing.Size(85, 54);
+			this.btnTK_Them.TabIndex = 1;
+			this.btnTK_Them.Text = "Thêm";
+			this.btnTK_Them.UseVisualStyleBackColor = true;
+			// 
+			// btnTK_Xoa
+			// 
+			this.btnTK_Xoa.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnTK_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTK_Xoa.Font = new System.Drawing.Font("Arial", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTK_Xoa.ForeColor = System.Drawing.Color.DodgerBlue;
+			this.btnTK_Xoa.Location = new System.Drawing.Point(340, 13);
+			this.btnTK_Xoa.Name = "btnTK_Xoa";
+			this.btnTK_Xoa.Size = new System.Drawing.Size(85, 54);
+			this.btnTK_Xoa.TabIndex = 2;
+			this.btnTK_Xoa.Text = "Xóa";
+			this.btnTK_Xoa.UseVisualStyleBackColor = true;
+			// 
+			// panel27
+			// 
+			this.panel27.Controls.Add(this.cbTK_Loai);
+			this.panel27.Controls.Add(this.label23);
+			this.panel27.Location = new System.Drawing.Point(22, 222);
+			this.panel27.Name = "panel27";
+			this.panel27.Size = new System.Drawing.Size(438, 52);
+			this.panel27.TabIndex = 6;
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.Location = new System.Drawing.Point(17, 17);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(105, 17);
+			this.label23.TabIndex = 0;
+			this.label23.Text = "Loại Tài Khoản";
+			// 
+			// cbTK_Loai
+			// 
+			this.cbTK_Loai.FormattingEnabled = true;
+			this.cbTK_Loai.Items.AddRange(new object[] {
+            "Quản trị viên",
+            "Nhân viên"});
+			this.cbTK_Loai.Location = new System.Drawing.Point(180, 14);
+			this.cbTK_Loai.Name = "cbTK_Loai";
+			this.cbTK_Loai.Size = new System.Drawing.Size(245, 25);
+			this.cbTK_Loai.TabIndex = 1;
 			// 
 			// frmAdmin
 			// 
@@ -1333,6 +1519,17 @@ namespace QuanLyShopQuanAo
 			this.panel24.PerformLayout();
 			this.panel26.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKH)).EndInit();
+			this.tpTaiKhoan.ResumeLayout(false);
+			this.panel21.ResumeLayout(false);
+			this.panel30.ResumeLayout(false);
+			this.panel30.PerformLayout();
+			this.panel31.ResumeLayout(false);
+			this.panel31.PerformLayout();
+			this.panel32.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).EndInit();
+			this.panel33.ResumeLayout(false);
+			this.panel27.ResumeLayout(false);
+			this.panel27.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -1442,5 +1639,21 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.Label lblDB;
 		private System.Windows.Forms.Label lblDaban;
 		private System.Windows.Forms.Button btn_QA_AddLoai;
+		private System.Windows.Forms.TabPage tpTaiKhoan;
+		private System.Windows.Forms.Panel panel21;
+		private System.Windows.Forms.Panel panel33;
+		private System.Windows.Forms.Button btnTK_Xoa;
+		private System.Windows.Forms.Button btnTK_Them;
+		private System.Windows.Forms.Panel panel30;
+		private System.Windows.Forms.TextBox txtTK_MatKhau;
+		private System.Windows.Forms.Label label25;
+		private System.Windows.Forms.Panel panel31;
+		private System.Windows.Forms.TextBox txtTK_TenDangNhap;
+		private System.Windows.Forms.Label label26;
+		private System.Windows.Forms.Panel panel32;
+		private System.Windows.Forms.DataGridView dtgvTaiKhoan;
+		private System.Windows.Forms.Panel panel27;
+		private System.Windows.Forms.ComboBox cbTK_Loai;
+		private System.Windows.Forms.Label label23;
 	}
 }

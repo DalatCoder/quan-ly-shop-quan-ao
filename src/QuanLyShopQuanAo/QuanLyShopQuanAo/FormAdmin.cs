@@ -36,6 +36,7 @@ namespace QuanLyShopQuanAo
 			InitStateQuanAo();
 			InitStateLoaiQuanAo();
 			InitStateKhachHang();
+			LoadAccount();
 		}
 
 		#endregion
@@ -331,11 +332,11 @@ namespace QuanLyShopQuanAo
 		private void btnTimQA_Click(object sender, EventArgs e)
 		{
 			string tenQA = txtTimQA.Text;
-			
+
 
 			if (string.IsNullOrWhiteSpace(tenQA))
 			{
-				if (string.IsNullOrWhiteSpace(txtTimTuGiaQA.Text)||string.IsNullOrWhiteSpace(txtTimDenGiaQA.Text))
+				if (string.IsNullOrWhiteSpace(txtTimTuGiaQA.Text) || string.IsNullOrWhiteSpace(txtTimDenGiaQA.Text))
 				{
 					MessageBox.Show("Vui lòng nhập thông tin tìm kiếm");
 				}
@@ -361,7 +362,7 @@ namespace QuanLyShopQuanAo
 					QAList.DataSource = QuanAo_DAO.Instance.Load_QA_By_TenQA_GiaCa(tenQA, giathap, giacao);
 				}
 
-			}	
+			}
 		}
 
 		private void btnXoaQA_Click(object sender, EventArgs e)
@@ -382,6 +383,31 @@ namespace QuanLyShopQuanAo
 			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
+		private void btn_QA_AddLoai_Click(object sender, EventArgs e)
+		{
+			string loaiQA = cbLoaiQA.Text;
+
+			// Thêm vào cơ sở dữ liệu
+
+
+			if (!LoaiQA_DAO.Instance.Insert_LoaiQuanAo(loaiQA))
+			{
+				cbLoaiQA.SelectedItem = cbLoaiQA.Items[0];
+				MessageBox.Show("Không thêm được loại quần áo", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+
+			cbLoaiQA.DataSource = LoaiQA_DAO.Instance.Load_LQA();
+			cbLoaiQA.DisplayMember = "Ten_LQA";
+			cbLoaiQA.ValueMember = "ID_LQA";
+
+			cbLoaiQA.SelectedIndex = cbLoaiQA.Items.Count - 1;
+
+			LoadListLQA();
+
+			MessageBox.Show("Thêm loại quần áo thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
 		#endregion
 
 		#region Loai quan ao
@@ -392,7 +418,7 @@ namespace QuanLyShopQuanAo
 			LoadListLQA();
 			AddDataBindingLoaiQuanAo();
 			DataTable table = ChiTietBanHang_DAO.Instance.Load_CTBH_BanChay();
-			
+
 			if (table.Rows.Count > 0)
 			{
 				lblChay.Text = table.Rows[0]["Ten_QA"].ToString();
@@ -409,7 +435,7 @@ namespace QuanLyShopQuanAo
 		{
 			txtLoaiQA_ID.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "ID_LQA", true, DataSourceUpdateMode.Never));
 			txtLoaiQA_Ten.DataBindings.Add(new Binding("Text", dtgvLoaiQuanAo.DataSource, "Ten_LQA", true, DataSourceUpdateMode.Never));
-			
+
 		}
 
 		void btnThemLoaiQA_Click(object sender, EventArgs e)
@@ -450,7 +476,7 @@ namespace QuanLyShopQuanAo
 			MessageBox.Show(msg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
-		
+
 		void btnSuaLoaiQA_Click(object sender, EventArgs e)
 		{
 			string Ten = txtLoaiQA_Ten.Text;
@@ -493,7 +519,7 @@ namespace QuanLyShopQuanAo
 		{
 			int idLQA = int.Parse(txtLoaiQA_ID.Text);
 			string msg;
-			
+
 
 			if (LoaiQA_DAO.Instance.DeleteQA(idLQA))
 			{
@@ -570,9 +596,9 @@ namespace QuanLyShopQuanAo
 			string chuoiTimKiem = txtKhachHang_TimKiem_TenSDT.Text;
 
 			if (string.IsNullOrWhiteSpace(chuoiTimKiem)) return;
-			
-				KHList.DataSource = KhachHang_DAO.Instance.Search_KH(chuoiTimKiem);
-			
+
+			KHList.DataSource = KhachHang_DAO.Instance.Search_KH(chuoiTimKiem);
+
 		}
 		private void btnKhachHang_XoaBoLoc_Click(object sender, EventArgs e)
 		{
@@ -592,29 +618,15 @@ namespace QuanLyShopQuanAo
 
 		#endregion
 
-		private void btn_QA_AddLoai_Click(object sender, EventArgs e)
+		#region Tai Khoan
+
+		void LoadAccount()
 		{
-			string loaiQA = cbLoaiQA.Text;
-
-			// Thêm vào cơ sở dữ liệu
-			
-
-			if (!LoaiQA_DAO.Instance.Insert_LoaiQuanAo(loaiQA))
-			{
-				cbLoaiQA.SelectedItem = cbLoaiQA.Items[0];
-				MessageBox.Show("Không thêm được loại quần áo", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				return;
-			}
-
-			cbLoaiQA.DataSource = LoaiQA_DAO.Instance.Load_LQA();
-			cbLoaiQA.DisplayMember = "Ten_LQA";
-			cbLoaiQA.ValueMember = "ID_LQA";
-
-			cbLoaiQA.SelectedIndex = cbLoaiQA.Items.Count - 1;
-
-			LoadListLQA();
-
-			MessageBox.Show("Thêm loại quần áo thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			dtgvTaiKhoan.DataSource = QuanTriVien_DAO.Instance.GetListAccount();
 		}
+
+		#endregion
+
+
 	}
 }

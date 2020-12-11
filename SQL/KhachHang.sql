@@ -44,3 +44,6 @@ GO
 
 -- EXEC sp_select_KhachHang_By_KeyWord 'hieu'
 -- EXEC sp_select_KhachHang_By_KeyWord '037'
+
+SELECT * FROM KhachHang
+WHERE KhachHang.SDT LIKE '82%'
