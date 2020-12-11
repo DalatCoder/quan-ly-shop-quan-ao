@@ -136,5 +136,21 @@ namespace QuanLyShopQuanAo.DAO
 			int result = (int)DataProvider.Instance.ExecuteScalar(query, param);
 			return result;
 		}
+
+		public int TinhTongTienChuaGiamGia(DateTime fromdate,DateTime todate)
+		{
+			string query = "EXEC sp_TinhTongTienChuaGiamGia @fromdate , @todate";
+			object[] param = new object[] { fromdate, todate };
+			int result = (int)DataProvider.Instance.ExecuteScalar(query, param);
+			return result;
+		}
+
+		public int TinhTongTienGiamGia(DateTime fromdate,DateTime todate)
+		{
+			string query = "EXEC sp_TinhTongTienGiamGia @fromdate , @todate";
+			object[] param = new object[] { fromdate, todate };
+			int result = (int)DataProvider.Instance.ExecuteScalar(query, param);
+			return result;
+		}
 	}
 }
