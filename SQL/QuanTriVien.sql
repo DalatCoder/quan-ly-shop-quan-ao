@@ -12,9 +12,9 @@ BEGIN
 END
 GO
 
-EXEC sp_select_DangNhap N'THIHA', N'123'
-EXEC sp_select_DangNhap N'THIHA', N'345'
-EXEC sp_select_DangNhap N'NHANVIEN', N'111'
+-- EXEC sp_select_DangNhap N'THIHA', N'123'
+-- EXEC sp_select_DangNhap N'THIHA', N'345'
+-- EXEC sp_select_DangNhap N'NHANVIEN', N'111'
 
 CREATE PROCEDURE sp_select_Account_By_UserName
 @username NVARCHAR(100)
@@ -41,7 +41,7 @@ BEGIN
 END
 GO
 
-EXEC sp_select_GetAccount
+-- EXEC sp_select_GetAccount
 
 
 CREATE PROCEDURE sp_select_KieuTaiKhoan
@@ -51,7 +51,7 @@ BEGIN
 END
 GO
 
-EXEC sp_select_KieuTaiKhoan
+-- EXEC sp_select_KieuTaiKhoan
 
 
 CREATE PROC sp_insert_QuanTriVien
@@ -66,7 +66,7 @@ BEGIN
 END
 GO
 
-EXEC sp_insert_QuanTriVien 1, N'NHANVIEN2', N'222'
+-- EXEC sp_insert_QuanTriVien 1, N'NHANVIEN2', N'222'
 
 
 CREATE PROC sp_delete_QuanTriVien

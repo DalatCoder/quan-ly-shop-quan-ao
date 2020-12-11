@@ -54,4 +54,4 @@ BEGIN
 END
 GO
 
-EXEC sp_select_TimKiemKhachHang '82'
+-- EXEC sp_select_TimKiemKhachHang '82'

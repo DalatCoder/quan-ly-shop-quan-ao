@@ -309,16 +309,19 @@ namespace QuanLyShopQuanAo
 			if (string.IsNullOrWhiteSpace(sdt))
 			{
 				txtHoTen.Text = "";
+				txtDiaChi.Text = "";
 				return;
 			}
 			List<KhachHang_DTO> dsKhachHang = KhachHang_DAO.Instance.TimKiemTheoSDT(sdt);
 			if (dsKhachHang.Count == 0)
 			{
 				txtHoTen.Text = "";
+				txtDiaChi.Text = "";
 			}
 			else
 			{
 				txtHoTen.Text = dsKhachHang[0].HoTen;
+				txtDiaChi.Text = dsKhachHang[0].DiaChi;
 			}
 		}
 

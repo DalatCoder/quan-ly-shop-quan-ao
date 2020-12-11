@@ -225,8 +225,8 @@ BEGIN
 END
 GO
 
-EXEC sp_TinhTongTienChuaGiamGia '20201201', '20201231';
-GO
+-- EXEC sp_TinhTongTienChuaGiamGia '20201201', '20201231';
+-- GO
 
 CREATE PROC	sp_TinhTongTienGiamGia 
 @fromdate DATE, @todate DATE
@@ -239,5 +239,5 @@ BEGIN
 END
 GO
 
-EXEC sp_TinhTongTienGiamGia '20201201', '20201231';
+-- EXEC sp_TinhTongTienGiamGia '20201201', '20201231';
 

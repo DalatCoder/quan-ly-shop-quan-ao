@@ -11,7 +11,8 @@ BEGIN
 		GiaBan, 
 		SoLuong, 
         CASE 
-            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'            
+            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'      
+			ELSE GhiChu      
 		END AS [GhiChu], 
 		LoaiQA.ID_LQA, 
 		Ten_LQA
@@ -32,7 +33,8 @@ BEGIN
 		GiaBan, 
 		SoLuong, 
         CASE 
-            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'            
+            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'        
+			ELSE GhiChu       
 		END AS [GhiChu], 
 		LoaiQA.ID_LQA, 
 		Ten_LQA
@@ -56,7 +58,8 @@ BEGIN
 		GiaBan, 
 		SoLuong, 
         CASE 
-            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'            
+            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'     
+			ELSE GhiChu          
 		END AS [GhiChu], 
 		LoaiQA.ID_LQA, 
 		Ten_LQA
@@ -80,7 +83,8 @@ BEGIN
 		GiaBan, 
 		SoLuong, 
         CASE 
-            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'            
+            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'      
+			ELSE GhiChu         
 		END AS [GhiChu], 
 		LoaiQA.ID_LQA, 
 		Ten_LQA
@@ -198,7 +202,8 @@ BEGIN
 		GiaBan, 
 		SoLuong, 
         CASE 
-            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'            
+            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'      
+			ELSE GhiChu         
 		END AS [GhiChu], 
 		LoaiQA.ID_LQA, 
 		Ten_LQA
@@ -227,7 +232,8 @@ BEGIN
 		GiaBan, 
 		SoLuong, 
         CASE 
-            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'            
+            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'        
+			ELSE GhiChu       
 		END AS [GhiChu], 
 		LoaiQA.ID_LQA, 
 		Ten_LQA
@@ -253,7 +259,8 @@ BEGIN
 		GiaBan, 
 		SoLuong, 
         CASE 
-            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'            
+            WHEN LEN(GhiChu) > 150 THEN SUBSTRING(GhiChu, 1, 150) + ' ...'      
+			ELSE GhiChu      
 		END AS [GhiChu], 
 		LoaiQA.ID_LQA, 
 		Ten_LQA
