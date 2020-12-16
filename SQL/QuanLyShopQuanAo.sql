@@ -238,3 +238,124 @@ VALUES
 	(3, 7, 5),
 	(3, 8, 1)
 SELECT * FROM ChiTietBanHang
+GO
+
+INSERT QuanAo(Ten_QA, ID_LQA, Size, SoLuong, GiaBan, GhiChu)
+VALUES
+	(N'Quần jean ngắn MOI MOI', 1, 'M', 100, 100000, N'Quần jean hấp dẫn cho ngày hè năng động');
+	GO
+
+-- Procedure bo sung
+CREATE PROC sp_select_cacsanphamkhongbanduoc
+AS
+	BEGIN
+	SELECT ID_QA, Ten_QA
+	FROM QuanAo
+	WHERE ID_QA NOT IN (
+		SELECT DISTINCT ID_QA FROM ChiTietBanHang
+	)
+END
+GO
+
+EXEC sp_select_cacsanphamkhongbanduoc
+GO
+
+CREATE PROC sp_select_Doanhthubanhangcuatungthangtrongnam
+(
+	@Year INT
+)
+AS 
+	BEGIN
+		SELECT MONTH(BanHang.NgayBanHang) AS THANG, SUM(SoLuongSanPham * GiaBan) AS DOANHTHU
+		FROM  ChiTietBanHang 
+		JOIN BanHang ON BanHang.ID_BH = ChiTietBanHang.ID_BH
+		JOIN  QuanAo ON	ChiTietBanHang.ID_QA = QuanAo.ID_QA
+		WHERE YEAR(NgayBanHang) = @Year
+		GROUP BY MONTH(NgayBanHang)
+	END
+GO
+
+EXEC sp_select_Doanhthubanhangcuatungthangtrongnam 2020
+GO
+
+CREATE PROC sp_select_top5KhachHangcosolanmuahangnhieunhat
+AS
+	BEGIN
+		SELECT ID_KH,HoTen
+		FROM KhachHang
+		WHERE ID_KH IN (
+			SELECT TOP 5 ID_KH
+			FROM BanHang
+			GROUP BY ID_KH
+			ORDER BY COUNT(DISTINCT ID_BH) DESC
+		)
+	END
+GO
+
+EXEC sp_select_top5KhachHangcosolanmuahangnhieunhat
+GO
+
+CREATE PROCEDURE sp_select_Master_LoaiQA
+AS
+BEGIN
+	SELECT LoaiQA.ID_LQA, COUNT(QuanAo.ID_LQA)  AS SoLuongSanPham, Ten_LQA
+	FROM QuanAo JOIN LoaiQA ON QuanAo.ID_LQA = LoaiQA.ID_LQA
+	WHERE QuanAo.ID_LQA = LoaiQA.ID_LQA
+	GROUP BY LoaiQA.ID_LQA,Ten_LQA
+END
+GO
+
+-- EXEC sp_select_Master_LoaiQA
+-- GO
+
+
+CREATE proc sp_select_sanphambanchaynhat
+as
+	begin
+		Select Top 5 Ten_QA, SUM(SoLuongSanPham) as SoLuongSanPham
+		from QuanAo, ChiTietBanHang
+		where QuanAo.ID_QA = ChiTietBanHang.ID_QA
+		group by Ten_QA
+		order by SoLuongSanPham desc
+	end
+go
+
+EXEC sp_select_sanphambanchaynhat
+GO
+
+-- Số lượng sản phẩm bán được của 1 sản phẩm
+create proc sp_select_sanphambandduoc
+(@ID_QA int)
+as
+	begin
+		select  SUM(SoLuongSanPham) as SoLuongSanPham
+		from QuanAo, ChiTietBanHang
+		where QuanAo.ID_QA = ChiTietBanHang.ID_QA and QuanAo.ID_QA =  @ID_QA
+	end
+GO
+
+Create proc Sp_ThongKeMatHangBanDuocTrongMoiThangVaTrongCaNam
+(@YEAR int
+)
+AS
+BEGIN
+SELECT b.ID_QA,Ten_QA, 
+	SUM(CASE MONTH(NgayBanHang) WHEN 1 THEN b.SoLuongSanPham ELSE 0 END) AS Thang1,
+	SUM(CASE MONTH(NgayBanHang) WHEN 2 THEN b.SoLuongSanPham ELSE 0 END) AS Thang2,
+	SUM(CASE MONTH(NgayBanHang) WHEN 3 THEN b.SoLuongSanPham ELSE 0 END) AS Thang3,
+	SUM(CASE MONTH(NgayBanHang) WHEN 4 THEN b.SoLuongSanPham ELSE 0 END) AS Thang4,
+	SUM(CASE MONTH(NgayBanHang) WHEN 5 THEN b.SoLuongSanPham ELSE 0 END) AS Thang5,
+	SUM(CASE MONTH(NgayBanHang) WHEN 6 THEN b.SoLuongSanPham ELSE 0 END) AS Thang6,
+	SUM(CASE MONTH(NgayBanHang) WHEN 7 THEN b.SoLuongSanPham ELSE 0 END) AS Thang7,
+	SUM(CASE MONTH(NgayBanHang) WHEN 8 THEN b.SoLuongSanPham ELSE 0 END) AS Thang8,
+	SUM(CASE MONTH(NgayBanHang) WHEN 9 THEN b.SoLuongSanPham ELSE 0 END) AS Thang9,
+	SUM(CASE MONTH(NgayBanHang) WHEN 10 THEN b.SoLuongSanPham ELSE 0 END) AS Thang10,
+	SUM(CASE MONTH(NgayBanHang) WHEN 11 THEN b.SoLuongSanPham ELSE 0 END) AS Thang11,
+	SUM(CASE MONTH(NgayBanHang) WHEN 12 THEN b.SoLuongSanPham ELSE 0 END) AS Thang12,
+	SUM(b.SoLuongSanPham) AS CaNam
+FROM (BanHang AS a INNER JOIN ChiTietBanHang AS b 
+ON a.ID_BH=b.ID_BH) 
+INNER JOIN QuanAo AS c ON b.ID_QA =c.ID_QA
+WHERE YEAR(NgayBanHang) = @YEAR
+GROUP BY b.ID_QA,Ten_QA
+END

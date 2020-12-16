@@ -60,5 +60,40 @@ namespace QuanLyShopQuanAo.DAO
 			int result = DataProvider.Instance.ExecuteNonQuery(query, param);
 			return result > 0;
 		}
+		public DataTable Load_CTBH_SPkhongbanduoc()
+		{
+
+			string query = "EXEC sp_select_cacsanphamkhongbanduoc";
+			object[] param = new object[] { };
+
+			return DataProvider.Instance.ExecuteQuery(query, param);
+		}
+
+
+		public DataTable Load_CTBH_DoanhThuTungThangTrongNam()
+		{
+			int nam = DateTime.Now.Year;
+			string query = "EXEC sp_select_Doanhthubanhangcuatungthangtrongnam @YEAR";
+			object[] param = new object[] { nam };
+
+			return DataProvider.Instance.ExecuteQuery(query, param);
+		}
+
+		public DataTable Load_CTBH_Top5KhachHangmuahangnhieunhat()
+		{
+
+			string query = "EXEC sp_select_top5KhachHangcosolanmuahangnhieunhat";
+			object[] param = new object[] { };
+
+			return DataProvider.Instance.ExecuteQuery(query, param);
+		}
+		public DataTable Load_CTBH_SoLuongMatHangBanDuocTrongMoiThangVaTrongCaNam(int nam)
+		{
+
+			string query = "EXEC Sp_ThongKeMatHangBanDuocTrongMoiThangVaTrongCaNam @YEAR";
+			object[] param = new object[] { nam };
+
+			return DataProvider.Instance.ExecuteQuery(query, param);
+		}
 	}
 }

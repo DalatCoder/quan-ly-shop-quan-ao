@@ -71,20 +71,12 @@ namespace QuanLyShopQuanAo.DAO
 			return listLQA;
 		}
 
-		//public List<LoaiQA_DTO> Load_Master_LQA()
-		//{
-		//	List<LoaiQA_DTO> loaiquanao = new List<LoaiQA_DTO>();
-		//	string query = "EXEC sp_select_Master_LoaiQA";
-		//	DataTable LQA = DataProvider.Instance.ExecuteQuery(query);
-
-		//	foreach (DataRow row in LQA.Rows)
-		//	{
-		//		LoaiQA_DTO lqa = new LoaiQA_DTO(row);
-		//		loaiquanao.Add(lqa);
-		//	}
-
-		//	return loaiquanao;
-		//}
+		public DataTable Load_Master_LQA()
+		{
+			string query = "EXEC sp_select_Master_LoaiQA";
+			DataTable LQA = DataProvider.Instance.ExecuteQuery(query);
+			return LQA;
+		}
 
 		public bool Insert_LoaiQuanAo(string ten_LQA)
 		{

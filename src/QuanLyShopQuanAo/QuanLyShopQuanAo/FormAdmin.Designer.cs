@@ -100,6 +100,8 @@ namespace QuanLyShopQuanAo
 			this.txtLoaiQA_TimKiemTen = new System.Windows.Forms.TextBox();
 			this.btnLoaiQA_TimKiem = new System.Windows.Forms.Button();
 			this.panel10 = new System.Windows.Forms.Panel();
+			this.gbLoaiQA = new System.Windows.Forms.GroupBox();
+			this.dgvSoluongLQA = new System.Windows.Forms.DataGridView();
 			this.panel17 = new System.Windows.Forms.Panel();
 			this.txtLoaiQA_SoLuongSP = new System.Windows.Forms.TextBox();
 			this.label22 = new System.Windows.Forms.Label();
@@ -153,10 +155,17 @@ namespace QuanLyShopQuanAo
 			this.panel32 = new System.Windows.Forms.Panel();
 			this.dtgvTaiKhoan = new System.Windows.Forms.DataGridView();
 			this.tpDoanhThu = new System.Windows.Forms.TabPage();
-			this.panel29 = new System.Windows.Forms.Panel();
-			this.lblSl = new System.Windows.Forms.Label();
-			this.lblChay = new System.Windows.Forms.Label();
-			this.label18 = new System.Windows.Forms.Label();
+			this.gbTop5kh = new System.Windows.Forms.GroupBox();
+			this.dgvTop5kh = new System.Windows.Forms.DataGridView();
+			this.gbDoanhthubanhangtungthang = new System.Windows.Forms.GroupBox();
+			this.dgvDoanhthutungthang = new System.Windows.Forms.DataGridView();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.dgvTop5spbc = new System.Windows.Forms.DataGridView();
+			this.tpTKSPMaster = new System.Windows.Forms.TabPage();
+			this.lblNam = new System.Windows.Forms.Label();
+			this.cbbNam = new System.Windows.Forms.ComboBox();
+			this.gbThongkemaster = new System.Windows.Forms.GroupBox();
+			this.dgvThongkemaster = new System.Windows.Forms.DataGridView();
 			this.tcAdmin.SuspendLayout();
 			this.tpBanHang.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -183,6 +192,8 @@ namespace QuanLyShopQuanAo
 			this.tpLoaiQuanAo.SuspendLayout();
 			this.panel12.SuspendLayout();
 			this.panel10.SuspendLayout();
+			this.gbLoaiQA.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvSoluongLQA)).BeginInit();
 			this.panel17.SuspendLayout();
 			this.panel14.SuspendLayout();
 			this.panel15.SuspendLayout();
@@ -207,7 +218,15 @@ namespace QuanLyShopQuanAo
 			this.panel32.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).BeginInit();
 			this.tpDoanhThu.SuspendLayout();
-			this.panel29.SuspendLayout();
+			this.gbTop5kh.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTop5kh)).BeginInit();
+			this.gbDoanhthubanhangtungthang.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvDoanhthutungthang)).BeginInit();
+			this.groupBox3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTop5spbc)).BeginInit();
+			this.tpTKSPMaster.SuspendLayout();
+			this.gbThongkemaster.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvThongkemaster)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tcAdmin
@@ -218,6 +237,7 @@ namespace QuanLyShopQuanAo
 			this.tcAdmin.Controls.Add(this.tpKhachHang);
 			this.tcAdmin.Controls.Add(this.tpTaiKhoan);
 			this.tcAdmin.Controls.Add(this.tpDoanhThu);
+			this.tcAdmin.Controls.Add(this.tpTKSPMaster);
 			this.tcAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tcAdmin.Location = new System.Drawing.Point(0, 0);
 			this.tcAdmin.Name = "tcAdmin";
@@ -977,6 +997,7 @@ namespace QuanLyShopQuanAo
 			// 
 			// panel10
 			// 
+			this.panel10.Controls.Add(this.gbLoaiQA);
 			this.panel10.Controls.Add(this.panel17);
 			this.panel10.Controls.Add(this.panel14);
 			this.panel10.Controls.Add(this.panel15);
@@ -984,6 +1005,29 @@ namespace QuanLyShopQuanAo
 			this.panel10.Name = "panel10";
 			this.panel10.Size = new System.Drawing.Size(483, 529);
 			this.panel10.TabIndex = 7;
+			// 
+			// gbLoaiQA
+			// 
+			this.gbLoaiQA.Controls.Add(this.dgvSoluongLQA);
+			this.gbLoaiQA.Location = new System.Drawing.Point(22, 224);
+			this.gbLoaiQA.Name = "gbLoaiQA";
+			this.gbLoaiQA.Size = new System.Drawing.Size(438, 295);
+			this.gbLoaiQA.TabIndex = 3;
+			this.gbLoaiQA.TabStop = false;
+			this.gbLoaiQA.Text = "Số lượng sản phẩm theo loại";
+			// 
+			// dgvSoluongLQA
+			// 
+			this.dgvSoluongLQA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvSoluongLQA.BackgroundColor = System.Drawing.Color.White;
+			this.dgvSoluongLQA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvSoluongLQA.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dgvSoluongLQA.Location = new System.Drawing.Point(3, 21);
+			this.dgvSoluongLQA.Name = "dgvSoluongLQA";
+			this.dgvSoluongLQA.ReadOnly = true;
+			this.dgvSoluongLQA.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvSoluongLQA.Size = new System.Drawing.Size(432, 271);
+			this.dgvSoluongLQA.TabIndex = 0;
 			// 
 			// panel17
 			// 
@@ -1516,7 +1560,9 @@ namespace QuanLyShopQuanAo
 			// 
 			// tpDoanhThu
 			// 
-			this.tpDoanhThu.Controls.Add(this.panel29);
+			this.tpDoanhThu.Controls.Add(this.gbTop5kh);
+			this.tpDoanhThu.Controls.Add(this.gbDoanhthubanhangtungthang);
+			this.tpDoanhThu.Controls.Add(this.groupBox3);
 			this.tpDoanhThu.Location = new System.Drawing.Point(4, 26);
 			this.tpDoanhThu.Name = "tpDoanhThu";
 			this.tpDoanhThu.Padding = new System.Windows.Forms.Padding(3);
@@ -1525,45 +1571,133 @@ namespace QuanLyShopQuanAo
 			this.tpDoanhThu.Text = "Thống kê";
 			this.tpDoanhThu.UseVisualStyleBackColor = true;
 			// 
-			// panel29
+			// gbTop5kh
 			// 
-			this.panel29.Controls.Add(this.lblSl);
-			this.panel29.Controls.Add(this.lblChay);
-			this.panel29.Controls.Add(this.label18);
-			this.panel29.Location = new System.Drawing.Point(622, 54);
-			this.panel29.Name = "panel29";
-			this.panel29.Size = new System.Drawing.Size(200, 100);
-			this.panel29.TabIndex = 0;
+			this.gbTop5kh.Controls.Add(this.dgvTop5kh);
+			this.gbTop5kh.Location = new System.Drawing.Point(563, 6);
+			this.gbTop5kh.Name = "gbTop5kh";
+			this.gbTop5kh.Size = new System.Drawing.Size(485, 271);
+			this.gbTop5kh.TabIndex = 2;
+			this.gbTop5kh.TabStop = false;
+			this.gbTop5kh.Text = "Top 5 khách hàng có số lần mua hàng nhiều nhất";
 			// 
-			// lblSl
+			// dgvTop5kh
 			// 
-			this.lblSl.AutoSize = true;
-			this.lblSl.ForeColor = System.Drawing.SystemColors.HotTrack;
-			this.lblSl.Location = new System.Drawing.Point(54, 68);
-			this.lblSl.Name = "lblSl";
-			this.lblSl.Size = new System.Drawing.Size(14, 17);
-			this.lblSl.TabIndex = 12;
-			this.lblSl.Text = "*";
+			this.dgvTop5kh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvTop5kh.BackgroundColor = System.Drawing.Color.White;
+			this.dgvTop5kh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvTop5kh.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dgvTop5kh.Location = new System.Drawing.Point(3, 21);
+			this.dgvTop5kh.Name = "dgvTop5kh";
+			this.dgvTop5kh.ReadOnly = true;
+			this.dgvTop5kh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvTop5kh.Size = new System.Drawing.Size(479, 247);
+			this.dgvTop5kh.TabIndex = 0;
 			// 
-			// lblChay
+			// gbDoanhthubanhangtungthang
 			// 
-			this.lblChay.AutoSize = true;
-			this.lblChay.ForeColor = System.Drawing.SystemColors.HotTrack;
-			this.lblChay.Location = new System.Drawing.Point(54, 47);
-			this.lblChay.Name = "lblChay";
-			this.lblChay.Size = new System.Drawing.Size(14, 17);
-			this.lblChay.TabIndex = 11;
-			this.lblChay.Text = "*";
+			this.gbDoanhthubanhangtungthang.Controls.Add(this.dgvDoanhthutungthang);
+			this.gbDoanhthubanhangtungthang.Location = new System.Drawing.Point(3, 292);
+			this.gbDoanhthubanhangtungthang.Name = "gbDoanhthubanhangtungthang";
+			this.gbDoanhthubanhangtungthang.Size = new System.Drawing.Size(1050, 353);
+			this.gbDoanhthubanhangtungthang.TabIndex = 2;
+			this.gbDoanhthubanhangtungthang.TabStop = false;
+			this.gbDoanhthubanhangtungthang.Text = "Doanh thu bán hàng từng tháng";
 			// 
-			// label18
+			// dgvDoanhthutungthang
 			// 
-			this.label18.AutoSize = true;
-			this.label18.ForeColor = System.Drawing.Color.Red;
-			this.label18.Location = new System.Drawing.Point(17, 15);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(167, 17);
-			this.label18.TabIndex = 10;
-			this.label18.Text = "Quần Áo Bán Chạy Nhất";
+			this.dgvDoanhthutungthang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvDoanhthutungthang.BackgroundColor = System.Drawing.Color.White;
+			this.dgvDoanhthutungthang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvDoanhthutungthang.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dgvDoanhthutungthang.Location = new System.Drawing.Point(3, 21);
+			this.dgvDoanhthutungthang.Name = "dgvDoanhthutungthang";
+			this.dgvDoanhthutungthang.ReadOnly = true;
+			this.dgvDoanhthutungthang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvDoanhthutungthang.Size = new System.Drawing.Size(1044, 329);
+			this.dgvDoanhthutungthang.TabIndex = 0;
+			// 
+			// groupBox3
+			// 
+			this.groupBox3.Controls.Add(this.dgvTop5spbc);
+			this.groupBox3.Location = new System.Drawing.Point(6, 6);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Size = new System.Drawing.Size(530, 271);
+			this.groupBox3.TabIndex = 1;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "Top 5 sản phẩm bán chạy";
+			// 
+			// dgvTop5spbc
+			// 
+			this.dgvTop5spbc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvTop5spbc.BackgroundColor = System.Drawing.Color.White;
+			this.dgvTop5spbc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvTop5spbc.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dgvTop5spbc.Location = new System.Drawing.Point(3, 21);
+			this.dgvTop5spbc.Name = "dgvTop5spbc";
+			this.dgvTop5spbc.ReadOnly = true;
+			this.dgvTop5spbc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvTop5spbc.Size = new System.Drawing.Size(524, 247);
+			this.dgvTop5spbc.TabIndex = 0;
+			// 
+			// tpTKSPMaster
+			// 
+			this.tpTKSPMaster.Controls.Add(this.lblNam);
+			this.tpTKSPMaster.Controls.Add(this.cbbNam);
+			this.tpTKSPMaster.Controls.Add(this.gbThongkemaster);
+			this.tpTKSPMaster.Location = new System.Drawing.Point(4, 26);
+			this.tpTKSPMaster.Name = "tpTKSPMaster";
+			this.tpTKSPMaster.Padding = new System.Windows.Forms.Padding(3);
+			this.tpTKSPMaster.Size = new System.Drawing.Size(1056, 651);
+			this.tpTKSPMaster.TabIndex = 7;
+			this.tpTKSPMaster.Text = "Thống kê Master";
+			this.tpTKSPMaster.UseVisualStyleBackColor = true;
+			// 
+			// lblNam
+			// 
+			this.lblNam.AutoSize = true;
+			this.lblNam.Location = new System.Drawing.Point(382, 14);
+			this.lblNam.Name = "lblNam";
+			this.lblNam.Size = new System.Drawing.Size(86, 17);
+			this.lblNam.TabIndex = 5;
+			this.lblNam.Text = "Chọn Năm :";
+			// 
+			// cbbNam
+			// 
+			this.cbbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbbNam.FormattingEnabled = true;
+			this.cbbNam.Items.AddRange(new object[] {
+            "2018",
+            "2019",
+            "2020"});
+			this.cbbNam.Location = new System.Drawing.Point(496, 11);
+			this.cbbNam.Name = "cbbNam";
+			this.cbbNam.Size = new System.Drawing.Size(121, 25);
+			this.cbbNam.TabIndex = 4;
+			this.cbbNam.SelectedIndexChanged += new System.EventHandler(this.cbbNam_SelectedIndexChanged);
+			// 
+			// gbThongkemaster
+			// 
+			this.gbThongkemaster.Controls.Add(this.dgvThongkemaster);
+			this.gbThongkemaster.Location = new System.Drawing.Point(8, 42);
+			this.gbThongkemaster.Name = "gbThongkemaster";
+			this.gbThongkemaster.Size = new System.Drawing.Size(1040, 601);
+			this.gbThongkemaster.TabIndex = 3;
+			this.gbThongkemaster.TabStop = false;
+			this.gbThongkemaster.Text = "Thống kê số lượng theo từng mặt hàng đã bán được trong tháng và cả năm";
+			// 
+			// dgvThongkemaster
+			// 
+			this.dgvThongkemaster.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvThongkemaster.BackgroundColor = System.Drawing.Color.White;
+			this.dgvThongkemaster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvThongkemaster.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dgvThongkemaster.Location = new System.Drawing.Point(3, 21);
+			this.dgvThongkemaster.Name = "dgvThongkemaster";
+			this.dgvThongkemaster.ReadOnly = true;
+			this.dgvThongkemaster.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvThongkemaster.Size = new System.Drawing.Size(1034, 577);
+			this.dgvThongkemaster.TabIndex = 0;
 			// 
 			// frmAdmin
 			// 
@@ -1613,6 +1747,8 @@ namespace QuanLyShopQuanAo
 			this.panel12.ResumeLayout(false);
 			this.panel12.PerformLayout();
 			this.panel10.ResumeLayout(false);
+			this.gbLoaiQA.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvSoluongLQA)).EndInit();
 			this.panel17.ResumeLayout(false);
 			this.panel17.PerformLayout();
 			this.panel14.ResumeLayout(false);
@@ -1648,8 +1784,16 @@ namespace QuanLyShopQuanAo
 			this.panel32.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dtgvTaiKhoan)).EndInit();
 			this.tpDoanhThu.ResumeLayout(false);
-			this.panel29.ResumeLayout(false);
-			this.panel29.PerformLayout();
+			this.gbTop5kh.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvTop5kh)).EndInit();
+			this.gbDoanhthubanhangtungthang.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvDoanhthutungthang)).EndInit();
+			this.groupBox3.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvTop5spbc)).EndInit();
+			this.tpTKSPMaster.ResumeLayout(false);
+			this.tpTKSPMaster.PerformLayout();
+			this.gbThongkemaster.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvThongkemaster)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1780,9 +1924,18 @@ namespace QuanLyShopQuanAo
 		private System.Windows.Forms.Label lbTT_ChuaGiamGia;
 		private System.Windows.Forms.Label label24;
 		private System.Windows.Forms.TabPage tpDoanhThu;
-		private System.Windows.Forms.Panel panel29;
-		private System.Windows.Forms.Label lblSl;
-		private System.Windows.Forms.Label lblChay;
-		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.GroupBox gbTop5kh;
+		private System.Windows.Forms.DataGridView dgvTop5kh;
+		private System.Windows.Forms.GroupBox gbDoanhthubanhangtungthang;
+		private System.Windows.Forms.DataGridView dgvDoanhthutungthang;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.DataGridView dgvTop5spbc;
+		private System.Windows.Forms.GroupBox gbLoaiQA;
+		private System.Windows.Forms.DataGridView dgvSoluongLQA;
+		private System.Windows.Forms.TabPage tpTKSPMaster;
+		private System.Windows.Forms.GroupBox gbThongkemaster;
+		private System.Windows.Forms.DataGridView dgvThongkemaster;
+		private System.Windows.Forms.Label lblNam;
+		private System.Windows.Forms.ComboBox cbbNam;
 	}
 }

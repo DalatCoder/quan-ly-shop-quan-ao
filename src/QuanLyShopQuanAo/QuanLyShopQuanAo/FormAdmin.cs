@@ -33,6 +33,11 @@ namespace QuanLyShopQuanAo
 			InitStateKhachHang();
 			LoadAccount();
 			LoadKieuTaiKhoan();
+			LoadSoLuongSP_Theoloai();
+			Load_Master_TheoMatHang();
+			Load_5SP_BanChay();
+			Load_DoanhThuTungThang();
+			Load_5KH();
 		}
 
 		#endregion
@@ -439,12 +444,11 @@ namespace QuanLyShopQuanAo
 			LoadListLQA();
 			AddDataBindingLoaiQuanAo();
 			DataTable table = ChiTietBanHang_DAO.Instance.Load_CTBH_BanChay();
+		}
 
-			if (table.Rows.Count > 0)
-			{
-				lblChay.Text = table.Rows[0]["Ten_QA"].ToString();
-				lblSl.Text = table.Rows[0]["SoLuongSanPham"].ToString();
-			}
+		void LoadSoLuongSP_Theoloai()
+		{
+			dgvSoluongLQA.DataSource = LoaiQA_DAO.Instance.Load_Master_LQA();
 		}
 
 		void LoadListLQA()
@@ -698,6 +702,45 @@ namespace QuanLyShopQuanAo
 			}
 		}
 
+
 		#endregion
+
+		#region Thong ke Master
+		void Load_Master_TheoMatHang()
+		{
+
+			var now = DateTime.Now;
+
+			cbbNam.Text = now.Year.ToString();
+
+			dgvThongkemaster.DataSource = ChiTietBanHang_DAO.Instance.Load_CTBH_SoLuongMatHangBanDuocTrongMoiThangVaTrongCaNam(now.Year);
+		}
+
+		private void cbbNam_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (cbbNam.SelectedItem == null) return;
+
+			String namDuocChon = cbbNam.SelectedItem.ToString();
+
+			dgvThongkemaster.DataSource = ChiTietBanHang_DAO.Instance.Load_CTBH_SoLuongMatHangBanDuocTrongMoiThangVaTrongCaNam(int.Parse(namDuocChon));
+		}
+
+		#endregion
+		#region Thong ke
+		void Load_5SP_BanChay()
+		{
+			dgvTop5spbc.DataSource = ChiTietBanHang_DAO.Instance.Load_CTBH_BanChay();
+		}
+		void Load_5KH()
+		{
+			dgvTop5kh.DataSource = ChiTietBanHang_DAO.Instance.Load_CTBH_Top5KhachHangmuahangnhieunhat();
+		}
+		void Load_DoanhThuTungThang()
+		{
+			dgvDoanhthutungthang.DataSource = ChiTietBanHang_DAO.Instance.Load_CTBH_DoanhThuTungThangTrongNam();
+		}
+		#endregion
+
+
 	}
 }
