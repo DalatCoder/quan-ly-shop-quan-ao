@@ -1,4 +1,4 @@
-# CƠ SỞ DỮ LIỆU QUẢN LÝ SHOP QUẦN ÁO
+# ỨNG DỤNG QUẢN LÝ CỬA HÀNG QUẦN ÁO NHỎ
 
 ## Nhóm 01
 
